@@ -1,0 +1,217 @@
+---
+title: "Classification Exercises"
+author: "Simone Collier"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Getting Started
+
+This section includes the code that was shown in class along with more tips and tricks. Go through this and run the code chunks before moving on to the exercises. 
+
+Start by loading the packages that have the data we need. If you need to install the packages first then run `install.packages("PACKAGENAME")` in your console before running the code chunk.
+
+```{r packages, results='hide', message=FALSE}
+library(ISLR2)
+library(MASS)
+library(e1071)
+library(class)
+```
+
+We will be making use of the Smarket data set which has the percentage returns for 1,250 days from the years 2001-2005. We are interested in predicting the qualitative response `Direction` as `Up` or `Down` using the other variables in the dataset. Use the `?` tool to find what each of the variables recorded mean.
+
+```{r Smarket}
+# This allows us to call the variables direction without using `Smarket$...`
+attach(Smarket)
+?Smarket
+```
+
+In order to run classification methods on this data set, it is a good idea to separate the data into training and testing sets. This allows us to get an idea of the accuracy of our classification models with both the training and testing error rates. Our training data set will span 2001-2004 and out test set will be the data from 2005.
+
+```{r}
+train <- (Year < 2005)
+Smarket.2005 <- Smarket[!train, ]
+Direction.2005 <- Smarket.2005$Direction
+```
+
+## Logistic Regression
+
+We will fit a logistic regression model to our training data to predict `Direction` using all the Lag variables and `Volume`. We can use the `glm()` function to fit a variety of generalized linear models. By specifying `family = binomial` we are instructing R to run a logistic regression. `subset = train` tells R to only run the regression on the training data subset of `Smarket`.
+
+```{r }
+log.fit <- glm(Direction ~ Lag1 + Lag2 + Lag3 + Lag4 + Lag5 + Volume,
+               data = Smarket, family = binomial, subset = train)
+summary(log.fit)
+```
+
+The column labelled `Pr(>|z|)` gives the $p$-values associated with each variables. Recall that the $p$-values indicate whether or not to reject the null hypothesis that there is no association between the response and predictor variable.
+
+***Is there evidence of an association between any of the predictor variables and the response? If so, which ones?***
+
+The `predict()` function can be used to predict the probability of the market direction given the value of the predictors. We pass `type = "response"` into the `predict()` function in order to output the probabilities in the form $P(Y=1 \mid X)$. Use the `contrasts()` function to determine how R has assigned the dummy variables to the qualitative predictor `Direction`.
+
+```{r contrasts}
+contrasts(Direction)
+
+log.probs <- predict(log.fit, type = "response")
+head(log.probs)
+```
+
+Using the probabilities, we can set a threshold and make a table of predictions. Let's use a threshold of 0.5 to start which means that the market direction will be predicted to o up if the probability that day is greater than 0.5.
+
+```{r}
+# Create a vector of length equal to the number of days in the data set with each element as "Down"
+log.pred <- rep("Down", nrow(Smarket))
+# Change the days with a probability greater than 0.5 to "Up
+log.pred[log.probs > 0.5] = "Up"
+head(log.pred)
+```
+
+We can make a confusion matrix from the predictions using `table()` in order to determine how many observations were correctly or incorrectly classified.
+
+```{r}
+table(log.pred, Direction)
+```
+
+The diagonal entries are the correct predictions and the off-diagonals are the incorrect predictions. The `mean()` function can be used to compute the fraction of days for which the market direction prediction was correct.
+
+```{r}
+mean(log.pred == Direction)
+```
+
+Note that 100% - 53.3% = 47.7%  is the training error rate.
+
+Now we can try predictin the outcomes of the test data using `predict(log.fit, Smarket.2005, type = "response")`. ***Try this out yourselves! Find the confusion matrix and test error rate as well.***
+
+***How does the training error rate compare to the test error rate?***
+
+***Is logistic regression method good at predicting the direction of the market? Why or why not? Use the training/testing error rate to support your answer.***
+
+## Linear Discriminant Analysis (LDA)
+
+We will perform LDA on the Smarket data in order to predict `Direction` using `Lag1` and `Lag2`. We can fit an LDA model using the `lda()` function which belongs to the `MASS` library. 
+
+```{r}
+lda.fit <- lda(Direction ~ Lag1 + Lag2, data = Smarket, subset = train)
+lda.fit
+```
+
+* The prior probabilities for each class (i.e. Up, Down) indicate the proportion of the training observations that belong to each class. For example $\hat{\mu}_1 = 0.492$ indicates that 49.2% of the training observations correspond to days where the market went down.
+
+* The group means are the average of each predictor within each class which are used as estimates of $\mu_k$.
+
+* The coefficients of linear discriminants are used to form the LDA decision rule. So, if -0.642$\times$`Lag1` - 0.515$\times$`Lag2` is large then the LDA classifier will predict a market increase and vice versa.
+
+We can use the `predict()` function to use our LDA model on our test data set. 
+
+```{r}
+lda.pred <- predict(lda.fit, Smarket.2005)
+```
+
+`lda.pred` contains three elements
+
+* `class`: the predictions for the market direction each day in 2005
+* `posterior`: a table (or matrix) with a row for for each observation and two columns labelled `Up` and `Down` which give the probabilities that the market will go up or down on the specified day.
+* `x`: linear discriminants.
+
+We can create a confusion matrix from `class` and find the test error rate.
+
+```{r}
+lda.class <- lda.pred$class
+
+table(lda.class, Direction.2005)
+mean(lda.class == Direction.2005)
+```
+
+The test error rate of the LDA model is 44%.
+
+***Try fitting a LDA model using predictor variables of the Smarket data of your choice. Discuss the results.***
+
+## Quadratic Discriminant Analysis (QDA)
+
+We will fit a QDA model to the `Smarket` usin the `qda()` function within the `MASS` library.
+
+```{r}
+qda.fit <- qda(Direction ~ Lag1 + Lag2, data = Smarket, subset = train)
+qda.fit
+```
+
+Note that the `qda()` output is similar to the `lda()` output except it does not contain the coefficients of the linear discriminants since the QDA classifier is quadratic. We can predict the market direction for the 2005 data using the same method as in the LDA case.
+
+```{r}
+qda.pred <- predict(qda.fit, Smarket.2005)
+qda.class <- qda.pred$class
+table(qda.class, Direction.2005)
+mean(qda.class == Direction.2005)
+```
+
+The test error rate of the QDA model is 40%.
+
+***Try fitting a QDA model using predictor variables of the Smarket data of your choice. Discuss the results.***
+
+## Naive Bayes
+
+We will fit a naive Bayes model to the Smarket data using the `naiveBayes()` function which is part of the `e1071` library. 
+
+```{r}
+naiveB.fit <- naiveBayes(Direction ~ Lag1 + Lag2, data = Smarket, subset = train)
+naiveB.fit
+```
+
+The conditional probability tables in the output give the mean (column 1) and standard deviation (column 2) for each of the predictors in each class. 
+
+```{r}
+naiveB.class <- predict(naiveB.fit, Smarket.2005)
+table(naiveB.class, Direction.2005)
+mean(naiveB.class == Direction.2005)
+```
+
+The test error rate of the naive Bayes model is 41%. 
+
+The `predict()` function is also capable of generating estimates for the probability that an observation belongs to each class.
+
+```{r}
+naiveB.pred <- predict(naiveB.fit, Smarket.2005, type = "raw")
+head(naiveB.pred)
+```
+
+***Try fitting a naive Bayes model using predictor variables of the Smarket data of your choice. Discuss the results.***
+
+# K-Nearest Neighbors
+
+We can fit a KNN model using the `knn()` function which belongs to the `class` library. Unlike the previous three classification methods we have been running, this function fits and runs predictions in one step. There are four inputs that are required:
+
+* A data frame or matrix of the predictors in the training data.
+
+* A data frame or matrix of the predictors in the test data for which we want to make predictions on.
+
+* A vector containing the true classification of the training data.
+
+* An integer indicating the number of nearest neighbors to be considered by the classifier
+
+```{r}
+train.X <- cbind(Lag1, Lag2)[train, ]
+test.X <- cbind(Lag1, Lag2)[!train, ]
+train.Y <- Direction[train]
+```
+
+Now that we have three of our inputs we can predict the direction of the market in 2005 using K=1. We set a random seed to ensure our results are reproducible since if there are several points that are the nearest then R will choose one of the them randomly.
+
+```{r}
+set.seed(1)
+knn.pred <- knn(train.X, test.X, train.Y, k = 1)
+table(knn.pred, Direction.2005)
+mean(knn.pred == Direction.2005)
+```
+
+As we can see KNN for K=1 only gives 50% accuracy which is no better than random chance. ***Try running KNN for several values of K and summarize the results for the best model you find.***
+
+***Out of all the classification methods we tried, which performs best on the `Smarket` data? Give some explanation for why that might be.***
+
+
+*These exercises were adapted from :* James, Gareth, et al. An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.

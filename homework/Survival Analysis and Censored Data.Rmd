@@ -1,0 +1,107 @@
+---
+title: "Survival Analysis and Censored Data Exercises"
+author: "Simone Collier"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# The Kaplan-Meier Survival Curve
+
+Start by loading the packages we need. If you need to install the packages first then run `install.packages("PACKAGENAME")` in your console before running the code chunk.
+
+```{r packages, results='hide', message=FALSE}
+library(ISLR2)
+library(survival)
+```
+
+We will be making use of the `BrainCancer` data set in the `ISLR2` package. It contains the survival times for patients with primary brain tumors undergoing treatment. It also contains information for serveral predictor variables which we will discuss later. 53 of the 88 patients were still alive at the end of the study.
+
+```{r}
+attach(BrainCancer)
+```
+
+We should first check how the `status` variables ($\delta$) has been coded.
+
+```{r}
+table(status)
+```
+
+We see there are 53 patients with $status = 0$ so this means `status = 0` means the survival time is censored and `status = 1` means the survival time is uncensored.
+
+We can create the Kaplan-Meier survival curve using the `survfit()` function within the `survival` library. Note that `time` is $y_i$, the time to the $i$-th event (censoring or death).
+
+```{r}
+survival.curve <- survfit(Surv(time, status) ~ 1)
+plot(survival.curve, xlab = "Months", ylab = "Estimated Probability of Survival")
+```
+
+The solid line is the Kaplan-Meier survival curve and the dashed lineas are the standard error bands.
+
+
+# The Log-Rank Test
+
+Now we want to create Kaplan-Meier survival curves from the `BrainCancer` data that are separated by sex.
+
+```{r}
+sex.curve <- survfit(Surv(time, status) ~ sex)
+plot(sex.curve, xlab = "Months", 
+     ylab = "Estimated Probability of Survival", col = c(2, 4))
+legend("bottomleft", levels(sex), col = c(2, 4), lty = 1)
+```
+
+We can use a log-rank test to compare the survival curves for males versus females. We use the `survdiff()` function from the `survival` package.
+
+```{r}
+logrank <- survdiff(Surv(time, status) ~ sex)
+logrank
+```
+
+The resulting p-value is 0.2 which is greater than 0.05, so there is no evidence of a difference in the survival between the two sexes.
+
+
+# The Cox Proportional Hazards Model
+
+We have seen the restults from the log-rank test that compares the survival curves for males versus females form the `BrainCancer` data. Now we can fit a Cox proportional hazards model to test the exact samme thing. We use the `coxph()` function from the `survival` library.
+
+```{r}
+fit.cox <- coxph(Surv(time, status) ~ sex)
+summary(fit.cox)
+```
+
+The p-value for the hypothesis test $H_0: \beta = 0$ is 0.233 which is not significant so we conclude that there is no difference in the survival rates between males and females. This is the same conclusion we found for the log-rank test.
+
+Now let's try to fit a model with multiple predictors. Note that the covariates included are either quanititative or qualitative with a binary response with the exception of `diagnosis`. The `diagnosis` variable has four classes: `Meningioma`, `LG glioma`, `HG glioma`, and `Other`. The `coxph()` function automatically chooses the first class as the baseline for all qualitative variables.
+
+```{r}
+multi.fit.cox <- coxph(Surv(time, status) ~ sex + diagnosis + loc + ki + gtv + stereo)
+multi.fit.cox
+```
+
+Since `Meningioma` was coded as the baseline, the fitted coefficient 2.15 associated with `HG glioma` means that the risk associated with `HG glioma` is $e^{2.15} = 8.62$ times more that the risk of `Meningioma`.
+
+We can plot the survival curves for each diagnosis category while adusting for the other predictors. To make these plots we make a new data set where the value for each of the other predictors is the mean (if quantitative) or mode (if qualitative) of the variable. So,
+
+```{r}
+plot.data <- data.frame(diagnosis = levels(diagnosis),
+                        sex = rep("Female", 4),
+                        loc = rep("Supratentorial", 4),
+                        ki = rep(mean(ki), 4),
+                        gtv = rep(mean(gtv), 4),
+                        stereo = rep("SRT", 4))
+```
+
+Now we use the `survfit()` function with our fitted model and `plot.data` as the `newdata`.
+
+```{r}
+survplots <- survfit(multi.fit.cox, newdata = plot.data)
+plot(survplots, xlab = "Months", ylab = "Survival Probability", col = 2:5)
+legend("bottomleft", levels(diagnosis), col = 2:5, lty = 1)
+```
+
+
+*These exercises were adapted from :* James, Gareth, et al. An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.

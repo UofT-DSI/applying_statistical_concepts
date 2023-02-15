@@ -1,0 +1,250 @@
+---
+title: "Decision Tree Exercises"
+author: "Simone Collier"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Fitting Classification Trees
+
+Start by loading the packages we need. If you need to install the packages first then run `install.packages("PACKAGENAME")` in your console before running the code chunk.
+
+```{r packages, results='hide', message=FALSE}
+library(tree)
+library(ISLR2)
+library(randomForest)
+library(gbm)
+library(BART)
+```
+
+We will be making use of the `Carseats` data set in the `ISLR2` package. It contains informatin about the sales of carseats in 400 different stores.
+
+```{r}
+attach(Carseats)
+?Carseats
+```
+
+We want to create a tree to predict the sales of the carseats. Right now, the variable `Sales` is the number of carests in thouhsands that are sold at each location. Instead of predicting a number we want to predict whether the number of `Sales` is high (exceeds 8) or not. Let's make a new qualitative variable `High` that decribes whether the `Sales` are high and add it to the Carseats data frame.
+
+```{r}
+High <- factor(ifelse(Sales <= 8, "No", "Yes"))
+Carseats <- data.frame(Carseats, High)
+```
+
+We can now fit a classification tree to the data in order to predict `High` using all the other variables in the dataset other than `Sales`. We can use the function `tree()` which is in the `tree` library.
+
+```{r}
+tree.carseats <- tree(High ~. -Sales, Carseats)
+tree.carseats
+```
+
+Calling our tree gives the criterion for each branch. The asteriks indicate terminal nodes. We can use the `plot()` function to plot our tree and add the node labels using `text()`.
+
+```{r}
+plot(tree.carseats)
+text(tree.carseats, pretty = 0, cex = 0.4)
+```
+
+Using the `summary()` function on our tree will gives us the borad overview of our tree as well as some errors associated with it.
+
+```{r}
+summary(tree.carseats)
+```
+
+The training error rate of our tree is 9%. In order to properly assess the quality of our tree we need to estimate the test error. So, we start by splitting the data into a test set and a training set. 
+
+```{r}
+set.seed(2)
+train <- sample(1:nrow(Carseats), nrow(Carseats)/2)
+Carseats.test <- Carseats[-train, ]
+High.test <- High[-train]
+```
+
+Now we can go ahead and fit the tree using the training obervations then use the `predict()` function to predict the responses for the test set.
+
+```{r}
+tree.carseats <- tree(High ~. - Sales, Carseats, subset = train)
+tree.pred <- predict(tree.carseats, Carseats.test, type = "class")
+table(tree.pred, High.test)
+```
+
+Recall that we comute the classification error rate as the sum of the missclassified observations divided by the total number of observations in the test set.
+
+```{r}
+(13 + 31)/200
+```
+
+Now we will try out cost complexity pruning to see if we can get a tree with a better test error. The function `cv.tree()` performs corss-validation to find the best level of tree complexity. The argument `FUN = prune.miscall` indicates that we want to use the calssification error rate to guide the pruning process (the deault is deviance). 
+
+```{r}
+set.seed(7)
+cv.carseats <- cv.tree(tree.carseats, FUN = prune.misclass)
+cv.carseats
+```
+
+The output of `cv.tree()` contains the following information
+
+* `size`: the number of terminal nodes for each tree that was considered.
+
+* `dev`: the cross-validation errors.
+
+* `k`: the cost-complexity tuning parameter.
+
+We can plot the error rate as a function of the `size`.
+
+```{r}
+plot(cv.carseats$size, cv.carseats$dev, type = 'b')
+```
+
+We see that the error rate is at a minimum when `size` = 9 thus we use the function `prune.misclass()` to obtain this tree.
+
+```{r}
+prune.carseats <- prune.misclass(tree.carseats, best = 9)
+plot(prune.carseats)
+text(prune.carseats, pretty = 0, cex = 0.6)
+```
+
+***Compute the test error rate of this pruned tree. How does the test error rate and the interpretability of this tree compare to the inital tree? ***
+
+
+# Fitting Regression Trees
+
+Recall the `Boston` dataset from the Linear Regression section. We will be fitting a regression tree to predict the median value of houses `medv` in Boston suburbs based on the information in the data set. First, we split the data into a training and test set.
+
+```{r}
+attach(Boston)
+set.seed(1)
+train <- sample(1:nrow(Boston), nrow(Boston)/2)
+Boston.test <- Boston[-train, ]
+medv.test <- Boston[-train, 'medv']
+```
+
+Now we can fit our tree with the training set.
+
+```{r}
+tree.boston <- tree(medv ~., Boston, subset = train)
+summary(tree.boston)
+
+plot(tree.boston)
+text(tree.boston, pretty = 0, cex = 0.7)
+```
+
+Now we can use the `cv.tree()` function to see whether the tree would benefit from pruning.
+
+```{r}
+cv.boston <- cv.tree(tree.boston)
+plot(cv.boston$size, cv.boston$dev, type = 'b')
+```
+
+This indicates that this tree does not require pruning since the tree with 7 terminal nodes has the lowest error rate. If we did wich to prune it however, we would use the function `prune.tree()` the same as in the classification setting. We can compute the test error rate by estimating the test MSE.
+
+```{r}
+pred <- predict(tree.boston, newdata = Boston.test)
+mean((pred - medv.test)^2)
+```
+
+The test set MSE is 35.29.
+
+
+# Bagging and Random Forests
+
+We will use bagging and random forests on the `Boston` data set. Since bagging is a special case of random forests with $m = p$, we can use the same function `randomForest()` from the `randomForest` library to perform both. We start with bagging. The argument `mtry = 12` indicates that all 12 of the predictors should be considered for each split of the tree.
+
+```{r}
+set.seed(1)
+bag.boston <- randomForest(medv ~., data = Boston, subset = train, mtry = 12, importance = TRUE)
+bag.boston
+```
+We can change the number of trees grown using the `ntree` argument.
+
+***Use this tree to predict the responses for the test set and estimate the test MSE. How does this compare to the MSE from the tree fitted without bagging?***
+
+ 
+Now let's try building a random forest of regression trees with `mtry = 6`.
+
+```{r}
+set.seed(1)
+rf.boston <- randomForest(medv ~., data = Boston, subset = train, mtry = 6, importance = TRUE)
+medv.rf <- predict(rf.boston, newdata = Boston.test)
+mean((medv.rf - medv.test)^2)
+```
+
+The test set MSE is 20.07 so the random forests provided a better tree than bagging in this case. The `importance()` function shows how important each of the variables are in the tree.
+
+```{r}
+importance(rf.boston)
+```
+
+* `%IncMSE` summarises the mean decrease of accuracy in predictions on the out of bag samples when the given variable is permuted.
+
+* `IncNodePurity` measures the total decrease in node impurity that results from splits over the given variable (averaged over all trees).
+
+We can plot these measures using the `varImpPlot()`
+
+```{r}
+varImpPlot(rf.boston)
+```
+
+***Which two variables are the most important when determining median house values in Boston suburbs?***
+
+
+# Boosting
+
+The `bm()` function from the `gbm` package will allow us to it boosted regression trees to the `Boston` data set. We set the argument `distribution` to `"gaussian"` since this is a regression problem (`"bernoulli"` for binary classification). The argument `n.trees` indicates how many trees and `interaction.depth` limits the depth of each tree.
+
+```{r}
+set.seed(1)
+boost.boston <- gbm(medv ~., data = Boston[train, ], distribution = "gaussian",
+                    n.trees = 5000, interaction.depth = 4)
+summary(boost.boston)
+```
+
+In this case, the `summary()` function outputs the relative influence along with a plot of it. 
+
+We can now use the boosted model to predict `medv` on the test set.
+
+```{r}
+medv.boost <- predict(boost.boston, newdata = Boston.test, n.trees = 5000)
+mean((medv.boost - medv.test)^2)
+```
+
+The test MSE is 18.39 which is the best test MSE from all the methods so far. 
+
+Note that we can change the shrinkage parameter $\lambda$ which is `shrinkage` in the `gbm()` function. The default value is 0.001.
+
+***Try fitting a new boosted model to the training set using a higher value for `shrinkage` and compute the test MSE. Which shrinkage parameter (between the two) yields the model with the best test error?***
+
+
+# Bayesian Additive Regression Trees
+
+We will use the `gbart()` function in the `BART` package to fit a Bayesian additive regression tree model to the `Boston` data. For this function, we need our data in the form of matrices.
+
+```{r}
+x <- Boston[, 1:12]
+y <- Boston[, 'medv']
+xtrain <- x[train, ]
+ytrain <- y[train]
+xtest <- x[-train, ]
+ytest <- y[-train]
+```
+
+We supply the test observations to the `gbart()` function directly so the fitting and predictions are made in one step. We can extract them and compute the test set MSE.
+
+```{r echo = T, results = 'hide'}
+bart.tree <- gbart(xtrain, ytrain, x.test = xtest)
+```
+
+```{r}
+medv.bart <- bart.tree$yhat.test.mean
+mean((medv.bart - medv.test)^2)
+```
+
+The test error rate for BART is the lowest of all the methods we tried.
+
+
+*These exercises were adapted from :* James, Gareth, et al. An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.

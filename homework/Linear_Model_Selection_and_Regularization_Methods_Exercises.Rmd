@@ -1,0 +1,324 @@
+---
+title: "Linear Model Selection and Regularization Exercises"
+author: "Simone Collier"
+output:
+  pdf_document: 
+    number_sections: yes
+  html_document:
+    number_sections: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Getting Started
+
+Start by loading the packages that have the data we need. If you need to install the packages first then run `install.packages("PACKAGENAME")` in your console before running the code chunk.
+
+```{r packages, results='hide', message=FALSE}
+library(ISLR2)
+library(leaps)
+library(glmnet)
+```
+
+We will be making use of the `Hitters` data set in the `ISLR` package. It contains baseball player's salaries along with other information about their performance in the previous year.
+
+```{r}
+names(Hitters)
+```
+
+We can use `is.na()` to see whether there is any missing data in the set. Using the `sum()` function in combination on the `Salary` column will tell us how many player's salaries we are missing.
+
+```{r}
+sum(is.na(Hitters$Salary))
+```
+
+The `na.omit()` function allows us to create a new data set from `Hitters` that removes rows with no entries.
+
+```{r}
+Hitters.noNA <- na.omit(Hitters)
+```
+
+We want to predict a baseball player's salary based on the other predictors in the data set using linear regression.
+
+
+# Subset Selection
+
+## Best Subset Selection
+
+We can use the `regsubsets()` function from the `leaps` package to perform best subset selection. It identifies the best model (smallest RSS) among those with the same number of predictors. 
+
+```{r}
+best.subset.fit <- regsubsets(Salary ~ ., data = Hitters.noNA)
+summary(best.subset.fit)
+```
+
+The `summary()` function displays the best combination of predictors for models with 1-8 predictors. The asteriks indicate that the variable is included in the model. The `nvmax` argument in the function `regsubsets()` can be increased to return models with more than 8 predictors. 
+
+```{r}
+# Perform best subset selection with all predictors (all columns except Salary)
+best.subset.fit <- regsubsets(Salary ~ ., data = Hitters.noNA, nvmax = ncol(Hitters) - 1)
+summary.best.subset <- summary(best.subset.fit)
+```
+
+## Stepwise Selection
+
+We can use `regsubsets()` to perform forward and backward stepwise selection with the argument `method = "forward` or `method = "backward"`.
+
+```{r}
+fwd.fit <- regsubsets(Salary ~ ., data = Hitters.noNA, 
+                      nvmax = ncol(Hitters) - 1, method = "forward")
+bwd.fit <- regsubsets(Salary ~ ., data = Hitters.noNA, 
+                      nvmax = ncol(Hitters) - 1, method = "backward")
+summary.fwd <- summary(fwd.fit)
+summary.bwd <- summary(bwd.fit)
+```
+
+## Deciding Between Models using Indirect Error Estimation
+
+The `summary()` function for `regsubsets()` output gives the $R^2$ (`rsq`), RSS (`rss`), adjusted $R^2$ (`adjr2`), $C_p$ (`cp`), and BIC (`bic`). We can make a plot of the adjusted $R^2$ statistic of the best subset selection outputs to help us decide which model to select. We can use the `which.max()` function to find at what index the maximum adjusted $R^2$ value occurs.
+
+```{r}
+# type = "l" connects the points of the plot with lines
+plot(summary.best.subset$adjr2, xlab = "Number of Predictors",
+     ylab = "Adjusted R^2", type = "l")
+# find the index of the maximum adjusted R^2
+max.adjr2 <- which.max(summary.best.subset$adjr2)
+# add point at maximum adjusted R^2
+points(max.adjr2, summary.best.subset$adjr2[max.adjr2], col = "red")
+```
+
+Recall that in the case of the $C_p$ and BIC statistics, the best model will have the smallest $C_p$ or BIC value.
+
+***Plot the $C_p$ and BIC statistics and include the minimum points. Based on the three plots, which model size is the best? Justify your answer and list the predictors that are included in the model. ***
+
+***Choose which model size you think is the best for both the forward and backward selection. How do the three models we have chosen compare?***
+
+
+## Deciding Between Models using Direct Error Estimation
+
+### Validation Set Approach
+
+We just saw how we can indirectly estimate the test error of our models. We will now look at directly estimate the test error using the validation set approach and cross-validation.
+
+We start by splitting the observations into a training set and a test set. We can do this by creating a random sample of `TRUE` and `FALSE` that is the same size as our data set. `TRUE` will signify that the element is in the training set and `FALSE` will signify that the element is in the test set.
+
+```{r}
+set.seed(1)
+train <- sample(c(TRUE, FALSE), nrow(Hitters.noNA), replace = TRUE)
+test <- (!train)
+```
+
+Now we can perform best subset selection on the training set.
+
+```{r}
+best.subset.fit2 <- regsubsets(Salary ~ ., data = Hitters.noNA[train, ], nvmax = ncol(Hitters.noNA) - 1)
+```
+
+Now that we have our fitted models we need to estimate the test error by predicting the response of the observations in our test set. This is a little tricky since the function `regsubsets()` which we used to fit our models does not work with the `predict()` function we have been using in previous sections. This means we will have to make our own function called `predict.regsubsets()`. Before we make the function let's go through the steps to understand what our function will need to do.
+
+We know that `best.subset.fit2` contains 19 linear regression models. What information do we need to extract from `best.subset.fit2` in order to be able to use each of the 19 models to predict the responses on the test set?... The fitted coefficients! Recall from the linear regression module that responses for linear models are found using:
+
+$$
+\hat{Y} = \hat{\beta}_{0}+\hat{\beta}_{1} X_1 +\hat{\beta}_{2} X_2 + \cdots +\hat{\beta}_{p} X_p
+$$
+
+So we need to write a function that extracts the fitted coefficients for each model size and then multiplies the corresponding predictors for each test observations. Let's write out each step first...
+
+To start let's get the test data on its own. Instead of using a data frame for this we will use a matrix. This will allow us to multiply our fitted coefficients and the test observations in the matrix directly. The `model.matrix()` function is commonly uded for build a predictor matrix from data in a regression context.
+
+```{r}
+test.mat <- model.matrix(Salary ~ ., data = Hitters.noNA[test, ])
+```
+
+Run `test.mat` see what it looks like.
+
+Now we need to extract the coefficients from each of the 19 fitted models in `best.subset.fit2` and multiply them with the corresponding test predictors. Then we can compute the test error. We can write a `for` loop for this.
+
+```{r}
+# Make empty vector to be filled with the computed test errors
+val.errors <- numeric()
+for (i in 1:19) {
+  # Extract the coefficients of the i-th model
+  coefs <- coef(best.subset.fit2, id = i)
+  # Extract the predictors from the test matrix that are relevant to the i-th model
+  obs <- test.mat[, names(coefs)]
+  # Predict the response on the test observations
+  pred <- obs %*% coefs
+  # Compute the test MSE for the i-th model
+  mse <- mean((Hitters.noNA$Salary[test] - pred)^2)
+  # Add the test error to the list
+  val.errors <- c(val.errors, mse)
+}
+
+val.errors
+```
+
+We can find the model with the smallest validation set error and choose this as our model.
+
+```{r}
+which.min(val.errors)
+```
+
+Now that we have the method layed out, we can write a generic function that we can use to predict responses for models from `regsubsets()`.
+
+```{r}
+# object is the `regsubsets()` output (i.e. best.subset.fit2)
+predict.regsubsets <- function(object, newdata, id, ...) {
+  # get the formula used in `regsubsets()`
+  form <- as.formula(object$call[[2]])
+  mat <- model.matrix(form, newdata)
+  coefs <- coef(object, id = id)
+  vars <- names(coefs)
+  mat[, vars] %*% coefs
+}
+```
+
+Let's try the function out.
+
+```{r}
+predict.regsubsets(best.subset.fit2, Hitters.noNA[test, ], 7)
+```
+
+Now that we have decided to go with the 7 variable model we need to refit the model using ALL the observations. We did this previously so we can go ahead and grab the corresponding model.
+
+```{r}
+coef(best.subset.fit, id = 7)
+```
+
+Note this model is a little different than the one that was fit with only the training observations... It even has different variables.
+
+```{r}
+coef(best.subset.fit2, id = 7)
+```
+
+### Cross-validation
+
+Let's try out the cross-validation technique for estimating test error. We will using $k = 10$ folds.
+
+```{r}
+k <- 10
+n <- nrow(Hitters.noNA)
+set.seed(1)
+folds <- sample(rep(1:k, length = n))
+```
+
+We can make a matrix for storing the computed test errors, one for each fold and model size.
+
+```{r}
+cv.errors <- matrix(nrow = k, ncol = 19)
+```
+
+Now we can go about computing the errors by first predicting the responses for each fold using each of the 19 models with our function `predict.regsubsets()` and then computing the MSE. 
+
+```{r}
+for (i in 1:k) {
+  # Fit the linear regression by best subset selection using all of the observations except those in the i-th fold
+  fold.fit <- regsubsets(Salary ~ ., data = Hitters.noNA[folds != i, ], nvmax = 19)
+  
+  for (j in 1:19) {
+    # Predict the response for the observations in the i-th fold using the fitted model of size j
+    pred <- predict.regsubsets(fold.fit, Hitters.noNA[folds == i, ], id = j)
+    # Compute the MSE using the predictions and add it to the matrix
+    cv.errors[i, j] <- mean((Hitters.noNA$Salary[folds == i] - pred)^2)
+  }
+}
+```
+
+Now we have the cross-validation error for each fold and each model size. If we take the mean of each column in the matrix, we will have the cross-validation error for each model size.
+
+```{r}
+mean.cv.errors <- apply(cv.errors, 2, mean)
+mean.cv.errors
+```
+
+***Make a plot of the cross-validation errors and identify the model with the lowest error error with a point. Refit the models with best subset selection using the complete data set. Return the coefficients of the model which was identified as the one with the lowest CV error. ***
+
+# Ridge Regression
+
+We will use the `glmnet()` function from the `glmnet` package to perform ridge regression. Instead of using a data frame, the `glmnet()` function requires that the predictors be in the form of a matrix and the response be in the form of a vector.
+
+```{r}
+x <- model.matrix(Salary ~., Hitters.noNA)[, -1]
+y <- Hitters.noNA$Salary
+```
+
+The `model.matrix()` automatically transforms qualitative variables into dummy variables. 
+
+The crucial step for ridge regression and the lasso is selecting the tuning parameter. We will start by fitting with many lambdas (this is the default for the function) and then use cross-validation after the fact to choose the lambda with the smallest MSE. Let's first split our data into a training and testing set so that we can compute the test error after the fact.
+
+```{r}
+set.seed(1)
+train <- sample (1:nrow(x), nrow(x)/2)
+test <- (-train)
+y.test <- y[test]
+```
+
+We choose `alpha = 0` in the `glmnet()` function perform ridge regression. The function standardizes the variables automatically so we need not worry about that.
+
+```{r}
+ridge.mod <- glmnet(x[train, ], y[train], alpha = 0)
+```
+
+Now we will use the function `cv.glmnet()`. This function performs cross-validation with a bunch of $\lambda$ values with a default of `nfolds = 10`.
+
+```{r}
+set.seed(1)
+cv.ridge <- cv.glmnet(x[train, ], y[train], alpha = 0)
+plot(cv.ridge)
+```
+
+We can find the $\lambda$ with the smallest cross-validation error and make predictions for the test set using the model in `ridge.mod` with the corresponding $\lambda$.
+
+```{r}
+best.lambda <- cv.ridge$lambda.min
+ridge.pred <- predict(ridge.mod, s = best.lambda, newx = x[test, ])
+```
+
+***Compute the test MSE.***
+
+Now we can refit the ridge regression using the complete data set and return the coefficients. 
+
+```{r}
+ridge <- glmnet(x, y, alpha = 0)
+predict(ridge, type = "coefficients", s = best.lambda)[1:20,]
+```
+
+
+# The Lasso
+
+We will perform the lasso the exact same way as ridge regression except we have `alpha = 1` in the `glmnet()` function to specify the lasso method is to be used.
+
+```{r}
+lasso.mod <- glmnet(x[train, ], y[train], alpha = 1)
+```
+
+Now we can perform cross-validation and compute the MSE.
+
+```{r}
+set.seed(1)
+cv.lasso <- cv.glmnet(x[train, ], y[train], alpha = 1)
+plot(cv.lasso)
+```
+
+```{r}
+best.lambda2 <- cv.lasso$lambda.min
+lasso.pred <- predict(lasso.mod, s = best.lambda2, newx = x[test, ])
+mse <- mean((lasso.pred - y.test)^2)
+mse
+```
+
+
+```{r}
+lasso <- glmnet(x, y, alpha = 1)
+predict(lasso, type = "coefficients", s = best.lambda2)[1:20, ]
+```
+
+The resulting model has 10 coefficients that are exactly equal to zero so it performed variable selection!
+
+***Fit a linear regression model to the data. Compute the test MSE for the linear regression model. Compare the results from the linear regression, ridge regression, and the lasso. Which is the best model and why?***
+
+
+*These exercises were adapted from :* James, Gareth, et al. An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+

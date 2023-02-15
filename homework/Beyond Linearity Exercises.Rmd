@@ -1,0 +1,228 @@
+---
+title: "Beyond Linearity"
+author: "Simone Collier"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Getting Started
+
+Start by loading the packages that have the data we need. If you need to install the packages first then run `install.packages("PACKAGENAME")` in your console before running the code chunk.
+
+```{r, results='hide', message=FALSE}
+library(ISLR2)
+library(ggplot2)
+library(splines)
+library(gam)
+```
+
+We will be making use of the `Wage` data set in the `ISLR2` package. This data set contains information about the wage of 3000 men in the Mid-Atlantic region. There are many other variables included such as `age`, the `year` the information was recorded, etc. 
+
+```{r}
+attach(Wage)
+names(Wage)
+```
+
+We want to create models that use the other variables in the data set to predict the `wage` of an individual.
+
+
+# Polynomial Regression
+
+We can fit a polynomial regression using the `lm()` function by performing multiple linear regression with powers of a single predictor. In our case we will use the variable `age`, so our predictors for a fourth degree polynomial regression are `age`, `age^2`, `age^3`, and `age^4`.
+
+```{r}
+poly.fit <- lm(wage ~ cbind(age, age^2, age^3, age^4), data = Wage)
+coef(summary(poly.fit))
+```
+
+We can produce the same result using the `poly()` function which gives us the powers of `age` when the argument `raw = TRUE`. Otherwise it gives a linear combination of the powers of `age` which will affect the fitted coefficients but not the model predictions.
+
+```{r}
+poly.fit <- lm(wage ~ poly(age, 4, raw = TRUE), data = Wage)
+coef(summary(poly.fit))
+```
+
+We can pick a range of ages that we want predictions of `wage` and set the argument `se = TRUE` to include the standard errors in the output. We can then create a 95% confidence intervals by adding and subtracting 2 standard errors from the predictions.
+
+```{r}
+age.range <- seq(from = min(age), to = max(age))
+pred <- predict(poly.fit, newdata = list(age = age.range), se = TRUE)
+conf.int <- cbind(pred$fit + 2 * pred$se.fit, pred$fit - 2 * pred$se.fit)
+```
+
+We can create some plots to visualize the results of the fit. 
+
+```{r}
+predictions <- data.frame(AGE = age.range, WAGE = pred$fit, 
+                          upper = conf.int[, 1], lower = conf.int[, 2])
+ggplot() + 
+  theme_classic() + 
+  ggtitle("4th Degreee Polynomial") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  geom_point(data = Wage, aes(x = age, y = wage), size = 0.05) +
+  geom_line(data = predictions, aes(x = AGE, y = WAGE), col = "blue") +
+  geom_ribbon(data = predictions, aes(x = age.range, ymin = lower, ymax = upper), col = 'grey', alpha = 0.4) +
+  xlab("Age") + ylab("Wage")
+```
+
+Now that we know how to fit a polynomial regression we can think about what is the best degree polynomial for our data. We will determine this by fitting a bunch of polynomials from linear to degree 5 and then performing analysis of variance (ANOVA) to test the null hypothesis that a model is sufficient to explain the data. The alternative hypothesis would be that a more complex model does a better job. We can use the `anova()` function to sequentially compare more and more complex models.
+
+```{r}
+fit.1 <- lm(wage ~ age, data = Wage)
+fit.2 <- lm(wage ~ poly(age, 2), data = Wage)
+fit.3 <- lm(wage ~ poly(age, 3), data = Wage)
+fit.4 <- lm(wage ~ poly(age, 4), data = Wage)
+fit.5 <- lm(wage ~ poly(age, 5), data = Wage)
+anova(fit.1, fit.2, fit.3, fit.4, fit.5)
+```
+
+The p-values from the ANOVA indicate that we can reject the null hypothesis when compare model 1 to model 2 and model 2 to model 3. This means that both the linear and quadratic models are not sufficient to explain the data. The p-value for the comparison of model 3 and 4 is almost significant so we could say that a 3rd or 4th degree polynomial is sufficient to explain the data. The p-value for the comparison of model 4 and 5 is not significant so there is no justification for using a 5th degree polynomial in this case.
+
+An alternative to the anova method is to use cross-validation. ***Describe the steps you would take to perform cross-validation in this case to choose the degree of the polynomial.***
+
+# Step Function
+
+We will now try to fit a step function to the data in order to again predict  `wage` based on `age`. We use the `cut()` function to split the data into a specified number equal ranges.
+
+```{r}
+step.fit <- lm(wage ~ cut(age, 4), data = Wage)
+coef(summary(step.fit))
+```
+
+The intercept coefficient can be interpreted as the average salary for individuals `age` < 33.5. The remaining coefficients are the average additional salary for those in the other age groups.
+
+***Make wage predictions for a range of ages and plot the results including the 95% confidence intervals.***
+
+
+# Splines
+
+We want to fit a regression spline with `wage` as the response and `age` as the predictor. We will fit regression splines using the `splines` library. The `bs()` function can generate a variety of functions for splines with a specified set of knots. The default spline is cubic although we can change this with the argument `degree`.
+
+```{r}
+spline.fit <- lm(wage ~ bs(age, knots = c(25, 40, 60)), data = Wage)
+```
+
+We can make predictions on our age range we defined previously using the fitted spline and get the standard errors as well. Then plottinh the data, the fit, and the confidence intervals is the same as before.
+
+```{r}
+pred <- predict(spline.fit, newdata = list(age = age.range), se = TRUE)
+conf.int <- cbind(pred$fit + 2 * pred$se.fit, pred$fit - 2 * pred$se.fit)
+predictions <- data.frame(AGE = age.range, WAGE = pred$fit, 
+                          upper = conf.int[, 1], lower = conf.int[, 2])
+ggplot() + 
+  theme_classic() + 
+  ggtitle("Cubic Spline") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  geom_point(data = Wage, aes(x = age, y = wage), size = 0.05) +
+  geom_line(data = predictions, aes(x = AGE, y = WAGE), col = "blue") +
+  geom_ribbon(data = predictions, aes(x = age.range, ymin = lower, ymax = upper), col = 'grey', alpha = 0.4) +
+  xlab("Age") + ylab("Wage")
+```
+
+We could instead fit a natural spline using the `ns()` function. We could also try specifying the degrees of freedom we would like.
+
+```{r}
+nspline.fit <- lm(wage ~ ns(age, df = 4), data = Wage)
+# Make predictions
+pred <- predict(nspline.fit, newdata = list(age = age.range), se = TRUE)
+conf.int <- cbind(pred$fit + 2 * pred$se.fit, pred$fit - 2 * pred$se.fit)
+predictions <- data.frame(AGE = age.range, WAGE = pred$fit, 
+                          upper = conf.int[, 1], lower = conf.int[, 2])
+# Plot the natural spline
+ggplot() + 
+  theme_classic() + 
+  ggtitle("Natural Cubic Spline") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  geom_point(data = Wage, aes(x = age, y = wage), size = 0.05) +
+  geom_line(data = predictions, aes(x = AGE, y = WAGE), col = "blue") +
+  geom_ribbon(data = predictions, aes(x = age.range, ymin = lower, ymax = upper), col = 'grey', alpha = 0.4) +
+  xlab("Age") + ylab("Wage")
+```
+
+# Local Regression
+
+We can perform local regression using the `loess()` function with a chosen `span`.
+
+```{r}
+local.fit <- loess(wage ~ age, span = 0.5, data = Wage)
+# Make predictions
+pred <- predict(local.fit, newdata = data.frame(age = age.range), se = TRUE)
+conf.int <- cbind(pred$fit + 2 * pred$se.fit, pred$fit - 2 * pred$se.fit)
+predictions <- data.frame(AGE = age.range, WAGE = pred$fit, 
+                          upper = conf.int[, 1], lower = conf.int[, 2])
+# Plot the local regression
+ggplot() + 
+  theme_classic() + 
+  ggtitle("Local Regression") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  geom_point(data = Wage, aes(x = age, y = wage), size = 0.05) +
+  geom_line(data = predictions, aes(x = AGE, y = WAGE), col = "blue") +
+  geom_ribbon(data = predictions, aes(x = age.range, ymin = lower, ymax = upper), col = 'grey', alpha = 0.4) +
+  xlab("Age") + ylab("Wage")
+```
+
+***Redo the fitting and plotting but this time choose a smaller `span`. What differences do you see? Explain why choosing a smaller `span` causes this.  ***
+
+
+# Generalised Additive Models
+
+We will fit a GAM to predict `Wage` using the predictors `year`, `age`, and `education`. The quantitative predictors will be a natural spline functions and `education` will naturally be fit with a step function.
+
+```{r}
+gam.fit <- lm(wage ~ ns(year, df = 4) + ns(age, df = 5) + education, data = Wage)
+```
+
+We can use our GAM to make predictions on the whole training set.
+
+```{r}
+pred <- predict(gam.fit, newdata = Wage)
+```
+
+We can use a special plotting function `plot.Gam()` from the `gam` library to make plots to summarise GAMs. Each plot shows the fitted relationship between one of the predictors and the response `wage`
+
+```{r}
+plot.Gam(gam.fit, se = TRUE, col = 'red')
+```
+
+We can see from the plot that wage is increasing somewhat linearly with year. 
+***Use an ANOVA test to determine which of these three models is the best:***
+
+* The same GAM as before except exclude `year`.
+
+* The same GAM as before except it instead has a linear function of `year` (written simply `+ year`)
+
+* The GAM we have already fit.
+
+**Recall that the models must be supplied to the `anova()` function in order of increasing complexity.**
+
+***Once you have determined which model is the best, plot the relationships as we did before. ***
+
+
+Fitting GAMs using the `gam()` function instead of `lm()` allows us more flexibility in the choice of our building block functions and will yield the same result otherwise. The `lo()` function can be used to fit local regression as one of the functions in a GAM.
+
+```{r}
+lo.gam.fit <- gam(wage ~ ns(year, df = 4) + lo(age, span = 0.7) + education, data = Wage)
+```
+
+The `lo()` function can also be use to create interaction terms in the GAM such as between `year` and `age`.
+
+```{r}
+lo.gam.fit2 <- gam(wage ~ lo(year,age, span = 0.2) + education, data = Wage)
+```
+
+We can fit a logistic regression GAM so we can predict whether wages are greater than 250. We use the `I()` function and set the argument `family = binomial`.
+
+```{r}
+logis.gam.fit <- gam(I(wage > 250) ~ year + poly(age, 3, raw = TRUE) + education, 
+                     family = binomial, data = Wage)
+plot(logis.gam.fit, se = TRUE, col = "blue")
+```
+
+
+
+*These exercises were adapted from :* James, Gareth, et al. An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.

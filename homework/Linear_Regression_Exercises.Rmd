@@ -1,0 +1,186 @@
+---
+title: "Linear Regression Exercises"
+author: "Simone Collier"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Simple Linear Regression
+
+Start by loading the packages that have the data we need. If you need to install the packages first then run `install.packages("PACKAGENAME")` in your console before running the code chunk.
+
+```{r packages}
+library(ISLR2)
+```
+
+Take a look at the Boston dataset using the table generating function `kable()` available in RMarkdown.
+
+```{r}
+knitr::kable(head(Boston))
+```
+
+If we want to learn more about the variables in this dataset we can use `?`.
+
+```{r}
+?Boston
+```
+
+Let's try fitting a simple linear regression to our `Boston` data
+
+* Response variable $Y$: `mdev`, the median value of owner-occupied homes in 
+
+* Predictor variable $X$: `rm`, average number of rooms per dwelling.
+
+The `lm()` function from the `stats` package performs the fitting of our linear model using the general syntax `lm(y ~ x, data)`.
+
+```{r}
+lm.medv.rm <- lm(medv ~ rm, data = Boston)
+lm.medv.rm
+```
+
+The output tells us that $\hat{\beta}_0 = -34.671$ and $\hat{\beta}_1 = 9102$.
+
+Instead of including `data = Boston` in `lm()`, we can use `attach()` to make the variables associated with `Boston` available.
+
+```{r}
+attach(Boston)
+
+lm.medv.rm <- lm(medv ~ rm)
+lm.medv.rm
+```
+
+Use the `summary()` function to look at the results of out fit.
+
+```{r}
+lm.medv.rm_summary <- summary(lm.medv.rm)
+```
+
+We can call `?summary.lm` to see what each of the outputs mean. We can extract individual elements from the summary such as a information about the linear regression coefficients.
+
+```{r}
+?summary.lm
+
+lm.medv.rm_summary$coefficients
+```
+
+Make it neater using `kable()`.
+
+```{r}
+knitr::kable(lm.medv.rm_summary$coefficients)
+```
+
+So we have the coefficient estimates, their associated standard errors, and the t-statistic and p-value associated with the hypothesis test $H_0: \beta_1 = 0$. The p-value for this test is significant so we can conclude there is a relationship between `medv` and `rm`.
+
+To compute the 95% confidence intervals for the regression coefficient estimates based on the standard errors:
+
+```{r}
+confint(lm.medv.rm)
+```
+
+We can also find the RSE and $R^2$ statistic in the summary of the linear regression model.
+
+```{r}
+lm.medv.rm_summary
+```
+
+From the $R^2$ statistic we can see that some of the variation in `medv` is explained by `rm` but a lot of it is not. This might be an indication that there are other variables in the data set that are affecting the response.
+
+We can plot our data and the linear regression model we fit.
+
+```{r}
+plot(medv ~ rm)
+abline(lm.medv.rm)
+```
+
+
+# Multiple Linear Regression
+
+We will choose several variables from the `Boston` data to be our predictors while retaining `medv` as our response.
+
+* $X_1$: `rm`, average number of rooms per dwelling.
+
+* $X_2$: `nox`,  nitrogen oxides concentration (parts per 10 million)
+
+Now we can use our `lm()` function to fit our model. With multiple predictors, the function input becomes `lm(Y ~ X_1 + X_2 + ...)`.
+
+```{r}
+mlm.fit <- lm(medv ~ rm + nox)
+mlm.fit
+```
+
+So we have $\hat \beta_0 = -18.206,\ \hat \beta_1 = 8.157,$ and $\hat \beta_2 = -18.971$.
+
+```{r}
+summary(mlm.fit)
+```
+
+* The p-value at the end of the summary indicates that there is a relationship between at least one of the predictors and the response.
+
+* The RSE and $R^2$ have improves compared to our simple linear regression fit. But, are the improvements the result of a better predictive model or overfitting?
+
+Prediction intervals incorporate both the reducible and irreducible error. They can be computed using the `predict()` function. So for `rm = 6` and `nox = 0.54` we can predict $Y$ and the prediction interval.
+
+```{r}
+predict(mlm.fit, data.frame(rm = 6, nox = 0.54), interval = "prediction")
+```
+
+$\hat Y = 20.48992$ is the prediction and (8.134498, 32.84533) is the 95\% prediction interval. We interpret this as 95\% of intervals of this form will contain the true value of $Y$ for the corresponding suburb.
+
+
+## Qualitative Predictors
+
+We can examine the relationship between `medv` and `chas`, where
+\begin{align*}
+\text{chas} = \left\{\begin{array}{ll}
+1 & \text { if } \text{tract bounds Charles River} \\
+0 & \text { if } \text{not}
+\end{array}\right. 
+\end{align*}
+We can perform the regression as usual:
+
+```{r}
+lm(medv ~ chas)
+```
+
+* $\hat \beta_0 = 22.094$: the average median house value for suburbs that are not bound by the Charles river.
+* $\hat \beta_1 = 6.346$: the difference in the average median house value for suburbs that are bound by the Charles River versus those that are not.
+
+# Interaction Term
+
+Let's look at the relationship between the response `medv` and the predictors `lstat` (the percent of households with low socioeconomic status) and `age` (the percent of homes built prior to 1940). We can also include the interaction term between `lstat` and `age`.
+
+The syntax used to implement this is `lm(y ~ x1 + x2 + x1:x2, data)` or `lm(y ~ x1 * x2, data)` for shorthand.
+
+```{r}
+summary(lm(medv ~ lstat * age))
+```
+
+The interaction term has a $p$-value of $0.0252$. Even though the $p$-value for `age` is not significant, we will still include it in our model due to the hierarchical principal.
+
+
+# Helpful plots
+
+There are a few plots that we discussed that can help to identify problems with our data or with our fit. If we use the `plot()` function there are 4 plots that are  automatically generated. We are particularly interested in the first 2 so we use the argument `which = c(1, 2).` We will also look at the studentized resultuals which we can plot using `rstudent()`.
+
+
+```{r}
+plot(lm.medv.rm, which = c(1, 2))
+plot(predict(lm.medv.rm), rstudent(lm.medv.rm),
+     xlab = "Fitted Values", ylab = "Studentized Residuals")
+```
+
+***What information about our fitted model can you gather from these plots? Are there any outliers or high leverage points?***
+
+***Fit a linear regression model on the `Boston` data set including all the predictors. The shorthand for this is `lm(medv ~ .)`. Interpret the summary including the hypothesis tests for the coefficients and the RSE and $R^2 values. Make plots of the fit including confidence intervals for the fitted line. Recreate and interpret the three plots we have just made using your new fit.***
+
+Ask for help if you get stuck!
+
+*These exercises were adapted from :* James, Gareth, et al. An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+
+
+
+
+
