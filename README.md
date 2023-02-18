@@ -59,11 +59,7 @@ Tutorial sessions on the same date as each class. Tutorials take place from 5 PM
 | 9      | Saturday 11 March      | Ethics and Inequity in ML, Review                                                   | | NA                                                 
 ## Grading Scheme
 
-Grading is based on three components [1] 3 weekly 
-
-
-
-ments, [2] homework questions (competion only), and [3] class participation. The grading scheme is as follows:
+Grading is based on three components: 3 assignments, 5 homework questions (completion only), and class participation. The grading scheme is as follows:
 
 | Assessment       | Number |  Individual Weight | Cumulative Weight
 |------------------|--------|--------------------|------------------|
