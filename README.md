@@ -2,12 +2,12 @@
 
 ## Contents:
 1. [Description](https://github.com/rachaellam/dsi-workshop#description)
-2. [Learning Outcomes](https://github.com/rachaellam/dsi-workshop#learning-outcomes)
-3. [Logistics](https://github.com/rachaellam/dsi-workshop#logistics)
-4. [Marking Scheme](https://github.com/rachaellam/dsi-workshop#marking-scheme)
-5. [Policies](https://github.com/rachaellam/dsi-workshop#policies)
-6. [Folder Structure](https://github.com/rachaellam/dsi-workshop#folder-structure)
-7. [Acknowledgements and Contributions](https://github.com/rachaellam/dsi-workshop#acknowledgements-and-contributions)
+2. [Learning Outcomes](https://github.com/UofT-DSI/06-statistical_learning#learning-outcomes)
+3. [Logistics](https://github.com/UofT-DSI/06-statistical_learning#logistics)
+4. [Course Schedule](https://github.com/UofT-DSI/06-statistical_learning#course-schedule)
+5. [Grading](https://github.com/UofT-DSI/06-statistical_learning#grading)
+6. [Policies](https://github.com/rachaellam/dsi-workshop#policies)
+8. [Acknowledgements](https://github.com/UofT-DSI/06-statistical_learning#acknowledgements)
 
 ## Description
 The course was created by the University of Toronto's Data Science Institute. This course provides the intuition and skills required to design, implement, test and validate a variety of models for supervised learning. To introduce the course, we will cover the basics of statistical learning including modelling with the goal of prediction versus inference, prediction accuracy and model interpretability trade-off, and the all-important bias-variance trade-off. Each section of this course will cover a unique set of methods used for supervised learning on a data set.
