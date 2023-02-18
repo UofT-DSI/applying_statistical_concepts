@@ -89,14 +89,14 @@ For each class (with the exception of the Industry Case Study), one homework que
 Homework Links (<u>only 5 required, marked for competion only!</u>)
 | Assessment        | ISLR2 Question         | Due Date | 
 | ------------------| -----------------|----------|
-| Homework week 1   |          | Thursday 23 February, by 6pm |
-| Homework week 2   |          | Saturday 25 February, by 9am|
-| Homework week 3   |          | Monday 27 February, by 6pm|
-| Homework week 4   |          | Thursday 2 March, by 6pm|
-| Homework week 5   |          | Saturday 4 March, by 9am|
-| Homework week 6   |          | Monday 6 March, by 6pm|
-| Homework week 7   |          | Thursday 9 March, by 6pm|
-| Homework week 9   |          | Sunday 12 March, by midnight |
+| Homework class 1   |          | Thursday 23 February, by 6pm |
+| Homework class 2   |          | Saturday 25 February, by 9am|
+| Homework class 3   |          | Monday 27 February, by 6pm|
+| Homework class 4   |          | Thursday 2 March, by 6pm|
+| Homework class 5   |          | Saturday 4 March, by 9am|
+| Homework class 6   |          | Monday 6 March, by 6pm|
+| Homework class 7   |          | Thursday 9 March, by 6pm|
+| Homework class 9   |          | Sunday 12 March, by midnight |
 
 **Participation**
 We hope all members in the course regularly participate. We define participation broadly, and include attendance, asking questions, answering others' questions, participating in discussions, etc.
