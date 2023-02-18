@@ -43,25 +43,25 @@ Tutorial sessions  will also be offered over Zoom. These will take place from 5 
 
 
 ### Lesson Schedule
-| Lesson | Topic                                                                                        | Assignments      | Resources  |
-|--------|----------------------------------------------------------------------------------------------|------------------|------------|
-| 1      | Regression <br>(linear regression; simple and multiple, others)                              | [Assignment 1]() | [Slides]() |
-| 2      | Classification <br>(logistic regression, generative models)                                  | [Assignment 1]() |            |
-| 3      | Resampling methods, Linear model selection and regularization                                | [Assignment 1]() |            |
-| 4      | Beyond linearity <br>(regressions, step functions, generalized additive)                     | [Assignment 2]() |            |           
-| 5      | Tree-based methods<br>(decision tree; bagging, random forest, etc.)                          | [Assignment 2]() |            |
-| 6      | Support Vector Machines, Survival analysis                                                   | [Assignment 2]() |            |
-| 7      | Principal Components Analysis, Reproducibility; Ethics; Inequity                             | [Assignment 3]() |            |
-| 8      | Professional Skills - Industry Case Study  <br>(Guest: Ajit Desai, Bank of Canada)           | [Assignment 3]() |            |
-| 9      | Estimation, Testing, and Learning: Review and Practice                                       | [Assignment 3]() |            |          
+| Lesson | Date                   | Topic                                                                               |  Resources  |
+|--------|------------------------|-------------------------------------------------------------------------------------|------------|
+| 1      | Tuesday 21 February    | Regression <br>(linear regression; simple and multiple, others)                     | [Slides]() |
+| 2      | Thursday 23 February   | Classification <br>(logistic regression, generative models)                         | [Slides]() |            
+| 3      | Saturday 25 February   | Resampling methods, Linear model selection and regularization                       | [Slides]() |                     
+| 4      | Monday 27 February     | Beyond linearity <br>(regressions, step functions, generalized additive)            | [Slides]() |                 
+| 5      | Thursday 2 March       | Tree-based methods<br>(decision tree; bagging, random forest, etc.)                 | [Slides]() |                     
+| 6      | Saturday 4 March       | Support Vector Machines, Survival analysis                                          | [Slides]() |                   
+| 7      | Monday 6 March         | Principal Components Analysis, Reproducibility; Ethics; Inequity                    | [Slides]() |                    
+| 8      | Thursday 9 March       | Professional Skills - Industry Case Study  <br>(Guest: Ajit Desai, Bank of Canada)  | [Slides]() |                   
+| 9      | Saturday 11 March      | Estimation, Testing, and Learning: Review and Practice                              | [Slides]() |                                                 
 
 ## Marking Scheme
 | Assessment       | Weight | Description     | Due Date |
 |------------------|--------|-----------------|----------|
-| [Assignment 1]() | 30%    | Classes 1,2,3   |  February 25th |
-| [Assignment 2]() | 30%    | Classes 4,5,6   |  March 4th     |
-| [Assignment 3]() | 30%    | Classes 7,9     |  March 11th    |
-| [Participation]()| 10%    | Attendance, engagement  |                |
+| [Assignment 1]() | 30%    | Classes 1,2,3   |  Sunday 26 February |
+| [Assignment 2]() | 30%    | Classes 4,5,6   |  Sunday 5 March     |
+| [Assignment 3]() | 30%    | Classes 7,9     |  Sunday 12 March    |
+| [Participation]()| 10%    | Attendance, engagement  |             |
 
 ## Policies
 The course is a live-coding class. Students are expected to follow along with the coding, creating files and folders to navigate and manipulate. Students should be active participants while coding and are encouraged to ask questions throughout. Although slides will be available for students to reference, they should be referenced before or after class, as during class will be dedicated to coding with the instructor.
