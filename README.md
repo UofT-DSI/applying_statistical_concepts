@@ -1,4 +1,4 @@
-# DSI Course for Bash, Git and GitHub
+# DSI Course for Statistical Learning
 
 ## Contents:
 1. [Description](https://github.com/rachaellam/dsi-workshop#description)
@@ -10,34 +10,34 @@
 7. [Acknowledgements and Contributions](https://github.com/rachaellam/dsi-workshop#acknowledgements-and-contributions)
 
 ## Description:
-The course was created by the University of Toronto's Data Science Institute. The beginning of the course will introduce the basic language of Unix shell including how to navigate and manipulate files and directories. Learners will then learn certain commands, how to create scripts and write basic functions using pipes, filters and loops. 
-
-The next portion of the course will be dedicated to getting started with version control and GitHub, and how it connects to the ethical discussions of reproducibility. Learners will learn how to set up Git and initialize and utilize repositories, including recording, viewing and undoing changes. They will also learn how to create branches and collaborate with others with shared branches. This course will put it all together and introduce some more advanced commands such as de-bugging and history editing.
-
-Finally, learners will determine how to problem-solve by identifying where the issue is and how to search with Google and Stack Overflow. This will then lead to the topic of reproducibility and how to contribute by commenting code and writing documentation.
+The course was created by the University of Toronto's Data Science Institute. This course provides the intuition and skills required to design, implement, test and validate a variety of models for supervised learning. To introduce the course, we will cover the basics of statistical learning including modelling with the goal of prediction versus inference, prediction accuracy and model interpretability trade-off, and the all-important bias-variance trade-off. Each section of this course will cover a unique set of methods used for supervised learning on a data set.
 
 This course is designed for those who have a degree in something other than Computer Science/Statistics who are looking to enhance their data science skills for their career.
 
 ## Learning Outcomes
 Students will know how to...
-1. Access the terminal and write scripts using basic commands, variables, pipes, filters and loops. This will be assessed in Assignment 1.
-2. Use version control to preserve personal work, access and edit pervious code versions, collaborate with others, and find and debug errors. This will be assessed in Assignment 2.
-3. Solve problems independently by identifying issues, researching, or properly formulating questions using components of reproducibility. This will be assessed in both Assignment 1 and Assignment 2.
-4. Synthesize all work within wider discussions of ethics and inequity. Students will actively scrutinize who is and isn't in our datasets and develop knowledge of past abuses of power to better engage their work with ethical considerations. This will be assessed in Assignment 2.
+1. Understand, implement and interpret the results from several supervised learning approaches for regression and classification
+2. Utilize resampling methods when appropriate to extract more information from a data set and to choose the best model
+3. Perform exploratory data analysis for unsupervised learning
+4. Understand what is required for reproducible machine learning
+5. Appreciate the uncertainties associated with model results and the ethical consequences of acting on these results
+6. recognize who matters in our models
 
 ## Logistics
 
 ### Course Contacts
-* Instructor: [**Name**] [Pronouns] [degree]. hyperlinked email
-  * Email etiquette
-  * Other comments 
-* TA: [**Name**] [pronouns] [degree]. hyperlinkedEmail
+* Instructor: Navona Calarco (she/her) [navona.calarco@mail.utoronto.ca](navona.calarco@mail.utoronto.ca)
+* TA: Julia Gallucci (she/her) [julia.gallucci@mail.utoronto.ca](julia.gallucci@mail.utoronto.ca)
 
 ### Delivery instructions
-The workshop will be held over three weeks, three days a week. Two of the three days will be 2-hours long and the last day will be 3-hours. Being mindful of online fatigue, there will be one break during each class where students are encouraged to stretch, grab a drink and snacks, or ask any additional questions.
+The course runs synchronously over Zoom. It consists of three classes a week for three weeks (nine classes total). Classes are 6 PM - 8 PM EST on Mondays (with the exception of the first class, moved to Tuesday) and Thursdays, and 9 AM - 12 PM EST on Saturdays. Being mindful of online fatigue, there will be one or two breaks during each class where students are encouraged to stretch, grab a drink and snacks, or ask any additional questions.
+
+Tutorial sessions  will also be offered over Zoom. These will take place from 5 PM - 6 PM EST on Mondays and Thursdays, and 8:30 AM - 9 AM EST and 12 PM - 12:30 PM EST on Saturdays.
 
 ### Technology Requirements
-1. Camera is optional although highly encouraged. We understand that not everyone may have the space at home to have the camera on.
+1. Computer with internet access
+2. R and RStudio installed (preferred), or accessed via the [Posit Cloud](https://posit.cloud/). 
+3. Camera is optional although encouraged. 
 
 
 ### Lesson Schedule
