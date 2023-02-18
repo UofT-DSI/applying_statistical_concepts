@@ -26,25 +26,29 @@ Students will know how to...
 ## Logistics
 
 ### Course Contacts
-* Instructor: Navona Calarco (she/her) [navona.calarco@mail.utoronto.ca](navona.calarco@mail.utoronto.ca)
-* TA: Julia Gallucci (she/her) [julia.gallucci@mail.utoronto.ca](julia.gallucci@mail.utoronto.ca)
+* Instructor: Navona Calarco [navona.calarco@mail.utoronto.ca](navona.calarco@mail.utoronto.ca)
+* TA: Julia Gallucci [julia.gallucci@mail.utoronto.ca](julia.gallucci@mail.utoronto.ca)
 
-### Delivery instructions
-The course runs synchronously over Zoom. It consists of three classes a week for three weeks (nine classes total). Classes are 6 PM - 8 PM EST on Mondays (with the exception of the first class, moved to Tuesday) and Thursdays, and 9 AM - 12 PM EST on Saturdays. 
-
-Being mindful of online fatigue, there will be one or two breaks during each class where students are encouraged to stretch, grab a drink and snacks, or ask any additional questions.
-
-Tutorial sessions  will also be offered over Zoom. These will take place from 5 PM - 6 PM EST on Mondays and Thursdays, and 8:30 AM - 9 AM EST and 12 PM - 12:30 PM EST on Saturdays.
+### Textbook
+.....
+Note that this textbook contains helpful 'homework exercise' at the end of each chapter, that may optionally be completed.
 
 ### Technology Requirements
 1. Computer with internet access
 2. R and RStudio installed (preferred), or accessed via the [Posit Cloud](https://posit.cloud/). 
 3. Camera is optional although encouraged. 
 
+### Course Delivery
+**Course** The course runs synchronously over Zoom. It consists of three classes a week for three weeks (i.e., a total of 21 hours over nine classes). Classes are 6 PM - 8 PM EST on Mondays (with the exception of the first class, moved to Tuesday) and Thursdays, and 9 AM - 12 PM EST on Saturdays. Being mindful of online fatigue, there will be one or two breaks during each class where students are encouraged to stretch, grab a drink and snacks, or ask any additional questions.
+
+**Tutorial** Tutorial sessions are also offered over Zoom, at the same link. Tutorials take place from 5 PM - 6 PM EST on Mondays and Thursdays, and 8:30 AM - 9 AM EST and 12 PM - 12:30 PM EST on Saturdays. Tutorial attendance is optional, and organization is unstructued. The tutorial is the best place for questions/issues pertaining to software, assignments, and optional homework questions.
+
+## Course Details
+The course is designed for teaching via slides and live-coding. Students should perform coding in real-time, alongside the instructor. Students are encouraged to ask questions at any time. As required, we will use Zoom Whiteboard to work through 'pen and paper'-type questions, and Posit cloud to work through coding puzzles.
 
 ### Lesson Schedule
-| Lesson | Date                   | Topic                                                                               |  Resources  |
-|--------|------------------------|-------------------------------------------------------------------------------------|------------|
+| Lesson | Date                   | Topic                                                                               |  Resources | Chapter |
+|--------|------------------------|-------------------------------------------------------------------------------------|------------| --------|
 | 1      | Tuesday 21 February    | Regression <br>(linear regression; simple and multiple, others)                     | [Slides]() |
 | 2      | Thursday 23 February   | Classification <br>(logistic regression, generative models)                         | [Slides]() |            
 | 3      | Saturday 25 February   | Resampling methods, Linear model selection and regularization                       | [Slides]() |                     
@@ -54,60 +58,23 @@ Tutorial sessions  will also be offered over Zoom. These will take place from 5 
 | 7      | Monday 6 March         | Principal Components Analysis, Reproducibility; Ethics; Inequity                    | [Slides]() |                    
 | 8      | Thursday 9 March       | Professional Skills - Industry Case Study  <br>(Guest: Ajit Desai, Bank of Canada)  | [Slides]() |                   
 | 9      | Saturday 11 March      | Estimation, Testing, and Learning: Review and Practice                              | [Slides]() |                                                 
+## Grading 
 
-## Marking Scheme
+**Assignments** There is one assignment due per week, for a total of three assignments. The assignments will contain questions from the prior week's learning. Each assignment will be worth 30% of the final mark. 
+
+**Participation** This course will assign 10% of the final grade on the basis of participation. Participation is broadly defined, and includes attendance, asking questions, answering others' questions and participating in discussions, etc.
+
+### Assignment Due-dates
 | Assessment       | Weight | Description     | Due Date |
 |------------------|--------|-----------------|----------|
-| [Assignment 1]() | 30%    | Classes 1,2,3   |  Sunday 26 February |
-| [Assignment 2]() | 30%    | Classes 4,5,6   |  Sunday 5 March     |
-| [Assignment 3]() | 30%    | Classes 7,9     |  Sunday 12 March    |
+| [Assignment 1]() | 30%    | Classes 1,2,3   |  Sunday 26 February, by midnight |
+| [Assignment 2]() | 30%    | Classes 4,5,6   |  Sunday 5 March, by midnight     |
+| [Assignment 3]() | 30%    | Classes 7,9     |  Sunday 12 March, by midnight    |
 | [Participation]()| 10%    | Attendance, engagement  |             |
 
-## Policies
-The course is a live-coding class. Students are expected to follow along with the coding, creating files and folders to navigate and manipulate. Students should be active participants while coding and are encouraged to ask questions throughout. Although slides will be available for students to reference, they should be referenced before or after class, as during class will be dedicated to coding with the instructor.
-
 **How to submit assignments, late policy, academic integrity.**
-
-## Folder Structure
-Below are the folders contained in this repo with a description of what they contain and information on how to use them.
-
-### 1 *assignments*:
-This folder contains the assignments for the workshop. Students are expected to complete them one week after the content has been delivered.
-
-### 2. *homework*:
-This folder contains homework for students to practice Unix and Git/GitHub workshops. Please complete the Unix Shell homework in the first week, and the Git/GitHub homework in the second.
-
-There are pdf copies of the homework and markdown files, which can be edited. The homework can change based on the amount of content that was completed each day.
-
-Homework is just a suggestion but will help students throughout the workshop, as content is cumulative and will only get more difficult. Unfortunately, there is not enough time to review previous content each class so while this homework is **not** graded, it is highly recommended.
-
-### 3. *lessons*:
-This folder contains the pdf and html version of the slides. Either the pdf slides or the html slides can be used when teaching. If slides are edited to contain any gifs, the instructor will need to use the html slides so that the gifs are active.
-
-pdf slides should be referenced before class to prepare or after class to review. During class will be live-coding, therefore, there is no need to follow them during class. They contain all information that was discussed in class and are a great resource in the future if students need to reassess their knowledge.
-
-### 4. *post-course*:
-This folder contains the exit surveys for students to complete. It holds both the md and docx versions of the survey.
-
-### 5. *slides-resources*:
-This folder contains all editable slides. To edit, download the entire folder, including the *pics* folder as this folder contains the pictures which are relationally referenced in the markdown files.
-
-To change a photo, edit the markdown where photos are referenced.
-
-Example: 
-
-Change `![w:1150 center](pics/github.png)` to `![bg](pics/github.png)`
-
-To add a photo, add photo to the *pics* folder and reference it within the markdown file.
-
-Example:
-
-Added photo labelled "git_commit.png" will be referenced in markdown file as `![w:1000 left](pics/git_commit.png)`
+Please submit all assignments to the TA, Julia, via [email](julia.gallucci@mail.utoronto.ca). Late assignments will have 5% deducted per day. Please request extensions *in advance* with the course instructor. The assignments have been designed to mitiga
 
 ## Acknowledgements and Contributions
-## Achnowledgements
-* Who helped make theses slides
-* We wish to acknowledge this land on which the University of Toronto operates. For thousands of years it has been the traditional land of the Huron-Wendat, the Seneca, and most recently, the Mississaugas of the Credit River. Today, this meeting place is still the home to many Indigenous people from across Turtle Island and we are grateful to have the opportunity to work on this land.
-### Contributions 
-* `bash-git-github` welcomes issues, enhancement requests, and other contributions. To submit an issue, use the [GitHub
-issues](https://github.com/anjalisilva/bash-git-github/issues).
+First slides were developed by Simone Collier under the supervision of Rohan Alexander. Slides have been created and modified by Navona Calarco and Julia Gallucci for Winter 2023. This course pulls largely from the book, *An Introduction to Statistical
+Learning with Applications in R* (2nd edition, 2021), by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani.
