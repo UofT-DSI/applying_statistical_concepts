@@ -49,14 +49,14 @@ Tutorial sessions are also offered over Zoom, at the same link. Tutorials take p
 | Lesson | Date                   | Topic                                                                               |  Resources | Chapter |
 |--------|------------------------|-------------------------------------------------------------------------------------|------------| --------|
 | 1      | Tuesday 21 February    | Regression <br>(linear regression; simple and multiple, others)                     | [Slides]() |
-| 2      | Thursday 23 February   | Classification <br>(logistic regression, generative models)                         | [Slides]() |            
-| 3      | Saturday 25 February   | Resampling methods, Linear model selection and regularization                       | [Slides]() |                     
-| 4      | Monday 27 February     | Beyond linearity <br>(regressions, step functions, generalized additive)            | [Slides]() |                 
-| 5      | Thursday 2 March       | Tree-based methods<br>(decision tree; bagging, random forest, etc.)                 | [Slides]() |                     
-| 6      | Saturday 4 March       | Support Vector Machines, Survival analysis                                          | [Slides]() |                   
-| 7      | Monday 6 March         | Principal Components Analysis, Reproducibility; Ethics; Inequity                    | [Slides]() |                    
-| 8      | Thursday 9 March       | Professional Skills - Industry Case Study  <br>(Guest: Ajit Desai, Bank of Canada)  | [Slides]() |                   
-| 9      | Saturday 11 March      | Estimation, Testing, and Learning: Review and Practice                              | [Slides]() |                                                 
+| 2      | Thursday 23 February   | Classification <br>(logistic regression, generative models)                         | |             
+| 3      | Saturday 25 February   | Resampling methods, Linear model selection and regularization                       | |                      
+| 4      | Monday 27 February     | Beyond linearity <br>(regressions, step functions, generalized additive)            | |                 
+| 5      | Thursday 2 March       | Tree-based methods<br>(decision tree; bagging, random forest, etc.)                 | |                      
+| 6      | Saturday 4 March       | Support Vector Machines, Survival analysis                                          | |                     
+| 7      | Monday 6 March         | Principal Components Analysis, Reproducibility; Ethics; Inequity                    | |                     
+| 8      | Thursday 9 March       | Professional Skills - Industry Case Study  <br>(Guest: Ajit Desai, Bank of Canada)  | |                   
+| 9      | Saturday 11 March      | Estimation, Testing, and Learning: Review and Practice                              | |                                                  
 ## Grading 
 
 **Marking Scheme**
