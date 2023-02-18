@@ -21,7 +21,7 @@ Students will know how to...
 3. Perform exploratory data analysis for unsupervised learning
 4. Understand what is required for reproducible machine learning
 5. Appreciate the uncertainties associated with model results and the ethical consequences of acting on these results
-6. recognize who matters in our models
+6. Recognize who matters in our models
 
 ## Logistics
 
@@ -30,7 +30,9 @@ Students will know how to...
 * TA: Julia Gallucci (she/her) [julia.gallucci@mail.utoronto.ca](julia.gallucci@mail.utoronto.ca)
 
 ### Delivery instructions
-The course runs synchronously over Zoom. It consists of three classes a week for three weeks (nine classes total). Classes are 6 PM - 8 PM EST on Mondays (with the exception of the first class, moved to Tuesday) and Thursdays, and 9 AM - 12 PM EST on Saturdays. Being mindful of online fatigue, there will be one or two breaks during each class where students are encouraged to stretch, grab a drink and snacks, or ask any additional questions.
+The course runs synchronously over Zoom. It consists of three classes a week for three weeks (nine classes total). Classes are 6 PM - 8 PM EST on Mondays (with the exception of the first class, moved to Tuesday) and Thursdays, and 9 AM - 12 PM EST on Saturdays. 
+
+Being mindful of online fatigue, there will be one or two breaks during each class where students are encouraged to stretch, grab a drink and snacks, or ask any additional questions.
 
 Tutorial sessions  will also be offered over Zoom. These will take place from 5 PM - 6 PM EST on Mondays and Thursdays, and 8:30 AM - 9 AM EST and 12 PM - 12:30 PM EST on Saturdays.
 
@@ -43,22 +45,23 @@ Tutorial sessions  will also be offered over Zoom. These will take place from 5 
 ### Lesson Schedule
 | Lesson | Topic                                                                                        | Assignments      | Resources  |
 |--------|----------------------------------------------------------------------------------------------|------------------|------------|
-| 1      | Unix Shell I <br>(introducing the Shell, introductory commands, files and directories)       | [Assignment 1]() | [Slides]() |
-| 2      | Unix Shell II<br>(input/output and pipes/filters)                                            | [Assignment 1]() | [Slides]() |
-| 3      | Unix Shell III<br>(shell scripts, shell functions, parameters, flow control)                 | [Assignment 1]() | [Slides]() |
-| 4      | Version Control and GitHub I<br>(introducing version control and GitHub, basic Git commands) | [Assignment 2]() | [Slides]() |
-| 5      | Version Control and GitHub II<br>(remote repositories; branching)                            | [Assignment 2]() | [Slides]() |
-| 6      | Version Control and GitHub III <br>(collaborating, dealing with conflicts)                   | [Assignment 2]() | [Slides]() |
-| 7      | Problem solve, reproducibility, ethics, inequity                                             | [Assignment 1]() <br> [Assignment 2]() | [Slides]() |
-| 8      | Professional Skills - Industry Case Study                                                    | [Assignment 2]() | [Slides]() |
-| 9      | Data Science Foundations - Review and Practice                                               |                  | [Slides]() |
+| 1      | Regression <br>(linear regression; simple and multiple, others)                              | [Assignment 1]() | [Slides]() |
+| 2      | Classification <br>(logistic regression, generative models)                                  | [Assignment 1]() |            |
+| 3      | Resampling methods, Linear model selection and regularization                                | [Assignment 1]() |            |
+| 4      | Beyond linearity <br>(regressions, step functions, generalized additive)                     | [Assignment 2]() |            |           
+| 5      | Tree-based methods<br>(decision tree; bagging, random forest, etc.)                          | [Assignment 2]() |            |
+| 6      | Support Vector Machines, Survival analysis                                                   | [Assignment 2]() |            |
+| 7      | Principal Components Analysis, Reproducibility; Ethics; Inequity                             | [Assignment 3]() |            |
+| 8      | Professional Skills - Industry Case Study  <br>(Guest: Ajit Desai, Bank of Canada)           | [Assignment 3]() |            |
+| 9      | Estimation, Testing, and Learning: Review and Practice                                       | [Assignment 3]() |            |          
 
 ## Marking Scheme
-| Assessment       | Weight | Description | Due Date |
-|------------------|--------|-------------|----------|
-| [Assignment 1]() |        |             |          |
-| [Assignment 2]() |        |             |          |
-|                  |        |             |          |
+| Assessment       | Weight | Description     | Due Date |
+|------------------|--------|-----------------|----------|
+| [Assignment 1]() | 30%    | Classes 1,2,3   |  February 25th |
+| [Assignment 2]() | 30%    | Classes 4,5,6   |  March 4th     |
+| [Assignment 3]() | 30%    | Classes 7,9     |  March 11th    |
+| [Participation]()| 10%    | Attendance, engagement  |                |
 
 ## Policies
 The course is a live-coding class. Students are expected to follow along with the coding, creating files and folders to navigate and manipulate. Students should be active participants while coding and are encouraged to ask questions throughout. Although slides will be available for students to reference, they should be referenced before or after class, as during class will be dedicated to coding with the instructor.
