@@ -82,7 +82,8 @@ Assignment Due-dates
 
 For each class (with the exception of the Industry Case Study), one homework question from the ISLR2 textbook will be assigned. The homework question is graded for **completion only** (i.e., an attempted solution receives full marks), and *only 5 questions* are required over the course (i.e., you do not have to submit 3). The homework questions will require writing code in R, and designed to take no more than 20 minutes. Individual feedback is not provided on the weekly homework question by default, but will be discussed in tutorials. Homework questions must be submitted before the beginning of the next class; late submissions will not be graded. Please email submissions, as an RMarkdown PDF, to the TA, [Julia](julia.gallucci@mail.utoronto.ca). Please title emails `DSI: Homework X, Name`.
 
-Homework Links (<u>only 5 required, marked for competion only!</u>)
+Homework is as follows (<u>only 5 required, marked for competion only!</u>):
+
 | Assessment        | ISLR2 Question         | Due Date | 
 | ------------------| -----------------|----------|
 | Homework class 1   |          | Thursday 23 February, by 6pm |
@@ -95,8 +96,8 @@ Homework Links (<u>only 5 required, marked for competion only!</u>)
 | Homework class 9   |          | Sunday 12 March, by midnight |
 
 **Participation**
+
 We hope all members in the course regularly participate. We define participation broadly, and include attendance, asking questions, answering others' questions, participating in discussions, etc.
 
 ## Acknowledgements and Contributions
-First slides were developed by Simone Collier under the supervision of Rohan Alexander. Slides have been created and modified by Navona Calarco and Julia Gallucci for Winter 2023. This course pulls largely from the book, *An Introduction to Statistical
-Learning with Applications in R* (2nd edition, 2021), by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani.
+First slides were developed by Simone Collier under the supervision of Rohan Alexander. Slides have been created and modified by Navona Calarco and Julia Gallucci for Winter 2023. This course pulls largely from the book, *An Introduction to Statistical Learning with Applications in R* (2nd edition, 2021), by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani.
