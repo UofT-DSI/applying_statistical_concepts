@@ -4,8 +4,8 @@
 1. [Description](https://github.com/UofT-DSI/06-statistical_learning#description)
 2. [Learning Outcomes](https://github.com/UofT-DSI/06-statistical_learning#learning-outcomes)
 3. [Logistics](https://github.com/UofT-DSI/06-statistical_learning#logistics)
-4. [Class Schedule](https://github.com/UofT-DSI/06-statistical_learning#course-schedule)
-5. [Grading Scheme](https://github.com/UofT-DSI/06-statistical_learning#grading)
+4. [Class Schedule](https://github.com/UofT-DSI/06-statistical_learning#class-schedule)
+5. [Grading Scheme](https://github.com/UofT-DSI/06-statistical_learning#grading-scheme)
 6. [Acknowledgements](https://github.com/UofT-DSI/06-statistical_learning#acknowledgements)
 
 ## Description
@@ -99,5 +99,5 @@ Homework is as follows (<u>only 5 required, marked for competion only!</u>):
 
 We hope all members in the course regularly participate. We define participation broadly, and include attendance, asking questions, answering others' questions, participating in discussions, etc.
 
-## Acknowledgements and Contributions
+## Acknowledgements
 First slides were developed by Simone Collier under the supervision of Rohan Alexander. Slides have been created and modified by Navona Calarco and Julia Gallucci for Winter 2023. This course pulls largely from the book, *An Introduction to Statistical Learning with Applications in R* (2nd edition, 2021), by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani.
