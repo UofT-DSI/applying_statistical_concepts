@@ -1,7 +1,7 @@
 # DSI Course for Statistical Learning
 
 ## Contents:
-1. [Description](https://github.com/rachaellam/dsi-workshop#description)
+1. [Description](https://github.com/UofT-DSI/06-statistical_learning#description)
 2. [Learning Outcomes](https://github.com/UofT-DSI/06-statistical_learning#learning-outcomes)
 3. [Logistics](https://github.com/UofT-DSI/06-statistical_learning#logistics)
 4. [Class Schedule](https://github.com/UofT-DSI/06-statistical_learning#course-schedule)
@@ -46,7 +46,7 @@ Tutorial sessions on the same date as each class. Tutorials take place from 5 PM
 
 ### Class Topics
 
-| Class | Date                   | Topic                                                                               |  Resources | Chapter |
+| Class | Date                   | Topic                                                                               |  Resources | ISLR2 Chapter |
 |--------|------------------------|-------------------------------------------------------------------------------------|------------| --------|
 | 1      | Tuesday 21 February    | Regression <br>(linear regression; simple and multiple, others)                     | [Slides]() | 3
 | 2      | Thursday 23 February   | Classification <br>(logistic regression, generative models)                         | | 4            
@@ -87,7 +87,7 @@ Assignment Due-dates
 For each class (with the exception of the Industry Case Study), one homework question from the ISLR2 textbook will be assigned. The homework question is graded for **completion only** (i.e., an attempted solution receives full marks), and *only 5 questions* are required over the course (i.e., you do not have to submit 3). The homework questions will require writing code in R, and designed to take no more than 20 minutes. Individual feedback is not provided on the weekly homework question by default, but will be discussed in tutorials. Homework questions must be submitted before the beginning of the next class; late submissions will not be graded. Please email submissions, as an RMarkdown PDF, to the TA, [Julia](julia.gallucci@mail.utoronto.ca). Please title emails `DSI: Homework X, Name`.
 
 Homework Links (<u>only 5 required, marked for competion only!</u>)
-| Assessment        | Question         | Due Date | 
+| Assessment        | ISLR2 Question         | Due Date | 
 | ------------------| -----------------|----------|
 | Homework week 1   | q1, pg.X         | Thursday 23 February, by 6pm |
 | Homework week 2   | q1, pg.X         | Saturday 25 February, by 9am|
