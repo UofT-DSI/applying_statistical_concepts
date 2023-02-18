@@ -9,7 +9,7 @@
 6. [Folder Structure](https://github.com/rachaellam/dsi-workshop#folder-structure)
 7. [Acknowledgements and Contributions](https://github.com/rachaellam/dsi-workshop#acknowledgements-and-contributions)
 
-## Description:
+## Description
 The course was created by the University of Toronto's Data Science Institute. This course provides the intuition and skills required to design, implement, test and validate a variety of models for supervised learning. To introduce the course, we will cover the basics of statistical learning including modelling with the goal of prediction versus inference, prediction accuracy and model interpretability trade-off, and the all-important bias-variance trade-off. Each section of this course will cover a unique set of methods used for supervised learning on a data set.
 
 This course is designed for those who have a degree in something other than Computer Science/Statistics who are looking to enhance their data science skills for their career.
@@ -34,19 +34,18 @@ Students will know how to...
 Note that this textbook contains helpful 'homework exercise' at the end of each chapter, that may optionally be completed.
 
 ### Technology Requirements
-1. Computer with internet access
-2. R and RStudio installed (preferred), or accessed via the [Posit Cloud](https://posit.cloud/). 
-3. Camera is optional although encouraged. 
+1. Zoom (camera optional but encouraged)
+2. R and RStudio (installation preferred, or accessed via the [Posit Cloud](https://posit.cloud/)). 
 
-### Course Delivery
-**Course** The course runs synchronously over Zoom. It consists of three classes a week for three weeks (i.e., a total of 21 hours over nine classes). Classes are 6 PM - 8 PM EST on Mondays (with the exception of the first class, moved to Tuesday) and Thursdays, and 9 AM - 12 PM EST on Saturdays. Being mindful of online fatigue, there will be one or two breaks during each class where students are encouraged to stretch, grab a drink and snacks, or ask any additional questions.
+### Lectures 
+The course runs synchronously over Zoom. It consists of three classes a week for three weeks (i.e., a total of 21 hours over nine classes). Classes are 6 PM - 8 PM EST on Mondays (with the exception of the first class, moved to Tuesday) and Thursdays, and 9 AM - 12 PM EST on Saturdays. Being mindful of online fatigue, there will be one or two breaks during each class where students are encouraged to stretch, grab a drink and snacks, or ask any additional questions.
 
-**Tutorial** Tutorial sessions are also offered over Zoom, at the same link. Tutorials take place from 5 PM - 6 PM EST on Mondays and Thursdays, and 8:30 AM - 9 AM EST and 12 PM - 12:30 PM EST on Saturdays. Tutorial attendance is optional, and organization is unstructued. The tutorial is the best place for questions/issues pertaining to software, assignments, and optional homework questions.
-
-## Course Details
 The course is designed for teaching via slides and live-coding. Students should perform coding in real-time, alongside the instructor. Students are encouraged to ask questions at any time. As required, we will use Zoom Whiteboard to work through 'pen and paper'-type questions, and Posit cloud to work through coding puzzles.
 
-### Lesson Schedule
+### Tutorial
+Tutorial sessions are also offered over Zoom, at the same link. Tutorials take place from 5 PM - 6 PM EST on Mondays and Thursdays, and 8:30 AM - 9 AM EST and 12 PM - 12:30 PM EST on Saturdays. Tutorial attendance is optional, and organization is unstructued. The tutorial is the best place for questions/issues pertaining to software, assignments, and optional homework questions.
+
+## Course Schedule
 | Lesson | Date                   | Topic                                                                               |  Resources | Chapter |
 |--------|------------------------|-------------------------------------------------------------------------------------|------------| --------|
 | 1      | Tuesday 21 February    | Regression <br>(linear regression; simple and multiple, others)                     | [Slides]() |
@@ -60,20 +59,27 @@ The course is designed for teaching via slides and live-coding. Students should 
 | 9      | Saturday 11 March      | Estimation, Testing, and Learning: Review and Practice                              | [Slides]() |                                                 
 ## Grading 
 
-**Assignments** There is one assignment due per week, for a total of three assignments. The assignments will contain questions from the prior week's learning. Each assignment will be worth 30% of the final mark. 
+**Marking Scheme**
+| Assessment       | Weight | 
+|------------------|--------|
+| [Assignment 1]() | 30%    | 
+| [Assignment 2]() | 30%    | 
+| [Assignment 3]() | 30%    | 
+| [Participation]()| 10%    | 
 
-**Participation** This course will assign 10% of the final grade on the basis of participation. Participation is broadly defined, and includes attendance, asking questions, answering others' questions and participating in discussions, etc.
+Grading is based on both assignment and participation. There is one assignment due per week, for a total of three assignments. The assignments will contain questions from the prior week's learning. Each assignment will be worth 30% of the final mark. Additionally, 10% of the final grade on the basis of participation, broadly defined (attendance, asking questions, answering others' questions and participating in discussions, etc.),
 
 ### Assignment Due-dates
-| Assessment       | Weight | Description     | Due Date |
-|------------------|--------|-----------------|----------|
-| [Assignment 1]() | 30%    | Classes 1,2,3   |  Sunday 26 February, by midnight |
-| [Assignment 2]() | 30%    | Classes 4,5,6   |  Sunday 5 March, by midnight     |
-| [Assignment 3]() | 30%    | Classes 7,9     |  Sunday 12 March, by midnight    |
-| [Participation]()| 10%    | Attendance, engagement  |             |
+| Assessment       | Description     | Due Date |
+|------------------| ----------------|----------|
+| [Assignment 1]() | Classes 1,2,3   |  Sunday 26 February, by midnight |
+| [Assignment 2]() | Classes 4,5,6   |  Sunday 5 March, by midnight     |
+| [Assignment 3]() | Classes 7,9     |  Sunday 12 March, by midnight    |
 
 **How to submit assignments, late policy, academic integrity.**
-Please submit all assignments to the TA, Julia, via [email](julia.gallucci@mail.utoronto.ca). Late assignments will have 5% deducted per day. Please request extensions *in advance* with the course instructor. The assignments have been designed to mitiga
+Please submit all assignments to the TA, Julia, via [email](julia.gallucci@mail.utoronto.ca). Late assignments will have 5% deducted per day. Please request extensions *in advance* with the course instructor. 
+
+......academic integrity...
 
 ## Acknowledgements and Contributions
 First slides were developed by Simone Collier under the supervision of Rohan Alexander. Slides have been created and modified by Navona Calarco and Julia Gallucci for Winter 2023. This course pulls largely from the book, *An Introduction to Statistical
