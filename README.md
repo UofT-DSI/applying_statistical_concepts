@@ -4,15 +4,12 @@
 1. [Description](https://github.com/rachaellam/dsi-workshop#description)
 2. [Learning Outcomes](https://github.com/UofT-DSI/06-statistical_learning#learning-outcomes)
 3. [Logistics](https://github.com/UofT-DSI/06-statistical_learning#logistics)
-4. [Course Schedule](https://github.com/UofT-DSI/06-statistical_learning#course-schedule)
-5. [Grading](https://github.com/UofT-DSI/06-statistical_learning#grading)
-6. [Policies](https://github.com/rachaellam/dsi-workshop#policies)
-8. [Acknowledgements](https://github.com/UofT-DSI/06-statistical_learning#acknowledgements)
+4. [Class Schedule](https://github.com/UofT-DSI/06-statistical_learning#course-schedule)
+5. [Grading Scheme](https://github.com/UofT-DSI/06-statistical_learning#grading)
+6. [Acknowledgements](https://github.com/UofT-DSI/06-statistical_learning#acknowledgements)
 
 ## Description
 The course was created by the University of Toronto's [Data Science Institute](https://datasciences.utoronto.ca). This course provides the intuition and skills required to design, implement, test and validate a variety of supervised learning models. We cover the basics of statistical learning including modelling with the goal of prediction versus inference, prediction accuracy and model interpretability trade-off, and the all-important bias-variance trade-off. Each section of this course will cover a unique set of methods used for supervised learning on real data sets.
-
-
 
 This course is designed for those who have a degree in something other than Computer Science/Statistics who are looking to enhance their data science skills for their career.
 
@@ -51,18 +48,22 @@ Tutorial sessions on the same date as each class. Tutorials take place from 5 PM
 
 | Class | Date                   | Topic                                                                               |  Resources | Chapter |
 |--------|------------------------|-------------------------------------------------------------------------------------|------------| --------|
-| 1      | Tuesday 21 February    | Regression <br>(linear regression; simple and multiple, others)                     | [Slides]() |
-| 2      | Thursday 23 February   | Classification <br>(logistic regression, generative models)                         | |             
-| 3      | Saturday 25 February   | Resampling methods, Linear model selection and regularization                       | |                      
-| 4      | Monday 27 February     | Beyond linearity <br>(regressions, step functions, generalized additive)            | |                 
-| 5      | Thursday 2 March       | Tree-based methods<br>(decision tree; bagging, random forest, etc.)                 | |                      
-| 6      | Saturday 4 March       | Support Vector Machines, Survival analysis                                          | |                     
-| 7      | Monday 6 March         | Principal Components Analysis, Reproducibility; Ethics; Inequity                    | |                     
-| 8      | Thursday 9 March       | Professional Skills - Industry Case Study  <br>(Guest: Ajit Desai, Bank of Canada)  | |                   
-| 9      | Saturday 11 March      | Estimation, Testing, and Learning: Review and Practice                              | |                                                  
+| 1      | Tuesday 21 February    | Regression <br>(linear regression; simple and multiple, others)                     | [Slides]() | 3
+| 2      | Thursday 23 February   | Classification <br>(logistic regression, generative models)                         | | 4            
+| 3      | Saturday 25 February   | Resampling methods, Linear model selection and regularization                       | | 5,6                    
+| 4      | Monday 27 February     | Beyond linearity <br>(regressions, step functions, generalized additive)            | | 7               
+| 5      | Thursday 2 March       | Tree-based methods<br>(decision tree; bagging, random forest, etc.)                 | | 8                     
+| 6      | Saturday 4 March       | Support Vector Machines, Survival analysis                                          | | 9,11                   
+| 7      | Monday 6 March         | Principal Components Analysis, K-means, Reproducibility                             | | 12,13                    
+| 8      | Thursday 9 March       | Professional Skills - Industry Case Study  <br>(Guest: Ajit Desai, Bank of Canada)  | | NA                  
+| 9      | Saturday 11 March      | Ethics and Inequity in ML, Review                                                   | | NA                                                 
 ## Grading Scheme
 
-Grading is based on three components [1] 3 weekly assignments, [2] homework questions (competion only), and [3] class participation. The grading scheme is as follows:
+Grading is based on three components [1] 3 weekly 
+
+
+
+ments, [2] homework questions (competion only), and [3] class participation. The grading scheme is as follows:
 
 | Assessment       | Number |  Individual Weight | Cumulative Weight
 |------------------|--------|--------------------|------------------|
@@ -72,7 +73,7 @@ Grading is based on three components [1] 3 weekly assignments, [2] homework ques
 
 **Assignments**
 
-Assignments will cover key statistical concepts and related code implementation. One assignment is assigned per week, for three weeks, for a total of 3 assignments. Assignments will be introduced in class, can be discussed in tutorial, and questions can be ask of the Instructor and/or TA over email. Assignments are due by midnight on Sundays. Please arrange for extensions *in advance* with the Instructor, [Navona](navona.calarco@mail.utoronto.ca). Please email submissions, as an RMarkdown PDF, to the TA, [Julia](julia.gallucci@mail.utoronto.ca), titled `DSI: Assignemtn X, Name`.
+Assignments will cover key statistical concepts and related code implementation. One assignment is assigned per week, for three weeks, for a total of 3 assignments. Assignments will be introduced in class, can be discussed in tutorial, and questions can be ask of the Instructor and/or TA over email. Assignments are due by midnight on Sundays. Please arrange for extensions *in advance* with the Instructor, [Navona](navona.calarco@mail.utoronto.ca). Please email submissions, as an RMarkdown PDF, to the TA, [Julia](julia.gallucci@mail.utoronto.ca), titled `DSI: Assignment X, Name`.
 
 Assignment Due-dates
 | Assessment        | Content         | Due Date |
