@@ -40,7 +40,7 @@ This is an intensive course. We will have three classes a week for three weeks (
 Classes will consist of instruction via prepared slides, and live-coding. All slides will be made available before lectures online. Students should perform coding in real-time, alongside the instructor. Students are encouraged to ask questions at any time. As required, we will use Zoom Whiteboard to work through 'pen and paper'-type questions, and Posit cloud to work through coding puzzles.
 
 ### Tutorial
-Tutorial sessions on the same date as each class. Tutorials take place from 5 PM - 6 PM EST on Mondays and Thursdays, and 8:30 AM - 9 AM EST and 12 PM - 12:30 PM EST on Saturdays. Tutorial attendance is optional, and organization is unstructured. The tutorial is the best place for questions/issues pertaining to software, homework, and assignments.
+Tutorial sessions on the same date as each class. Tutorials take place from 5 PM - 6 PM EST on Mondays (with the exception of the first class, moved to Tuesday) and Thursdays, and 8:30 AM - 9 AM EST and 12 PM - 12:30 PM EST on Saturdays. Tutorial attendance is optional, and organization is unstructured. The tutorial is the best place for questions/issues pertaining to software, homework, and assignments.
 
 ## Class Schedule
 
