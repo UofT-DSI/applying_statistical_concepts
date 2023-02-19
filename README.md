@@ -84,11 +84,11 @@ For each class (with the exception of the Industry Case Study), one homework que
 
 Homework is as follows (<u>only 5 required, marked for competion only!</u>):
 
-| Assessment        | ISLR2 Question         | Due Date | 
-| ------------------| -----------------|----------|
-| Homework class 1   |          | Thursday 23 February, by 6pm |
-| Homework class 2   |          | Saturday 25 February, by 9am|
-| Homework class 3   |          | Monday 27 February, by 6pm|
+| Assessment        | ISLR2 Question       | Due Date | 
+| ------------------| ---------------------|----------|
+| Homework class 1   | Ch 3, pg 123, q8    | Thursday 23 February, by 6pm |
+| Homework class 2   | Ch 4, pg 193, q13   | Saturday 25 February, by 9am|
+| Homework class 3   | Ch 6, pg 286, q9    | Monday 27 February, by 6pm|
 | Homework class 4   |          | Thursday 2 March, by 6pm|
 | Homework class 5   |          | Saturday 4 March, by 9am|
 | Homework class 6   |          | Monday 6 March, by 6pm|
