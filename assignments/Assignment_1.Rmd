@@ -1,0 +1,221 @@
+---
+title: "Assignment 1"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+-----
+
+This assignment is due on __Sunday 26 February__, by midnight. It pertains to content taught in classes 1-3, i.e., week 1. 
+
+This assignment should be completed in R, and an PDF file should be submitted, containing both code and written answers. If you like, you may create your own .Rmd file from scratch, but it is likely easier to modify this one.
+
+Please do not be intimidated by the apparent length of this assignment (it is deceiving!). All required code is a single line. Questions that require identification and/or intepretation will not penalized for brevity of response: if a question can be answered with 'yes/no', or a numeric value, you may simply state as much. 
+
+We will go through comparable code and concepts in class. If you run into trouble, start by using the help `?` function in R, to get information about the datasets and function in question. The internet is also a great resource when coding (though note that no outside searches are required by the assignment!). If you do incorporate code from the internet, please cite the source within your code (providing a URL is sufficient).
+
+Please bring questions that you cannot work out on your own to tutorial. We will work with you through the issue.
+
+If you like, you may collaborate with others in the class. If you choose to do so, please indicate with whom you have worked at the top of your PDF. Separate submissions are required.
+
+Any questions can be addressed to Navona ([navona.calarco@mail.utoronto.ca]()) and/or Julia ([julia.gallucci@mail.utoronto.ca]()) before the due-date. Please email your submissions to Julia, with the subject `DSI: Assignment 1, Name`.
+
+-----
+
+__Question 1:__  
+__Simple linear regression.__
+
+Let's use the `Boston` dataset in the `ISLR2` library. (You may type `?Boston` in the console to review details of the dataset.)
+```{r}
+library('ISLR2') #install.packages('ISLR2') first, if do not have
+attach(Boston)
+```
+
+Before we fit and review model outputs, we ought to visualize our data. Review the code, and plot, below. Answer the following questions:  
+_(i)_ What are the `medv` and `dis` variables being plotted? (Hint: review the 'help' file)  
+_(ii)_ What concept 'defines' the plotted line?   
+
+```{r}
+plot(medv ~ dis) #plot data
+abline(lm(medv ~ dis)) #plot line
+```
+
+Consider the variables plotted above. In the context of the `Boston` dataset:  
+_(iii)_ What is the (implied) null hypothesis? What is the (implied) alternative hypothesis?
+
+_(iv)_ Now, let's fit a simple regression model, using the general syntax `lm(y ~ x)`. As above, use `mdev` as the response variable Y, and `dis` as the predictor variable X. 
+```{r}
+#code here
+```
+
+Review your model output to answer the following questions (Hint: use the `summary` and `confint` functions):    
+_(v)_ What are the _coefficient estimates_ for $B_0$ (intercept) and $B_1$ (slope)?  
+_(vi)_ What are the _standard errors_ for $B_0$ and $B_1$?  
+_(vii)_ What are the _confidence intervals_ for $B_0$ and $B_1$?  
+
+Now, let's interpret the model output.  
+_(viii)_ Is the model a good fit? (Hint: review $R^2$)  
+_(ix)_ Do we reject the (implied) null hypothesis? Why or why not? (Hint: review model $F$ statistic, $p$ value).  
+
+-----
+
+__Question 2:__  
+__Multiple linear regression.__
+
+Let's continue to use the `Boston` dataset. 
+
+_(i)_ Fit a multiple linear regression, with two predictor variables: $X_1$ is `dis`, and $X_2$ is `rm`. As before, keep `medv` as the response variable Y. (Hint: use the syntax `lm(y ~ x1 + x2)`).
+
+```{r}
+#code here
+```
+
+_(ii)_ In the context of the `Boston` dataset, state the null and alternative hypotheses.
+
+_(iii)_ Review the model output, using `summary`. Does it appear that both `dis` and `rm` are predictive of `medv`? How did you determine this?
+
+_(iv)_ We can use the inbuilt `plot` function to generate helpful diagnostic plots (Hint: provide `plot` with the multiple regression model). Review the first generated plot, 'Residuals vs. Fitted'. Which observations are outliers? What impact might outliers have on our model?
+```{r}
+#code here
+```
+
+_(v)_ Fit a second model, this time including an interaction between the two predictor variables. Is there an interaction? (Hint: use the syntax `lm(y ~ x1 * x2)`). State an interpretation of the interaction, in the context of the Boston dataset, in one or two sentences.
+```{r}
+#code here
+```
+
+-----
+
+__Question 3:__  
+__Classification using KNN.__
+
+Let's use the `Caravan` dataset in the `ISLR2` library. (You may type `?Caravan` in the console to review details of the dataset.) In this dataset, the response variable of interest is `Purchase`, which indicates if a given customer purchased a caravan insurance policy. We will simultaneously use all other variables in the dataset to predict the response variable.
+
+```{r}
+attach(Caravan)
+```
+
+Before fitting any model, it is essential to understand our data. Answer the following questions about the `Caravan` dataset (Hint: use `str`):  
+_(i)_ How many observations (rows) does the dataset contain?    
+_(ii)_ How many variables (columns) does the dataset contain?    
+_(iii)_ What 'variable' type is the response variable `Purchase` (e.g., 'character', 'factor', 'numeric', etc)? What are the 'levels' of the variable?    
+_(iv)_ How many predictor variables do we have (Hint: all variables other than `Purchase`)?  
+
+Next, we must preform 'pre-processing' or 'data munging', to prepare our data for classification/prediction. For KNN, there are three essential steps. A first essential step is to 'standardize' the predictor variables. We can achieve this using the `scale` function, provided as follows:
+```{r}
+predictors_standardized <- scale(Caravan[, -86]) #Purchase is the #86th column
+```
+
+_(v)_ Why is it important to standardize the predictor variables?  
+_(vi)_ Why did we elect not to standard our response variable `Purchase`?  
+
+_(vii)_ A second essential step is to set a random seed. Do so below (Hint: use the `set.seed` function). Why is setting a seed important? Is the particular seed value important? Why or why not?
+
+```{r, cache=T}
+#code here
+```
+
+_(viii)_ A third essential step is to split our standardized data into separate training and testing sets. We will split into 75% training and 25% testing. The provided code randomly partitions our data, and creates linked training sets for the predictors and response variables. Extend the code to create a non-overlapping test set for the predictors and response variables (Hint: use the 'not' operator, `!`).
+```{r}
+#first, create a random vector of T and F values, the same length as the Caravan dataset
+split <- sample(c(TRUE, FALSE), nrow(predictors_standardized), replace=TRUE, prob=c(0.75, 0.25))
+
+#define the training set, for X (predictors)
+training_X <- predictors_standardized[split, ]
+
+#defining the training set, for Y (response)
+training_Y <- Caravan$Purchase[split]
+
+#here, define the testing set, for X (predictors) 
+#testing_X <- 
+
+#here, define the testing set, for Y (response) 
+#testing_Y <- 
+
+```
+
+_(ix)_ Finally, we are set to fit the KNN model! In R, we can use the `knn` function, in the `class` library. Fit the KNN with k=1. (You may review arguments to knn by typing `?knn` in the console). 
+```{r}
+library(class) #install.packages('class') first, if do not have
+
+#here, fit knn model
+```
+
+Using your fit model, answer the following questions:   
+_(x)_ What is the prediction accuracy? (Hint: use the `mean` function, and compare your model to `testing_Y`)  
+_(xi)_ What is the predictor error (Hint: as error is the inverse of accuracy, use the 'not' operator, `!`)  
+
+```{r}
+#prediction accuracy rate
+
+#prediction error rate
+```
+_(xii)_ How does this prediction error/accuracy compare to what could be achieved via random guesses? To answer this, consider the percent of customers in the `Carvan` dataset who actually purchase insurance, computed below:
+```{r}
+#percent of customers who purchase insurance
+(sum(Purchase == 'Yes') / sum(Purchase == 'No')) * 100
+```
+
+_(xiii)_ Fit a second KNN model, with k=3. Does this model perform better (i.e., have higher accuracy, compared to a random guess)?
+```{r}
+#fit knn, with k=3
+```
+
+-----
+
+__Question 4:__  
+__Resampling via Bootstrapping__
+
+Let's use the `iris` dataset. As always, start by reviewing a description of the dataset, by typing `?iris` in the console. This dataset contains various physical measurements of several species of iris flowers.
+```{r}
+attach(iris)
+```
+
+Imagine we are analysts working for a shipping company. The company wants to know the average length of iris' petals, to inform space allotment on an upcoming shipment. The relevant variable in the dataset is `Petal.Length`. 
+
+_(i)_ Why is it (perhaps) not sufficient to simply calculate the mean of `Petal.Length`? What more information will preforming a bootstrap provide to us?  
+
+_(ii)_ We can preform bootstrapping in R by via the `boot` library. Below, load the library (if you do not yet have it, you will have to first install it, via `install.packages`).
+```{r}
+#code here
+```
+
+_(iii)_ Before performing bootstrapping, we need to write our own, specialized function to calculate the statistic of interest: in our case, we want to calculate mean. There is one error (typo) in the function below. Correct the error.
+
+```{r}
+my_func <- function(data, index){
+  data <- data[index,]
+  median(data$Petal.Length[index])
+}
+```
+
+_(iv)_ Now that we have our desired function, we can perform the bootstrap. Check out `?boot` to understand its three required arguments. Remember, because bootstrapping involves randomness, we must first set a seed for reproducibility!
+
+```{r}
+#set seed
+
+#boot function
+```
+_(v)_ Justify your choice for R.
+
+_(vi)_ Review the model output. What is the original mean value? What is the original standard error?
+
+Next, let's look _inside_ our model to understand the new, bootstrapped sample we have created. The variable of interest is `t`. For example, if I called my model `myboot`, I can review the bootstrapped range, by typing `range(myboot$t)`.
+
+_(vii)_. Write code to review the bootstrapped standard deviation (Hint: the function name is `sd`):
+```{r}
+#code here
+```
+
+_(viii)_ Next, let's compute 95% confidence intervals, for the mean value of iris petal length. For this, you can use the `boot.ci` function. Read the help to understand required arguments, and include an optional argument to select just one of the four 'types' of interval.
+```{r}
+#code here
+```
+_(ix)_. Use the plot function on your model object. Review `Histogram of t`. What does this histogram show?
+```{r}
+#code here
+```
+
+_(x)_ Given your bootstrapped analysis, what do you recommend to shipping company? 
+
