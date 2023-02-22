@@ -71,6 +71,10 @@ Grading is based on three components: 3 assignments, 5 homework questions (compl
 
 Assignments will cover key statistical concepts and related code implementation. One assignment is assigned per week, for three weeks, for a total of 3 assignments. Assignments will be introduced in class, can be discussed in tutorial, and questions can be ask of the Instructor and/or TA over email. Assignments are due by midnight on Sundays. Please arrange for extensions *in advance* with the Instructor, [Navona](navona.calarco@mail.utoronto.ca). Please email submissions, as an RMarkdown PDF, to the TA, [Julia](julia.gallucci@mail.utoronto.ca), titled `DSI: Assignment X, Name`.
 
+Assignments can be found in the `Assignments` directory, above. We've included an .html file (knitted Markdown file) for easy reading, as well as .Rmd file, that can be edited for submission. (To download files, click Raw > Save as.)
+
+Note: If the assignment requires some content we end up not covering in class (i.e., we've fallen behind), it will be removed from the assignmetn / not be graded (you're welcome to submit answers if you like). Any questions that are removed will be determined and clearly indicated in the class before the assignment is due.
+
 Assignment Due-dates
 | Assessment        | Content         | Due Date |
 | ------------------| ----------------|----------|
