@@ -48,10 +48,10 @@ Tutorial sessions on the same date as each class. Tutorials take place from 5 PM
 
 | Class | Date                   | Topic                                                                               |  Resources | ISLR2 Chapter |
 |--------|------------------------|-------------------------------------------------------------------------------------|------------| --------|
-| 1      | Tuesday 21 February    | Key Concepts <br> Regression(linear regression; simple and multiple, others)        | [Slides 1/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.1-Introduction_to_Statistical_Learning_slides.pdf); [Slides 2/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.2-Linear_Regression_slides.pdf) | 2,3
-| 2      | Thursday 23 February   | Classification <br>(logistic regression, generative models)                         | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.3-Classication_slides.pdf) | 4            
-| 3      | Saturday 25 February   | Resampling methods, Linear model selection and regularization                       | | 5,6                    
-| 4      | Monday 27 February     | Beyond linearity <br>(regressions, step functions, generalized additive)            | | 7               
+| 1      | Tuesday 21 February    | Key Concepts <br> Simple linear regression       | [Slides 1/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.1-Introduction_to_Statistical_Learning_slides.pdf); [Slides 2/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.2-Linear_Regression_slides.pdf) | 2,3
+| 2      | Thursday 23 February   | Multiple linear regression, interactions, qualitative predictors <br>                         | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.3-Classication_slides.pdf) | 4            
+| 3      | Saturday 25 February   | Classification (logistic regression, generative models), Resampling methods (CV, bootstrap)                     | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.4-Resampling_Methods_slides.pdf) | 5                    
+| 4      | Monday 27 February     |  Linear model selection and regularization, Beyond linearity <br>(regressions, step functions, generalized additive)            | | 6, 7               
 | 5      | Thursday 2 March       | Tree-based methods<br>(decision tree; bagging, random forest, etc.)                 | | 8                     
 | 6      | Saturday 4 March       | Support Vector Machines, Survival analysis                                          | | 9,11                   
 | 7      | Monday 6 March         | Principal Components Analysis, K-means, Reproducibility                             | | 12,13                    
