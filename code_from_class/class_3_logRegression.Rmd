@@ -1,0 +1,61 @@
+---
+title: "class_3_logRegression"
+output: html_document
+date: "2023-02-25"
+---
+
+```{r}
+#load library
+library('ISLR2')
+
+#load data
+df <- Smarket
+
+#let's take a look at our contrasts
+contrasts(df$Direction)
+
+#let's look at correlations
+cor(df[,-9]) #remove non-numeric from correlation
+pairs(df) #plot all fairs
+
+#use table function to count observations
+table(df$Direction) #roughly equal
+```
+
+Split into training and testing
+
+```{r}
+#find training observations: all observations from Year == 2005
+training_observations <- df$Year < 2005 #this is a vector
+
+#now let's make our training and testing set
+train <- df[training_observations,]
+test <-  df[!training_observations,] #!=not operator
+```
+
+Log regression
+
+```{r}
+#let's fit our model, using glm, and specify 'family'
+log.fit <- glm(Direction ~ Lag1 + Lag2 + Lag3 + Lag4 + Lag5 + Volume, data=df, subset=training_observations, family='binomial')
+
+#summary
+summary(log.fit)
+```
+Let's look at the predictions
+```{r}
+
+#pull out our predictions
+(predictions <- predict(log.fit, type='response')) #parens around prints to screen
+
+#apply labels, using 50% threshold
+predictions_Label <- ifelse(predictions > .5, 'Up', 'Down')
+
+#compare, using mean 
+mean(predictions_Label == train$Direction)
+
+#confusion matrix
+table(predictions_Label, train$Direction)
+
+```
+

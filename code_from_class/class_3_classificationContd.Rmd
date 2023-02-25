@@ -1,0 +1,142 @@
+---
+title: "class_3_classificationContd"
+output: html_document
+date: "2023-02-25"
+---
+
+```{r}
+#load libraries
+library('ISLR2')
+library('MASS')
+
+#load data
+df <- Smarket
+
+```
+
+Split into training and testing
+
+```{r}
+
+#find training observations: all observations from Year == 2005
+training_observations <- df$Year < 2005 #this is a vector
+
+#now let's make our training and testing set
+train <- df[training_observations,]
+test <-  df[!training_observations,] #!=not operator
+```
+
+LDA
+
+```{r}
+
+#fit an LDA (function from MASS package)
+lda.fit <- lda(Direction ~ Lag1 + Lag2, data=df, subset=training_observations)
+
+#review summary
+summary(lda.fit)
+
+#make predictions
+prediction <- predict(lda.fit, test)
+
+#for clarity, let's make some new, well-named variables
+prediction.probabilities <- prediction$posterior[,2]
+prediction.classes <- prediction$class
+observed.classes <- test$Direction
+
+#confusion matrix
+table(prediction.classes, observed.classes)
+
+#accuracy
+mean(prediction.classes == observed.classes)
+
+#error
+1 - mean(prediction.classes == observed.classes)
+```
+
+Let's make a ROC curve
+```{r}
+#install if required
+#install.packages('pROC')
+
+#load library
+library('pROC')
+
+#get data ready for plotting (can combine with line #68, if preferred)
+res.roc <- roc(observed.classes, prediction.probabilities)
+
+#call plot 
+plot(res.roc, print.auc=T)
+
+```
+
+QDA
+
+```{r}
+
+#fit QDA model (also in MASS)
+qda.fit <- qda(Direction ~ Lag1 + Lag2, data=df, subset=training_observations)
+
+#check out the fit
+qda.fit
+
+#predictions
+qda.pred <- predict(qda.fit, test)
+
+#confusion matrix
+table(qda.pred$class, test$Direction)
+
+#accuracy
+mean(qda.pred$class == test$Direction)
+```
+
+Naive Bayes
+```{r}
+
+#load special library
+library('e1071')
+
+#fit model
+naiveB.fit <- naiveBayes(Direction ~ Lag1 + Lag2, data=df, subset=training_observations)
+
+#take a look
+naiveB.fit
+
+#predict
+predict.class <- predict(naiveB.fit, test)
+
+#confusion matrix
+table(predict.class, test$Direction)
+
+#accuracy
+mean(predict.class == test$Direction)
+```
+
+KNN
+
+```{r}
+#library
+library(class)
+
+#let's get our data in the form that KNN wants
+#see ?knn for more details
+train.X <- cbind(df$Lag1[training_observations], df$Lag2[training_observations])
+test.X <- cbind(df$Lag1[!training_observations], df$Lag2[!training_observations])
+train.Y <- df$Direction[training_observations]
+
+```
+
+Run our model
+```{r}
+set.seed(123) #for random splits of possible ties
+knn.pred <- knn(train.X, test.X, train.Y, k=5)
+table(knn.pred, test$Direction)
+
+#accuracy
+mean(knn.pred == test$Direction)
+
+#let's find the best k value
+knn_fit <- caret::train(Direction ~ Lag1 + Lag2, data=df[training_observations,], method='knn', tuneLength=20)
+plot(knn_fit)
+```
+
