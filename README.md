@@ -92,7 +92,7 @@ Homework is as follows (<u>only 5 required, marked for competion only!</u>):
 | ------------------| ---------------------|----------|
 | Homework class 1   | Ch 3, pg 123, q8    | Thursday 23 February, by 6pm |
 | Homework class 2   | Ch 3, pg 123, q9, a-e   | Saturday 25 February, by 9am|
-| Homework class 3   | Ch 6, pg 286, q9    | Monday 27 February, by 6pm|
+| Homework class 3   | Ch 4, pg 193, q13    | Monday 27 February, by 6pm|
 | Homework class 4   |          | Thursday 2 March, by 6pm|
 | Homework class 5   |          | Saturday 4 March, by 9am|
 | Homework class 6   |          | Monday 6 March, by 6pm|
