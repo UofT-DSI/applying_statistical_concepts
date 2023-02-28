@@ -1,0 +1,154 @@
+---
+title: "class_4"
+output: html_document
+date: "2023-02-27"
+---
+
+# Re-sampling
+
+Let's check out how to perform re-sampling via a validation set
+(We already know how to do this, from prior classes)
+```{r}
+
+#load the textbook library
+library(ISLR2)
+
+#attach the auto data (remember to check out the help)
+attach(Auto)
+
+#as always, take a look at our data
+str(Auto) #392 observations, 9 variables
+
+#set seed for randomness
+set.seed(123)
+
+#split the dataset, into half
+train <- sample(392, 196) #many ways to do this - this is quick and dirty (taking half of our n=392)
+
+#fit a linear model
+lm.fit <- lm(mpg ~ horsepower, subset = train) #notice this is fit on training only
+
+#make our predictions
+lm.pred <- predict(lm.fit, Auto)
+
+#calculate MSE in testing
+mean((mpg - lm.pred)[-train]^2)
+```
+
+Now, let's look at LOOCV
+
+```{r}
+
+#we use the boot package (install it if you don't have it)
+library(boot)
+
+#let's fit our linear model (using glm)
+glm.fit <- glm(mpg ~ horsepower) #this gives us the same result, as lm, but a different object structure needed by cv.glm
+
+#perform cv, using cv.
+cv.glm.fit <- cv.glm(Auto, glm.fit)
+
+#we can confirm the number of K - will be equal to N, if LOOCV
+cv.glm.fit$K
+
+#pull out our MSE
+cv.glm.fit$delta[1] #first value is 'raw' cross-validation estimate of prediction error
+```
+
+K-fold CV
+
+```{r}
+#set seed, because involves random selection of observations into fold
+set.seed(123)
+
+#if we want, we can perform k-fold cross validation, as below
+cv.glm.fit.k5 <- cv.glm(Auto, glm.fit, K=5) #we set k to 5
+
+#pull out our MSE
+cv.glm.fit.k5$delta[1] 
+
+#we can also get a bit more sophisticated
+#let's use a for=loop, to estimate error for k-folds, with k ranging from 2 to 12
+kfold_errors <- numeric(11) #first, initialize an empty vector of length 11
+
+#now, let's fill this in
+for (i in 1:11) {
+   glm.fit <- glm(mpg ~ horsepower, data=Auto) #fit the model
+   kfold_errors[i] <- cv.glm(Auto, glm.fit, K=i+1)$delta[1] #pill out the errors
+}
+
+#check out the 11 error values
+kfold_errors
+
+#interpretation: it looks like the error values are very similar - the number of folds appears not to matter too much (at least, in this range, on this data)
+
+```
+
+Bootstrapping (example 1)
+
+```{r}
+
+#install this library if you don't have it (contains height data)
+library(dslabs)
+
+#take a look at heights data
+View(heights) # we want to estimate certainty of our height estimate
+
+#we need to write a function to be used by the 'boot' function we will use
+#the boot function requires us to provide data, and index
+mean.func <- function(data, index){
+  mean(data$height[index])
+}
+
+#because randomness, set seed
+set.seed(123)
+
+#bootstrapping
+boot(heights, mean.func, R=1000) #automatically performs replacement
+
+#great: we now have a standard error estimate, that we didn't have before!
+
+```
+Bootstrapping (example 2)
+
+```{r}
+
+#in addition to estimating uncertaintly around something like a mean value (a parameter), we can use bootstrapping to estimate uncertaintly of model components, include coefficients
+
+#let's write a function to calculate B0 and B1 values, for a simple linear model
+coef.func <- function(data, index){
+  coef(lm(mpg ~ horsepower, data=data, subset=index))
+}
+
+#again, set seed
+set.seed(123)
+
+#call boot function
+boot(Auto, coef.func, R=10000)
+
+#the first row 'original' value is the B0 (intercept), and associated std. error 
+#the second row 'original' value is the B1 (slope), and associated std. error
+
+```
+
+# Regularization 
+
+```{r}
+
+#packages
+library(leaps) #this is for all-subsets regression
+
+#data cleaning
+View(Hitters) #from ISLR
+
+#in this dataset, we have NAs
+Hitters <- na.omit(Hitters) #let's get rid of them, removing all rows
+
+#fit best subset (nvmax value is how many predictor variables)
+best.subset.fit <- regsubsets(Salary ~ ., data=Hitters, nvmax=19) #all other variables are predictors
+
+#let's see the summary - shows us which variables include in which models
+summary(best.subset.fit)
+
+```
+
