@@ -1,0 +1,245 @@
+---
+title: "Assignment 2"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+-----
+
+This assignment is due on __Sunday 5 March__, by midnight. It pertains to content taught in classes 4-6, i.e., week 2, but is weighted towards classes 4 and 5. 
+
+This assignment should be completed in R, and an PDF file should be submitted, containing both code and written answers. If you like, you may create your own .Rmd file from scratch, but it is likely easier to modify this one.
+
+As before, questions that require identification and/or interpretation will not penalized for brevity of response: if a question can be answered with 'yes/no', or a numeric value, you may simply state as much. If you incorporate code from the internet (which is not required and generally not advisable), please cite the source within your code (providing a URL is sufficient).
+
+If you like, you may collaborate with others in the class. If you choose to do so, please indicate with whom you have worked at the top of your PDF. Separate submissions are required.
+
+Any questions can be addressed to Navona ([navona.calarco@mail.utoronto.ca]()) and/or Julia ([julia.gallucci@mail.utoronto.ca]()) before the due-date. Please email your submissions to Julia, with the subject `DSI: Assignment 2, Name`.
+
+-----
+
+__Question 1:__  
+__Resampling via Bootstrapping__
+
+Let's use the `iris` dataset. This dataset contains various physical measurements of several species of iris flowers. As always, start by reviewing a description of the dataset, by typing `?iris` in the console. 
+```{r}
+#code here
+```
+
+Imagine we are analysts working for a shipping company. The company wants to know the average length of iris petals, to inform space allotment on an upcoming shipment. The relevant variable in the dataset is `Petal.Length`. 
+
+_(i)_ Why is it (perhaps) not sufficient to simply calculate the mean of `Petal.Length`? What more information will preforming a bootstrap provide to us?  
+
+_(ii)_ Before performing bootstrapping, we need to write our own, specialized function to calculate mean of `Petal.Length`. The function must take an argument for both data, and index. Hint: recall our in-class calculation of mean height. 
+
+```{r}
+#custom function for boot library
+my_func <- function(data, index){
+  #code here
+}
+```
+
+_(iii)_ Now that we have our desired function, we can perform the bootstrap. Check out `?boot` to understand its three required arguments. Remember, because bootstrapping involves randomness, we must first set a seed for reproducibility!
+
+```{r}
+#load library
+
+#set seed
+
+#boot function
+```
+
+_(iv)_ Briefly justify your choice for the R (replicates) parameter.
+
+_(v)_ Review the model output. What is the original mean value? What is the original standard error?
+
+Next, let's look _inside_ our model to understand the new, bootstrapped sample we have created. The variable of interest is `t`. For example, if I called my model `myboot`, I can review the bootstrapped range, by typing `range(myboot$t)`.
+
+_(vi)_. Write code to review the bootstrapped standard deviation (Hint: the function name is `sd`):
+```{r}
+#code here
+```
+
+_(vii)_ Next, let's compute 95% confidence intervals, for the mean value of `Petal.Length`. For this, you can use the `boot.ci` function. Read the help to understand required arguments. Include an optional argument to select just one of the four 'types' of interval.
+```{r}
+#code here
+```
+
+_(viii)_. Use the plot function on your model object. Review `Histogram of t`. What does this histogram show?
+```{r}
+#code here
+```
+
+_(ix)_ Given your bootstrapped analysis, what do you recommend to shipping company? 
+
+-----
+
+__Question 2:__
+__Resampling via LOOCV (leave-one-out cross validation)__
+
+For this question, use the in-built `swiss` dataset, and the `boot` library. 
+
+```{r}
+#load the library
+
+#get the data
+
+#explore dataset
+```
+
+Answer the following questions:
+
+_(i)_ What will be the size (number of observations) of each LOOCV training sample?
+
+_(ii)_ What will be the size (number of observations) of each LOOCV testing sample?
+
+_(iii)_ How many "folds" (i.e., k) will our LOOCV model have?  
+
+_(iv)_ Now, fit a linear model, with `Fertility` as the response variable, and all other variables as predictors. Use the `glm` function from the `boot` library (recall that using `glm` instead of `lm` makes things easier in subsequent steps).  
+
+```{r}
+#code here
+```
+
+_(v)_ Next, perform LOOCV, using the appropriate function from the `boot` library.  
+```{r}
+#code here
+```
+
+_(vi)_ What is the MSE for the LOOCV?  
+```{r}
+#code here
+```
+
+_(vii)_ Run the LOOCV for a second time (no need to repeat the code; simply, run your existing code in in v and vi again). Do you obtain different results? Why or why not?  
+
+_(viii)_ Manually compute MSE for the linear model (without LOOCV) that you fit with the `glm` function, in iv. (Hint: recall that MSE is defined as the sum of squared residuals, divided by n-p. You can "look inside" your linear model object to find residual values).  
+
+```{r}
+#code here
+```
+
+_(ix)_ Does the LOOCV-linear model, or the non-validated linear model, appear to have greater error? Why might this be the case?   
+
+Imagine that the `swiss` dataset has just announced a major new release, which will include data from all provinces of Europe (not just those in Switzerland), and records all the way to the present day (not just 1888).  
+
+_(x)_ Would you choose LOOCV as a validation method for this new release? Why or why not?  
+
+_(xi)_ What validation method might you choose instead?  
+
+-----
+
+__Question 3:__  
+__Regularization via best subset selection.__
+
+Let's use the `fat` dataset, in the `faraway` library. To perform model selection via "best subsets", we will use the `regsubsets` function in the `leaps` package.
+
+```{r}
+#load the two libraries here
+
+#load dataset
+```
+
+_(i)_ Using the `regsubsets` function, fit a best subset model with `brozek` (body fat) as the response, and all variables except for `free`, `siri`, and `density` as predictors. Provide the `nvmax` argument, with a value equal to the number of predictors.
+
+```{r}
+#code here
+```
+
+The plot below shows (unadjusted) $R^2$ estimates for all subset models.
+
+![](https://drive.google.com/uc?id=1omSUpJrARF6gYnZ2hWv61EWbdlWklBdG)
+
+```{r}
+#example code
+#plot(summary(best_sub)$rsq, xlab = "Number of Variables/Predictors", ylab = "R-squared value", type = "l")
+```
+
+_(ii)_ Why can't we use (unadjusted) $R^2$ estimates to select the best model? 
+
+_(iii)_ Create a plot similar to that above, but showing adjusted $R^2$. Add a coloured point, highlighting the number of variables/predictors with the most desirable adjusted $R^2$ value (Hint: use the `which.max` function).
+```{r}
+#code here
+```
+
+_(iv)_ Write code to pull out the highest and lowest $R^2$ values (Hint: use the `max` and `min` functions.). Does the difference in percent variance explained (i.e., $R^2$) appear to be meaningful? (No statistics needed: interpret in the context of the `fat` dataset).
+
+```{r}
+#code here
+```
+
+_(v)_ What is the best model according to BIC? (Hint: `which.min`).
+```{r}
+#code here
+```
+
+_(vi)_ What is the best model according to $C_p$? 
+```{r}
+#code here
+```
+
+_(vii)_ Are you surprised that BIC and $C_p$ compute differing estimates of prediction error? Why or why not?
+
+Let's be more rigorous, and compute a direct (cf. indirect) estimate of prediction error via k-fold cross validation. Unfortunately, the `regsubsets` function does not work with the `predict` function that we have become familiar with. The `predict.regsubsets` function provided below achieves something comparable to `predict` (in brief, it extracts the fitted coefficients for each model size and then multiplies the corresponding predictors for each test observations). <u> This code does not need to be edited.</u>
+
+```{r}
+#provided function - do not edit
+predict.regsubsets <- function(object, newdata, id, ...) {
+  form <- as.formula(object$call[[2]]) #pull out the formula
+  mat <- model.matrix(form, newdata) #make a matrix
+  coefs <- coef(object, id=id) #pull out coefficients
+  vars <- names(coefs) #pull out associated predictors
+  mat[, vars] %*% coefs #matrix multiplciation
+}
+```
+
+Now, we need to define several variables/objects for our k-fold cross validation. In the code chunk below:  
+
+_(viii)_ Define a variable `k`, with a value of 5. 
+
+_(ix)_ Define a variable `n`, with a value reflecting the number of observations in our data.
+
+_(x)_ Define a variable `p`, with a value reflecting the maximum number of predictors in our subset selection (equal to `nvmax`)
+
+_(xi)_ Define a variable `folds`. This variable is a vector, containing randomly selected integers from 1 through k, and should be of length n. (Hint: review the `sample` and `rep` functions.)
+
+_(xii)_ Define a variable `cv.errors`. This variable is a matrix. Its number of rows should be equal to k, and it number of columns should be equal to p. (You may choose to fill the matrix with NAs or 0 values or something else; these will be overwritten.)
+
+```{r}
+#define k
+
+#define n
+
+#define p
+
+#define folds
+
+#define cv.errors
+
+```
+
+Great! Now that we have our required variables/objects, and the (provided) `predict.regsubsets` function, we must write a for loop that will (a) fit our model on all but the held-out (test) fold, (b) predict the response in the held-out fold, and compute MSE in the held-out fold.
+
+The image below shows most of this code, with some crucial bits occluded. The occluded bits are 5 variables defined above: `k`, `regsubsets`, `p`, `folds`, and `cv.errors`. ![](https://drive.google.com/uc?id=1MdbaIhq82sU-230WX8qi1vR7T8hCJBV7)
+
+_(xiii)_ Type this code into the chunk below, filling in the missing bits. (You are free to omit comments and change the code structure -- as long as it works!)
+
+```{r}
+#code here
+```
+
+_(xiv)_ Review your `cv.errors` matrix. It should contain 14 columns (one for each number of predictors) and 5 rows (one for each of the k-folds). The contained values are MSE estimates. Find the mean of the MSE estimates, for each number of predictors (Hint: check out the `colMeans` function).
+```{r}
+#code here
+```
+
+_(BONUS)_. The "one-standard-error rule" states that if there are several models with similar estimates of test MSE, we can choose between them by: (a) calculating the MSE standard error model (number of predictors), (b) consider all models with an MSE within one standard error of the model with the smallest MSE, and (c) from the models within this band, select the one with the smallest number of predictors. Perform computations over `cv.errors` to select the ideal number of predictors, in accordance with the "one-standard-error rule".
+```{r}
+#code here
+```
+
+
+
+
+
