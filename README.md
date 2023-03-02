@@ -52,8 +52,8 @@ Tutorial sessions on the same date as each class. Tutorials take place from 5 PM
 | 2      | Thursday 23 February   | Multiple linear regression, interactions, qualitative predictors <br>                         | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.2-Linear_Regression_slides.pdf) | 4            
 | 3      | Saturday 25 February   | Classification (logistic regression, generative models)                     | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.3-Classication_slides.pdf) | 5                    
 | 4      | Monday 27 February     |  Resampling methods (CV, bootstrap), Linear model selection and regularization            | [Slides 1/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.4-Resampling_Methods_slides.pdf); [Slides 2/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.5-Linear_Model_Selection_and_Regularisation_slides.pdf) | 5, 6               
-| 5      | Thursday 2 March       | Beyond linearity, Tree-based methods<br>(decision tree; bagging, random forest, etc.)                 | | 7, 8         
-| 6      | Saturday 4 March       | Support Vector Machines, Survival analysis                                          | | 9,11                   
+| 5      | Thursday 2 March       | Beyond linearity                | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.2-Linear_Regression_slides.pdf) | 7, 8         
+| 6      | Saturday 4 March       | Tree-based methods, Support Vector Machines, Survival analysis                                          | | 9,11       
 | 7      | Monday 6 March         | Principal Components Analysis, K-means, Reproducibility                             | | 12,13                    
 | 8      | Thursday 9 March       | Professional Skills - Industry Case Study  <br>(Guest: Ajit Desai, Bank of Canada)  | | NA                  
 | 9      | Saturday 11 March      | Ethics and Inequity in ML, Review                                                   | | NA                                                 
