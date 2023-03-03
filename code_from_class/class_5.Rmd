@@ -1,0 +1,165 @@
+---
+title: "class_5"
+output: html_document
+date: "2023-03-02"
+---
+
+```{r}
+#load libraries
+library(ISLR2)
+library(leaps)
+```
+
+Let's continue using the 'Hitters' dataset: baseball player player performance stats, along with their salaries
+
+```{r}
+#omit NA
+Hitters <- na.omit(Hitters)
+```
+
+# Subset selection
+
+Let's perform best/forward/backward model selection
+(These are methods that may improve our linear model fits, via feature selection)
+
+```{r}
+
+#perform best subset
+#this suggests the variables in the best model (via smallest RSS) among all possible models with the *same number of predictors*
+best_subset <- regsubsets(Salary ~ ., data=Hitters, nvmax=ncol(Hitters) -1) #we want all 19 vars considered
+
+#look at summary
+#note: asterisks indicate the variables included in the model at each possible model size (not significance!)
+summary(best_subset)
+
+#instead of 'best subset', let's perform forward stepwise selection
+best_subset.fwd <- regsubsets(Salary ~ ., data=Hitters, nvmax=ncol(Hitters) -1, method='forward')
+
+#let's perform backward stepwise selection
+best_subset.bwd <- regsubsets(Salary ~ ., data=Hitters, nvmax=ncol(Hitters) -1, method='backward')
+
+#when we compare the best/forward/backward approaches to model selection, we see that the variables included in each differ (this is ok/expected!)
+```
+
+We have not yet decided _which_ model, i.e., the number of predictors that is best (so far, we just know what variables/predictors may be included in models of various sizes, i.e., with a k value at each possible k size, from 1:19). We do this on the basis of estimating <u>test error.</u>
+
+There are a number of competing ways to select the so-called best model. We discussed 4 "indirect" methods that adjust the test error, to avoid bias due to overfitting: `Cp`, `AIC`, `BIC` and `Adjusted $R^2$`.
+
+```{r}
+
+#let's save our summary, to more easily pull out values of interest
+my_summary <- summary(best_subset)
+
+#look at the adjusted R2 values -- one for each possible model size, i.e., each value of k
+my_summary$adjr2
+
+#we can make a nice plot (run this code all together)
+plot(my_summary$adjr2, xlab='Number of Predictors', ylab='Adjusted R^2 value' ,type='l')
+mypoint <- which.max(my_summary$adjr2) #highlight best value
+points(mypoint, my_summary$adjr2[mypoint], col='red')
+
+```
+If we wanted, we can also select our ideal model via direct error estimation. This involves cross-validation. (We did not perform that in class, as similar to past and future examples).
+
+# Shrinkage Methods
+
+## Ridge regression
+```{r}
+#library
+library(glmnet)
+
+#the glmnet library requires our data in a special format
+x <- model.matrix(Salary ~., Hitters)[, -1]
+y <- Hitters$Salary
+
+#split up data into training and testing (1/2 each)
+set.seed(1)
+train <- sample (1:nrow(x), nrow(x)/2)
+test <- (-train)
+y.test <- y[test]
+
+#fit ridge regression model
+ridge.mod <- glmnet(x[train, ], y[train], alpha = 0) #0=ridge
+
+#cross validation -- helps us 'tune' lambda hyperparameter
+#recall: we need to set lambda to help us achieve best fit
+#note: the cv.glmnet function using nfolds=10
+set.seed(1)
+cv.ridge <- cv.glmnet(x[train, ], y[train], alpha = 0)
+
+#we can make a nice plot, showing MSE, for each of the possible lambda values considered by cv.glmnet.
+plot(cv.ridge)
+#the top x axis values tell us number of non-0 predictors
+#the vertical lines are the minimal lambda value that that largest within 1SE of the minimal value
+
+#let's pull out our best minimal lambda 
+(min1.lambda <- cv.ridge$lambda.min)
+
+#note: there's a second estimate of the best lambda, as as largest lambda value within one SE of the minimal: helps avoid overfitted
+(min2lambda <- cv.ridge$lambda.1se)
+
+#now that we have the lambda with the smallest cross validation error, we can make our predictions in the test set
+ridge.pred <- predict(ridge.mod, s=min1.lambda, newx = x[test, ])
+
+#compute test MSE
+(mse <- mean((ridge.pred - y.test)^2))
+
+##################################################################
+#NOTE
+#In class, we noticed big discrepancy on the basis of seeds set
+#To work out why this is, see separate `ridge_stability.Rmd'
+
+#print out estimates of interest
+min1.lambda
+min2lambda
+mse
+
+#seed 123
+#min1.lambda: 27.68026
+#min2lambda: 1377.653
+# mse: 145983.9
+
+#seed 7
+#min1.lambda: 29.5721
+#min2lambda: 5413.877
+#mse: 107880.1
+
+#seed 1
+#min1.lambda: 326.0828
+#min2lambda: 6401.138
+#mse: 139863.2
+
+##################################################################
+
+#after find ideal lambda, refit the ridge regression using the complete dataset
+ridge <- glmnet(x, y, alpha = 0)
+
+#pull out coefficient values (this is what we need to describe model)
+predict(ridge, type = "coefficients", s = min1.lambda)
+
+```
+
+## Lasso
+
+```{r}
+
+#the process in R is virtually identical to that of ridge, with the exceptino that we now set alpha to 1
+set.seed(123)
+lasso.mod <- glmnet(x[train,], y[train], alpha=1)
+
+#cross validation
+cv.lasso <- cv.glmnet(x[train,], y[train], alpha=1)
+plot(cv.lasso)
+
+#find minimal lambda
+lasso_min1.lambda <- cv.lasso$lambda.min
+
+#make predictions, get MSE
+lasso.pred <- predict(lasso.mod, s=lasso_min1.lambda, newx = x[test,])
+mse <- mean((lasso.pred - y.test)^2)
+
+#now, refit on full data, get coefficients
+lasso <- glmnet(x, y, alpha=1)
+predict(lasso, type = 'coefficients', s=lasso_min1.lambda)
+```
+
