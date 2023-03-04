@@ -53,7 +53,7 @@ Tutorial sessions on the same date as each class. Tutorials take place from 5 PM
 | 3      | Saturday 25 February   | Classification (logistic regression, generative models)                     | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.3-Classication_slides.pdf) | 4                    
 | 4      | Monday 27 February     |  Resampling methods (CV, bootstrap)          | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.4-Resampling_Methods_slides.pdf) | 5               
 | 5      | Thursday 2 March       | Linear model selection and regularization  | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.2-Linear_Regression_slides.pdf) | 6         
-| 6      | Saturday 4 March       | Beyond linearity, Tree-based methods                                         | | 7, 8       
+| 6      | Saturday 4 March       | Beyond linearity, Tree-based methods                                         | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.6-Beyond_Linearity_slides.pdf)| 7, 8       
 | 7      | Monday 6 March         |  Support Vector Machines, Survival analysis                            | | 9, 11                    
 | 8      | Thursday 9 March       | Professional Skills - Industry Case Study  <br>(Guest: Ajit Desai, Bank of Canada)  | | NA                  
 | 9      | Saturday 11 March      | Principal Components Analysis, K-means, Ethics/Inequity/Reproducibility                                                   | | 12, 13                                                 
