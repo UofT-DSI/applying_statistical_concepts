@@ -205,7 +205,7 @@ my_func &lt;- function(data, index){
 <p><em>(iv)</em> <strong>[1 POINT]</strong> Briefly justify your choice for the R (replicates) parameter.</p>
 <p><em>(v)</em> <strong>[2 POINTS]</strong> Review the model output. What is the original mean value? What is the original standard error?</p>
 <p>Next, let’s look <em>inside</em> our model to understand the new, bootstrapped sample we have created. The variable of interest is <code>t</code>. For example, if I called my model <code>myboot</code>, I can review the bootstrapped range, by typing <code>range(myboot$t)</code>.</p>
-<p><em>(vi)</em>. <strong>[1 POINT]</strong> Write code to review the bootstrapped standard deviation (Hint: the function name is <code>sd</code>):</p>
+<p><em>(vi)</em>. <strong>[1 POINT]</strong> Write code to review the standard deviation of the bootstrapped means (Hint: the function name is <code>sd</code>). <mark> Note: the question formerly said to find the “bootstrapped standard deviation”, which may be misleading – you do not need to run a seperate bootstrap analysis here- we are looking only for the standard deviation of <code>myboot$t</code>.</mark></p>
 <pre class="r"><code>#code here</code></pre>
 <p><em>(vii)</em> <strong>[2 POINTS]</strong> Next, let’s compute 95% confidence intervals, for the mean value of <code>Petal.Length</code>. For this, you can use the <code>boot.ci</code> function. Read the help to understand required arguments. Include an optional argument to select just one of the four ‘types’ of interval.</p>
 <pre class="r"><code>#code here</code></pre>
@@ -231,7 +231,7 @@ my_func &lt;- function(data, index){
 <p><em>(vi)</em> <strong>[1 POINT]</strong>What is the MSE for the LOOCV?</p>
 <pre class="r"><code>#code here</code></pre>
 <p><em>(vii)</em> <strong>[1 POINT]</strong> Run the LOOCV for a second time (no need to repeat the code; simply, run your existing code in in v and vi again). Do you obtain different results? Why or why not?</p>
-<p><em>(viii)</em> <strong>[2 POINTS]</strong> Manually compute MSE for the linear model (without LOOCV) that you fit with the <code>glm</code> function, in iv. (Hint: recall that MSE is defined as the sum of squared residuals, divided by n-p. You can “look inside” your linear model object to find residual values).</p>
+<p><em>(viii)</em> <strong>[2 POINTS]</strong> Manually compute MSE for the linear model (without LOOCV) that you fit with the <code>glm</code> function, in iv. (Hint: recall that MSE is defined as the sum of squared residuals, divided by n. You can “look inside” your linear model object to find residual values). <mark> Note: this question previously had an error and stated that “MSE is defined as the sum of squared residuals, divided by n-p”.</mark></p>
 <pre class="r"><code>#code here</code></pre>
 <p><em>(ix)</em> <strong>[2 POINTS]</strong> Does the LOOCV-linear model, or the non-validated linear model, appear to have greater error? Why might this be the case?</p>
 <p>Imagine that the <code>swiss</code> dataset has just announced a major new release, which will include data from all provinces of Europe (not just those in Switzerland), and records all the way to the present day (not just 1888).</p>

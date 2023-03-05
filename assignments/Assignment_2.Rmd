@@ -63,7 +63,7 @@ _(v)_ **[2 POINTS]** Review the model output. What is the original mean value? W
 
 Next, let's look _inside_ our model to understand the new, bootstrapped sample we have created. The variable of interest is `t`. For example, if I called my model `myboot`, I can review the bootstrapped range, by typing `range(myboot$t)`.
 
-_(vi)_. **[1 POINT]** Write code to review the bootstrapped standard deviation (Hint: the function name is `sd`):
+_(vi)_. **[1 POINT]** Write code to review the standard deviation of the bootstrapped means (Hint: the function name is `sd`). <mark> Note: the question formerly said to find the "bootstrapped standard deviation", which may be misleading -- you do not need to run a seperate bootstrap analysis here- we are looking only for the standard deviation of `myboot$t`.</mark>
 ```{r}
 #code here
 ```
