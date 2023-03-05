@@ -53,7 +53,7 @@ Tutorial sessions on the same date as each class. Tutorials take place from 5 PM
 | 3      | Saturday 25 February   | Classification (logistic regression, generative models)                     | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.3-Classication_slides.pdf) | 4                    
 | 4      | Monday 27 February     |  Resampling methods (CV, bootstrap)          | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.4-Resampling_Methods_slides.pdf) | 5               
 | 5      | Thursday 2 March       | Linear model selection and regularization  | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.2-Linear_Regression_slides.pdf) | 6         
-| 6      | Saturday 4 March       | Beyond linearity, Tree-based methods                                         | | 7, 8       
+| 6      | Saturday 4 March       | Beyond linearity, Tree-based methods                                         | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.6-Beyond_Linearity_slides.pdf)| 7, 8       
 | 7      | Monday 6 March         |  Support Vector Machines, Survival analysis                            | | 9, 11                    
 | 8      | Thursday 9 March       | Professional Skills - Industry Case Study  <br>(Guest: Ajit Desai, Bank of Canada)  | | NA                  
 | 9      | Saturday 11 March      | Principal Components Analysis, K-means, Ethics/Inequity/Reproducibility                                                   | | 12, 13                                                 
@@ -95,7 +95,7 @@ Homework is as follows (<u>only 5 required, marked for competion only!</u>):
 | Homework class 3   | Ch 4, pg 193, q13    | Monday 27 February, by 6pm|
 | Homework class 4   | Ch 5, pg 221, q6     | Thursday 2 March, by 6pm|
 | Homework class 5   | Ch 5, pg 286, q9, a-d| Saturday 4 March, by 9am|
-| Homework class 6   |          | Monday 6 March, by 6pm|
+| Homework class 6   | Ch 7, pg 324, q9     | Monday 6 March, by 6pm|
 | Homework class 7   |          | Thursday 9 March, by 6pm|
 | Homework class 9   |          | Sunday 12 March, by midnight |
 
