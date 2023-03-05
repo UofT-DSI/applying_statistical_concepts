@@ -121,7 +121,7 @@ _(vi)_ **[1 POINT]**What is the MSE for the LOOCV?
 
 _(vii)_ **[1 POINT]** Run the LOOCV for a second time (no need to repeat the code; simply, run your existing code in in v and vi again). Do you obtain different results? Why or why not?  
 
-_(viii)_ **[2 POINTS]** Manually compute MSE for the linear model (without LOOCV) that you fit with the `glm` function, in iv. (Hint: recall that MSE is defined as the sum of squared residuals, divided by n-p. You can "look inside" your linear model object to find residual values).  
+_(viii)_ **[2 POINTS]** Manually compute MSE for the linear model (without LOOCV) that you fit with the `glm` function, in iv. (Hint: recall that MSE is defined as the sum of squared residuals, divided by n. You can "look inside" your linear model object to find residual values).  <mark> Note: this question previously had an error and stated that "MSE is defined as the sum of squared residuals, divided by n-p".</mark> 
 
 ```{r}
 #code here
