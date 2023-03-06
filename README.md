@@ -52,7 +52,7 @@ Tutorial sessions on the same date as each class. Tutorials take place from 5 PM
 | 2      | Thursday 23 February   | Multiple linear regression, interactions, qualitative predictors <br>                         | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.2-Linear_Regression_slides.pdf) | 3            
 | 3      | Saturday 25 February   | Classification (logistic regression, generative models)                     | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.3-Classication_slides.pdf) | 4                    
 | 4      | Monday 27 February     |  Resampling methods (CV, bootstrap)          | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.4-Resampling_Methods_slides.pdf) | 5               
-| 5      | Thursday 2 March       | Linear model selection and regularization  | [Slides]https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.5-Linear_Model_Selection_and_Regularisation_slides.pdf) | 6         
+| 5      | Thursday 2 March       | Linear model selection and regularization  | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.5-Linear_Model_Selection_and_Regularisation_slides.pdf) | 6         
 | 6      | Saturday 4 March       | Beyond linearity                                       | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.6-Beyond_Linearity_slides.pdf)| 7       
 | 7      | Monday 6 March         | Tree-based methods                           | | 8                    
 | 8      | Thursday 9 March       | Professional Skills - Industry Case Study  <br>(Guest: Ajit Desai, Bank of Canada)  | | NA                  
