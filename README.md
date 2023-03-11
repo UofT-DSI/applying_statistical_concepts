@@ -56,7 +56,7 @@ Tutorial sessions on the same date as each class. Tutorials take place from 5 PM
 | 6      | Saturday 4 March       | Beyond linearity                                       | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.6-Beyond_Linearity_slides.pdf)| 7       
 | 7      | Monday 6 March         | Tree-based methods                           | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.7-Tree-Based_Methods_slides.pdf) | 8                    
 | 8      | Thursday 9 March       | Professional Skills - Industry Case Study  <br>(Guest: Ajit Desai, Bank of Canada)  | | NA                  
-| 9      | Saturday 11 March      | Survival Analysis, Principal Components Analysis, Ethics/Inequity/Reproducibility   | | 12, 13                                                 
+| 9      | Saturday 11 March      | Survival Analysis, Principal Components Analysis, Ethics/Inequity/Reproducibility   | [Slides 1/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.10-Unsupervised_Learning_slides.pdf), [Slides 2/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.9-Survival_Analysis_and_Censored_Data_slides.pdf)| 12, 13                                                 
 ## Grading Scheme
 
 Grading is based on three components: 3 assignments, 5 homework questions (completion only), and class participation. The grading scheme is as follows:
