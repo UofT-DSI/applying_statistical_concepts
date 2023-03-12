@@ -97,7 +97,7 @@ Homework is as follows (<u>only 5 required, marked for competion only!</u>):
 | Homework class 5   | Ch 5, pg 286, q9, a-d| Saturday 4 March, by 9am|
 | Homework class 6   | Ch 7, pg 324, q9     | Monday 6 March, by 6pm|
 | Homework class 7   | Ch 8, pg 363, q9     | Thursday 9 March, by 6pm|
-| Homework class 9   | Ch 12, pg 55, q9     | Sunday 12 March, by midnight |
+| Homework class 9   | Ch 12, pg 550, q9     | Sunday 12 March, by midnight |
 
 **Participation**
 
