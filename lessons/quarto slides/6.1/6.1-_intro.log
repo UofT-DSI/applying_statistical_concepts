@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.21)  27 MAR 2023 10:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.30)  30 MAR 2023 14:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**6.1-_intro.tex
+**6.1-_intro
 (./6.1-_intro.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22>
@@ -1253,10 +1253,13 @@ No file 6.1-_intro.nav.
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
-LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-201.
+No file 6.1-_intro.toc.
+[2
 
-(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmss.fd
+]
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+206.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1264,30 +1267,30 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-01.
+06.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-201.
+206.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-201.
+206.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 201.
+(Font)              <10.95> on input line 206.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 201.
+(Font)              <8> on input line 206.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 201.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 201
+(Font)              <6> on input line 206.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 206
 .
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1296,7 +1299,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 201
+LaTeX Font Info:    Trying to load font information for U+msb on input line 206
 .
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1306,28 +1309,99 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 201.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 206.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 201.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 206.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 201.
- [2
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 206.
+ [3
 
 {/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
-<images/sales fig.png, id=48, 618.31pt x 280.04625pt>
+<images/sales fig.png, id=54, 618.31pt x 280.04625pt>
 File: images/sales fig.png Graphic file (type png)
 <use images/sales fig.png>
-Package pdftex.def Info: images/sales fig.png  used on input line 215.
+Package pdftex.def Info: images/sales fig.png  used on input line 220.
 (pdftex.def)             Requested size: 414.81276pt x 187.87784pt.
 
-Overfull \vbox (12.00806pt too high) detected at line 215
+Overfull \vbox (12.00806pt too high) detected at line 220
  []
 
-[3
+[4
 
- <./images/sales fig.png>] [4
+ <./images/sales fig.png>] [5
 
-{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}] [5
+{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}] [6
+
+] [7
+
+] [8
+
+] [9
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 330.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 330.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 330.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 330.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 330.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 330.
+ [10
+
+] [11
+
+{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] [12
+
+] [13
+
+] [14
+
+] [15
+
+] [16
+
+]
+<images/test_training_mse.png, id=186, 528.97626pt x 290.08376pt>
+File: images/test_training_mse.png Graphic file (type png)
+<use images/test_training_mse.png>
+Package pdftex.def Info: images/test_training_mse.png  used on input line 537.
+(pdftex.def)             Requested size: 274.77866pt x 150.68506pt.
+ [17
+
+ <./images/test_training_mse.png>] [18
+
+] [19
+
+{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 612.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 612.
+ [20
+
+] [21
+
+]
+<images/bias_variance.png, id=225, 547.04375pt x 254.9525pt>
+File: images/bias_variance.png Graphic file (type png)
+<use images/bias_variance.png>
+Package pdftex.def Info: images/bias_variance.png  used on input line 668.
+(pdftex.def)             Requested size: 306.39249pt x 142.79575pt.
+
+Overfull \hbox (3.05296pt too wide) in paragraph at lines 668--668
+[][]  
+ []
+
+[22
+
+ <./images/bias_variance.png>] [23
+
+] [24
 
 ]
 \tf@nav=\write5
@@ -1341,23 +1415,27 @@ Overfull \vbox (12.00806pt too high) detected at line 215
 
  (./6.1-_intro.aux) ) 
 Here is how much of TeX's memory you used:
- 33753 strings out of 476025
- 710856 string characters out of 5790017
- 1859388 words of memory out of 5000000
- 53486 multiletter control sequences out of 15000+600000
- 555437 words of font info for 88 fonts, out of 8000000 for 9000
+ 34058 strings out of 476025
+ 716817 string characters out of 5790017
+ 1862388 words of memory out of 5000000
+ 53642 multiletter control sequences out of 15000+600000
+ 597207 words of font info for 154 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,122p,1007b,699s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,122p,1003b,699s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/
-lmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb
-></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/loc
-al/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/
-2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2023/tex
-mf-dist/fonts/type1/public/lm/lmsso10.pfb>
-Output written on 6.1-_intro.pdf (5 pages, 229730 bytes).
+lmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/loc
+al/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive
+/2023/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2023/texmf
+-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2023/texmf-dist/fo
+nts/type1/public/lm/lmsso10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1
+/public/lm/lmsso12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/l
+m/lmsso8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.p
+fb>
+Output written on 6.1-_intro.pdf (24 pages, 432900 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 26756 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 315 PDF objects out of 1000 (max. 8388607)
+ 230 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 51390 words of extra memory for PDF output out of 51595 (max. 10000000)
 
