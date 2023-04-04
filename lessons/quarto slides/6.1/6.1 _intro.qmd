@@ -7,7 +7,7 @@ format:
     theme: Madrid
     colortheme: DarkBlue
     institute: The University of Toronto
-    toc: true
+    # toc: true
     # Table of contents not generating at the moment
 editor: visual
 header-includes: 

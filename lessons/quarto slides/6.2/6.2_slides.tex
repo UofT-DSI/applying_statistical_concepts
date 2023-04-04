@@ -1,0 +1,591 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+  aspectratio=169,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usetheme[]{Madrid}
+\usecolortheme{DarkBlue}
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\definecolor{DarkBlue}{rgb}{0.05, 0.15, 0.3}
+\setbeamercolor{structure}{fg=DarkBlue}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={6.2: Linear Regression},
+  pdfauthor={Navona Calarco},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{6.2: Linear Regression}
+\author{Navona Calarco}
+\date{}
+\institute{The University of Toronto}
+
+\begin{document}
+\frame{\titlepage}
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners, interior hidden, frame hidden]}{\end{tcolorbox}}\fi
+
+\begin{frame}[fragile]{Motivation}
+\protect\hypertarget{motivation}{}
+Throughout this Module we will be making use of the \texttt{Boston}
+dataset in the R package \texttt{ISLR2}. We can install the package in R
+and add it to our library:
+
+\begin{verbatim}
+install.packages("ISLR2")
+library(ISLR2)
+\end{verbatim}
+
+The \texttt{Boston} dataset contains housing values in 506 Boston
+suburbs along with 12 other variables associated with the suburbs. To
+name a few,
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{rm}: average number of rooms per dwelling
+\item
+  \texttt{nox}: nitrogen oxides concentration (parts per 10 million)
+\item
+  \texttt{lstat}: percent of households with low socioeconomics status
+\end{itemize}
+
+We can take \texttt{medv}, the median value of owner-occupied homes in
+\$1000s, to be the response variable \(Y\) and the 12 other variables to
+be the predictors \(X = (X_1, \dots, X_{12})\).
+\end{frame}
+
+\begin{frame}{Motivation}
+\protect\hypertarget{motivation-1}{}
+There may be some specific question we'd like to address
+
+\begin{itemize}
+\tightlist
+\item
+  Is there a relationship between the 12 variables and housing price?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Does the data provide evidence of an association?
+  \end{itemize}
+\item
+  Are all of the 12 variables associated with housing price?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Perhaps only a few of the variables have an effect on housing price.
+  \end{itemize}
+\item
+  How accurate are the predictions for housing prices based on these
+  variables?
+\item
+  Is the relationship between the variables and housing price linear?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Perhaps we can transform some variables to make the relationship
+    linear.
+  \end{itemize}
+\end{itemize}
+
+\alert{All of these questions can be answered using linear regression!}
+\end{frame}
+
+\begin{frame}{Simple Linear Regression}
+\protect\hypertarget{simple-linear-regression}{}
+\textbf{Simple linear regression} uses a \emph{single} predictor
+variable \(X\) to predict a \emph{quantitative} response \(Y\) by
+assuming the relationship between them is linear.
+\[Y \approx \beta_0 + \beta_1 X\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(\beta_0\) and \(\beta_1\) are the model \textbf{parameters} which
+  are unknown.
+\item
+  \(\beta_0\) is the intercept term and \(\beta_1\) is the slope term.
+\end{itemize}
+
+We can use the training data to produce estimates \(\hat \beta_0\) and
+\(\hat \beta_1\) and predict future responses
+
+\[\hat{y} \approx \hat{\beta_0} + \hat{\beta_1} X\]
+\end{frame}
+
+\begin{frame}{Estimating the Coefficients}
+\protect\hypertarget{estimating-the-coefficients}{}
+Suppose we have \(n\) observations in our training data which each
+consists of a measurement for \(X\) and \(Y\) represented by \[
+(x_1, y_1),\ (x_2, y_2), \dots,\ (x_n, y_n)
+\]
+
+We want to find estimates for \(\hat \beta_0\) and \(\hat \beta_1\) such
+that for all \(i = 1, \dots, n\) \[
+y_i \approx \hat y_i
+\]
+
+where \(\hat y_i = \hat \beta_0 + \hat \beta_1 x_i\) is the prediction
+for \(y_i\) given \(x_i\).
+
+The most common method used to measure the difference between \(y_i\)
+and \(\hat y_i\) is the least squares criterion. The idea being that
+\alert{we want to find the $\hat \beta_0$ and $\hat \beta_1$ that give us the smallest difference}.
+\end{frame}
+
+\begin{frame}{Least Squares Criterion}
+\protect\hypertarget{least-squares-criterion}{}
+We define the \(i\)th \textbf{residual} to be the difference between the
+\(i\)th observed response value and the \(i\)th predicted response
+value: \[
+e_i = y_i - \hat y_i
+\]
+
+The \textbf{residual sum of squares} (RSS) is the following \[
+\operatorname{RSS} = e_1^2 + \cdots + e_n^2 
+= \left(y_{1}-\hat{\beta}_{0}-\hat{\beta}_{1} x_{1}\right)^{2}+\cdots+\left(y_{n}-\hat{\beta}_{0}-\hat{\beta}_{1} x_{n}\right)^{2}
+\]
+
+\begin{block}{The RSS is minimized by the estimates below (where
+\(\bar{x},\ \bar{y}\) are the sample means):}
+\protect\hypertarget{the-rss-is-minimized-by-the-estimates-below-where-barx-bary-are-the-sample-means}{}
+\[
+\begin{aligned}
+\hat{\beta}_{1}&=\frac{\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)\left(y_{i}-\bar{y}\right)}{\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{2}} \\
+\hat{\beta}_{0}&=\bar{y}-\hat{\beta}_{1} \bar{x}
+\end{aligned}
+\]
+\alert{So $\hat \beta_1$ and $\hat \beta_0$ definte the least squares coefficient estimates}
+\end{block}
+\end{frame}
+
+\begin{frame}{Assessing the Accuracy of the Coefficient Estimates}
+\protect\hypertarget{assessing-the-accuracy-of-the-coefficient-estimates}{}
+Recall from section 6.1 that we assume the true relationship between the
+predictor \(X\) and the response \(Y\) is \[
+Y = f(X) + \epsilon
+\] where \(f\) is an unknown function and \(\epsilon\) is the random
+error with mean zero. By assuming \(f\) is linear, we obtain \[
+Y = \beta_0 + \beta_1 X + \epsilon
+\] Now suppose we have the least squares coefficient estimates
+\(\hat \beta_0\) and \(\hat \beta_1\), so \[
+\hat Y = \hat \beta_0 + \hat \beta_1 X
+\] We would like to assess the how close \(\hat \beta_0\) and
+\(\hat \beta_1\) are to the true parameter values \(\beta_0\) and
+\(\beta_1\).
+\end{frame}
+
+\begin{frame}{Standard Error}
+\protect\hypertarget{standard-error}{}
+We can compute the \textbf{standard erorrs} associated with
+\(\hat \beta_0\) and \(\hat \beta_1\) with the following: \[
+\operatorname{SE}\left(\hat{\beta}_{0}\right)^{2}=\sigma^{2}\left[\frac{1}{n}+\frac{\bar{x}^{2}}{\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{2}}\right], \quad \quad  \operatorname{SE}\left(\hat{\beta}_{1}\right)^{2}=\frac{\sigma^{2}}{\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{2}}
+\] where \(\sigma^2 = \operatorname{Var}(\epsilon)\) and is usually
+unknown. Luckily, \(\sigma\) can be estimated from the data using the
+\textbf{residual standard error} (RSE) \[
+\operatorname{RSE} = \sqrt{\frac{\operatorname{RSS}}{(n-2)}}
+\] The standard errors for \(\hat \beta_0\) and \(\hat \beta_1\) can be
+used to compute confidence intervals of the estimates or perform
+hypothesis tests on the coefficients.
+\end{frame}
+
+\begin{frame}{Hypothesis Tests on the Coefficients}
+\protect\hypertarget{hypothesis-tests-on-the-coefficients}{}
+Once we have the standard errors, we can perform a hypothesis test on
+the coefficients to determine whether there is a relationship between
+\(X\) and \(Y\). The null hypothesis is \[
+H_0: \text{ There is no relationship between } X \text{ and } Y
+\] and the alternative hypothesis is \[
+H_{a}: \text { There is some relationship between } X \text { and } Y
+\]
+
+Mathematically, this is \[
+H_0: \beta_1 = 0 \quad \text{versus} \quad H_a: \beta_1 \neq 0
+\] since if \(\beta_1 = 0\) then \(Y = \beta_0 + \epsilon\) so \(Y\) is
+not associated with \(X\).
+\end{frame}
+
+\begin{frame}{Hypothesis Tests on the Coefficients}
+\protect\hypertarget{hypothesis-tests-on-the-coefficients-1}{}
+In order to test the null hypothesis, we need to determine whether
+\(\hat \beta_1\) is sufficiently far from zero. The
+\(\mathbf{t}\)\textbf{-statistic} \[
+t=\frac{\hat{\beta}_{1}-0}{\operatorname{SE}(\hat{\beta}_{1})}
+\] measures the number of standard deviations that \(\hat \beta_1\) is
+away from 0. The \(p\)-value can be computed from the \(t\)-statistic
+which will allow us to either accept or reject our null hypothesis.
+\end{frame}
+
+\begin{frame}{Assessing the Accuracy of the Model}
+\protect\hypertarget{assessing-the-accuracy-of-the-model}{}
+The quality of the linear regression fit is often assessed with the
+residual standard error (RSE) and the \(R^2\) statistic.
+
+\begin{itemize}
+\tightlist
+\item
+  The RSE gives an absolute
+  \alert{measure of lack of fit of the model to the data.}
+\item
+  The \(\mathbf{R^2}\) \textbf{statistic} measures
+  \alert{the proportion of variability in $Y$ that can be explained by $X$.}
+\end{itemize}
+
+We've already seen how the RSE is computed from the RSS and the \(R^2\)
+statistic can be computed using \[
+R^{2}=1-\frac{\mathrm{RSS}}{\mathrm{TSS}}
+\] where \(\mathrm{TSS}=\sum\left(y_{i}-\bar{y}\right)^{2}\) is the
+\textbf{total sum of squares} which measures the amount of variability
+in the responses before regression is performed.
+\end{frame}
+
+\begin{frame}[fragile]{Simple Linear Regression Summary}
+\protect\hypertarget{simple-linear-regression-summary}{}
+Simple linear regression uses a single predictor variable \(X\) to
+predict a response \(Y\) with \[
+Y \approx \beta_{0}+\beta_{1} X
+\]
+
+\begin{itemize}
+\item
+  \(\beta_{0}, \beta_{1}\) are estimated by minimizing the residual sum
+  of squares (RSS)
+\item
+  The standard error (SE) of the coefficient estimates is a measure of
+  accuracy.
+\item
+  The residual standard error (RSE) gives a measure of lack of fit of
+  the model to the data.
+\item
+  The \(R^2\) statistic measures the proportion of variability explained
+  by the regression. - A hypothesis test on \(\beta_1\) indicates
+  whether there is a relationship between \(X\) and \(Y\).
+\item
+  The \texttt{lm()} function in R can be used to perform all of these
+  tasks!
+\end{itemize}
+
+\textbf{Any Questions?}
+\end{frame}
+
+\begin{frame}{Exercises: Simple Linear Regression}
+\protect\hypertarget{exercises-simple-linear-regression}{}
+Open the Linear Regression Exercises R Markdown file.
+
+\begin{itemize}
+\tightlist
+\item
+  Go over the ``Simple Linear Regression'' section together as a class.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Multiple Linear Regression}
+\protect\hypertarget{multiple-linear-regression}{}
+Suppose we have \(n\) observations in our data each consisting of \(p\)
+predictor values and one response value. That is, \[
+\left\{\left(x_{1}, y_{1}\right),\left(x_{2}, y_{2}\right), \ldots,\left(x_{n}, y_{n}\right)\right\} \text { where } x_{i}=\left(x_{i 1}, x_{i 2}, \ldots, x_{i p}\right).
+\] We want to fit this data with a linear model. We can extend simple
+linear regression to accommodate \(p\) predictors. \[
+Y=\beta_{0}+\beta_{1} X_{1}+\beta_{2} X_{2}+\cdots+\beta_{p} X_{p}+\epsilon
+\]
+\alert{We interpret $\beta_j$ as the average effect on $Y$ of one unit increase in $X_j$ while holding all other predictors fixed.}
+
+As with simple linear regression, the coefficients
+\(\beta_0, \dots, \beta_p\) are unknown and must be estimated.
+\end{frame}
+
+\begin{frame}{Estimating the Coefficients}
+\protect\hypertarget{estimating-the-coefficients-1}{}
+We want to find estimates \(\hat \beta_0, \dots, \hat \beta_p\), so that
+predictions for the response can be made using \[
+\hat{y}=\hat{\beta}_{0}+\hat{\beta}_{1} x_{1}+\hat{\beta}_{2} x_{2}+\cdots+\hat{\beta}_{p} x_{p}.
+\] The least squares approach is used again in this case to estimate the
+\(p\) parameters. That is, we choose \(\beta_0, \dots, \beta_p\) to
+minimize the sum of the squared residuals \[
+\begin{aligned}
+\mathrm{RSS} &=\sum_{i=1}^{n}\left(y_{i}-\hat{y}_{i}\right)^{2} \\
+&=\sum_{i=1}^{n}\left(y_{i}-\hat{\beta}_{0}-\hat{\beta}_{1} x_{i 1}-\hat{\beta}_{2} x_{i 2}-\cdots-\hat{\beta}_{p} x_{i p}\right)^{2}
+\end{aligned}
+\] The equations for \(\hat \beta_0, \dots, \hat \beta_p\) which
+minimize the \(RSS\) are complicated and not entirely important since
+there are functions that perform the computation for us in R and Python.
+\end{frame}
+
+\begin{frame}{Least Squares Regression Plane}
+\protect\hypertarget{least-squares-regression-plane}{}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+The figure shows the relationship between two predictor variables and a
+response variable. Linear regression in this case gives a plane fit by
+minimizing the squared vertical distance between the observations and
+the plane.
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\includegraphics[width=2.59375in,height=\textheight]{images/regression_plane.png}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Important Questions}
+\protect\hypertarget{important-questions}{}
+When working with multiple linear regression, we are often interested in
+several important questions.
+
+\begin{itemize}
+\item
+  Is there a relationship between the response and the predictors?
+\item
+  How well does the model fit the data?
+\item
+  Given a set of predictor values, what is the predicted response, and
+  how accurate is our prediction? We will go over the methods for
+  answering each of these questions.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Hypothesis Test for Parameters}
+\protect\hypertarget{hypothesis-test-for-parameters}{}
+One: \emph{Is there a relationship between the response and the
+predictors?}
+
+We can address this question by testing whether the regression
+coefficients are far enough from zero.
+
+Our null hypothesis and alternative hypothesis are the following: \[
+H_{0}: \beta_{1}=\beta_{2}=\cdots=\beta_{p}=0
+\hspace{1cm}
+H_{a}: \beta_{j} \neq 0 \text{ for some } j
+\] The hypothesis can be tested with the
+\(\mathbf{F}\)\textbf{-statistic}, which is defined by \[
+F=\frac{(\mathrm{TSS}-\mathrm{RSS}) / p}{\mathrm{RSS} /(n-p-1)}.
+\] If the \(F\)-statistic is much larger than 1 we reject the null
+hypothesis and conclude there is a relationship between at least on the
+the predictors and the response. If the \(F\)-statistic is close to 1,
+the \(p\)-value can be computed to determine the outcome.
+\end{frame}
+
+\begin{frame}{\(RSE\) and \(R^2\)}
+\protect\hypertarget{rse-and-r2}{}
+Two: \emph{How well does the model fit the data?}
+
+The \(\operatorname{RSE}\) and \(R^2\) are measures of the model fit. In
+the multiple linear regression context, \(R^2\) is the square of the
+correlation between the response and the fitted linear model. That is,
+\(R^2 = \operatorname{Cor}(Y, \hat Y)^2\).
+
+The \(\operatorname{RSE}\) is defined by \[
+\mathrm{RSE}=\sqrt{\frac{\mathrm{RSS}}{n-p-1} } \hspace{1cm} \text{where } n = \text{\# observations},\ p = \text{\# predictors}
+\]
+
+Important considerations as the number of variables in the model
+increases:
+
+\begin{itemize}
+\item
+  \(R^2\) will increase even if the new variables have a weak
+  association with the response.
+\item
+  \(RSS\) of the training data will decrease, but not necessarily that
+  of the testing data.
+\item
+  \(RSE\) will increase if the decrease in \(RSS\) is small relative to
+  the increase in \(p\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Prediction Accuracy}
+\protect\hypertarget{prediction-accuracy}{}
+Three: \emph{Given a set of predictor values, what is the predicted
+response, and how accurate is our prediction?} Once we have fit the
+multiple regression model, the response \(Y\) is predicted by \[
+        \hat Y = \hat{\beta}_{0}+\hat{\beta}_{1} X_{1}+\cdots+\hat{\beta}_{p} X_{p}.
+        \] There are three types of uncertainty associated with the
+prediction \(\hat Y\)
+
+\begin{enumerate}
+\item
+  The \textbf{reducible error} arising from the inaccuracy of the
+  coefficient estimates.
+\item
+  The reducible error stemming from the assumption that the relationship
+  between \(Y\) and \(X\) is linear; \textbf{model bias}.
+\item
+  The \textbf{irreducible error} from the random error associated with
+  the true response \(Y = f(x) + \epsilon\).
+\end{enumerate}
+
+We can address how much \(Y\) will vary from \(\hat Y\) using prediction
+intervals.
+\end{frame}
+
+\begin{frame}{Exercises: Multiple Linear Regression}
+\protect\hypertarget{exercises-multiple-linear-regression}{}
+Open the Linear Regression Exercises R Markdown file.
+
+\begin{itemize}
+\tightlist
+\item
+  Go over the ``Multiple Linear Regression'' section together as a
+  class.
+\end{itemize}
+\end{frame}
+
+
+
+\end{document}
