@@ -175,7 +175,7 @@
 
 \begin{document}
 \frame{\titlepage}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners, interior hidden, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, interior hidden, breakable, frame hidden, sharp corners, enhanced]}{\end{tcolorbox}}\fi
 
 \begin{frame}[fragile]{Motivation}
 \protect\hypertarget{motivation}{}
@@ -584,6 +584,471 @@ Open the Linear Regression Exercises R Markdown file.
   Go over the ``Multiple Linear Regression'' section together as a
   class.
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Qualitative Predictors}
+\protect\hypertarget{qualitative-predictors}{}
+So far we have only looked at using quantitative predictor variables for
+linear regression. However, sometimes the inclusion of qualitative
+variables is desirable.
+
+Suppose we have the following information about a set of people:
+
+\begin{itemize}
+\item
+  \(Y\): income (quantitative: \$ amount)
+\item
+  \(X_1\): student status (qualitative: is a student or is not)
+\item
+  \(X_2\): location of residence (qualitative: Toronto, Vancouver,
+  Montreal)
+\end{itemize}
+
+We want to determine whether there is a relationship between income and
+the other two qualitative variables.
+\end{frame}
+
+\begin{frame}{Qualitative Predictors: Two Levels}
+\protect\hypertarget{qualitative-predictors-two-levels}{}
+Let's start by looking at the differences in income between students and
+non-students. Our qualitative predictor, or \emph{factor}, has two
+levels so we can incorporate into a regression model using a
+\textbf{dummy variable} that takes on two possible numerical values.
+
+\[
+x_{i}=\left\{\begin{array}{ll}
+1 & \text { if } i \text{th person is a student } \\
+0 & \text { if } i \text{th person is not a student }
+\end{array}\right. 
+\]
+
+So we have the following model
+
+\[
+y_{i}=\beta_{0}+\beta_{1} x_{i}+\epsilon_{i}=\left\{\begin{array}{ll}
+\beta_{0}+\beta_{1}+\epsilon_{i} & \text { if } i \text{th person is a student } \\
+\beta_{0}+\epsilon_{i} & \text { if } i \text{th person is not a student }
+\end{array}\right.
+\]
+
+\begin{itemize}
+\item
+  \(\beta_0\) is the average income for non-students.
+\item
+  \(\beta_0 + \beta_1\) is the average income for students.
+\end{itemize}
+
+The method for fitting linear models with qualitative predictors using
+dummy variables remains the same.
+\end{frame}
+
+\begin{frame}{Qualitative Predictors: Multiple Level}
+\protect\hypertarget{qualitative-predictors-multiple-level}{}
+Now let's look at the difference in income between the residents of
+Toronto, Vancouver, and Montreal. We can do this using two dummy
+variables.
+
+\[
+\begin{aligned}
+x_{i 1}&=\left\{\begin{array}{ll}
+1 & \text { if } i \text {th person is from Vancouver } \\
+0 & \text { if } i \text {th person is not from Vancouver }
+\end{array}\right.
+\\
+x_{i 2}&=\left\{\begin{array}{ll}
+1 & \text { if } i \text {th person is from Montreal } \\
+0 & \text { if } i \text {th person is not Montreal }
+\end{array}\right.
+\end{aligned}
+\]
+
+The level with no dummy variable is known as the \textbf{baseline}
+(Toronto in this example). Our model is now \[
+y_{i}=\beta_{0}+\beta_{1} x_{i 1}+\beta_{2} x_{i 2}+\epsilon_{i}=\left\{\begin{array}{ll}
+\beta_{0}+\beta_{1}+\epsilon_{i} & \text { if } i \text{th person is from Vancouver } \\
+\beta_{0}+\beta_{2}+\epsilon_{i} & \text { if } i \text{th person is from Montreal } \\
+\beta_{0}+\epsilon_{i} & \text { if } i \text{th person is from Toronto. }
+\end{array}\right.
+\]
+\end{frame}
+
+\begin{frame}{Qualitative Predictors: Multiple Levels}
+\protect\hypertarget{qualitative-predictors-multiple-levels}{}
+\[
+y_{i}=\beta_{0}+\beta_{1} x_{i 1}+\beta_{2} x_{i 2}+\epsilon_{i}=\left\{\begin{array}{ll}
+\beta_{0}+\beta_{1}+\epsilon_{i} & \text { if } i \text{th person is from Vancouver } \\
+\beta_{0}+\beta_{2}+\epsilon_{i} & \text { if } i \text{th person is from Montreal } \\
+\beta_{0}+\epsilon_{i} & \text { if } i \text{th person is from Toronto. }
+\end{array}\right.
+\]
+
+The coefficients can be interpreted as
+
+\begin{itemize}
+\item
+  \(\beta_0\) the average income for people from Toronto
+\item
+  \(\beta_1\) the difference in the average income between people from
+  Vancouver versus Toronto
+\item
+  \(\beta_2\) the difference in the average income between people from
+  Montreal versus Toronto.
+\end{itemize}
+
+\begin{enumerate}
+\tightlist
+\item
+  The choice of 0 and 1 as values for the dummy variable or the choice
+  of the baseline category are arbitrary and will not change the results
+  of the regression
+\item
+  These choices will impact the interpretation of the coefficients and
+  their \(p\)-values.
+\item
+  Use an F-test to test \(H_0\) : \(\beta_1 = \beta_2 = 0\).
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Exercises: Qualitative Predictors}
+\protect\hypertarget{exercises-qualitative-predictors}{}
+Open the Linear Regression Exercises R Markdown file.
+
+\begin{itemize}
+\tightlist
+\item
+  Go over the ``Qualitative Predictors'' section together as a class.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Extensions of the Linear Model}
+\protect\hypertarget{extensions-of-the-linear-model}{}
+Two of the most important and restrictive assumptions for linear
+regression models are
+
+\begin{itemize}
+\tightlist
+\item
+  The relationship between the predictors and the response is
+  \alert{additive}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\Rightarrow\) \emph{The association between a predictor and the
+    response does not depend on any of the other predictors.}
+  \end{itemize}
+\item
+  The relationship between the predictors and the response is
+  \alert{linear}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\Rightarrow\) \emph{A one-unit change in a predictor induces a
+    constant change in the response regardless of the value of the
+    predictor.}
+  \end{itemize}
+\end{itemize}
+
+We will examine the relaxation of the additive assumption but
+modifications to the linear assumption will be left until section 6.6.
+\end{frame}
+
+\begin{frame}{Removing the Additive Assumption}
+\protect\hypertarget{removing-the-additive-assumption}{}
+Consider the following linear regression model with two predictors \[
+Y=\beta_{0}+\beta_{1} X_{1}+\beta_{2} X_{2}+\epsilon
+\] We can include the product of \(X_1\) and \(X_2\) as a third
+predictor called the \textbf{interaction term}.
+\[Y=\beta_{0}+\beta_{1} X_{1}+\beta_{2} X_{2}+\alert{\beta_{3} X_{1} X_{2}}+\epsilon\]
+This means that a change in the value of \(X_2\) will change the
+association between \(X_1\) and \(Y\).
+
+We can look at the \(p\)-value for \(H_0: \beta_3 = 0\) to determine
+whether the interaction term is justified.
+
+The \textbf{hierarchical principal}: when including an interaction in a
+model, the main effects should also be included even if the \(p\)-values
+for these coefficients are not significant.
+\end{frame}
+
+\begin{frame}{Exercises: Interaction Term}
+\protect\hypertarget{exercises-interaction-term}{}
+Open the Linear Regression Exercises R Markdown file.
+
+\begin{itemize}
+\tightlist
+\item
+  Go over the ``Interaction Term'' section together as a class.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Potential Problems}
+\protect\hypertarget{potential-problems}{}
+There are quite a few problems that can arise when fitting a linear
+regression model to a data set.
+
+\begin{itemize}
+\item
+  Non-linear response-predictor relationship
+\item
+  Correlation of error terms
+\item
+  Non-constant variance of error terms
+\item
+  Outliers
+\item
+  High-leverage points
+\end{itemize}
+
+We will briefly explain how to identify these problems but we will wait
+to provide solutions until later sections within this module.
+\end{frame}
+
+\begin{frame}{Non-Linearity}
+\protect\hypertarget{non-linearity}{}
+Linear regression assumes a linear relationship between the predictors
+and the response. If this assumption is invalid then conclusions derived
+from the model are flawed.
+
+Identification:
+
+\begin{itemize}
+\item
+  Plot the residuals \(e_i = y_i - \hat y_i\) versus the predictor
+  \(x_i\) (or versus \(y_i\) in the case of multiple regression)
+\item
+  There should be no discernible pattern in the residuals, otherwise
+  this may indicate non-linearity.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Non-Linearity}
+\protect\hypertarget{non-linearity-1}{}
+Plot of the residuals versus the predicted values for a linear
+regression fit to a dataset.
+
+\begin{figure}
+
+{\centering \includegraphics[width=2.22917in,height=\textheight]{images/residuals-01.png}
+
+}
+
+\end{figure}
+
+There is a clear trend in the residuals illustrated by the red curve
+which could indicate patterns in the data that are not captured by the
+linear model.
+\end{frame}
+
+\begin{frame}{Correlation of Errors}
+\protect\hypertarget{correlation-of-errors}{}
+Linear regression assumes that the error terms
+\(\epsilon_{1}, \epsilon_{2}, \ldots, \epsilon_{n}\) are uncorrelated
+(i.e.~the value of \(\epsilon_{i}\) is unrelated to the value for
+\(\epsilon_{i+1}\)). If this is violated, the estimated standard errors
+are much smaller than the truth, leading to unwarranted confidence in
+the model.
+
+Examples
+
+\begin{itemize}
+\item
+  correlation between consecutive observations in time series data.
+\item
+  observations are related in some other way (ex: individuals are
+  members of the same family or have been exposed to the same
+  environmental factors).
+\end{itemize}
+
+Identification for time series:
+
+\begin{itemize}
+\item
+  Plot residuals versus time.
+\item
+  Look for temporal patterns that could indicated correlation of error
+  terms.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Correlation of Errors}
+\protect\hypertarget{correlation-of-errors-1}{}
+Both plots show the residuals from a linear regression fit to time
+series data versus time. The top plot shows no correlation between the
+residuals whereas the bottom plot clearly has a time dependent
+structure.
+
+\begin{figure}
+
+{\centering \includegraphics[width=4.66667in,height=\textheight]{images/uncorrelated_error.png}
+
+}
+
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=4.66667in,height=\textheight]{images/correlated_error.png}
+
+}
+
+\end{figure}
+\end{frame}
+
+\begin{frame}{Non-Constant Variance of Errors}
+\protect\hypertarget{non-constant-variance-of-errors}{}
+Linear regression also assumes constant variance of the error terms,
+\(\operatorname{Var}(\epsilon_i) = \sigma^2\). If this assumption is
+invalid, the standard errors, confidence intervals, and hypothesis tests
+for the linear model are undermined.
+
+Identification:
+
+\begin{enumerate}
+\item
+  Plot the residuals versus the response.
+\item
+  Look for a funnel shape in the plot (this indicates an increase or
+  decrease in the variance of the errors as a function of the response)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Non-Constant Variance of Errors}
+\protect\hypertarget{non-constant-variance-of-errors-1}{}
+Plot for the residuals versus the fitted values of a linear regression
+model.
+
+\begin{figure}
+
+{\centering \includegraphics[width=2.20833in,height=\textheight]{images/variance_errors.png}
+
+}
+
+\end{figure}
+
+The residuals show a clear funnel shape with increasing response values
+resulting in increasing variance of the error terms.
+\end{frame}
+
+\begin{frame}{Outliers}
+\protect\hypertarget{outliers}{}
+\textbf{Outliers} are data points that have unusual values for \(y_i\)
+given an unremarkable \(x_i\). That is, \(y_i\) is far from the value
+predicted by the model for \(x_i\). Outliers can occur as a result of an
+error in data collection or a variety of other reasons.
+
+Outliers often have little effect on the parameter fitting, but they can
+alter the \(RSE\) and \(R^2\) which can impact the interpretation of the
+fit.
+
+Identification:
+
+\begin{enumerate}
+\item
+  Plot the \textbf{studentized residuals} which are computed by dividing
+  the residuals \(e_i\) by the estimated standard error.
+\item
+  Observations with studentized residuals greater than 3 or less than -3
+  are probably outliers.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Outliers}
+\protect\hypertarget{outliers-1}{}
+Plot of the studentized residuals versus the response values.
+
+\begin{figure}
+
+{\centering \includegraphics[width=2.34375in,height=\textheight]{images/studentized_re.png}
+
+}
+
+\end{figure}
+
+The red point at the top of the plot is above 3 which indicates it is an
+outlier.
+\end{frame}
+
+\begin{frame}{High Leverage Points}
+\protect\hypertarget{high-leverage-points}{}
+\textbf{High leverage points} are observations that have an unusual
+predictor value. These points tend to impact the fitted regression quite
+a bit and are therefore very important to identify.
+
+Identification:
+
+\begin{itemize}
+\item
+  In simple linear regression, look for observations with a predictor
+  value that is far outside the range of the rest.
+\item
+  In multiple regression, we are looking for an unusual combination of
+  predictors which can be harder to identify
+
+  \begin{itemize}
+  \item
+    Compute the leverage statistic for each observation.
+  \item
+    If the leverage statistic is much greater than \((p+1)n\), the
+    observation may have high leverage.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{High Leverage Points}
+\protect\hypertarget{high-leverage-points-1}{}
+The left plot shows the response versus the predictors for a simple
+linear regression. The right plot show the studentized residuals versus
+the leverage.
+
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{figure}
+
+{\centering \includegraphics[width=1.32292in,height=\textheight]{images/simple_leverage.png}
+
+}
+
+\end{figure}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{figure}
+
+{\centering \includegraphics[width=1.32292in,height=\textheight]{images/multiple_leverage.png}
+
+}
+
+\end{figure}
+\end{column}
+\end{columns}
+
+Observation 41 in the left plot has a very large predictor value which
+indicates it is a high leverage point. This is confirmed in the right
+plot by the leverage index. The right plot also indicates 41 has a
+larger studentized residual (as does observation 20) so 41 is an outlier
+and a high leverage point.
+\end{frame}
+
+\begin{frame}{Exercises}
+\protect\hypertarget{exercises}{}
+Open the Linear Regression Exercises R Markdown file.
+
+\begin{itemize}
+\item
+  Go over the ``Helpful Plots'' section together as a class.
+\item
+  Complete the exercises at the end of the file.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{References}
+\protect\hypertarget{references}{}
+Chapter 3 of the ISLR2 book:
+
+James, Gareth, et al.~``Linear Regression.'' An Introduction to
+Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
 \end{frame}
 
 

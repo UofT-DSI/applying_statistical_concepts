@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  3 APR 2023 23:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  4 APR 2023 10:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1413,6 +1413,109 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
 
 ] [21
 
+] [22
+
+]
+Overfull \vbox (22.81015pt too high) detected at line 643
+ []
+
+[23
+
+] [24
+
+] [25
+
+] [26
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 755.
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <5> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 755.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 755.
+ [27
+
+] [28
+
+] [29
+
+] [30
+
+] [31
+
+]
+<images/residuals-01.png, id=288, 266.9975pt x 249.93375pt>
+File: images/residuals-01.png Graphic file (type png)
+<use images/residuals-01.png>
+Package pdftex.def Info: images/residuals-01.png  used on input line 842.
+(pdftex.def)             Requested size: 161.10823pt x 150.81184pt.
+ [32
+
+ <./images/residuals-01.png>]
+[33
+
+]
+<images/uncorrelated_error.png, id=304, 517.43312pt x 115.43124pt>
+File: images/uncorrelated_error.png Graphic file (type png)
+<use images/uncorrelated_error.png>
+Package pdftex.def Info: images/uncorrelated_error.png  used on input line 897.
+
+(pdftex.def)             Requested size: 337.27498pt x 75.24077pt.
+<images/correlated_error.png, id=305, 519.9425pt x 145.54375pt>
+File: images/correlated_error.png Graphic file (type png)
+<use images/correlated_error.png>
+Package pdftex.def Info: images/correlated_error.png  used on input line 897.
+(pdftex.def)             Requested size: 337.26047pt x 94.40688pt.
+
+Overfull \vbox (15.17787pt too high) detected at line 897
+ []
+
+[34
+
+ <./images/uncorrelated_error.png> <./images/correlated_error.png>] [35
+
+]
+<images/variance_errors.png, id=322, 420.57124pt x 397.485pt>
+File: images/variance_errors.png Graphic file (type png)
+<use images/variance_errors.png>
+Package pdftex.def Info: images/variance_errors.png  used on input line 932.
+(pdftex.def)             Requested size: 159.59412pt x 150.83359pt.
+
+[36
+
+ <./images/variance_errors.png>] [37
+
+]
+<images/studentized_re.png, id=339, 280.04625pt x 248.93pt>
+File: images/studentized_re.png Graphic file (type png)
+<use images/studentized_re.png>
+Package pdftex.def Info: images/studentized_re.png  used on input line 971.
+(pdftex.def)             Requested size: 169.3879pt x 150.56702pt.
+ [38
+
+ <./images/studentized_re.png>]
+[39
+
+]
+<images/simple_leverage.png, id=355, 206.7725pt x 194.7275pt>
+File: images/simple_leverage.png Graphic file (type png)
+<use images/simple_leverage.png>
+Package pdftex.def Info: images/simple_leverage.png  used on input line 1032.
+(pdftex.def)             Requested size: 95.60869pt x 90.03925pt.
+<images/multiple_leverage.png, id=356, 207.77625pt x 195.73125pt>
+File: images/multiple_leverage.png Graphic file (type png)
+<use images/multiple_leverage.png>
+Package pdftex.def Info: images/multiple_leverage.png  used on input line 1032.
+
+(pdftex.def)             Requested size: 95.60675pt x 90.06433pt.
+ [40
+
+ <./images/simple_leverage.png> <./images/multiple_leverage.png>]
+[41
+
+] [42
+
 ]
 \tf@nav=\write5
 \openout5 = `6.2_slides.nav'.
@@ -1425,13 +1528,13 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
 
  (./6.2_slides.aux) ) 
 Here is how much of TeX's memory you used:
- 34227 strings out of 476017
- 719764 string characters out of 5789768
+ 34403 strings out of 476017
+ 722961 string characters out of 5789768
  1864666 words of memory out of 5000000
- 53791 multiletter control sequences out of 15000+600000
- 627345 words of font info for 175 fonts, out of 8000000 for 9000
+ 53858 multiletter control sequences out of 15000+600000
+ 644249 words of font info for 201 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,122p,1003b,612s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,17n,122p,1003b,612s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/
 lmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/loc
@@ -1444,10 +1547,10 @@ msso10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsso12.pf
 b></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsso8.pfb></usr/lo
 cal/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texliv
 e/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on 6.2_slides.pdf (21 pages, 343237 bytes).
+Output written on 6.2_slides.pdf (42 pages, 692827 bytes).
 PDF statistics:
- 297 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
- 71818 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 477 PDF objects out of 1000 (max. 8388607)
+ 362 compressed objects within 4 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 82093 words of extra memory for PDF output out of 89155 (max. 10000000)
 
