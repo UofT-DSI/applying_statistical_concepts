@@ -1,0 +1,427 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+  aspectratio=169,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usetheme[]{Madrid}
+\usecolortheme{DarkBlue}
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\definecolor{DarkBlue}{rgb}{0.05, 0.15, 0.3}
+\setbeamercolor{structure}{fg=DarkBlue}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={6.3: Classification},
+  pdfauthor={Navona Calarco},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{6.3: Classification}
+\author{Navona Calarco}
+\date{}
+\institute{The University of Toronto}
+
+\begin{document}
+\frame{\titlepage}
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, enhanced, boxrule=0pt, interior hidden, frame hidden, borderline west={3pt}{0pt}{shadecolor}, breakable]}{\end{tcolorbox}}\fi
+
+\begin{frame}{Intro}
+\protect\hypertarget{intro}{}
+Classification involves predicating a qualitative response by a
+assigning it to a category. The methods that are used to classify
+observations are called \textbf{classifiers} and most of them work by
+following two steps:
+
+\begin{itemize}
+\item
+  Compute the probability that an observation belongs to a category.
+\item
+  Classify the observation based on some probability threshold
+  \textbackslash(i.e.~if the probability that an observation belongs to
+  some category is greater than 0.5 then assign the observation to that
+  category)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Why not use linear regression?}
+\protect\hypertarget{why-not-use-linear-regression}{}
+Suppose we are trying to diagnose a patient with either a \emph{stroke},
+\emph{drug overdose}, or \emph{epileptic seizure} based on their
+symptoms. We can code this response as follows \[
+    Y=\left\{\begin{array}{ll}
+1 & \text { if stroke; } \\
+2 & \text { if drug overdose; } \\
+3 & \text { if epileptic seizure. }
+\end{array}\right.
+\] At this point we could use linear regression to predict \(Y\) based
+on a set of predictors. However there are several problems with this
+coding
+
+\begin{itemize}
+\item
+  Implies an ordering of the outcomes.
+\item
+  The difference between epileptic seizure and stroke versus stroke and
+  drug overdose is assumed to be the same.
+\end{itemize}
+
+A different ordering would give completely different results for the
+linear regression.
+\alert{There is no convenient way to code a qualitative response with more than two levels so that linear regression can be used.}
+\end{frame}
+
+\begin{frame}{Why not use linear regression?}
+\protect\hypertarget{why-not-use-linear-regression-1}{}
+The 0/1 coding for a binary qualitative response variable does not
+suffer the same problems. However the probabilities we obtain will be
+difficult to interpret
+
+\begin{itemize}
+\item
+  negative probabilities
+\item
+  probabilities above 1
+\end{itemize}
+
+So, linear regression only able to give
+\alert{crude estimates of the probabilities for a binary response.}
+
+In summary, we don't use linear regression for classification since:
+
+\begin{itemize}
+\item
+  It does not work for a qualitative response variable with more than 2
+  classes.
+\item
+  With 2 classes, the probability estimates are not meaningful.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Logistic Regression}
+\protect\hypertarget{logistic-regression}{}
+\textbf{Logistic regression} models the probability that the response
+\(Y\) belongs to a particular category. Suppose we have a qualitative
+response \(Y\) that has two levels, coded as 0 and 1, and one predictor
+variable. We want to model
+
+\[
+p(X)=\operatorname{Pr}(Y=1 \mid X)
+\]
+
+The logistic function keeps the probabilities between 0 and 1. For one
+predictor, the function is \[
+p(X)=\frac{e^{\beta_{0}+\beta_{1} X}}{1+e^{\beta_{0}+\beta_{1} X}}
+\] As with linear regression, we are trying to fit \(\beta_0, \beta_1\).
+\end{frame}
+
+\begin{frame}{Estimating the regression coefficients}
+\protect\hypertarget{estimating-the-regression-coefficients}{}
+\(\beta_0\) and \(\beta_1\) are estimated using the training data using
+a method called \textbf{maximum likelihood}. This involves maximizing
+the likelihood function, but we will not cover the details of this
+function.
+\end{frame}
+
+\begin{frame}{Odds}
+\protect\hypertarget{odds}{}
+The \textbf{odds} compares the probability of a particular outcome to
+the probability of all the other outcomes.
+
+\[
+    \frac{p(X)}{1-p(X)}=e^{\beta_{0}+\beta_{1} X}
+\]
+
+\begin{itemize}
+\item
+  takes values between (0, \(\infty\))
+\item
+  odds close to 0 \(\Rightarrow\) very low probability of the outcome in
+  question
+\item
+  odds much greater than 0 \(\Rightarrow\) very high probability of the
+  outcome in question.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Log Odds}
+\protect\hypertarget{log-odds}{}
+The \textbf{log odds} (or logit) is obtained by taking the logarithm of
+the odds \[
+    \log \left(\frac{p(X)}{1-p(X)}\right)=\beta_{0}+\beta_{1} X
+\]
+
+\begin{itemize}
+\item
+  Increasing \(X\) by one unit changes the log odds by \(\beta_1\).
+\item
+  If \(\beta_1\) is positive, increasing \(X\) is associated with
+  increasing \(p(X)\)
+\item
+  If \(\beta_1\) is negative, increasing \(X\) is associated with
+  decreasing \(p(X)\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Making Predictions}
+\protect\hypertarget{making-predictions}{}
+Once the coefficients have been estimated predictions can be made for
+any value of the predictor. Logistic regression will give the
+probability of the outcome and the classification will be according to
+some threshold which depends on the problem or how conservative the
+predictions should be.
+\end{frame}
+
+\begin{frame}{Multiple Predictors}
+\protect\hypertarget{multiple-predictors}{}
+Simple logistic regression can be extended to include multiple
+predictors \[
+p(X)=\frac{e^{\beta_{0}+\beta_{1} X_{1}+\cdots+\beta_{p} X_{p}}}{1+e^{\beta_{0}+\beta_{1} X_{1}+\cdots+\beta_{p} X_{p}}}
+\] The log odds in this case becomes \[
+\log \left(\frac{p(X)}{1-p(X)}\right)=\beta_{0}+\beta_{1} X_{1}+\cdots+\beta_{p} X_{p}
+\] As before, the maximum likelihood is used to estimate the
+coefficients.
+\end{frame}
+
+\begin{frame}{Exercise: Logistic Regression}
+\protect\hypertarget{exercise-logistic-regression}{}
+Open the Classification Exercises R Markdown file.
+
+\begin{itemize}
+\item
+  Go over ``Getting Started'' together as a class.
+\item
+  Go through the ``Logistic Regression'' as a class.
+\item
+  5 minutes for students to complete the questions from ``Logistic
+  Regression''.
+\item
+  Questions should be completed at home if time does not allow.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Multinomial logistic regression}
+\protect\hypertarget{multinomial-logistic-regression}{}
+We can extend to two-class logistic regression to accommodate \(K\)
+classes. We need to select one class to serve as the \textbf{baseline},
+so we will choose the \(K\)th class. Then the model becomes \[
+\begin{aligned}
+\operatorname{Pr}(Y=K \mid X=x)=\frac{1}{1+\sum_{l=1}^{K-1} e^{\beta_{l 0}+\beta_{l 1} x_{1}+\cdots+\beta_{l p} x_{p}}}
+&& \text{and,} 
+\\
+\operatorname{Pr}(Y=k \mid X=x)=\frac{e^{\beta_{k 0}+\beta_{k 1} x_{1}+\cdots+\beta_{k p} x_{p}}}{1+\sum_{l=1}^{K-1} e^{\beta_{l 0}+\beta_{l 1} x_{1}+\cdots+\beta_{l p} x_{p}}} 
+&& \text{for } k = 1, \dots, K-1
+\end{aligned}
+\] The interpretation of the coefficients is tied to the choice of the
+baseline.
+\end{frame}
+
+\begin{frame}{Bayes Classifier}
+\protect\hypertarget{bayes-classifier}{}
+Suppose that we have a qualitative response variable \(Y\) with \(K\)
+distinct and ordered classes. The Bayes classifier use a less direct
+approach using Bayes' theorem to estimating the probabilities
+
+\[\operatorname{Pr}(Y=k \mid X=x)=\frac{\pi_{k} f_{k}(x)}{\sum_{l=1}^{K} \pi_{l} f_{l}(x)}\]
+
+\begin{itemize}
+\item
+  \(\pi_k\) is the \textbf{prior} probability that a random observation
+  belongs to the \(k\)th class.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    estimated as the fraction of the training observation that belong to
+    the \(k\)th class.
+  \end{itemize}
+\item
+  \(f_{k}(X) \equiv \operatorname{Pr}(X \mid Y=k)\) is the
+  \textbf{density function} of \(X\) for an observation from the \(k\)th
+  class.
+\end{itemize}
+
+There are several methods we will discuss that attempt to approximate
+the Bayes classifier using different approaches for estimating
+\(f_k(x)\).
+\end{frame}
+
+\begin{frame}{Why Use Bayes Classifier?}
+\protect\hypertarget{why-use-bayes-classifier}{}
+\begin{itemize}
+\item
+  When there is \alert{a lot of separation between two classes} logistic
+  regression does not does not provide stable coefficient estimates.
+\item
+  If the
+  \alert{distribution of each of the predictors is approximately normal and the sample size is small},
+  these approaches are more accurate.
+\end{itemize}
+
+The methods that attempt to estimate the Bayes classifier that we will
+cover are:
+
+\begin{itemize}
+\item
+  Linear discriminant analysis,
+\item
+  Quadratic discriminant analysis, and
+\item
+  Naive Bayes.
+\end{itemize}
+\end{frame}
+
+
+
+\end{document}
