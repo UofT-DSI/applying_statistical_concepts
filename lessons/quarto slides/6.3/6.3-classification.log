@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  11 APR 2023 23:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  12 APR 2023 16:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1353,6 +1353,100 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
 ]
 [14
 
+] [15
+
+] [16
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 472.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 472.
+ [17
+
+] [18
+
+]
+<images/confusionmatrix.png, id=174, 405.515pt x 193.72375pt>
+File: images/confusionmatrix.png Graphic file (type png)
+<use images/confusionmatrix.png>
+Package pdftex.def Info: images/confusionmatrix.png  used on input line 519.
+(pdftex.def)             Requested size: 240.90387pt x 115.08525pt.
+ [19
+
+ <./images/confusionmatrix.png>] [20
+
+]
+<images/ROC.png, id=192, 371.88937pt x 324.71312pt>
+File: images/ROC.png Graphic file (type png)
+<use images/ROC.png>
+Package pdftex.def Info: images/ROC.png  used on input line 569.
+(pdftex.def)             Requested size: 172.39903pt x 150.52925pt.
+ [21
+
+ <./images/ROC.png>] [22
+
+]
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 606.
+
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 606.
+
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 606.
+
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 606.
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <8> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 606.
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <6> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 606.
+LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 606.
+
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 606.
+
+LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <8> not available
+(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 606.
+
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <8> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 606.
+
+LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <6> not available
+(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 606.
+
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <6> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 606.
+
+ [23
+
+] [24
+
+] [25
+
+] [26
+
+] [27
+
+] [28
+
+]
+<images/KNN1.png, id=252, 440.64626pt x 250.9375pt>
+File: images/KNN1.png Graphic file (type png)
+<use images/KNN1.png>
+Package pdftex.def Info: images/KNN1.png  used on input line 711.
+(pdftex.def)             Requested size: 225.84274pt x 128.61203pt.
+ [29
+
+ <./images/KNN1.png>] [30
+
+]
+[31
+
+] [32
+
 ]
 \tf@nav=\write5
 \openout5 = `6.3-classification.nav'.
@@ -1365,27 +1459,29 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
 
  (./6.3-classification.aux) ) 
 Here is how much of TeX's memory you used:
- 33881 strings out of 476017
- 712929 string characters out of 5789768
- 1860666 words of memory out of 5000000
- 53549 multiletter control sequences out of 15000+600000
- 582806 words of font info for 127 fonts, out of 8000000 for 9000
+ 34079 strings out of 476017
+ 716027 string characters out of 5789768
+ 1862666 words of memory out of 5000000
+ 53623 multiletter control sequences out of 15000+600000
+ 619414 words of font info for 176 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,122p,1011b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,122p,1011b,651s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/pu
 blic/lm/lmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
-mi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></
-usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/
-texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/20
-23/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2023/texmf-di
-st/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts
-/type1/public/lm/lmsso10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/pu
-blic/lm/lmsso8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
-sy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on 6.3-classification.pdf (14 pages, 175070 bytes).
+mi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><
+/usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/
+texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/20
+23/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2023/texmf-d
+ist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2023/texmf-dist/fonts/t
+ype1/public/lm/lmssbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
+lic/lm/lmsso10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
+sso12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsso8.pfb>
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/loca
+l/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on 6.3-classification.pdf (32 pages, 326865 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 154 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 43099 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 371 PDF objects out of 1000 (max. 8388607)
+ 284 compressed objects within 3 object streams
+ 96 named destinations out of 1000 (max. 500000)
+ 65642 words of extra memory for PDF output out of 74296 (max. 10000000)
 

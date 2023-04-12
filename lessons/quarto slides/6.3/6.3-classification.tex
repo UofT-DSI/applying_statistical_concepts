@@ -175,7 +175,7 @@
 
 \begin{document}
 \frame{\titlepage}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, enhanced, boxrule=0pt, interior hidden, frame hidden, borderline west={3pt}{0pt}{shadecolor}, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
 
 \begin{frame}{Intro}
 \protect\hypertarget{intro}{}
@@ -299,7 +299,7 @@ the probability of all the other outcomes.
 \protect\hypertarget{log-odds}{}
 The \textbf{log odds} (or logit) is obtained by taking the logarithm of
 the odds \[
-    \log \left(\frac{p(X)}{1-p(X)}\right)=\beta_{0}+\beta_{1} X
+\log \left(\frac{p(X)}{1-p(X)}\right)=\beta_{0}+\beta_{1} X
 \]
 
 \begin{itemize}
@@ -420,6 +420,331 @@ cover are:
 \item
   Naive Bayes.
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Linear Discriminant Analysis}
+\protect\hypertarget{linear-discriminant-analysis}{}
+Suppose we only have one predictor, so \(p = 1\). In order to estimate
+\(f_k(x)\) we make the following assumptions:
+
+\begin{itemize}
+\item
+  \(f_k(x)\) is normal
+\item
+  the variance is the same across all \(K\) classes.
+\end{itemize}
+
+Linear discriminant analysis (LDA) then approximates the Bayes
+classifier using the estimates: \[
+\begin{aligned}
+\hat{\mu}_{k} &=\frac{1}{n_{k}} \sum_{i: y_{i}=k} x_{i} && (k \text{th mean)}\\
+\hat{\sigma}^{2} &=\frac{1}{n-K} \sum_{k=1}^{K} \sum_{i: y_{i}=k}\left(x_{i}-\hat{\mu}_{k}\right)^{2} && \text{(variance)}\\
+\hat{\pi}_{k}&=n_{k} / n && (k \text{th prior probability)}.
+\end{aligned}
+\] where \(n\) = number of training observations, and \(n_k\) = number
+of observations in the \(k\)th class.
+\end{frame}
+
+\begin{frame}{Linear Discriminant Analysis}
+\protect\hypertarget{linear-discriminant-analysis-1}{}
+The LDA classifier uses the estimates for \(\pi_{k}, \mu_{k}\), and
+\(\sigma^{2}\) to assign an observation \(X = x\) to the class that has
+the largest \[
+\hat{\delta}_{k}(x)=x \cdot \frac{\hat{\mu}_{k}}{\hat{\sigma}^{2}}-\frac{\hat{\mu}_{k}^{2}}{2 \hat{\sigma}^{2}}+\log \left(\hat{\pi}_{k}\right)
+\]
+\end{frame}
+
+\begin{frame}{Linear Discriminant Analysis for \(p>1\)}
+\protect\hypertarget{linear-discriminant-analysis-for-p1}{}
+Now suppose we have \(X = (X_1, \dots, X_p)\) predictors. Assumptions: -
+\(X\) is multivariate Gaussian (i.e.~each predictor is normally
+distributed with some correlation between them)
+
+\begin{itemize}
+\item
+  class-specific mean vectors
+\item
+  common covariance matrix across classes.
+\end{itemize}
+
+We classify observations to the class for which \(\hat{\delta}_{k}(x)\)
+is the largest.
+\end{frame}
+
+\begin{frame}{Binary Classifiers}
+\protect\hypertarget{binary-classifiers}{}
+Binary classifiers, similarly to such as tests for diseases (positive
+versus negative), can make two types of errors:
+
+\begin{itemize}
+\item
+  Incorrectly assign an individual as positive when they are negative
+  (False positive).
+\item
+  Incorrectly assign an individual as negative when they are positive
+  (False negative).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Confusion Matrix}
+\protect\hypertarget{confusion-matrix}{}
+A confusion matrix helps to summarize the two types of errors of binary
+classifiers. They compare the LDA predictions to the true outcomes of
+the training observations. In the case of medical tests this looks like:
+
+\begin{columns}[T]
+\begin{column}{0.6\textwidth}
+\begin{figure}
+
+{\centering \includegraphics[width=3.33333in,height=\textheight]{images/confusionmatrix.png}
+
+}
+
+\end{figure}
+
+The red text is where the numbers are filled in.
+\end{column}
+
+\begin{column}{0.4\textwidth}
+\begin{itemize}
+\item
+  N and P are the number of actual negatives and positives respectively
+  in the training data.
+\item
+  N* and P* are the number of predicted negative and positives in the
+  training data.
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Threshold}
+\protect\hypertarget{threshold}{}
+Recall that the Bayes classifier assigns observations to the class for
+with the posterior probability is the greatest. Since probabilities sum
+to 1, for a binary classifier this means that a test will come back
+positive if:
+
+\[
+\operatorname{Pr}( \text{positive} \mid X=x) > 0.5
+\]
+
+That is, the binary classifier uses a threshold of 50\%. Depending on
+the classification problem, one may want to specify a different
+threshold level. For example:
+
+\[
+\text{positive if }\operatorname{Pr}( \text{positive} \mid X=x) > 0.2
+\]
+\end{frame}
+
+\begin{frame}{ROC}
+\protect\hypertarget{roc}{}
+The ROC (receiver operator characteristics) curve is a method for
+visualising the errors previously discusses for all possible thresholds.
+
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{figure}
+
+{\centering \includegraphics[width=2.38542in,height=\textheight]{images/ROC.png}
+
+}
+
+\end{figure}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item
+  Performance of a classifier is given by the area under the ROC curve,
+  called the AUC.
+\item
+  The larger the AUC the better.
+\item
+  Ideal ROC curve is as close to the top left corner as possible.
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Exercise: Linear Discriminant Analysis}
+\protect\hypertarget{exercise-linear-discriminant-analysis}{}
+Open the Classification Exercises R Markdown file.
+
+\begin{itemize}
+\item
+  Go over the ``Linear Discriminant Analysis'' section together as a
+  class.
+\item
+  5 minutes for students to complete the questions from ``Linear
+  Discriminant Analysis''.
+\item
+  Questions should be completed at home if time does not allow.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Quadratic Discriminant Analysis}
+\protect\hypertarget{quadratic-discriminant-analysis}{}
+The Quadratic discriminant analysis (QDA) classifier assumes that:
+
+\begin{itemize}
+\item
+  observations are drawn from a class-specific Gaussian distribution
+\item
+  each class has its own covariance matrix (unlike LDA)
+\end{itemize}
+
+The QDA uses estimates for the class-specific means (\(\mu_k\)),
+covariance matrices (\(\boldsymbol{\Sigma}_{k}\)), and prior probability
+(\(\mu_k\)) to assign an observation \(x\) to the class for which
+
+\[
+\delta_{k}(x)=-\frac{1}{2}\left(x-\mu_{k}\right)^{T} \boldsymbol{\Sigma}_{k}^{-1}\left(x-\mu_{k}\right)-\frac{1}{2} \log \left|\boldsymbol{\Sigma}_{k}\right|+\log \pi_{k}
+\] is the largest. Unlike the LDA, the function for \(\delta_{k}(x)\) is
+quadratic which gives the QDA it's name.
+\end{frame}
+
+\begin{frame}{LDA vs QDA}
+\protect\hypertarget{lda-vs-qda}{}
+When to use the LDA versus the QDA:
+
+\begin{itemize}
+\item
+  LDA is better than QDA when there are few training observations since
+  it requires fewer parameters to be estimated.
+\item
+  QDA is best when there are many training observations or when the
+  assumption of a common covariance matrix in the LDA is clearly wrong.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise: Quadratic Discriminant Analysis}
+\protect\hypertarget{exercise-quadratic-discriminant-analysis}{}
+Open the Classification Exercises R Markdown file.
+
+\begin{itemize}
+\item
+  Go over the ``Quadratic Discriminant Analysis'' section together as a
+  class.
+\item
+  5 minutes for students to complete the questions from ``Quadratic
+  Discriminant Analysis''.
+\item
+  Questions should be completed at home if time does not allow.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Naive Bayes}
+\protect\hypertarget{naive-bayes}{}
+The naive Bayes classifier assumes:
+\textit{within each class, the $p$ predictors are independent}. This
+allows us to disregard any association between the \(p\) predictors and
+gives the form of \(f_k(x)\) as \[
+f_{k}(x)=f_{k 1}\left(x_{1}\right) \times f_{k 2}\left(x_{2}\right) \times \cdots \times f_{k p}\left(x_{p}\right)
+\] where \(f_{k j}\) is the density function of the \(j\)th predictor
+for observations in the \(k\)th class.
+
+To estimate \(f_{k j}\) using the training data there are several
+options:
+
+\begin{itemize}
+\item
+  For quantitative \(X_j\):
+\item
+  assume that for each class, the \(j\)th predictor is drawn from a
+  normal distribution, or
+\item
+  estimate it as the fraction of the training observations in the
+  \(k\)th class that belong to the same histogram bin as \(x_j\).
+\item
+  For quantitative \(X_j\):
+\item
+  count the proportion of training observations for the \(j\)th
+  predictor that belong to each class.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise: Naive Bayes}
+\protect\hypertarget{exercise-naive-bayes}{}
+Open the Classification Exercises R Markdown file.
+
+\begin{itemize}
+\item
+  Go over the ``Naive Bayes'' section together as a class.
+\item
+  5 minutes for students to complete the questions from ``Naive Bayes''.
+\item
+  Questions should be completed at home if time does not allow.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\(K\)-Nearest Neighbours}
+\protect\hypertarget{k-nearest-neighbours}{}
+The \(K\)-nearest neighbors (KNN) classifier works very differently than
+any of the previous classification methods. For a test observation
+\(x_0\), it identifies \(K\) training data points that are closest to
+\(x_0\) (represented by \(\mathcal{N}_0\)) and estimates the conditional
+probability for class \(j\) as \[
+\operatorname{Pr}\left(Y=j \mid X=x_{0}\right)=\frac{1}{K} \sum_{i \in \mathcal{N}_{0}} I\left(y_{i}=j\right)
+\] where \(I(y_i = j)\) if an \textbf{indicator variable} that equals 1
+is \(y_i = j\) and 0 otherwise. The KNN classifier classifies the test
+observation \(x_0\) to the class for which the above probability is the
+largest.
+\end{frame}
+
+\begin{frame}{\(K\)-Nearest Neighbours}
+\protect\hypertarget{k-nearest-neighbours-1}{}
+These figures illustrate the KNN approach with \(K=3\). To the left we
+see the 3 closest points to x are 1 orange and 2 blue so this
+observation will be classified as blue. The right figure shows the
+decision boundaries where an observation will be classified as blue or
+orange.
+
+\begin{figure}
+
+{\centering \includegraphics[width=3.125in,height=\textheight]{images/KNN1.png}
+
+}
+
+\end{figure}
+\end{frame}
+
+\begin{frame}{Exercise: K-Nearest Neighbours}
+\protect\hypertarget{exercise-k-nearest-neighbours}{}
+Open the Classification Exercises R Markdown file.
+
+\begin{itemize}
+\item
+  Go over the ``K-Nearest Neighbours'' section together as a class.
+\item
+  5 minutes for students to complete the questions from ``K-Nearest
+  Neighbours''.
+\item
+  Questions should be completed at home if time does not allow.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{How to choose the classification method}
+\protect\hypertarget{how-to-choose-the-classification-method}{}
+The choice of classification method depends on two things:
+
+\begin{itemize}
+\item
+  the true distribution of the predictors in each of the \(K\) classes,
+  and
+\item
+  the number of training observations (\(n\)) compared to to the number
+  of predictors (\(p\)).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{References}
+\protect\hypertarget{references}{}
+Chapter 4 and section 2.2.3 of the ISLR2 book:
+
+James, Gareth, et al.~An Introduction to Statistical Learning: with
+Applications in R, 2nd ed., Springer, 2021.
 \end{frame}
 
 
