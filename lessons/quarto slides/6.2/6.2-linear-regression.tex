@@ -175,7 +175,7 @@
 
 \begin{document}
 \frame{\titlepage}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, interior hidden, breakable, frame hidden, sharp corners, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, interior hidden, frame hidden, sharp corners, breakable, boxrule=0pt, enhanced]}{\end{tcolorbox}}\fi
 
 \begin{frame}[fragile]{Motivation}
 \protect\hypertarget{motivation}{}
@@ -613,18 +613,12 @@ the other two qualitative variables.
 Let's start by looking at the differences in income between students and
 non-students. Our qualitative predictor, or \emph{factor}, has two
 levels so we can incorporate into a regression model using a
-\textbf{dummy variable} that takes on two possible numerical values.
-
-\[
+\textbf{dummy variable} that takes on two possible numerical values. \[
 x_{i}=\left\{\begin{array}{ll}
 1 & \text { if } i \text{th person is a student } \\
 0 & \text { if } i \text{th person is not a student }
 \end{array}\right. 
-\]
-
-So we have the following model
-
-\[
+\] So we have the following model \[
 y_{i}=\beta_{0}+\beta_{1} x_{i}+\epsilon_{i}=\left\{\begin{array}{ll}
 \beta_{0}+\beta_{1}+\epsilon_{i} & \text { if } i \text{th person is a student } \\
 \beta_{0}+\epsilon_{i} & \text { if } i \text{th person is not a student }

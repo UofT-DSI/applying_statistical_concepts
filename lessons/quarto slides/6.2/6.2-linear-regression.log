@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  4 APR 2023 10:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  13 APR 2023 15:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**6.2_slides
-(./6.2_slides.tex
+**6.2-linear-regression
+(./6.2-linear-regression.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-03-30>
 (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamer.cls
@@ -1075,8 +1075,8 @@ File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count378
 \l__pdf_internal_box=\box104
 )
-No file 6.2_slides.aux.
-\openout1 = `6.2_slides.aux'.
+No file 6.2-linear-regression.aux.
+\openout1 = `6.2-linear-regression.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 176.
 LaTeX Font Info:    ... okay on input line 176.
@@ -1248,14 +1248,15 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-No file 6.2_slides.nav.
+No file 6.2-linear-regression.nav.
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
-\openout4 = `6.2_slides.vrb'.
+\openout4 = `6.2-linear-regression.vrb'.
 
- (./6.2_slides.vrb
+
+(./6.2-linear-regression.vrb
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
 .
 
@@ -1364,10 +1365,10 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 ) [11
 
 ]
-\openout4 = `6.2_slides.vrb'.
+\openout4 = `6.2-linear-regression.vrb'.
 
 
-(./6.2_slides.vrb) [12
+(./6.2-linear-regression.vrb) [12
 
 ] [13
 
@@ -1383,8 +1384,7 @@ Package pdftex.def Info: images/regression_plane.png  used on input line 483.
 (pdftex.def)             Requested size: 187.45328pt x 188.04092pt.
  [16
 
- <./images/regression_plane.png>]
-[17
+ <./images/regression_plane.png>] [17
 
 ] [18
 
@@ -1415,11 +1415,7 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
 
 ] [22
 
-]
-Overfull \vbox (22.81015pt too high) detected at line 643
- []
-
-[23
+] [23
 
 ] [24
 
@@ -1429,18 +1425,19 @@ Overfull \vbox (22.81015pt too high) detected at line 643
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 755.
+(Font)              <5> on input line 749.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <5> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 755.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 749.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 755.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 749.
  [27
 
 ] [28
 
 ] [29
 
-] [30
+]
+[30
 
 ] [31
 
@@ -1448,27 +1445,26 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
 <images/residuals-01.png, id=288, 266.9975pt x 249.93375pt>
 File: images/residuals-01.png Graphic file (type png)
 <use images/residuals-01.png>
-Package pdftex.def Info: images/residuals-01.png  used on input line 842.
+Package pdftex.def Info: images/residuals-01.png  used on input line 836.
 (pdftex.def)             Requested size: 161.10823pt x 150.81184pt.
  [32
 
- <./images/residuals-01.png>]
-[33
+ <./images/residuals-01.png>] [33
 
 ]
 <images/uncorrelated_error.png, id=304, 517.43312pt x 115.43124pt>
 File: images/uncorrelated_error.png Graphic file (type png)
 <use images/uncorrelated_error.png>
-Package pdftex.def Info: images/uncorrelated_error.png  used on input line 897.
+Package pdftex.def Info: images/uncorrelated_error.png  used on input line 891.
 
 (pdftex.def)             Requested size: 337.27498pt x 75.24077pt.
 <images/correlated_error.png, id=305, 519.9425pt x 145.54375pt>
 File: images/correlated_error.png Graphic file (type png)
 <use images/correlated_error.png>
-Package pdftex.def Info: images/correlated_error.png  used on input line 897.
+Package pdftex.def Info: images/correlated_error.png  used on input line 891.
 (pdftex.def)             Requested size: 337.26047pt x 94.40688pt.
 
-Overfull \vbox (15.17787pt too high) detected at line 897
+Overfull \vbox (15.17787pt too high) detected at line 891
  []
 
 [34
@@ -1479,7 +1475,7 @@ Overfull \vbox (15.17787pt too high) detected at line 897
 <images/variance_errors.png, id=322, 420.57124pt x 397.485pt>
 File: images/variance_errors.png Graphic file (type png)
 <use images/variance_errors.png>
-Package pdftex.def Info: images/variance_errors.png  used on input line 932.
+Package pdftex.def Info: images/variance_errors.png  used on input line 926.
 (pdftex.def)             Requested size: 159.59412pt x 150.83359pt.
 
 [36
@@ -1490,7 +1486,7 @@ Package pdftex.def Info: images/variance_errors.png  used on input line 932.
 <images/studentized_re.png, id=339, 280.04625pt x 248.93pt>
 File: images/studentized_re.png Graphic file (type png)
 <use images/studentized_re.png>
-Package pdftex.def Info: images/studentized_re.png  used on input line 971.
+Package pdftex.def Info: images/studentized_re.png  used on input line 965.
 (pdftex.def)             Requested size: 169.3879pt x 150.56702pt.
  [38
 
@@ -1501,12 +1497,12 @@ Package pdftex.def Info: images/studentized_re.png  used on input line 971.
 <images/simple_leverage.png, id=355, 206.7725pt x 194.7275pt>
 File: images/simple_leverage.png Graphic file (type png)
 <use images/simple_leverage.png>
-Package pdftex.def Info: images/simple_leverage.png  used on input line 1032.
+Package pdftex.def Info: images/simple_leverage.png  used on input line 1026.
 (pdftex.def)             Requested size: 95.60869pt x 90.03925pt.
 <images/multiple_leverage.png, id=356, 207.77625pt x 195.73125pt>
 File: images/multiple_leverage.png Graphic file (type png)
 <use images/multiple_leverage.png>
-Package pdftex.def Info: images/multiple_leverage.png  used on input line 1032.
+Package pdftex.def Info: images/multiple_leverage.png  used on input line 1026.
 
 (pdftex.def)             Requested size: 95.60675pt x 90.06433pt.
  [40
@@ -1518,36 +1514,36 @@ Package pdftex.def Info: images/multiple_leverage.png  used on input line 1032.
 
 ]
 \tf@nav=\write5
-\openout5 = `6.2_slides.nav'.
+\openout5 = `6.2-linear-regression.nav'.
 
 \tf@toc=\write6
-\openout6 = `6.2_slides.toc'.
+\openout6 = `6.2-linear-regression.toc'.
 
 \tf@snm=\write7
-\openout7 = `6.2_slides.snm'.
+\openout7 = `6.2-linear-regression.snm'.
 
- (./6.2_slides.aux) ) 
+ (./6.2-linear-regression.aux) ) 
 Here is how much of TeX's memory you used:
  34403 strings out of 476017
- 722961 string characters out of 5789768
+ 723159 string characters out of 5789768
  1864666 words of memory out of 5000000
  53858 multiletter control sequences out of 15000+600000
  644249 words of font info for 201 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,17n,122p,1003b,612s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/
-lmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
-></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/loc
-al/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/
-2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2023/texmf
--dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2023/texmf-dist/font
-s/type1/public/lm/lmss8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
-lic/lm/lmssbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/l
-msso10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsso12.pf
-b></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsso8.pfb></usr/lo
-cal/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texliv
-e/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on 6.2_slides.pdf (42 pages, 692827 bytes).
+ 128i,17n,122p,1014b,612s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1
+/public/lm/lmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm
+/lmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pf
+b></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/loc
+al/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive
+/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2023/texm
+f-dist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2023/texmf-dist/font
+s/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/
+public/lm/lmsso10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm
+/lmsso12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsso8.p
+fb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/l
+ocal/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on 6.2-linear-regression.pdf (42 pages, 692838 bytes).
 PDF statistics:
  477 PDF objects out of 1000 (max. 8388607)
  362 compressed objects within 4 object streams
