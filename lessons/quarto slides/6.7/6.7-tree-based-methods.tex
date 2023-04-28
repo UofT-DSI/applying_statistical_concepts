@@ -1,0 +1,793 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+  aspectratio=169,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usetheme[]{Madrid}
+\usecolortheme{DarkBlue}
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\definecolor{DarkBlue}{rgb}{0.05, 0.15, 0.3}
+\setbeamercolor{structure}{fg=DarkBlue}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={6.7 Tree-Based Methods},
+  pdfauthor={Navona Calarco},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{6.7 Tree-Based Methods}
+\author{Navona Calarco}
+\date{}
+\institute{The University of Toronto}
+
+\begin{document}
+\frame{\titlepage}
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, breakable, boxrule=0pt, sharp corners, interior hidden, borderline west={3pt}{0pt}{shadecolor}, frame hidden]}{\end{tcolorbox}}\fi
+
+\begin{frame}{Introduction}
+\protect\hypertarget{introduction}{}
+This section will cover tree-based methods for regression and
+classification. These methods are easy to interpret yet their prediction
+accuracy is not as good as the other methods we have seen.
+
+We will also cover several methods that combine multiple trees to
+overcome this problem:
+
+\begin{itemize}
+\item
+  Bagging
+\item
+  Random forests
+\item
+  Boosting
+\item
+  Bayesian additive regression trees.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Regression Trees}
+\protect\hypertarget{regression-trees}{}
+Regression trees are able to make predictions for quantitative responses
+based on predictors. The method is summarized in two steps:
+
+\begin{enumerate}
+\item
+  Divide the predictor space \(X_1, X_2, \dots , X_p\) into \(J\)
+  distinct non-overlapping regions \(R_1, R_2, \dots R_J\).
+\item
+  The predicted response of an observation that falls into the region
+  \(R_j\) is the mean of the response values of the training
+  observations in \(R_j\).
+\end{enumerate}
+
+How do we choose the regions \(R_1, R_2, \dots R_J\)?
+\end{frame}
+
+\begin{frame}{Constructing \(R_1, R_2, \dots R_J\)}
+\protect\hypertarget{constructing-r_1-r_2-dots-r_j}{}
+The goal is to find regions \(R_1, R_2, \dots R_J\) (boxes for
+simplicity) that minimize
+\[\operatorname{RSS} = \sum_{j=1}^{J} \sum_{i \in R_{j}}\left(y_{i}-\hat{y}_{R_{j}}\right)^{2}\]
+
+\begin{itemize}
+\item
+  \(\hat{y}_{R_j}\) is the mean response for the training observations
+  in the \(j\)-th box.
+\item
+  We cannot consider every possible splitting so we use
+  \textbf{recursive binary splitting} to construct the regions.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Recursive Binary Splitting}
+\protect\hypertarget{recursive-binary-splitting}{}
+\begin{enumerate}
+\item
+  Consider all predictors \(X_1, \dots, X_p\) and all possible values of
+  the cutpoint \(s\) for each predictor.
+\item
+  Compute the RSS of the tree for each predictor and cut point
+  combination.
+\item
+  Select the predictor \(X_j\) and cut-point \(s\) such that splitting
+  the predictor space into the regions \(\{X|X_j < s\}\) and
+  \(\{X|X_j \geq s\}\) results in the greatest reduction in RSS.
+\item
+  Repeat steps 1-3 to minimize the RSS within each of the regions until
+  we decide to stop (stop when we reach no more than 5 observations per
+  region or some other criteria).
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Regression Trees}
+\protect\hypertarget{regression-trees-1}{}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{figure}
+
+{\centering \includegraphics[width=2.34375in,height=\textheight]{images/tree diagram.png}
+
+}
+
+\end{figure}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item
+  The \textbf{terminal nodes} of the tree are the resulting regions.
+\item
+  The \textbf{internal nodes} are the points on the tree where the
+  predictor space is split.
+\item
+  The \textbf{branches} of the tree are the segments that connect the
+  nodes.
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Tree Pruning}
+\protect\hypertarget{tree-pruning}{}
+Using recursive binary splitting by itself yields a large tree \(T_0\)
+that is prone to overfitting, high variance, and poor test error rates.
+So we use \textbf{cost complexity pruning} (aka weakest link pruning)
+after the fact to shrink the tree. For each \(\alpha\) there is a
+subtree \(T \subset T_0\) that minimizes
+\[\sum_{m=1}^{|T|} \sum_{i:} x_{i} \in R_{m}\left(y_{i}-\hat{y}_{R_{m}}\right)^{2}+\alpha|T|\]
+
+\begin{itemize}
+\item
+  \(\alpha\) is the tuning parameter.
+\item
+  \(|T|\) is the number of terminal nodes of the tree \(T\).
+\item
+  \(R_m\) is the region (rectangle) that corresponds to the \(m\)th
+  terminal node.
+\item
+  \(\hat{y}_{R_m}\) is the mean of the training observations in \(R_m\)
+  .
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Tuning Parameter \(\alpha\)}
+\protect\hypertarget{tuning-parameter-alpha}{}
+The tuning parameter \(\alpha\) from the cost complexity method has
+several features.
+
+\begin{itemize}
+\item
+  It is non-negative.
+\item
+  It controls the trade-off between the complexity of the subtree and
+  its fit to the training data.
+
+  \begin{itemize}
+  \item
+    \(\alpha = 0\) implies maximum complexity so \(T = T_0\)
+  \item
+    As \(\alpha\) increases, there is a penalty for having meany
+    terminal nodes so the subtree will shrink.
+  \end{itemize}
+\item
+  We use a validation set of cross-validation to choose a value for
+  \(\alpha\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Regression Trees}
+\protect\hypertarget{regression-trees-2}{}
+\begin{block}{The complete process for building a regression tree is
+summarised by:}
+\protect\hypertarget{the-complete-process-for-building-a-regression-tree-is-summarised-by}{}
+\begin{itemize}
+\item
+  Build a large tree using \textbf{recursive binary splitting} on the
+  training data. Stop when each terminal node has no more than some
+  fixed number of observations.
+\item
+  Perform \textbf{cost complexity pruning} to the large tree with many
+  values of \(\alpha\) to obtain a sequence of best subtrees.
+\item
+  Use K-fold \textbf{cross-validation} to choose the \(\alpha\).
+\item
+  Return the subtree from step 2 that corresponds to the chosen value of
+  \(\alpha\).
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Classification Trees}
+\protect\hypertarget{classification-trees}{}
+A classification tree can be used to make predictions for a qualitative
+response. It assigns observations to the
+\alert{most commonly occurring class} of training observations in the
+region to which the observation belongs.
+
+Before we describe the method, we define three indices.
+\end{frame}
+
+\begin{frame}{Classification Error Rate}
+\protect\hypertarget{classification-error-rate}{}
+The \textbf{classification error rate} is the fraction of the training
+observations in a region that do not belong to the most common class of
+the region. \[
+E=1-\max _{k}\left(\hat{p}_{m k}\right)
+\] - \(\hat{p}_{m_k}\) is the proportion of training observations in the
+\(m\)th region that are from the \(k\)th class.
+
+\begin{itemize}
+\tightlist
+\item
+  We want a small \(E\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Entropy}
+\protect\hypertarget{entropy}{}
+\textbf{Entropy} is another measure of the total variance.
+\[D=-\sum_{k=1}^{K} \hat{p}_{m k} \log \hat{p}_{m k} .\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(E\) is small if a node contains predominantly observations from a
+  single class.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Classification Trees}
+\protect\hypertarget{classification-trees-1}{}
+\begin{block}{The complete process for building a regression tree is
+summarised by:}
+\protect\hypertarget{the-complete-process-for-building-a-regression-tree-is-summarised-by-1}{}
+\begin{enumerate}
+\item
+  Build a large tree using \textbf{recursive binary splitting} on the
+  training data. You can use either the Gini index or entropy with the
+  goal of minimizing it with every split. Stop when each terminal node
+  has no more than some fixed number of observations.
+\item
+  Perform \textbf{cost complexity pruning} to the large tree with many
+  values of \(\alpha\) to obtain a sequence of best subtrees using
+  classification error rate.
+\item
+  Use K-fold \textbf{cross-validation} to choose the \(\alpha\).
+\item
+  Return the subtree from step 2 that corresponds to the chosen value of
+  \(\alpha\).
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{Exercises: Trees for Regression and Classification\}}
+\protect\hypertarget{exercises-trees-for-regression-and-classification}{}
+Open the Tree Based Methods Exercises R Markdown file.
+
+\begin{itemize}
+\item
+  Go over the ``Fitting Classification Trees'' section together as a
+  class.
+\item
+  7 minutes for students to complete the questions at the end of the
+  section.
+\item
+  Questions should be completed at home if time does not allow.
+\item
+  Go over the ``Fitting Regression Trees'' section together as a class.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Pros and Cons of Trees}
+\protect\hypertarget{pros-and-cons-of-trees}{}
+Advantages of using decision trees for regression and classification:
+
+\begin{itemize}
+\item
+  They are very easy to interpret.
+\item
+  They can be displayed graphically.
+\item
+  They can handle qualitative predictors without the need for dummy
+  variables.
+\end{itemize}
+
+Disadvantages:
+
+\begin{itemize}
+\item
+  The predictive accuracy of trees is lower than other methods.
+\item
+  They are not very robust so a small change in the data can cause a
+  large change in the tree.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Bagging}
+\protect\hypertarget{bagging}{}
+Bagging, also known as the bootstrap, is a method that can applied to
+decision trees in order to reduce their variance. It results in improved
+prediction accuracy but worse interpretability.
+
+\begin{block}{Bagging Regression Trees}
+\protect\hypertarget{bagging-regression-trees}{}
+\begin{enumerate}
+\item
+  Sample \(B\) bootstrapped training sets from the data set.
+\item
+  Construct \(B\) regression trees from the bootstrapped training sets
+  and leave them unpruned.
+\item
+  For a given test observation, average the resulting predictions from
+  the \(B\) trees.
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{Bagging}
+\protect\hypertarget{bagging-1}{}
+\begin{exampleblock}{Bagging Classification Trees}
+
+1. Sample $B$ bootstrapped training sets from the data set.
+
+2. Construct $B$ classification trees from the bootstrapped training sets and leave them unpruned.
+
+3. For a given test observation, record the prediction that results from each tree and then take the most commonly occurring class among the predictions.
+
+\end{exampleblock}
+
+The number of trees \(B\) is not of great importance as long as it is
+sufficiently large so the error is relatively constant.
+\end{frame}
+
+\begin{frame}{Out-of-Bag Error Estimation}
+\protect\hypertarget{out-of-bag-error-estimation}{}
+Out-of-bag error estimation can be used to estimate the test error of a
+bagged model.
+
+\begin{itemize}
+\item
+  Each bagged tree uses on average two thirds of the observations to fit
+  the tree.
+\item
+  The remaining observations are call out-of-bag (OOB) observations.
+\end{itemize}
+
+The method is outlined by:
+
+\begin{enumerate}
+\item
+  For each observation we predict the response using the trees for which
+  the observations was OOB.
+\item
+  Average the predicted quantitative responses or choose the most common
+  predicted qualitative response.
+\item
+  Compute the MSE or classification error and use this as the estimated
+  test error for the bagged model.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Random Forests}
+\protect\hypertarget{random-forests}{}
+Random forests operate very similarly to bagging but often provide
+better results.
+
+\begin{exampleblock}{}
+1. Sample $B$ bootstrapped training sets from the data set.
+
+2. Construct $B$ trees from the bootstrapped training sets but when building each split in the tree using recursive binary splitting, only a random subset of $m \approx \sqrt{p}$ predictors are considered as candidates.
+
+3. For a given test observation, record the prediction that results from each tree and then take the average OR the most commonly occurring class among the predictions.
+\end{exampleblock}
+
+\begin{itemize}
+\item
+  Choosing between \(m < p\) predictors at each split ensures that the
+  trees will not always choose the most powerful predictors.
+\item
+  This results in uncorrelated trees with a lower resulting variance.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercises: Bagging and Random Forests}
+\protect\hypertarget{exercises-bagging-and-random-forests}{}
+Open the Tree Based Methods Exercises R Markdown file.
+
+\begin{itemize}
+\item
+  Go over the ``Bagging and Random Forests'' section together as a
+  class.
+\item
+  2 minutes for students to complete the questions at the end of the
+  section.
+\item
+  Questions should be completed at home if time does not allow.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Boosting}
+\protect\hypertarget{boosting}{}
+Boosting is very different from bagging since it grows trees sequential,
+using information from previously grown trees. Although this method can
+also be applied to classification trees we will only outline the
+procedure for regression trees.
+
+\begin{enumerate}
+\item
+  Fit a regression tree to the data set in the usual way.
+\item
+  Compute the residuals for this tree.
+\item
+  Fit a new decision tree with \(d\) nodes using the residuals as the
+  response values.
+\item
+  Take this to be the base tree.
+\item
+  Update the residuals of the tree and fit a new tree, adding a shrunken
+  version of this tree to the base tree.
+\item
+  Repeat step 5 \(B\) times.
+\end{enumerate}
+
+The formal algorithm is on the following slide.
+\end{frame}
+
+\begin{frame}{Boosting}
+\protect\hypertarget{boosting-1}{}
+\begin{block}{Boosting for Regression Trees}
+\protect\hypertarget{boosting-for-regression-trees}{}
+\begin{enumerate}
+\item
+  Fit a regression tree to the training set and compute the resulting
+  residuals \(r_i\).
+\item
+  Set \(\hat{f}(x)\) to be a blank tree and \(r_i = y_i\) for all \(i\).
+\item
+  For \(b = 1,2,\dots, B\):
+\end{enumerate}
+
+\begin{itemize}
+\item
+  Fit a tree \(\hat{f}^b\) with \(d\) internal nodes to the training
+  data \((X, r)\).
+\item
+  Update \(\hat{f}\) by adding a shrunken version of \(\hat{f}^b\)
+  \[\hat{f}(x) \leftarrow \hat{f}(x)+\lambda \hat{f}^{b}(x)\]
+\item
+  Update the residuals
+  \[r_{i} \leftarrow r_{i}-\lambda \hat{f}^{b}\left(x_{i}\right)\]
+\end{itemize}
+
+\begin{enumerate}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Output the boosted tree
+  \[\hat{f}(x)=\sum_{b=1}^{B} \lambda \hat{f}^{b}(x)\]
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{Boosting}
+\protect\hypertarget{boosting-2}{}
+The key parameters of this procedure are:
+
+\begin{itemize}
+\item
+  \(B\): the number of trees.
+
+  \begin{itemize}
+  \item
+    If \(B\) is too large, we risk overfitting.
+  \item
+    Cross-validation is used to select \(B\).
+  \end{itemize}
+\item
+  \(\lambda\): the shrinkage parameter.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A small positive number that control the rate at which boosting
+    learns.
+  \end{itemize}
+\item
+  \(d\): the number of splits in each tree.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Controls the complexity of the boosted tree.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercises: Boosting}
+\protect\hypertarget{exercises-boosting}{}
+Open the Tree Based Methods Exercises R Markdown file.
+
+\begin{itemize}
+\item
+  Go over the ``Boosting'' section together as a class.
+\item
+  7 minutes for students to complete the questions at the end of the
+  section.
+\item
+  Questions should be completed at home if time does not allow.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Bayesian Additive Regression Trees}
+\protect\hypertarget{bayesian-additive-regression-trees}{}
+Bayesian additive regression trees (BART) work iteratively. At each
+iteration, \(K\) regression trees are created and then summed.
+
+\begin{itemize}
+\item
+  The \(K\) trees for the 1st iteration have a single root node: the
+  \alert{mean response values divided by the total number of trees.}
+\item
+  The \alert{$K$ trees are summed} so the 1st iteration tree is the mean
+  response value.
+\item
+  In the \(b\)th iteration, the response values of the \(k\)th tree from
+  the \(b-1\) iteration are
+  \alert{subtracted by the predictions from the other $K-1$ trees}
+  (partial residual).
+\item
+  Then the \(k\)th tree is updated by choosing a
+  \alert{random perturbation} from a set of possible perturbations to
+  improve the fit of the partial residual.
+\item
+  The \alert{$K$ trees are summed} to acquire the \(b\)th iteration
+  tree.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Bayesian Additive Regression Trees}
+\protect\hypertarget{bayesian-additive-regression-trees-1}{}
+Before we describe the algorithm more formally we need some notation:
+
+\begin{itemize}
+\item
+  \(K\): the number of regression trees.
+\item
+  \(B\): the number of iterations of the BART algorithm.
+\item
+  \(\hat{f}_{k}^{b}(x)\): the prediction for \(x\) from the \(k\)th
+  regression tree used in the \(b\)th iteration.
+\end{itemize}
+
+The perturbations that we discussed in step 4 can only
+
+\begin{itemize}
+\item
+  Add or prune branches from the tree.
+\item
+  Change the prediction for each terminal node of the tree.
+\end{itemize}
+
+The first few iterations of BART do not provide good results, known as
+the \textbf{burn-in} period, so we usually exclude these \(L\) samples
+from the final average.
+\end{frame}
+
+\begin{frame}{Bayesian Additive Regression Trees}
+\protect\hypertarget{bayesian-additive-regression-trees-2}{}
+\begin{enumerate}
+\item
+  Let
+  \(\hat{f}_{1}^{1}(x)=\hat{f}_{2}^{1}(x)=\cdots=\hat{f}_{K}^{1}(x)=\frac{1}{n K} \sum_{i=1}^{n} y_{i}\).
+\item
+  Then
+  \(\hat{f}^{1}(x)=\sum_{k=1}^{K} \hat{f}_{k}^{1}(x)=\frac{1}{n} \sum_{i=1}^{n} y_{i}\).
+\end{enumerate}
+
+\begin{itemize}
+\item
+  For \(b = 2,\dots, B\):
+
+  \begin{itemize}
+  \item
+    For \(k = 1, 2, \dots K\):
+
+    \begin{itemize}
+    \item
+      For \(i = 1, \dots, n\), compute the partial residual
+      \[r_{i}=y_{i}-\sum_{k^{\prime}<k} \hat{f}_{k^{\prime}}^{b}\left(x_{i}\right)-\sum_{k^{\prime}>k} \hat{f}_{k^{\prime}}^{b-1}\left(x_{i}\right)\]
+    \item
+      Fit a new tree \(\hat{f}_{k}^{b}(x)\) to \(r_i\) by randomly
+      perturbing \(\hat{f}_{k}^{b-1}(x)\). Perturbations that improve
+      the fit are favored.
+    \end{itemize}
+  \end{itemize}
+\item
+  Compute \(\hat{f}^{b}(x)=\sum_{k=1}^{K} \hat{f}_{k}^{b}(x)\).
+\end{itemize}
+
+\begin{enumerate}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Compute the mean, excluding the \(L\) burn-in samples:
+  ~~\(\hat{f}(x)=\frac{1}{B-L} \sum_{b=L+1}^{B} \hat{f}^{b}(x)\)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Exercises: Bayesian Additive Regression Trees}
+\protect\hypertarget{exercises-bayesian-additive-regression-trees}{}
+Open the Tree Based Methods Exercises R Markdown file.
+
+\begin{itemize}
+\tightlist
+\item
+  Go over the ``Bayesian Additive Regression Trees'' section together as
+  a class.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{References}
+\protect\hypertarget{references}{}
+Chapter 8 of the ISLR2 book:
+
+James, Gareth, et al.~``Tree-Based Methods.'' An Introduction to
+Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+\end{frame}
+
+
+
+\end{document}
