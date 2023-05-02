@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.20)  2 MAY 2023 10:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  13 APR 2023 15:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**6.3-classification
-(./6.3-classification.tex
+**6.4-resampling-methods
+(./6.4-resampling-methods.tex
 LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-04-19>
+L3 programming layer <2023-03-30>
 (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2023/02/20 v3.69 A class for typesetting presentations
 (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
@@ -515,14 +515,14 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (/usr/local/texlive/2023/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
 Package: sansmathaccent 2020/01/31
 (/usr/local/texlive/2023/texmf-dist/tex/latex/koma-script/scrlfile.sty
-Package: scrlfile 2023/04/17 v3.39 KOMA-Script package (file load hooks)
+Package: scrlfile 2022/10/12 v3.38 KOMA-Script package (file load hooks)
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
-Package: scrlfile-hook 2023/04/17 v3.39 KOMA-Script package (using LaTeX hooks)
+Package: scrlfile-hook 2022/10/12 v3.38 KOMA-Script package (using LaTeX hooks)
 
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/koma-script/scrlogo.sty
-Package: scrlogo 2023/04/17 v3.39 KOMA-Script package (logo)
+Package: scrlogo 2022/10/12 v3.38 KOMA-Script package (logo)
 )))))
 (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
 (/usr/local/texlive/2023/texmf-dist/tex/latex/translator/translator.sty
@@ -1071,12 +1071,12 @@ File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count378
 \l__pdf_internal_box=\box104
 )
-No file 6.3-classification.aux.
-\openout1 = `6.3-classification.aux'.
+No file 6.4-resampling-methods.aux.
+\openout1 = `6.4-resampling-methods.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 176.
 LaTeX Font Info:    ... okay on input line 176.
@@ -1248,19 +1248,23 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-No file 6.3-classification.nav.
+No file 6.4-resampling-methods.nav.
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}] [2
 
-]
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 222.
-LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-222.
+] [3
 
-(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmss.fd
+] [4
+
+]
+[5
+
+]
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+284.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1268,30 +1272,30 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-22.
+84.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-222.
+284.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-222.
+284.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 222.
+(Font)              <10.95> on input line 284.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 222.
+(Font)              <8> on input line 284.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 222.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 222
+(Font)              <6> on input line 284.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 284
 .
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1300,7 +1304,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 222
+LaTeX Font Info:    Trying to load font information for U+msb on input line 284
 .
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1309,179 +1313,77 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 284.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 222.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 284.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 222.
- [3
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 284.
+ [6
 
-{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/te
-xlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}] [4
-
-] [5
-
-{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/loca
-l/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [6
-
-] [7
+]
+[7
 
 ] [8
 
-] [9
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 339.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 339.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 339.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 339.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 339.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 339.
+ [9
 
-] [10
+{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
+[10
 
-] [11
+{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
+[11
 
 ] [12
 
-]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 397.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 397.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 397.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 397.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 397.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 397.
- [13
+] [13
 
-]
-[14
-
-] [15
-
-] [16
-
-]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 470.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 470.
- [17
-
-] [18
-
-]
-<images/confusionmatrix.png, id=174, 405.515pt x 193.72375pt>
-File: images/confusionmatrix.png Graphic file (type png)
-<use images/confusionmatrix.png>
-Package pdftex.def Info: images/confusionmatrix.png  used on input line 517.
-(pdftex.def)             Requested size: 240.90387pt x 115.08525pt.
- [19
-
- <./images/confusionmatrix.png>] [20
-
-]
-<images/ROC.png, id=192, 371.88937pt x 324.71312pt>
-File: images/ROC.png Graphic file (type png)
-<use images/ROC.png>
-Package pdftex.def Info: images/ROC.png  used on input line 567.
-(pdftex.def)             Requested size: 172.39903pt x 150.52925pt.
- [21
-
- <./images/ROC.png>] [22
-
-]
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 604.
-
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 604.
-
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 604.
-
-LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 604.
-LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <8> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 604.
-LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <6> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 604.
-LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 604.
-
-LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 604.
-
-LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <8> not available
-(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 604.
-
-LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <8> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 604.
-
-LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <6> not available
-(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 604.
-
-LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <6> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 604.
-
- [23
-
-] [24
-
-] [25
-
-] [26
-
-] [27
-
-] [28
-
-]
-<images/KNN1.png, id=252, 440.64626pt x 250.9375pt>
-File: images/KNN1.png Graphic file (type png)
-<use images/KNN1.png>
-Package pdftex.def Info: images/KNN1.png  used on input line 716.
-(pdftex.def)             Requested size: 225.84274pt x 128.61203pt.
- [29
-
- <./images/KNN1.png>] [30
-
-]
-[31
-
-] [32
+] [14
 
 ]
 \tf@nav=\write5
-\openout5 = `6.3-classification.nav'.
+\openout5 = `6.4-resampling-methods.nav'.
 
 \tf@toc=\write6
-\openout6 = `6.3-classification.toc'.
+\openout6 = `6.4-resampling-methods.toc'.
 
 \tf@snm=\write7
-\openout7 = `6.3-classification.snm'.
+\openout7 = `6.4-resampling-methods.snm'.
 
- (./6.3-classification.aux) ) 
+ (./6.4-resampling-methods.aux) ) 
 Here is how much of TeX's memory you used:
- 34078 strings out of 476001
- 716007 string characters out of 5789199
- 1863074 words of memory out of 5000000
- 53640 multiletter control sequences out of 15000+600000
- 619281 words of font info for 175 fonts, out of 8000000 for 9000
+ 33836 strings out of 476017
+ 711719 string characters out of 5789768
+ 1860666 words of memory out of 5000000
+ 53505 multiletter control sequences out of 15000+600000
+ 580201 words of font info for 127 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,122p,1011b,651s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/pu
-blic/lm/lmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
-mi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><
-/usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/
-texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/20
-23/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2023/texmf-d
-ist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2023/texmf-dist/fonts/t
-ype1/public/lm/lmssbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
-lic/lm/lmsso10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
-sso12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsso8.pfb>
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/loca
-l/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on 6.3-classification.pdf (32 pages, 326794 bytes).
+ 128i,15n,122p,1015b,508s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type
+1/public/lm/lmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/l
+m/lmss10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.p
+fb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/lo
+cal/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texl
+ive/2023/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></usr/local/texlive/2023/
+texmf-dist/fonts/type1/public/lm/lmsso12.pfb></usr/local/texlive/2023/texmf-dis
+t/fonts/type1/public/lm/lmsso8.pfb>
+Output written on 6.4-resampling-methods.pdf (14 pages, 159027 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 284 compressed objects within 3 object streams
- 96 named destinations out of 1000 (max. 500000)
- 65642 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 189 PDF objects out of 1000 (max. 8388607)
+ 140 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 41045 words of extra memory for PDF output out of 42996 (max. 10000000)
 

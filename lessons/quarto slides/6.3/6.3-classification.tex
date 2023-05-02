@@ -175,7 +175,7 @@
 
 \begin{document}
 \frame{\titlepage}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced, boxrule=0pt, breakable, frame hidden, interior hidden]}{\end{tcolorbox}}\fi
 
 \begin{frame}{Intro}
 \protect\hypertarget{intro}{}
@@ -188,10 +188,9 @@ following two steps:
 \item
   Compute the probability that an observation belongs to a category.
 \item
-  Classify the observation based on some probability threshold
-  \textbackslash(i.e.~if the probability that an observation belongs to
-  some category is greater than 0.5 then assign the observation to that
-  category)
+  Classify the observation based on some probability threshold (i.e.~if
+  the probability that an observation belongs to some category is
+  greater than 0.5 then assign the observation to that category)
 \end{itemize}
 \end{frame}
 
@@ -450,13 +449,12 @@ of observations in the \(k\)th class.
 The LDA classifier uses the estimates for \(\pi_{k}, \mu_{k}\), and
 \(\sigma^{2}\) to assign an observation \(X = x\) to the class that has
 the largest \[
-\hat{\delta}_{k}(x)=x \cdot \frac{\hat{\mu}_{k}}{\hat{\sigma}^{2}}-\frac{\hat{\mu}_{k}^{2}}{2 \hat{\sigma}^{2}}+\log \left(\hat{\pi}_{k}\right)
-\]
+\hat{\delta}_{k}(x)=x \cdot \frac{\hat{\mu}_{k}}{\hat{\sigma}^{2}}-\frac{\hat{\mu}_{k}^{2}}{2 \hat{\sigma}^{2}}+\log \left(\hat{\pi}_{k}\right)\]
 \end{frame}
 
 \begin{frame}{Linear Discriminant Analysis for \(p>1\)}
 \protect\hypertarget{linear-discriminant-analysis-for-p1}{}
-Now suppose we have \(X = (X_1, \dots, X_p)\) predictors. Assumptions: -
+Now suppose we have \(X = (X_1, \dots, X_p)\) predictors. Assumptions:
 \(X\) is multivariate Gaussian (i.e.~each predictor is normally
 distributed with some correlation between them)
 
@@ -651,17 +649,24 @@ options:
 \begin{itemize}
 \item
   For quantitative \(X_j\):
-\item
-  assume that for each class, the \(j\)th predictor is drawn from a
-  normal distribution, or
-\item
-  estimate it as the fraction of the training observations in the
-  \(k\)th class that belong to the same histogram bin as \(x_j\).
+
+  \begin{itemize}
+  \item
+    assume that for each class, the \(j\)th predictor is drawn from a
+    normal distribution, or
+  \item
+    estimate it as the fraction of the training observations in the
+    \(k\)th class that belong to the same histogram bin as \(x_j\).
+  \end{itemize}
 \item
   For quantitative \(X_j\):
-\item
-  count the proportion of training observations for the \(j\)th
-  predictor that belong to each class.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    count the proportion of training observations for the \(j\)th
+    predictor that belong to each class.
+  \end{itemize}
 \end{itemize}
 \end{frame}
 

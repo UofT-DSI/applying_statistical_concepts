@@ -21,7 +21,7 @@ Classification involves predicating a qualitative response by a assigning it to 
 
 -   Compute the probability that an observation belongs to a category.
 
--   Classify the observation based on some probability threshold \\(i.e. if the probability that an observation belongs to some category is greater than 0.5 then assign the observation to that category)
+-   Classify the observation based on some probability threshold (i.e. if the probability that an observation belongs to some category is greater than 0.5 then assign the observation to that category)
 
 ------------------------------------------------------------------------
 
@@ -208,14 +208,13 @@ $$ where $n$ = number of training observations, and $n_k$ = number of observatio
 # Linear Discriminant Analysis
 
 The LDA classifier uses the estimates for $\pi_{k}, \mu_{k}$, and $\sigma^{2}$ to assign an observation $X = x$ to the class that has the largest $$
-\hat{\delta}_{k}(x)=x \cdot \frac{\hat{\mu}_{k}}{\hat{\sigma}^{2}}-\frac{\hat{\mu}_{k}^{2}}{2 \hat{\sigma}^{2}}+\log \left(\hat{\pi}_{k}\right)
-$$
+\hat{\delta}_{k}(x)=x \cdot \frac{\hat{\mu}_{k}}{\hat{\sigma}^{2}}-\frac{\hat{\mu}_{k}^{2}}{2 \hat{\sigma}^{2}}+\log \left(\hat{\pi}_{k}\right)$$
 
 ------------------------------------------------------------------------
 
 # Linear Discriminant Analysis for $p>1$
 
-Now suppose we have $X = (X_1, \dots, X_p)$ predictors. Assumptions: - $X$ is multivariate Gaussian (i.e. each predictor is normally distributed with some correlation between them)
+Now suppose we have $X = (X_1, \dots, X_p)$ predictors. Assumptions: $X$ is multivariate Gaussian (i.e. each predictor is normally distributed with some correlation between them)
 
 -   class-specific mean vectors
 
@@ -351,13 +350,13 @@ To estimate $f_{k j}$ using the training data there are several options:
 
 -   For quantitative $X_j$:
 
--   assume that for each class, the $j$th predictor is drawn from a normal distribution, or
+    -   assume that for each class, the $j$th predictor is drawn from a normal distribution, or
 
--   estimate it as the fraction of the training observations in the $k$th class that belong to the same histogram bin as $x_j$.
+    -   estimate it as the fraction of the training observations in the $k$th class that belong to the same histogram bin as $x_j$.
 
 -   For quantitative $X_j$:
 
--   count the proportion of training observations for the $j$th predictor that belong to each class.
+    -   count the proportion of training observations for the $j$th predictor that belong to each class.
 
 ------------------------------------------------------------------------
 
