@@ -670,7 +670,7 @@ The next 2 iterations of step 3 of the algorithm.
 
 The choice of the linkage type will have an effect on the dendrogram produced by the hierarchical clustering algorithm.
 
-![](images/linkage_choice.png){fig-align="center" width="345"}
+![](images/linkage_choice.png){fig-align="center" width="298"}
 
 ------------------------------------------------------------------------
 
