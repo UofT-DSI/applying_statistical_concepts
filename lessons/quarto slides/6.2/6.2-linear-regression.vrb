@@ -1,0 +1,27 @@
+\frametitle{Simple Linear Regression Summary}
+\protect\hypertarget{simple-linear-regression-summary}{}
+Simple linear regression uses a single predictor variable \(X\) to
+predict a response \(Y\) with \[
+Y \approx \beta_{0}+\beta_{1} X
+\]
+
+\begin{itemize}
+\item
+  \(\beta_{0}, \beta_{1}\) are estimated by minimizing the residual sum
+  of squares (RSS)
+\item
+  The standard error (SE) of the coefficient estimates is a measure of
+  accuracy.
+\item
+  The residual standard error (RSE) gives a measure of lack of fit of
+  the model to the data.
+\item
+  The \(R^2\) statistic measures the proportion of variability explained
+  by the regression. - A hypothesis test on \(\beta_1\) indicates
+  whether there is a relationship between \(X\) and \(Y\).
+\item
+  The \texttt{lm()} function in R can be used to perform all of these
+  tasks!
+\end{itemize}
+
+\textbf{Any Questions?}
