@@ -163,7 +163,7 @@ A separating hyperplane classifier will necessarily perfectly classify the train
 
 # Exercises: The Maximal Margin Classifier
 
-Open the Support Vector Machines Exercises R Markdown file.
+Open the Support Vector Machines Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "Maximal Margin Classifier" section together as a class.
 
@@ -250,7 +250,7 @@ A support vector classifier fit to the same data set with four different differe
 
 # Exercises: Support Vector Classifier
 
-Open the Support Vector Machines Exercises R Markdown file.
+Open the Support Vector Machines Exercises R Markdown or Jupyter Notebook file.
 
 -   Go through the "Support Vector Classifier" section together as a class.
 
@@ -326,7 +326,7 @@ Extending the concept of separating hyperplanes to $K > 2$ classes is actually q
 
 # Exercises: Support Vector Machine
 
-Open the Support Vector Machines Exercises R Markdown file.
+Open the Support Vector Machines Exercises R Markdown or Jupyter Notebook file.
 
 -   Go through the "Support Vector Machine" section together as a class.
 
@@ -338,6 +338,8 @@ Open the Support Vector Machines Exercises R Markdown file.
 
 # References
 
-Chapter 9 of the ISLR2 book:
+Chapter 9 of the ISLR2 and ISLP books:
 
 James, Gareth, et al. "Support Vector Machines." An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+
+James, Gareth, et al. "Support Vector Machines." An Introduction to Statistical Learning: with Applications in Python, Springer, 2023.

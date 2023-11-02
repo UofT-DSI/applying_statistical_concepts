@@ -21,7 +21,7 @@ In this section we will look at alternative fitting procedures for linear models
 
 -   **Subset Selection**
 
--   **Shinkage**
+-   **Shrinkage**
 
 ------------------------------------------------------------------------
 
@@ -101,7 +101,7 @@ Backward stepwise selection is simply the reverse of forward stepwise selection.
 
 # Exercises: Subset Selection
 
-Open the Linear Model Selection and Regularization R Markdown file.
+Open the Linear Model Selection and Regularization R Markdown or Jupyter Notebook file.
 
 -   Go over the "Getting Started" section together as a class.
 
@@ -184,7 +184,7 @@ The adjusted $R^2$ statistic is the computed with $$
 
 # Exercises: Indirect Error Estimation
 
-Open the Linear Model Selection and Regularization R Markdown file.
+Open the Linear Model Selection and Regularization R Markdown or Jupyter Notebook file.
 
 -   Go over the section 2.3 together as a class.
 
@@ -222,7 +222,7 @@ If there are several models that have similar test errors, use the **one-standar
 
 # Exercises: Direct Error Estimation
 
-Open the Linear Model Selection and Regularization R Markdown file.
+Open the Linear Model Selection and Regularization R Markdown or Jupyter Notebook file.
 
 -   Go over the section 2.4 together as a class.
 
@@ -318,9 +318,9 @@ Cross-validation offers a simple way to choose the best tuning parameter for rid
 
 ------------------------------------------------------------------------
 
-# Exercises: Ridge Regression & The Lasso}
+# Exercises: Ridge Regression & The Lasso
 
-Open the Linear Model Selection and Regularization R Markdown file.
+Open the Linear Model Selection and Regularization R Markdown or Jupyter Notebook file.
 
 -   Go over the "Ridge Regression" section together as a class.
 
@@ -334,6 +334,8 @@ Open the Linear Model Selection and Regularization R Markdown file.
 
 # References
 
-Chapter 6 of the ISLR2 book:
+Chapter 6 of the ISLR2 and ISLP books:
 
 James, Gareth, et al. "Linear Model Selection and Regularization." An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+
+James, Gareth, et al. "Linear Model Selection and Regularization." An Introduction to Statistical Learning: with Applications in Python, Springer, 2023.

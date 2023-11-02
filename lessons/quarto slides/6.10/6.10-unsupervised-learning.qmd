@@ -315,7 +315,7 @@ Assuming that the features have been centered to have mean zero...
 
 # Exercises: Principal Components Analysis
 
-Open the Unsupervised Learning Exercises R Markdown file.
+Open the Unsupervised Learning Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "Principal Components Analysis" section together as a class.
 
@@ -349,7 +349,7 @@ Matrix completion works by \alert{simultaneously estimating the missing values a
 
 # Exercises: Matrix Completion
 
-Open the Unsupervised Learning Exercises R Markdown file.
+Open the Unsupervised Learning Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "Matrix Completion" section together as a class.
 
@@ -454,7 +454,7 @@ To find the global optima:
 
 # Exercises: K-Means Clustering
 
-Open the Unsupervised Learning Exercises R Markdown file.
+Open the Unsupervised Learning Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "K-Means Clustering" section together as a class.
 
@@ -676,7 +676,7 @@ The choice of the linkage type will have an effect on the dendrogram produced by
 
 # Exercises: Hierarchical Clustering
 
-Open the Unsupervised Learning Exercises R Markdown file.
+Open the Unsupervised Learning Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "Hierarchical Clustering" section together as a class.
 
@@ -684,12 +684,12 @@ Open the Unsupervised Learning Exercises R Markdown file.
 
 # References
 
-Chapter 12 of the ISLR2 book:
+Chapter 12 of the ISLR2 and ISLP books:
 
-\quad James, Gareth, et al. "Unsupervised Learning." An Introduction to Statistical Learning:
+James, Gareth, et al. "Unsupervised Learning." An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
 
-\quad with Applications in R, 2nd ed., Springer, 2021.
+James, Gareth, et al. "Unsupervised Learning." An Introduction to Statistical Learning: with Applications in Python, Springer, 2023.
 
 Local optima photo:
 
-\quad By Christoph Roser at AllAboutLean.com under the free CC-BY-SA 4.0 license.
+By Christoph Roser at AllAboutLean.com under the free CC-BY-SA 4.0 license.

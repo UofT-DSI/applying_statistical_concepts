@@ -27,7 +27,7 @@ We will also cover several methods that combine multiple trees to overcome this 
 
 -   Boosting
 
--   Bayesian additive regression trees.
+-   Bayesian additive regression trees
 
 ------------------------------------------------------------------------
 
@@ -169,7 +169,7 @@ $$ - $\hat{p}_{m_k}$ is the proportion of training observations in the $m$th reg
 
 # Exercises: Trees for Regression and Classification}
 
-Open the Tree Based Methods Exercises R Markdown file.
+Open the Tree Based Methods Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "Fitting Classification Trees" section together as a class.
 
@@ -185,17 +185,17 @@ Open the Tree Based Methods Exercises R Markdown file.
 
 Advantages of using decision trees for regression and classification:
 
--   They are very easy to interpret.
+-   They are very easy to interpret
 
--   They can be displayed graphically.
+-   They can be displayed graphically
 
--   They can handle qualitative predictors without the need for dummy variables.
+-   They can handle qualitative predictors without the need for dummy variables
 
 Disadvantages:
 
--   The predictive accuracy of trees is lower than other methods.
+-   The predictive accuracy of trees is lower than other methods
 
--   They are not very robust so a small change in the data can cause a large change in the tree.
+-   They are not very robust so a small change in the data can cause a large change in the tree
 
 ------------------------------------------------------------------------
 
@@ -269,7 +269,7 @@ Random forests operate very similarly to bagging but often provide better result
 
 # Exercises: Bagging and Random Forests
 
-Open the Tree Based Methods Exercises R Markdown file.
+Open the Tree Based Methods Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "Bagging and Random Forests" section together as a class.
 
@@ -335,13 +335,13 @@ The key parameters of this procedure are:
 
 -   $d$: the number of splits in each tree.
 
-    - Controls the complexity of the boosted tree.
+    -   Controls the complexity of the boosted tree.
 
 ------------------------------------------------------------------------
 
 # Exercises: Boosting
 
-Open the Tree Based Methods Exercises R Markdown file.
+Open the Tree Based Methods Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "Boosting" section together as a class.
 
@@ -403,20 +403,22 @@ The first few iterations of BART do not provide good results, known as the **bur
 
 -   Compute $\hat{f}^{b}(x)=\sum_{k=1}^{K} \hat{f}_{k}^{b}(x)$.
 
-3.   Compute the mean, excluding the $L$ burn-in samples:   $\hat{f}(x)=\frac{1}{B-L} \sum_{b=L+1}^{B} \hat{f}^{b}(x)$
+3.  Compute the mean, excluding the $L$ burn-in samples:   $\hat{f}(x)=\frac{1}{B-L} \sum_{b=L+1}^{B} \hat{f}^{b}(x)$
 
----
+------------------------------------------------------------------------
 
 # Exercises: Bayesian Additive Regression Trees
 
-Open the Tree Based Methods Exercises R Markdown file.
+Open the Tree Based Methods Exercises R Markdown or Jupyter Notebook file.
 
-- Go over the "Bayesian Additive Regression Trees" section together as a class.
+-   Go over the "Bayesian Additive Regression Trees" section together as a class.
 
----
+------------------------------------------------------------------------
 
 # References
-Chapter 8 of the ISLR2 book:
 
-James, Gareth, et al. “Tree-Based Methods.”  An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+Chapter 8 of the ISLR2 and ISLP books:
 
+James, Gareth, et al. "Tree-Based Methods." An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+
+James, Gareth, et al. "Tree-Based Methods." An Introduction to Statistical Learning: with Applications in Python, Springer, 2023.

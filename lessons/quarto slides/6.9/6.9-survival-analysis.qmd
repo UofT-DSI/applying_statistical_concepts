@@ -1,5 +1,5 @@
 ---
-title: "6.3: Survival Analysis and Censored Data"
+title: "6.9: Survival Analysis and Censored Data"
 author: "Navona Calarco"
 format:
   beamer:
@@ -31,9 +31,9 @@ Survival analysis and censored data are related to the analysis of the outcome v
 
 For each individual we assume there exists:
 
--   $T$: the true **survival time** which represents the time at which the event of interest occurs.      *Ex: The time at which the patient dies.*
+-   $T$: the true **survival time** which represents the time at which the event of interest occurs.      *Ex: The time at which the patient dies*.
 
--   $C$: the true **censoring time** which is when the censoring occurs.          *Ex: The time at which the patient drops out of the study.*
+-   $C$: the true **censoring time** which is when the censoring occurs.          *Ex: The time at which the patient drops out of the study*.
 
 However, we only ever observe the time that comes first: $$Y=\min (T, C)$$ In order to keep track of which time $Y$ represents, we also have a status indicator: $$
 \delta=\left\{\begin{array}{ll}
@@ -111,8 +111,7 @@ $$ Now we need the estimates for each of these terms.
 
 The estimator $$
 \widehat{\operatorname{Pr}}\left(T>d_{j} \mid T>d_{j-1}\right)=\left(r_{j}-q_{j}\right) / r_{j}
-$$ is the fraction of the risk set at time $d_j$ who survived past time $d_j$. So, the **Kaplan-Meier estimator** of the survival curve is 
-$$\widehat{S}\left(d_{k}\right)=\prod_{j=1}^{k}\left(\frac{r_{j}-q_{j}}{r_{j}}\right)$$
+$$ is the fraction of the risk set at time $d_j$ who survived past time $d_j$. So, the **Kaplan-Meier estimator** of the survival curve is $$\widehat{S}\left(d_{k}\right)=\prod_{j=1}^{k}\left(\frac{r_{j}-q_{j}}{r_{j}}\right)$$
 
 -   For times $t$ between $d_k$ and $d_{k+1}$ we set $\widehat{S}(t)=\widehat{S}\left(d_{k}\right)$.
 
@@ -122,7 +121,7 @@ $$\widehat{S}\left(d_{k}\right)=\prod_{j=1}^{k}\left(\frac{r_{j}-q_{j}}{r_{j}}\r
 
 # Exercise: The Kaplan-Meier Survival Curve
 
-Open the Survival Analysis and Censored Data R Markdown file.
+Open the Survival Analysis and Censored Data R Markdown or Jupyter Notebook file.
 
 -   Go over the "The Kaplan-Meier Survival Curve" section together as a class.
 
@@ -194,7 +193,7 @@ $$
 
 # Exercise: The Log-Rank Test
 
-Open the Survival Analysis and Censored Data R Markdown file.
+Open the Survival Analysis and Censored Data R Markdown or Jupyter Notebook file.
 
 -   Go over the "The Log-Rank Test" section together as a class.
 
@@ -260,7 +259,7 @@ Since the baseline hazard function $h_0(t)$ is unspecified the only assumption w
 :::
 :::
 
----
+------------------------------------------------------------------------
 
 # Cox Proportional Hazards Model
 
@@ -268,38 +267,40 @@ Because $h_0(t)$ in the proportional hazards assumption is unknown we cannot plu
 
 \alert{Cox's proportional hazards model says that it it possible to estimate $\beta$ without specifying the form of $h_0(t)$.}
 
-- Use the **partial likelihood** which is valid regardless of the the value of $h_0(t)$.
+-   Use the **partial likelihood** which is valid regardless of the the value of $h_0(t)$.
 
-- Maximize the partial likelihood with respect to $\beta$.
+-   Maximize the partial likelihood with respect to $\beta$.
 
-- We can obtain $p$-values corresponding to null hypotesis such as $H_0: \beta_j = 0$.
+-   We can obtain $p$-values corresponding to null hypotesis such as $H_0: \beta_j = 0$.
 
-- We can obtain confidence intervals associated with the estimated coefficients.
+-   We can obtain confidence intervals associated with the estimated coefficients.
 
----
+------------------------------------------------------------------------
 
 # Cox Proportional Hazards Model
 
 Suppose we have a single binary predictor $x_i \in \{0, 1\}$ and we want to determine whether there is a difference between the survival times of the observations in the two groups.
 
-- *Approach #1:* Fit a Cox proportional hazards model and test the null hypothesis $H_0: \beta = 0$.
+-   *Approach #1:* Fit a Cox proportional hazards model and test the null hypothesis $H_0: \beta = 0$.
 
-- *Approach #2:* Perform a log-rank test to compare the two groups.
+-   *Approach #2:* Perform a log-rank test to compare the two groups.
 
 In the case of a binary predictor both methods will yield the same result!
 
----
+------------------------------------------------------------------------
 
 # Exercise: The Cox Proportional Hazards Model
 
-Open the Survival Analysis and Censored Data R Markdown file.
- 
-- Go over the "The Cox Proportional Hazards Model" section together as a class.
+Open the Survival Analysis and Censored Data R Markdown or Jupyter Notebook file.
 
----
+-   Go over the "The Cox Proportional Hazards Model" section together as a class.
+
+------------------------------------------------------------------------
 
 # References
 
-Chapter 11 of the ISLR2 book:
+Chapter 11 of the ISLR2 and ISLP books:
 
-James, Gareth, et al. “Survival Analysis and Censored Data.”  An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+James, Gareth, et al. "Survival Analysis and Censored Data." An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+
+James, Gareth, et al. "Survival Analysis and Censored Data." An Introduction to Statistical Learning: with Applications in Python, Springer, 2023.

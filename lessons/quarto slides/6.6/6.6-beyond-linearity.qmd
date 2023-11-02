@@ -17,7 +17,7 @@ header-includes:
 
 # Introduction
 
-In section 6.5 we saw how we can improve upon linear models by reducing their complexity, and therefore the resulting variance of the estimates.
+In section 6.5 we saw how we can improve upon linear models by reducing their complexity and therefore the resulting variance of the estimates.
 
 In this section we will look at extension of the linear model that do not require linearity.
 
@@ -45,9 +45,9 @@ $$ The coefficient are easily \alert{estimated using least squares regression} w
 
 ------------------------------------------------------------------------
 
-# Exercises: Polynomial Regression}
+# Exercises: Polynomial Regression
 
-Open the Beyond Linearity Exercises R Markdown file.
+Open the Beyond Linearity Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "Getting Started" section together as a class.
 
@@ -76,13 +76,13 @@ $$ We can use least squares to fit the coefficients.
 
 # Exercises: Step Functions
 
-Open the Beyond Linearity Exercises R Markdown file.
+Open the Beyond Linearity Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "Step Functions" section together as a class.
 
 -   5 minutes for students to complete the questions.
 
--Questions should be completed at home if time does not allow.
+-   Questions should be completed at home if time does not allow.
 
 ------------------------------------------------------------------------
 
@@ -139,7 +139,7 @@ There are several useful constraints that can be used with regression splines to
 
 # Exercises: Splines
 
-Open the Beyond Linearity Exercises R Markdown file.
+Open the Beyond Linearity Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "Splines" section together as a class.
 
@@ -181,7 +181,7 @@ There are other less important choices that can be made.
 
 # Exercises: Local Regression
 
-Open the Beyond Linearity Exercises R Markdown file.
+Open the Beyond Linearity Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "Local Regression" section together as a class.
 
@@ -229,13 +229,13 @@ Cons
 
 # Exercises: GAMs
 
-Open the Beyond Linearity Exercises R Markdown file.
+Open the Beyond Linearity Exercises R Markdown or Jupyter Notebook file.
 
--   Go over the start of the "Generalised Linear Models" section together as a class.
+-   Go over the start of the "Generalized Linear Models" section together as a class.
 
 -   10 minutes for students to complete the questions.
 
--   Go over the rest of the "Generalised Linear Models" section together as a class.
+-   Go over the rest of the "Generalized Linear Models" section together as a class.
 
 -   Questions should be completed at home if time does not allow.
 
@@ -243,6 +243,8 @@ Open the Beyond Linearity Exercises R Markdown file.
 
 # References
 
-Chapter 7 of the ISLR2 book:
+Chapter 7 of the ISLR2 and ISLP books:
 
 James, Gareth, et al. "Moving Beyond Linearity." An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+
+James, Gareth, et al. "Moving Beyond Linearity." An Introduction to Statistical Learning: with Applications in Python, Springer, 2023.
