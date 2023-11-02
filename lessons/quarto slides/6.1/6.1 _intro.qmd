@@ -166,7 +166,7 @@ This method does not make an assumption about the form of $f$. Instead, the goal
     -   **Quantitative** variables have numerical values (ex: age, monetary value, etc.)
     -   **Qualitative** variables are categorical values (ex: {small, medium, large} or {yes, no})
 -   \alert{Problems that involve quantitative response variables are \textbf{regression} problems.}
--   \alert{Problems that involve qualitative response variables are \textbf{lassification} problems.}
+-   \alert{Problems that involve qualitative response variables are \textbf{classification} problems.}
 -   This is a bit of a generalisation (logistic regression is a classification method but its output is numerical so can be thought of as a regression method as well)
 
 ------------------------------------------------------------------------
@@ -276,6 +276,8 @@ So far we have discussed model accuracy in the context of regression but the sam
 
 # References
 
-Chapter 2 of the ISLR2 book:
+Chapter 2 of the ISLR2 and ISLP books:
 
 James, Gareth, et al. "Statistical Learning." An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+
+James, Gareth, et al. "Statistical Learning." An Introduction to Statistical Learning: with Applications in Python, Springer, 2023.
