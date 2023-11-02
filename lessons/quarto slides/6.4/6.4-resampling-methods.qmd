@@ -61,7 +61,7 @@ Cross-validation is an extension of the validation set approach that accounts fo
 
 # Exercises: The Validation Set Approach
 
-Open the Resampling Methods R Markdown file.
+Open the Resampling Methods R Markdown or Jupyter Notebook file.
 
 -   Go over the "Getting Started" section together as a class.
 
@@ -101,7 +101,7 @@ How is the LOOCV approach better than the validation set approach?
 
 # Exercises: Leave-One-Out Cross-Validation
 
-Open the Resampling Methods R Markdown file.
+Open the Resampling Methods R Markdown or Jupyter Notebook file.
 
 -   Go over the "Leave-One-Out Cross-Validation" section together as a class.
 
@@ -125,7 +125,7 @@ $k$-fold cross validation involves randomly dividing the set of observations int
 
 The $k$-fold cross validation estimate of the test error is the average of the $k$ validation set errors.
 
-LOOCV is a special case of the $k$-fold cross validation approach using $k = n$ ($n = $ number of observations).
+LOOCV is a special case of the $k$-fold cross validation approach using $k = n$ (\$n = \$ number of observations).
 
 ------------------------------------------------------------------------
 
@@ -149,7 +149,7 @@ Thus, there is a bias-variance trade-off when it comes to choosing $k$ for $k$-f
 
 # Exercises: $k$-fold CV
 
-Open the Resampling Methods R Markdown file.
+Open the Resampling Methods R Markdown or Jupyter Notebook file.
 
 -   Go over the "$k$-fold CV" section together as a class.
 
@@ -179,7 +179,7 @@ This method is able to give us an estimate of the variability associated with ou
 
 # Exercises: The Bootstrap
 
-Open the Resampling Methods R Markdown file.
+Open the Resampling Methods R Markdown and Jupyter Notebook file.
 
 -   Go over the "The Bootstrap" section together as a class.
 
@@ -187,6 +187,8 @@ Open the Resampling Methods R Markdown file.
 
 # References
 
-Chapter 5 of the ISLR2 book:
+Chapter 5 of the ISLR2 and ISLP books:
 
 James, Gareth, et al. "Resampling Methods." An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+
+James, Gareth, et al. "Resampling Methods." An Introduction to Statistical Learning: with Applications in Python, Springer, 2023.

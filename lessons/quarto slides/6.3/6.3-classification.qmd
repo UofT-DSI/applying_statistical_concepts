@@ -129,7 +129,7 @@ $$ As before, the maximum likelihood is used to estimate the coefficients.
 
 # Exercise: Logistic Regression
 
-Open the Classification Exercises R Markdown file.
+Open the Classification Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over "Getting Started" together as a class.
 
@@ -292,7 +292,7 @@ The ROC (receiver operator characteristics) curve is a method for visualising th
 
 # Exercise: Linear Discriminant Analysis
 
-Open the Classification Exercises R Markdown file.
+Open the Classification Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "Linear Discriminant Analysis" section together as a class.
 
@@ -330,7 +330,7 @@ When to use the LDA versus the QDA:
 
 # Exercise: Quadratic Discriminant Analysis
 
-Open the Classification Exercises R Markdown file.
+Open the Classification Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "Quadratic Discriminant Analysis" section together as a class.
 
@@ -362,7 +362,7 @@ To estimate $f_{k j}$ using the training data there are several options:
 
 # Exercise: Naive Bayes
 
-Open the Classification Exercises R Markdown file.
+Open the Classification Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "Naive Bayes" section together as a class.
 
@@ -390,7 +390,7 @@ These figures illustrate the KNN approach with $K=3$. To the left we see the 3 c
 
 # Exercise: K-Nearest Neighbours
 
-Open the Classification Exercises R Markdown file.
+Open the Classification Exercises R Markdown or Jupyter Notebook file.
 
 -   Go over the "K-Nearest Neighbours" section together as a class.
 
@@ -412,6 +412,8 @@ The choice of classification method depends on two things:
 
 # References
 
-Chapter 4 and section 2.2.3 of the ISLR2 book:
+Chapter 4 and section 2.2.3 of the ISLR2 and ISLP books:
 
-James, Gareth, et al. An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+James, Gareth, et al. "Classification." An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+
+James, Gareth, et al. "Classification." An Introduction to Statistical Learning: with Applications in Python, Springer, 2023.
