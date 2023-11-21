@@ -84,9 +84,9 @@ The diagonal entries are the correct predictions and the off-diagonals are the i
 mean(log.pred == Direction)
 ```
 
-Note that 100% - 53.3% = 47.7%  is the training error rate.
+Note that 100% - 53.3% = 46.7%  is the training error rate.
 
-Now we can try predictin the outcomes of the test data using `predict(log.fit, Smarket.2005, type = "response")`. ***Try this out yourselves! Find the confusion matrix and test error rate as well.***
+Now we can try predicting the outcomes of the test data using `predict(log.fit, Smarket.2005, type = "response")`. ***Try this out yourselves! Find the confusion matrix and test error rate as well.***
 
 ***How does the training error rate compare to the test error rate?***
 
