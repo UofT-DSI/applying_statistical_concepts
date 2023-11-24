@@ -246,7 +246,3 @@ _(BONUS)_.  **[5 POINTS]** The "one-standard-error rule" states that if there ar
 #code here
 ```
 
-
-
-
-
