@@ -28,7 +28,7 @@ By the end of the course, students will:
 * TA: Julia Gallucci [julia.gallucci@mail.utoronto.ca](julia.gallucci@mail.utoronto.ca)
 
 ### Textbook
-This course is based largely on the second edition (2021) of *An Introduction with Statistical Learning with Applications in R* (ISLR2), written by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani and *An Introduction with Statistical Learning with Applications in Python* (ISLP), written by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor. Students should choose the language they are most familiar with to complete this course. Whether taken in R or Python, the underlying principles of this course remain the same. This course includes all essential materials from the textbooks in our slides and is not required; however, students may find it useful as a reference. The books can be downloaded for free, online, at the [companion website](https://www.statlearning.com/). If preferred, both the [R](https://librarysearch.library.utoronto.ca/discovery/fulldisplay?docid=alma991106106183406196&context=L&vid=01UTORONTO_INST:UTORONTO&lang=en&search_scope=UTL_AND_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,An%20Introduction%20to%20Statistical%20Learning&offset=0) and [Python](https://librarysearch.library.utoronto.ca/discovery/fulldisplay?docid=alma991107279624206196&context=L&vid=01UTORONTO_INST:UTORONTO&lang=en&search_scope=UTL_AND_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,An%20introduction%20to%20statistical%20learning%20:%20with%20applications%20in%20Python) verions of the books can be purchased, or borrowed from the University of Toronto library in print or online. 
+This course is based largely on the second edition (2021) of *An Introduction with Statistical Learning with Applications in R* (ISLR2), written by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani and *An Introduction with Statistical Learning with Applications in Python* (ISLP), written by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor (2023). Students should choose the language they are most familiar with to complete this course. Whether taken in R or Python, the underlying principles of this course remain the same. This course includes all essential materials from the textbooks in our slides and is not required; however, students may find it useful as a reference. The books can be downloaded for free, online, at the [companion website](https://www.statlearning.com/). If preferred, both the [R](https://librarysearch.library.utoronto.ca/discovery/fulldisplay?docid=alma991106106183406196&context=L&vid=01UTORONTO_INST:UTORONTO&lang=en&search_scope=UTL_AND_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,An%20Introduction%20to%20Statistical%20Learning&offset=0) and [Python](https://librarysearch.library.utoronto.ca/discovery/fulldisplay?docid=alma991107279624206196&context=L&vid=01UTORONTO_INST:UTORONTO&lang=en&search_scope=UTL_AND_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,An%20introduction%20to%20statistical%20learning%20:%20with%20applications%20in%20Python) verions of the books can be purchased, or borrowed from the University of Toronto library in print or online. 
 
 ### Technology Requirements
 Lectures and tutorials are run synchronously over Zoom. We use R and RStudio and Juypiter's Notebook throughout the course. It is preferrable to have them installed; however, the RStudio IDE may be accessed via the 
@@ -46,7 +46,7 @@ Tutorial sessions on the same date as each class. Tutorials take place from 5 PM
 
 ### Class Topics
 
-| Class | Date                   | Topic                                                                               |  Resources | ISLR2 Chapter |
+| Class | Date                   | Topic                                                                               |  Resources | ISLR2/ISLP Chapter |
 |--------|------------------------|-------------------------------------------------------------------------------------|------------| --------|
 | 1      | Tuesday 21 February    | Key Concepts <br> Simple linear regression       | [Slides 1/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.1-Introduction_to_Statistical_Learning_slides.pdf); [Slides 2/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.2-Linear_Regression_slides.pdf) | 2,3
 | 2      | Thursday 23 February   | Multiple linear regression, interactions, qualitative predictors <br>                         | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.2-Linear_Regression_slides.pdf) | 3            
@@ -71,16 +71,17 @@ Grading is based on three components: 3 assignments, 5 homework questions (compl
 
 Assignments will cover key statistical concepts and related code implementation. One assignment is assigned per week, for three weeks, for a total of 3 assignments. Assignments will be introduced in class, can be discussed in tutorial, and questions can be ask of the Instructor and/or TA over email. Assignments are due by midnight on Sundays. Please arrange for extensions *in advance* with the Instructor, [Navona](navona.calarco@mail.utoronto.ca). Please email submissions, as an RMarkdown PDF, to the TA, [Julia](julia.gallucci@mail.utoronto.ca), titled `DSI: Assignment X, Name`.
 
-Assignments can be found in the `Assignments` directory, above. We've included an .html file (knitted Markdown file) for easy reading, as well as .Rmd file, that can be edited for submission. (To download files, click Raw > Save as.)
+Assignments can be found in the `Assignments` directory, above. We've included an .html file (knitted Markdown file) for easy reading, as well as .Rmd and Jupyter Notebook files, that can be edited for submission. (To download files, click Raw > Save as.)
 
-Note: If the assignment requires some content we end up not covering in class (i.e., we've fallen behind), it will be removed from the assignmetn / not be graded (you're welcome to submit answers if you like). Any questions that are removed will be determined and clearly indicated in the class before the assignment is due.
+Note: If the assignment requires some content we end up not covering in class (i.e., we've fallen behind), it will be removed from the assignment / not be graded (you're welcome to submit answers if you like). Any questions that are removed will be determined and clearly indicated in the class before the assignment is due.
 
-Assignment Due-dates
-| Assessment        | Content         | Due Date |
-| ------------------| ----------------|----------|
-| Assignment 1      | Classes 1,2,3   |  Sunday 26 February, by midnight |
-| Assignment 2      | Classes 4,5,6   |  Sunday 5 March, by midnight     |
-| Assignment 3      | Classes 7,9     |  Sunday 12 March, by midnight    |
+**Assignment Due-dates**
+
+| Assessment        | Content         | Due Date                         |
+| ------------------| ----------------|----------------------------------|
+| Assignment 1      | Classes 1, 2, 3   |  Sunday 26 February, by midnight |
+| Assignment 2      | Classes 4, 5, 6   |  Sunday 5 March, by midnight     |
+| Assignment 3      | Classes 7, 9     |  Sunday 12 March, by midnight    |
 
 **Homework**
 
@@ -88,20 +89,33 @@ For each class (with the exception of the Industry Case Study), one homework que
 
 Homework is as follows (<u>only 5 required, marked for competion only!</u>):
 
-| Assessment        | ISLR2 Question       | Due Date | 
-| ------------------| ---------------------|----------|
-| Homework class 1   | Ch 3, pg 123, q8    | Thursday 23 February, by 6pm |
-| Homework class 2   | Ch 3, pg 123, q9, a-e   | Saturday 25 February, by 9am|
-| Homework class 3   | Ch 4, pg 193, q13    | Monday 27 February, by 6pm|
-| Homework class 4   | Ch 5, pg 221, q6     | Thursday 2 March, by 6pm|
-| Homework class 5   | Ch 5, pg 286, q9, a-d| Saturday 4 March, by 9am|
-| Homework class 6   | Ch 7, pg 324, q9     | Monday 6 March, by 6pm|
-| Homework class 7   | Ch 8, pg 363, q9     | Thursday 9 March, by 6pm|
-| Homework class 9   | Ch 12, pg 550, q9     | Sunday 12 March, by midnight |
+| Assessment        | ISLR2 Question       | ISLP Question       |           Due Date | 
+| ------------------| ---------------------|----------------------|---------------------
+| Homework class 1   | Ch 3, pg 123, q8    | Ch 3, pg 129, q8     |Thursday 23 February, by 6pm |
+| Homework class 2   | Ch 3, pg 123, q9, a-e | Ch 3, pg 129-130, q9, a-e | Saturday 25 February, by 9am|
+| Homework class 3   | Ch 4, pg 193, q13    | Ch 4, pg 196-197, q13 | Monday 27 February, by 6pm|
+| Homework class 4   | Ch 5, pg 221, q6     | Ch 5, pg 226-227, q6 | Thursday 2 March, by 6pm|
+| Homework class 5   | Ch 5, pg 286, q9, a-d| Ch 5, pg 286-287, q9, a-d | Saturday 4 March, by 9am|
+| Homework class 6   | Ch 7, pg 324, q9     | Ch 7, pg 327, q9    |  Monday 6 March, by 6pm|
+| Homework class 7   | Ch 8, pg 363, q9     | Ch 8, pg 365, q9    | Thursday 9 March, by 6pm|
+| Homework class 9   | Ch 12, pg 550, q9    | Ch 12, pg 554-555, q9 | Sunday 12 March, by midnight |
 
 **Participation**
 
 We hope all members in the course regularly participate. We define participation broadly, and include attendance, asking questions, answering others' questions, participating in discussions, etc.
 
 ## Acknowledgements
-First slides were developed by Simone Collier under the supervision of Rohan Alexander. Slides have been created and modified by Navona Calarco and Julia Gallucci for Winter 2023. This course pulls largely from the book, *An Introduction to Statistical Learning with Applications in R* (2nd edition, 2021), by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani.
+First slides were developed by Simone Collier under the supervision of Rohan Alexander. Materials were re-developed from R to Python by Inessa De Angelis under the supervision of Rohan Alexander. Slides have been created and modified by Navona Calarco and Julia Gallucci for Winter 2023. This course pulls largely from the books *An Introduction to Statistical Learning with Applications in R* (2nd edition, 2021), by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani and *An Introduction to Statistical Learning with Applications in Python* (2023) by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor. 
+
+## To Update
+For the course instructor and course support:
+
+  -   Update course assignments to reflect new grading approach 
+  
+      - Specifically, check which assignment Question 4 (assignment 1) / Question 1 (assignment 2) should be included with
+  
+  -   Update dates, deadlines, and class schedule throughout all materials and this ReadMe
+  
+  -   Update course instructor and course support names and contract information throughout all materials and this ReadMe
+  
+  -   Update learning outcomes listed throughout all materials and this ReadMe
