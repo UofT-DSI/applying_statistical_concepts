@@ -110,7 +110,7 @@ First slides were developed by Simone Collier under the supervision of Rohan Ale
 ## To Update
 For the course instructor and course support:
 
-  -   Update course assignments to reflect new grading approach 
+  -   Update course assignments and answer keys to reflect new grading approach 
   
       - Specifically, check which assignment Question 4 (assignment 1) / Question 1 (assignment 2) should be included with
   
@@ -118,4 +118,8 @@ For the course instructor and course support:
   
   -   Update course instructor and course support names and contract information throughout all materials and this ReadMe
   
-  -   Update learning outcomes listed throughout all materials and this ReadMe
+  -   Update learning outcomes listed throughout all materials and this ReadMe.
+  
+  -   Add remaining answers to the Python homework 5 and 7 documents. 
+  
+  -   This is not so much something to update, but a note! All the Python packages used as part of ISLP are always changing and if you are continually getting error messages when running code, make sure everything is up-to-date by running the following in your terminal: `pip install -r https://raw.githubusercontent.com/intro-stat-learning/ISLP_labs/v2/requirements.txt` . More info: https://islp.readthedocs.io/en/latest/installation.html. 
