@@ -1,17 +1,15 @@
-# DSI Course for Statistical Learning
+# Estimation, machine learning and testing
 
 ## Contents:
-1. [Description](https://github.com/UofT-DSI/06-statistical_learning#description)
-2. [Learning Outcomes](https://github.com/UofT-DSI/06-statistical_learning#learning-outcomes)
-3. [Logistics](https://github.com/UofT-DSI/06-statistical_learning#logistics)
-4. [Class Schedule](https://github.com/UofT-DSI/06-statistical_learning#class-schedule)
-5. [Grading Scheme](https://github.com/UofT-DSI/06-statistical_learning#grading-scheme)
-6. [Acknowledgements](https://github.com/UofT-DSI/06-statistical_learning#acknowledgements)
+1. [Description](https://github.com/UofT-DSI/estimation_machine_learning_testing#description)
+2. [Learning Outcomes](https://github.com/UofT-DSI/estimation_machine_learning_testing#learning-outcomes)
+3. [Logistics](https://github.com/UofT-DSI/estimation_machine_learning_testing#logistics)
+4. [Class Schedule](https://github.com/UofT-DSI/estimation_machine_learning_testing#class-schedule)
+5. [Grading Scheme](https://github.com/UofT-DSI/estimation_machine_learning_testing#grading-scheme)
+6. [Acknowledgements](https://github.com/UofT-DSI/estimation_machine_learning_testing#acknowledgements)
 
 ## Description
-This course provides the intuition and skills required to design, implement, test and validate a variety of supervised learning models. We cover the basics of statistical learning including modelling with the goal of prediction versus inference, prediction accuracy and model interpretability trade-off, and the all-important bias-variance trade-off. Each section of this course will cover a unique set of methods used for supervised learning on real data sets.
-
-This course is designed for those who have a degree in something other than Computer Science/Statistics who are looking to enhance their data science skills for their career.
+This course provides the intuition and skills required to design, implement, test and validate a variety of supervised learning models. We cover the basics of statistical learning including modelling with the goal of prediction versus inference, prediction accuracy and model interpretability trade-off, and the bias-variance trade-off. Each section of this course will cover a unique set of methods used for supervised learning on real data sets.
 
 ## Learning Outcomes
 By the end of the course, students will:
@@ -31,7 +29,7 @@ By the end of the course, students will:
 This course is based largely on the second edition (2021) of *An Introduction with Statistical Learning with Applications in R* (ISLR2), written by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani and *An Introduction with Statistical Learning with Applications in Python* (ISLP), written by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor (2023). Students should choose the language they are most familiar with to complete this course. Whether taken in R or Python, the underlying principles of this course remain the same. This course includes all essential materials from the textbooks in our slides and is not required; however, students may find it useful as a reference. The books can be downloaded for free, online, at the [companion website](https://www.statlearning.com/). If preferred, both the [R](https://librarysearch.library.utoronto.ca/discovery/fulldisplay?docid=alma991106106183406196&context=L&vid=01UTORONTO_INST:UTORONTO&lang=en&search_scope=UTL_AND_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,An%20Introduction%20to%20Statistical%20Learning&offset=0) and [Python](https://librarysearch.library.utoronto.ca/discovery/fulldisplay?docid=alma991107279624206196&context=L&vid=01UTORONTO_INST:UTORONTO&lang=en&search_scope=UTL_AND_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,An%20introduction%20to%20statistical%20learning%20:%20with%20applications%20in%20Python) verions of the books can be purchased, or borrowed from the University of Toronto library in print or online. 
 
 ### Technology Requirements
-Lectures and tutorials are run synchronously over Zoom. We use R and RStudio and Juypiter's Notebook throughout the course. It is preferrable to have them installed; however, the RStudio IDE may be accessed via the 
+Lectures and tutorials are run synchronously over Zoom. We use R and RStudio and Juypiter Notebooks throughout the course. It is preferrable to have them installed; however, the RStudio IDE may be accessed via the 
 the [Posit Cloud](https://posit.cloud/) if preferred (free account required). We will occasionally use [Posit Cloud](https://posit.cloud/) for collaborative coding. 
 
 ### Classes
@@ -105,7 +103,7 @@ Homework is as follows (<u>only 5 required, marked for competion only!</u>):
 We hope all members in the course regularly participate. We define participation broadly, and include attendance, asking questions, answering others' questions, participating in discussions, etc.
 
 ## Acknowledgements
-First slides were developed by Simone Collier under the supervision of Rohan Alexander. Materials were re-developed from R to Python by Inessa De Angelis under the supervision of Rohan Alexander. Slides have been created and modified by Navona Calarco and Julia Gallucci for Winter 2023. This course pulls largely from the books *An Introduction to Statistical Learning with Applications in R* (2nd edition, 2021), by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani and *An Introduction to Statistical Learning with Applications in Python* (2023) by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor. 
+Rohan Alexander supervised the development of this course. The first slides were developed by Simone Collier. Slides have been created and modified by Navona Calarco and Julia Gallucci for Winter 2023. Materials were re-developed from R to Python by Inessa De Angelis in Fall 2023. This course draws extensively on *An Introduction to Statistical Learning with Applications in R* (2nd edition, 2021), by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani and *An Introduction to Statistical Learning with Applications in Python* (2023) by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor. 
 
 ## To Update
 For the course instructor and course support:
