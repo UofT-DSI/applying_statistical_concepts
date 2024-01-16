@@ -84,20 +84,20 @@ Note: If the assignment requires some content we end up not covering in class (i
 
 **Homework**
 
-For each class (with the exception of the Industry Case Study), one homework question from the ISLR2 textbook will be assigned. The homework question is graded for **completion only** (i.e., an attempted solution receives full marks), and *only 5 questions* are required over the course (i.e., you do not have to submit 3). The homework questions will require writing code in R, and designed to take no more than 20 minutes. Individual feedback is not provided on the weekly homework question by default, but will be discussed in tutorials. Homework questions must be submitted before the beginning of the next class; late submissions will not be graded. Homeworks should be submitted through the correct Google Forms link found below following the naming convention firstname_lastname_hw#.  
+For each class (with the exception of the Industry Case Study), one homework question from the ISLR2 textbook will be assigned. The homework question is graded for **completion only** (i.e., an attempted solution receives full marks), and *only 5 questions* are required over the course (i.e., you do not have to submit 3). The homework questions will require writing code in Python and are designed to take no more than 20 minutes. Individual feedback is not provided on the weekly homework question by default, but will be discussed in tutorials. Homework questions must be submitted before the beginning of the next class; late submissions will not be graded. Homeworks should be submitted through the correct Google Forms link found below following the naming convention firstname_lastname_hw#.  
 
 Homework is as follows (<u>only 5 required, marked for competion only!</u>):
 
 | Assessment        | ISLR2 Question       | ISLP Question       |           Due Date | Submission Link |
 | ------------------| ---------------------|----------------------|---------------------| --------------- |
-| Homework class 1   | Ch 3, pg 123, q8    | Ch 3, pg 129, q8     |Thursday 23 February, by 6pm | https://forms.gle/hyZwATUZaeq8tCMt8 | 
-| Homework class 2   | Ch 3, pg 123, q9, a-e | Ch 3, pg 129-130, q9, a-e | Saturday 25 February, by 9am| https://forms.gle/oXC5jCkUeTXP5r5U6 | 
-| Homework class 3   | Ch 4, pg 193, q13    | Ch 4, pg 196-197, q13 | Monday 27 February, by 6pm| https://forms.gle/oXC5jCkUeTXP5r5U6 |
-| Homework class 4   | Ch 5, pg 221, q6     | Ch 5, pg 226-227, q6 | Thursday 2 March, by 6pm| https://forms.gle/jNg8XrnWbDY6aep28 |
-| Homework class 5   | Ch 5, pg 286, q9, a-d| Ch 5, pg 286-287, q9, a-d | Saturday 4 March, by 9am| https://forms.gle/v8qmqjWBbm83aAUBA |
-| Homework class 6   | Ch 7, pg 324, q9     | Ch 7, pg 327, q9    |  Monday 6 March, by 6pm| https://forms.gle/ixMWHBrJzW4BgLk16
-| Homework class 7   | Ch 8, pg 363, q9     | Ch 8, pg 365, q9    | Thursday 9 March, by 6pm| https://forms.gle/9tWZjJoYnRV9JYM9A |
-| Homework class 9   | Ch 12, pg 550, q9    | Ch 12, pg 554-555, q9 | Sunday 12 March, by midnight | https://forms.gle/NBbS3DmLHJqSy7PL7 |
+| Homework class 1   | Ch 3, pg 123, q8    | Ch 3, pg 129, q8     |Thursday 23 February, by 6pm | [HW1](https://forms.gle/hyZwATUZaeq8tCMt8) | 
+| Homework class 2   | Ch 3, pg 123, q9, a-e | Ch 3, pg 129-130, q9, a-e | Saturday 25 February, by 9am| [HW2](https://forms.gle/oXC5jCkUeTXP5r5U6) | 
+| Homework class 3   | Ch 4, pg 193, q13    | Ch 4, pg 196-197, q13 | Monday 27 February, by 6pm| [HW3](https://forms.gle/oXC5jCkUeTXP5r5U6) |
+| Homework class 4   | Ch 5, pg 221, q6     | Ch 5, pg 226-227, q6 | Thursday 2 March, by 6pm| [HW4](https://forms.gle/jNg8XrnWbDY6aep28) |
+| Homework class 5   | Ch 5, pg 286, q9, a-d| Ch 5, pg 286-287, q9, a-d | Saturday 4 March, by 9am| [HW5](https://forms.gle/v8qmqjWBbm83aAUBA) |
+| Homework class 6   | Ch 7, pg 324, q9     | Ch 7, pg 327, q9    |  Monday 6 March, by 6pm| [HW6](https://forms.gle/ixMWHBrJzW4BgLk16) |
+| Homework class 7   | Ch 8, pg 363, q9     | Ch 8, pg 365, q9    | Thursday 9 March, by 6pm| [HW7](https://forms.gle/9tWZjJoYnRV9JYM9A) |
+| Homework class 9   | Ch 12, pg 550, q9    | Ch 12, pg 554-555, q9 | Sunday 12 March, by midnight | [HW8](https://forms.gle/NBbS3DmLHJqSy7PL7) |
 
 **Participation**
 
