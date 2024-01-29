@@ -51,10 +51,10 @@ Tutorial sessions are on the same date as each class. Tutorials will take place 
 | 2      | Wednesday 17 January   | Multiple linear regression, interactions, qualitative predictors <br>                         | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.2-Linear_Regression_slides.pdf) | 3            
 | 3      | Thursday 18 January   | Classification (logistic regression, generative models)                     | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.3-Classication_slides.pdf) | 4                    
 | 4      | Saturday 20 January     |  Resampling methods (CV, bootstrap) and Linear model selection and regularization         | [Slides1/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.4-Resampling_Methods_slides.pdf)[Slides2/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.5-Linear_Model_Selection_and_Regularisation_slides.pdf)  | 5, 6               
-| 5      | Tuesday 23 January      | Beyond linearity                                       | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.6-Beyond_Linearity_slides.pdf)| 7       
-| 6      | Wednesday 24 January       | Tree-based methods                           | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.7-Tree-Based_Methods_slides.pdf) | 8        
+| 5      | Tuesday 23 January      | Tree-based methods                                     | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.7-Tree-Based_Methods_slides.pdf))| 7       
+| 6      | Wednesday 24 January       | Support Vector Machines                           | [Slides] | 8        
 | 7      | Thursday 25 January       | Professional Skills - Industry Case Study  <br>(Guest: Ajit Desai, Bank of Canada)  | | NA                  
-| 8      | Saturday 27 January         | Survival Analysis, Principal Components Analysis, Ethics/Inequity/Reproducibility | [Slides 1/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.10-Unsupervised_Learning_slides.pdf), [Slides 2/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.9-Survival_Analysis_and_Censored_Data_slides.pdf)| 12, 13                       
+| 8      | Saturday 27 January         | Survival Analysis, Principal Components Analysis, Ethics/Inequity/Reproducibility | [Slides 1/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.9-Survival_Analysis_and_Censored_Data_slides.pdf), [Slides 2/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.10-Unsupervised_Learning_slides.pdf)| 12, 13                       
 
 ## Grading Scheme
 
@@ -90,11 +90,10 @@ Homework is as follows (<u>only 5 required, marked for competion only!</u>):
 
 | Assessment        | ISLR2 Question       | ISLP Question       |           Due Date | Submission Link |
 | ------------------| ---------------------|----------------------|---------------------| --------------- |
-| Homework class 1   | Ch 3, pg 123, q8    | Ch 3, pg 129, q8     |Wednesday 17 January, by 6pm | [HW1](https://forms.gle/hyZwATUZaeq8tCMt8) | 
-| Homework class 2   | Ch 3, pg 123, q9, a-e | Ch 3, pg 129-130, q9, a-e | Thursday 18 January, by 6pm| [HW2](https://forms.gle/oXC5jCkUeTXP5r5U6) | 
-| Homework class 3   | Ch 4, pg 193, q13    | Ch 4, pg 196-197, q13 | Saturday 20 January, by 9am| [HW3](https://forms.gle/oXC5jCkUeTXP5r5U6) |
-| Homework class 4   | Ch 5, pg 221, q6     | Ch 5, pg 226-227, q6 | Saturday 20 January, by 9am| [HW4](https://forms.gle/jNg8XrnWbDY6aep28) |
-| Homework class 5   | Ch 5, pg 286, q9, a-d| Ch 5, pg 286-287, q9, a-d | Tuesday 23 January, by 6pm| [HW5](https://forms.gle/v8qmqjWBbm83aAUBA) |
+| Homework class 1   | Ch 3, pg 123, q8    | Ch 3, pg 129, q8     | Thursday 18 January, by 6pm | [HW1](https://forms.gle/hyZwATUZaeq8tCMt8) | 
+| Homework class 2   | Ch 3, pg 123, q9, a-e | Ch 3, pg 129-130, q9, a-e | Saturday 20 January, by 9am| [HW2](https://forms.gle/oXC5jCkUeTXP5r5U6) | 
+| Homework class 3   | Ch 4, pg 193, q13    | Ch 4, pg 196-197, q13 | Tuesday 23 January, by 6pm| [HW3](https://forms.gle/fkM96s8EPqjcqzeq7) |
+| Homework class 4   | Ch 5, pg 221, q6     | Ch 5, pg 226-227, q6 | Tuesday 23 January, by 6pm| [HW4](https://forms.gle/jNg8XrnWbDY6aep28) |
 | Homework class 6   | Ch 7, pg 324, q9     | Ch 7, pg 327, q9    |  Wednesday 24 January, by 6pm| [HW6](https://forms.gle/ixMWHBrJzW4BgLk16) |
 | Homework class 7   | Ch 8, pg 363, q9     | Ch 8, pg 365, q9    | Thursday 25 January, by 6pm| [HW7](https://forms.gle/9tWZjJoYnRV9JYM9A) |
 | Homework class 9   | Ch 12, pg 550, q9    | Ch 12, pg 554-555, q9 | Saturday 27 January, by 9am | [HW8](https://forms.gle/NBbS3DmLHJqSy7PL7) |
