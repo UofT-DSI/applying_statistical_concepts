@@ -1,4 +1,3 @@
 .DS_Store
-post-course/
-.Rproj.user
-.vscode/
+.vscode/*
+06-instructors/find_duplicate_packages.sh

@@ -26,6 +26,7 @@ By the end of the course, students will:
 * Instructor: Kamilah Ebrahim [kamilah.ebrahim@mail.utoronto.ca](kamilah.ebrahim@mail.utoronto.ca)
 * TA: Ananya Jha [ananya.jha@mail.utoronto.ca](ananya.jha@mail.utoronto.ca)
 * TA : Vishnou Vinayagame [vishnouvina@cs.toronto.edu](vishnouvina@cs.toronto.edu)
+* TA: Vishnou Vinayagame [vishnouvina@cs.toronto.edu](vishnouvina@cs.toronto.edu)
 
 ### Textbook
 This course is based largely on the second edition (2021) of *An Introduction with Statistical Learning with Applications in R* (ISLR2), written by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani and *An Introduction with Statistical Learning with Applications in Python* (ISLP), written by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor (2023). Students should choose the language they are most familiar with to complete this course. Whether taken in R or Python, the underlying principles of this course remain the same. This course includes all essential materials from the textbooks in our slides and is not required; however, students may find it useful as a reference. The books can be downloaded for free, online, at the [companion website](https://www.statlearning.com/). If preferred, both the [R](https://librarysearch.library.utoronto.ca/discovery/fulldisplay?docid=alma991106106183406196&context=L&vid=01UTORONTO_INST:UTORONTO&lang=en&search_scope=UTL_AND_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,An%20Introduction%20to%20Statistical%20Learning&offset=0) and [Python](https://librarysearch.library.utoronto.ca/discovery/fulldisplay?docid=alma991107279624206196&context=L&vid=01UTORONTO_INST:UTORONTO&lang=en&search_scope=UTL_AND_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,An%20introduction%20to%20statistical%20learning%20:%20with%20applications%20in%20Python) verions of the books can be purchased, or borrowed from the University of Toronto library in print or online. 
@@ -100,17 +101,4 @@ Homework is as follows (<u>only 3 required, marked for competion only!</u>):
 We hope all members in the course regularly participate. We define participation broadly, and include attendance, asking questions, answering others' questions, participating in discussions, etc.
 
 ## Acknowledgements
-Rohan Alexander supervised the development of this course. The first slides were developed by Simone Collier. Slides have been created and modified by Navona Calarco and Julia Gallucci for Winter 2023. Materials were re-developed from R to Python by Inessa De Angelis in Fall 2023. This course draws extensively on *An Introduction to Statistical Learning with Applications in R* (2nd edition, 2021), by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani and *An Introduction to Statistical Learning with Applications in Python* (2023) by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor. 
-
-## To Update
-For the course instructor and course support:
-
-  - Specifically, check which assignment Question 1 (assignment 2) should be included with
-      
-  -   Update learning outcomes listed throughout all materials and this ReadMe.
-
-  -  Update course instructor and course support names and contract information throughout all materials 
-  
-  -   Add remaining answers to the Python homework 5 and 7 documents. 
-  
-  -   This is not so much something to update, but a note! All the Python packages used as part of ISLP are always changing and if you are continually getting error messages when running code, make sure everything is up-to-date by running the following in your terminal: `pip install -r https://raw.githubusercontent.com/intro-stat-learning/ISLP_labs/v2/requirements.txt` . More info: https://islp.readthedocs.io/en/latest/installation.html. 
+Rohan Alexander supervised the development of this course. The first slides were developed by Simone Collier. Slides have been created and modified by Navona Calarco and Julia Gallucci for Winter 2023. Materials were re-developed from R to Python by Inessa De Angelis in Fall 2023. This course draws extensively on *An Introduction to Statistical Learning with Applications in R* (2nd edition, 2021), by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani and *An Introduction to Statistical Learning with Applications in Python* (2023) by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor. The structure of the repos were heavily organized and modified by Vishnou Vinayagame and Daniel Razavi in Winter of 2024.
