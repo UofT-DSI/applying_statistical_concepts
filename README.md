@@ -78,9 +78,9 @@ Note: If the assignment requires some content we end up not covering in class (i
 
 | Assessment        | Content         | Due Date                         | Submission Link |
 | ------------------| ----------------|----------------------------------| ------------------ |
-| Assignment 1      | Classes 1, 2, 3   |  Sunday March 17, by 11:59PM | [A1](https://forms.gle/5ocshXh5ZtUj8WXY6) |  
-| Assignment 2      | Classes 4, 5   |  Wednesday March 20, by 11:59PM     | [A2](https://forms.gle/nNJMjBRzDVaRKMBA9) |
-| Assignment 3      | Classes 3, 4, 6     |  Saturday March 23, by 11:59PM    | [A3](https://forms.gle/qSnbougKaH5cvntb8) |
+| Assignment 1      | Classes 1, 2, 3   |  Sunday March 17, by 11:59PM | Your Drive Folder |  
+| Assignment 2      | Classes 4, 5   |  Wednesday March 20, by 11:59PM     | Your Drive Folder |
+| Assignment 3      | Classes 3, 4, 6     |  Saturday March 23, by 11:59PM    | Your Drive Folder |
 
 **Homework**
 
@@ -90,11 +90,11 @@ Homework is as follows (<u>only 3 required, marked for competion only!</u>):
 
 | Assessment        | ISLR2 Question       | ISLP Question       |           Due Date | Submission Link |
 | ------------------| ---------------------|----------------------|---------------------| --------------- |
-| Homework 1   | Ch 3, pg 123, q8    | Ch 3, pg 129, q8     | Wednesday, March 13 | [HW1](https://forms.gle/hyZwATUZaeq8tCMt8) | 
-| Homework 2   | Ch 3, pg 123, q9, a-e | Ch 3, pg 129-130, q9, a-e | Friday, March 15 | [HW2](https://forms.gle/oXC5jCkUeTXP5r5U6) | 
-| Homework 3   | Ch 4, pg 193, q13    | Ch 4, pg 196-197, q13 | Sunday, March 17 | [HW3](https://forms.gle/fkM96s8EPqjcqzeq7) |
-| Homework 4   | Ch 5, pg 221, q6     | Ch 5, pg 226-227, q6 | Tuesday, March 19 | [HW4](https://forms.gle/jNg8XrnWbDY6aep28) |
-| Homework 5   | Ch 6, pg ?, q?     | Ch 6, pg 286-287    | Thursday, March 21 | [HW5](https://forms.gle/ixMWHBrJzW4BgLk16) |
+| Homework 1   | Ch 3, pg 123, q8    | Ch 3, pg 129, q8     | Wednesday, March 13 | Your Drive Folder | 
+| Homework 2   | Ch 3, pg 123, q9, a-e | Ch 3, pg 129-130, q9, a-e | Friday, March 15 | Your Drive Folder | 
+| Homework 3   | Ch 4, pg 193, q13    | Ch 4, pg 196-197, q13 | Sunday, March 17 | Your Drive Folder |
+| Homework 4   | Ch 5, pg 221, q6     | Ch 5, pg 226-227, q6 | Tuesday, March 19 | Your Drive Folder |
+| Homework 5   | Ch 6, pg ?, q?     | Ch 6, pg 286-287    | Thursday, March 21 | Your Drive Folder |
 
 **Participation**
 
