@@ -1,5 +1,31 @@
 # Estimation, machine learning and testing
 
+## Contents
+* [Description](#description)
+* [Learning Outcomes](#learning-outcomes)
+* [Logistics](#logistics)
+  + [Course Contacts](#course-contacts)
+  + [Requirements](#requirements)
+  + [Delivery of Module](#delivery-of-module)
+  + [How the Instructor will deliver](#how-the-instructor-will-deliver)
+  + [Expectations](#expectations)
+* [Class Schedule](#class-schedule)
+  + [Class Topics](#class-topics)
+* [Grading Scheme](#grading-scheme)
+* [Policies](#policies)
+* [Resources](#resources)
+  - [Documents](#documents)
+  - [Simple Linear Regression](#simple-linear-regression)
+  - [Multiple linear regression, interactions, qualitative predictors](#multiple-linear-regression-interactions-qualitative-predictors)
+  - [Classification (logistic regression, generative models)](#classification-logistic-regression-generative-models)
+  - [Resampling methods (CV, bootstrap) and Linear model selection and regularization](#resampling-methods-cv-bootstrap-and-linear-model-selection-and-regularization)
+  - [Tree-based methods](#tree-based-methods)
+  - [Support Vector Machines](#support-vector-machines)
+  - [Survival Analysis, Principal Components Analysis, Ethics/Inequity/Reproducibility](#survival-analysis-principal-components-analysis-ethicsinequityreproducibility)
+  + [How to get help](#how-to-get-help)
+* [Folder Structure](#folder-structure)
+* [Acknowledgements](#acknowledgements)
+
 ## Description
 This course provides the intuition and skills required to design, implement, test and validate a variety of supervised learning models. We cover the basics of statistical learning including modelling with the goal of prediction versus inference, prediction accuracy and model interpretability trade-off, and the bias-variance trade-off. Each section of this course will cover a unique set of methods used for supervised learning on real data sets.
 
@@ -88,8 +114,9 @@ Note: If the assignment requires some content we end up not covering in class (i
 Feel free to use the following as resources:
 
 #### Documents
-- [Cheatsheet](./05-review_session_material/DSI%20emlt-cheat%20sheet%202.pdf)
-- [Cross Validation - Basic Idea and Steps](./05-review_session_material/Cross%20validation%20-%20basic%20idea&steps.pdf)
+- [Cheatsheet](./05-review-session-material/dsi-emlt-cheat-sheet-2.pdf)
+- [Cross Validation - Basic Idea and Steps](./05-review-session-material/cross-validation-basic-idea-and-steps.pdf)
+- [EMLT Tutorial](./05-review-session-material/emlt-tutorials.pdf)
 
 #### Simple Linear Regression
 - [Linear Regression, explained in 2 minutes](https://www.youtube.com/watch?v=CtsRRUddV2s)
@@ -125,7 +152,7 @@ Feel free to use the following as resources:
 - [Mini Lecture: Survival Analysis](https://www.youtube.com/watch?v=t6vdjwhauF8&pp=ygUsYmlvc3RhdGlzdGljcyBtaW5pIGxlY3R1cmUgc3Vydml2YWwgYW5hbHlzaXM%3D)
 
 ### How to get help
-![image](/Steps%20to%20ask%20for%20help.png)
+![image](/steps-to-ask-for-help.png)
 
 <hr>
 
@@ -136,7 +163,7 @@ Feel free to use the following as resources:
 |-- 02-assignments
 |-- 03-exercises
 |-- 04-homework
-|-- 05-review_session_material
+|-- 05-review-session-material
 |-- 06-instructors
 |-- .gitignore
 ```
