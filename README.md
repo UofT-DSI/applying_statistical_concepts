@@ -1,46 +1,43 @@
 # Estimation, machine learning and testing
 
-## Contents:
-1. [Description](https://github.com/UofT-DSI/estimation_machine_learning_testing#description)
-2. [Learning Outcomes](https://github.com/UofT-DSI/estimation_machine_learning_testing#learning-outcomes)
-3. [Logistics](https://github.com/UofT-DSI/estimation_machine_learning_testing#logistics)
-4. [Class Schedule](https://github.com/UofT-DSI/estimation_machine_learning_testing#class-schedule)
-5. [Grading Scheme](https://github.com/UofT-DSI/estimation_machine_learning_testing#grading-scheme)
-6. [Acknowledgements](https://github.com/UofT-DSI/estimation_machine_learning_testing#acknowledgements)
-
 ## Description
 This course provides the intuition and skills required to design, implement, test and validate a variety of supervised learning models. We cover the basics of statistical learning including modelling with the goal of prediction versus inference, prediction accuracy and model interpretability trade-off, and the bias-variance trade-off. Each section of this course will cover a unique set of methods used for supervised learning on real data sets.
 
 ## Learning Outcomes
 By the end of the course, students will:
-1. Understand, implement and interpret the results from several supervised learning approaches for regression and classification
+1. Implement and interpret the results from several supervised learning approaches for regression and classification
 2. Utilize resampling methods to extract more information from a data set and to choose the best model
 3. Perform exploratory data analysis for unsupervised learning
-4. Understand what is required for reproducible learning
-5. Appreciate the uncertainties associated with model results and the ethical consequences of acting on these results
-6. Communicate different trade offs and considerations for the statistical methods in their toolkit to both technical and non-technical audiences
+4. Determine what is required for reproducible learning
+5. Analyze the uncertainties associated with model results and the ethical consequences of acting on these results
+6. Explain the different trade offs and considerations for the statistical methods in their toolkit to both technical and non-technical audiences
 
 ## Logistics
 
 ### Course Contacts
-* Instructor: Kamilah Ebrahim [kamilah.ebrahim@mail.utoronto.ca](kamilah.ebrahim@mail.utoronto.ca)
-* TA: Ananya Jha [ananya.jha@mail.utoronto.ca](ananya.jha@mail.utoronto.ca)
-* TA : Vishnou Vinayagame [vishnouvina@cs.toronto.edu](vishnouvina@cs.toronto.edu)
+**Questions can be submitted to the #questions channel on Slack**
 
-### Textbook
-This course is based largely on the second edition (2021) of *An Introduction with Statistical Learning with Applications in R* (ISLR2), written by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani and *An Introduction with Statistical Learning with Applications in Python* (ISLP), written by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor (2023). Students should choose the language they are most familiar with to complete this course. Whether taken in R or Python, the underlying principles of this course remain the same. This course includes all essential materials from the textbooks in our slides and is not required; however, students may find it useful as a reference. The books can be downloaded for free, online, at the [companion website](https://www.statlearning.com/). If preferred, both the [R](https://librarysearch.library.utoronto.ca/discovery/fulldisplay?docid=alma991106106183406196&context=L&vid=01UTORONTO_INST:UTORONTO&lang=en&search_scope=UTL_AND_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,An%20Introduction%20to%20Statistical%20Learning&offset=0) and [Python](https://librarysearch.library.utoronto.ca/discovery/fulldisplay?docid=alma991107279624206196&context=L&vid=01UTORONTO_INST:UTORONTO&lang=en&search_scope=UTL_AND_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,An%20introduction%20to%20statistical%20learning%20:%20with%20applications%20in%20Python) verions of the books can be purchased, or borrowed from the University of Toronto library in print or online. 
+* Instructor: **{Name}** {Pronouns}. Emails to the instructor can be sent to {first_name.last_name}@mail.utoronto.ca.
+* TA: **{Name}** {Pronouns}. Emails to the instructor can be sent to {first_name.last_name}@mail.utoronto.ca.
 
-### Technology Requirements
-Lectures and tutorials are run synchronously over Zoom. We use R and RStudio and Juypiter Notebooks throughout the course. It is preferrable to have them installed; however, the RStudio IDE may be accessed via the 
-the [Posit Cloud](https://posit.cloud/) if preferred (free account required). We will occasionally use [Posit Cloud](https://posit.cloud/) for collaborative coding. 
+### Requirements
+* Learners are not expected to have any coding experience, we designed the learning contents for beginners.
+* Learners are encouraged to ask questions, and collaborate with others to enhance learning.
+* Learners must have a computer and an internet connection to participate in online activities.
+* Learners must have VSCode installed with the following extensions: 
+    * [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+* Learners must not use generative AI such as ChatGPT to generate code in order to complete assignments. It should be use as a supportive tool to seek out answers to questions you may have.
+* We expect learners to have completed the [onboarding repo](https://github.com/UofT-DSI/Onboarding/tree/tech-onboarding-docs).
+* Camera is optional although highly encouraged. We understand that not everyone may have the space at home to have the camera on.
 
-### Classes
-We will have a total of 6 over three weeks, according to the schedule below. Classes are 6 PM - 8:30 PM EST on Tuesday, Wednesday and Thursday, and 9 AM - 11:30 AM EST on Saturdays. Being mindful of online fatigue, there will be one or two brief breaks during each class.
+### Delivery of Module
+The module will run sychronously up three times a week on Zoom. The first three days are used as "lectures" and will last a maximum of 3 hours. During this time, the instructor will introduce the concepts for the week. The last day is used for as optional, asychronous work periods. The work periods will also last for up to 3 hours. During the work period, an instructor or TA will be present on Zoom to assist learners reach the intended learning outcomes.
 
-Classes will consist of instruction via prepared slides, and live-coding. All slides will be made available before lectures online. Students should perform coding in real-time, alongside the instructor. Students are encouraged to ask questions at any time. As required, we will use Zoom Whiteboard to work through 'pen and paper'-type questions, and Posit cloud to work through coding puzzles.
-
-### Tutorial
-Tutorial sessions are on the same date as each class. Tutorials will take place 30 minutes before and after each session. Tutorial attendance is optional, and organization is unstructured. The tutorial is the best place for questions/issues pertaining to software, homework, and assignments.
+### How the Instructor will deliver
+The instructors will introduce the concepts through a collaborative live coding session usiing the Python notebooks found under `/01-slides`. All instructors will also upload any live coding files to this repository for any learners to revisit under `/live-code`.
+ 
+### Expectations
+Learners are encouraged to be active participants while coding and are encouraged to ask questions throughout the module.
 
 ## Class Schedule
 
@@ -48,22 +45,21 @@ Tutorial sessions are on the same date as each class. Tutorials will take place 
 
 | Class | Date                   | Topic                                                                               |  Resources | ISLR2/ISLP Chapter |
 |--------|------------------------|-------------------------------------------------------------------------------------|------------| --------|
-| 1      | Thursday March 7th    | Key Concepts of Statistical Analysis <br> Simple linear regression       | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.1-Introduction_to_Statistical_Learning_slides.pdf) | 2
-| 2      | Thursday March 14th   | Multiple linear regression, interactions, qualitative predictors <br>                         | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.2-Linear_Regression_slides.pdf) | 3            
-| 3      | Saturday March 16th   | Classification (logistic regression, generative models)                     | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.3-Classication_slides.pdf) | 4                    
-| 4      | Monday March 18th     |  Resampling methods (CV, bootstrap) and Linear model selection and regularization         | [Slides1/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.4-Resampling_Methods_slides.pdf)[Slides2/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.5-Linear_Model_Selection_and_Regularisation_slides.pdf)  | 5, 6               
-| 5      | Tuesday March 19th      | Review of last session's content                                     | [Slides1/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.4-Resampling_Methods_slides.pdf)[Slides2/2](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.5-Linear_Model_Selection_and_Regularisation_slides.pdf)  | 5, 6       
-| 6      | Wednesday March 20th        | Introduction to unsupervised learning                           | [Slides](https://github.com/UofT-DSI/06-statistical_learning/blob/main/lessons/6.10-Unsupervised_Learning_slides.pdf) | 12,13                           
+| 1      | TBD    | Key Concepts of Statistical Analysis <br> Simple linear regression       | [Slides](./01-slides/6.1-Introduction_to_Statistical_Learning_slides.pdf) | 2
+| 2      | TBD   | Multiple linear regression, interactions, qualitative predictors <br>                         | [Slides](./01-slides/6.2-linear-regression.pdf) | 3            
+| 3      | TBD   | Classification (logistic regression, generative models)                     | [Slides](./01-slides/6.3-classification.pdf) | 4                    
+| 4      | TBD     |  Resampling methods (CV, bootstrap) and Linear model selection and regularization         | [Slides1/2](./01-slides/6.4-resampling-methods.pdf), [Slides2/2](./01-slides/6.5-linear-model-selection.pdf)  | 5, 6               
+| 5      | TBD      | Review of last session's content                                     | [Slides1/2](./01-slides/6.4-resampling-methods.pdf), [Slides2/2](./01-slides/6.5-linear-model-selection.pdf)  | 5, 6       
+| 6      | TBD        | Introduction to unsupervised learning                           | [Slides](./01-slides/6.10-Unsupervised_Learning_slides.pdf) | 12,13                           
 
 ## Grading Scheme
 
-Grading is based on three components: 2 assignments (3rd one is now optional), 3 homework questions (completion only), and class participation. The grading scheme is as follows:
+Grading is based on three components: 3 assignments, and class participation. The grading scheme is as follows:
 
 | Assessment       | Number |  Individual Weight | Cumulative Weight
 |------------------|--------|--------------------|------------------|
-| Assignments      | 2      |  30%               | 60%              |
-| Homework         | 3      |  10%               | 30%              | 
-| Participation    | NA     |  NA                | 10%              |
+| Assignments      | 3      |  25%               | 75%              |
+| Participation    | NA     |  NA                | 25%              |
 
 **Assignments**
 
@@ -77,27 +73,85 @@ Note: If the assignment requires some content we end up not covering in class (i
 
 | Assessment        | Content         | Due Date                         | Submission Link |
 | ------------------| ----------------|----------------------------------| ------------------ |
-| Assignment 1      | Classes 1, 2, 3   |  Sunday March 17, by 11:59PM | Your Drive Folder |  
-| Assignment 2      | Classes 4, 5   |  Friday March 22, by 11:59PM     | Your Drive Folder |
-| Assignment 3      | Classes 3, 4, 6     |  Optional    | Your Drive Folder |
+| Assignment 1      | Classes 1, 2, 3   |  TBD | Your Drive Folder |  
+| Assignment 2      | Classes 4, 5   |  TBD     | Your Drive Folder |
+| Assignment 3      | Classes 3, 4, 6     |  TBD    | Your Drive Folder |
 
-**Homework**
+## Policies
+* **Accessibility:** We want to provide an accessible learning environment for all. If there is something we can do to make this course more accessible to you, please let us know.
+* **Course communications:** Communications take place over email or on Slack. If communicating over email, please include "DSI-EMT" or similar in the subject line, e.g. "DSI-EMT: stats question"
+* **Camera:** Keeping your camera on is optional.
+* **Microphone:** Please keep microphones muted unless you need to speak. Please indicate your name before speaking as some Zoom configurations make it hard to tell who is talking!
+* **Assessment:** There will be homework which **is not** graded, but highly recommended, and there will be two assignments which **are** graded.
 
-For each class (with the exception of the first class), one homework question from the ISLR2 textbook will be assigned. The homework question is graded for **completion only** (i.e., an attempted solution receives full marks), and *only 3 questions* are required over the course (i.e., you do not have to submit 2 of them out of the 5 ones). The homework questions will require writing code in Python and are designed to take no more than 20 minutes. Individual feedback is not provided on the weekly homework question by default, but will be discussed in tutorials. Homework questions must be submitted before the beginning of the next class; late submissions will not be graded. Homeworks should be submitted through your Drive Folder following the naming convention firstname_lastname_hw#.  
+## Resources
+Feel free to use the following as resources:
 
-Homework is as follows (<u>only 3 required, marked for competion only!</u>):
+#### Documents
+- [Cheatsheet](./05-review_session_material/DSI%20emlt-cheat%20sheet%202.pdf)
+- [Cross Validation - Basic Idea and Steps](./05-review_session_material/Cross%20validation%20-%20basic%20idea&steps.pdf)
 
-| Assessment        | ISLR2 Question       | ISLP Question       |           Due Date | Submission Link |
-| ------------------| ---------------------|----------------------|---------------------| --------------- |
-| Homework 1   | Ch 3, pg 123, q8    | Ch 3, pg 129, q8     | Wednesday, March 13 | Your Drive Folder | 
-| Homework 2   | Ch 3, pg 123, q9, a-e | Ch 3, pg 129-130, q9, a-e | Friday, March 15 | Your Drive Folder | 
-| Homework 3   | Ch 4, pg 193, q13    | Ch 4, pg 196-197, q13 | Sunday, March 17 | Your Drive Folder |
-| Homework 4   | Ch 5, pg 221, q6     | Ch 5, pg 226-227, q6 | Tuesday, March 19 | Your Drive Folder |
-| Homework 5   | Ch 6, pg ?, q?     | Ch 6, pg 286-287    | Thursday, March 21 | Your Drive Folder |
+#### Simple Linear Regression
+- [Linear Regression, explained in 2 minutes](https://www.youtube.com/watch?v=CtsRRUddV2s)
+- [Linear Regression, Clearly Explained!!!](https://www.youtube.com/watch?v=7ArmBVF2dCs&pp=ygUic2ltcGxlIGxpbmVhciByZWdyZXNzaW9uIHN0YXRxdWVzdA%3D%3D)
 
-**Participation**
+#### Multiple linear regression, interactions, qualitative predictors
+- [Multiple Regression, Clearly Explained!!!](https://www.youtube.com/watch?v=EkAQAi3a4js&pp=ygUic2ltcGxlIGxpbmVhciByZWdyZXNzaW9uIHN0YXRxdWVzdA%3D%3D)
 
-We hope all members in the course regularly participate. We define participation broadly, and include attendance, asking questions, answering others' questions, participating in discussions, etc.
+#### Classification (logistic regression, generative models)
+- [Logistic Regression, explained in 3 minutes](https://www.youtube.com/watch?v=EKm0spFxFG4)
+- [StatQuest: Logistic Regression](https://www.youtube.com/watch?v=yIYKR4sgzI8&list=PLblh5JKOoLUKxzEP5HA2d-Li7IJkHfXSe)
+- [StatQuest: Linear Discriminant Analysis (LDA) clearly explained.](https://www.youtube.com/watch?v=azXCzI57Yfc&pp=ygUNTERBIHN0YXRxdWVzdA%3D%3D)
+- [StatQuest: K-nearest neighbors, Clearly Explained](https://www.youtube.com/watch?v=HVXime0nQeI&pp=ygUNa25uIHN0YXRxdWVzdA%3D%3D)
+- [Naive Bayes, Clearly Explained!!!](https://www.youtube.com/watch?v=O2L2Uv9pdDA&pp=ygUaYmF5ZXMgY2xhc3NpZmllciBzdGF0cXVlc3Q%3D)
+
+#### Resampling methods (CV, bootstrap) and Linear model selection and regularization
+- [Linear Modelling](https://www.youtube.com/watch?v=-inJu1jHqb8)
+- [Machine Learning Fundamentals: Cross Validation](https://www.youtube.com/watch?v=fSytzGwwBVw&pp=ygUYdmFsaWRhdGlvbiBzZXQgc3RhdHF1ZXN0)
+- [Bootstrapping Main Ideas!!!](https://www.youtube.com/watch?v=Xz0x-8-cgaQ&pp=ygUXYm9vdHN0cmFwcGluZyBzdGF0cXVlc3Q%3D)
+
+#### Tree-based methods
+- [Tree-based methods, explained in 8 minutes](https://www.youtube.com/watch?v=sN5ZcJLDMaE)
+- [Regularization, explained in 12 minutes](https://www.youtube.com/watch?v=pJ5c_uLeg2A)
+- [Decision and Classification Trees, Clearly Explained!!!](https://www.youtube.com/watch?v=_L39rN6gz7Y&pp=ygUXZGVjaXNpb24gdHJlZSBzdGF0cXVlc3Q%3D)
+- [Regression Trees, Clearly Explained!!!](https://www.youtube.com/watch?v=g9c66TUylZ4&pp=ygUXZGVjaXNpb24gdHJlZSBzdGF0cXVlc3Q%3D)
+- [Boosting](https://www.youtube.com/watch?v=GM3CDQfQ4sw&pp=ygUQdWRhY2l0eSBib29zdGluZw%3D%3D)
+- [Statistical Learning: 8.6 Bayesian Additive Regression Trees](https://www.youtube.com/watch?v=xWhPwHZF4c0&pp=ygUUQkFSVCBzdGFuZm9yZCBvbmxpbmU%3D)
+
+#### Support Vector Machines
+- [Support Vector Machines Part 1 (of 3): Main Ideas!!!](https://www.youtube.com/watch?v=efR1C6CvhmE&pp=ygUOc3ZtcyBzdGF0cXVlc3Q%3D)
+
+#### Survival Analysis, Principal Components Analysis, Ethics/Inequity/Reproducibility
+- [Mini Lecture: Survival Analysis](https://www.youtube.com/watch?v=t6vdjwhauF8&pp=ygUsYmlvc3RhdGlzdGljcyBtaW5pIGxlY3R1cmUgc3Vydml2YWwgYW5hbHlzaXM%3D)
+
+### How to get help
+![image](/Steps%20to%20ask%20for%20help.png)
+
+<hr>
+
+## Folder Structure
+
+```markdown
+|-- 01-slides
+|-- 02-assignments
+|-- 03-exercises
+|-- 04-homework
+|-- 05-review_session_material
+|-- 06-instructors
+|-- .gitignore
+```
+
+* **slides:** Course slides as interactive notebooks (.ipynb files)
+* **pdf slides:** Course slides as PDF files
+* **live-coding:** Notebooks from class live coding sessions
+* **exercises:** Work to be done alongside the lectures
+* **homework:** Optional homework to practice concepts covered in class
+* **assignments:** Graded assignments
+* **review_session_material**: Contains review materials
+* **instructors:** Instructions for the Instructor on what to teach
+* README: This file!
+* .gitignore: Files to exclude from this folder, specified by the instructor
+
 
 ## Acknowledgements
 Rohan Alexander supervised the development of this course. The first slides were developed by Simone Collier. Slides have been created and modified by Navona Calarco and Julia Gallucci for Winter 2023. Materials were re-developed from R to Python by Inessa De Angelis in Fall 2023. This course draws extensively on *An Introduction to Statistical Learning with Applications in R* (2nd edition, 2021), by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani and *An Introduction to Statistical Learning with Applications in Python* (2023) by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor. The structure of the repos were heavily organized and modified by Vishnou Vinayagame and Daniel Razavi in Winter of 2024.
