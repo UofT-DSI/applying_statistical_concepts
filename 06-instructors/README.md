@@ -4,7 +4,7 @@
 The instructor will teach using the content provided in the `/01-slides` directory. You are allowed to live code with them during your lecture. Just make sure you upload the live-coding files to a new directory called `/live-coding` under `/01-slides` to this repository using a new branch and open up a pull request for it to be merge.
 
 ## How does the module flow?
-The module is organized into 3 main directories:
+The module is organized into 4 main directories:
 1. Slides
 2. Assignments
 3. Exercises
