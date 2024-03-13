@@ -72,14 +72,14 @@ Learners are encouraged to be active participants while coding and are encourage
 | Class | Date                   | Topic                                                                               |  Resources | ISLR2/ISLP Chapter |
 |--------|------------------------|-------------------------------------------------------------------------------------|------------| --------|
 | 1      | TBD    | Key Concepts of Statistical Analysis <br> Simple linear regression       | [Slides](./01-slides/6.1-Introduction_to_Statistical_Learning_slides.pdf) | 2
-| 2      | TBD   | Multiple linear regression, interactions, qualitative predictors <br>                         | [Slides](./01-slides/6.2-linear-regression.pdf) | 3            
+| 2      | TBD   | Multiple linear regression and interactions <br>                         | [Slides](./01-slides/6.2-linear-regression.pdf) | 3            
 | 3      | TBD   | Qualitative Predictors                    | [Slides](./01-slides/6.2-linear-regression.pdf)  |3                     
 | 4      | TBD     |  Classification (logistic regression, generative models)        | [Slides](./01-slides/6.3-classification.pdf)  | 4            
 | 5      | TBD      | Classification (logistic regression, generative models)                                      | [Slides](./01-slides/6.3-classification.pdf) | 4      
 | 6      | TBD        | Review      |  | 2-4     |
-| 7      | TBD     |  Resampling methods (CV, bootstrap) and Linear model selection and regularization         | [Slides](./01-slides/6.4-resampling-methods.pdf)  | 5               
-| 8      | TBD      | Linear Model Selection and Regularization (subset selection, shrinkage methods)                                 | [Slides](./01-slides/6.5-linear-model-selection.pdf) | 6       
-| 9      | TBD        | Linear Model Selection and Regularization (subset selection, shrinkage methods)                       | [Slides](./01-slides/6.5-linear-model-selection.pdf) | 6     |                      
+| 7      | TBD     |  Resampling methods (Cross Validation, bootstrap)       | [Slides](./01-slides/6.4-resampling-methods.pdf)  | 5               
+| 8      | TBD      | Linear Model Selection and Regularization (subset selection)                                 | [Slides](./01-slides/6.5-linear-model-selection.pdf) | 6       
+| 9      | TBD        | Linear Model Selection and Regularization (shrinkage methods)                       | [Slides](./01-slides/6.5-linear-model-selection.pdf) | 6     |                      
 
 ## Grading Scheme
 
