@@ -73,10 +73,13 @@ Learners are encouraged to be active participants while coding and are encourage
 |--------|------------------------|-------------------------------------------------------------------------------------|------------| --------|
 | 1      | TBD    | Key Concepts of Statistical Analysis <br> Simple linear regression       | [Slides](./01-slides/6.1-Introduction_to_Statistical_Learning_slides.pdf) | 2
 | 2      | TBD   | Multiple linear regression, interactions, qualitative predictors <br>                         | [Slides](./01-slides/6.2-linear-regression.pdf) | 3            
-| 3      | TBD   | Classification (logistic regression, generative models)                     | [Slides](./01-slides/6.3-classification.pdf) | 4                    
-| 4      | TBD     |  Resampling methods (CV, bootstrap) and Linear model selection and regularization         | [Slides1/2](./01-slides/6.4-resampling-methods.pdf), [Slides2/2](./01-slides/6.5-linear-model-selection.pdf)  | 5, 6               
-| 5      | TBD      | Review of last session's content                                     | [Slides1/2](./01-slides/6.4-resampling-methods.pdf), [Slides2/2](./01-slides/6.5-linear-model-selection.pdf)  | 5, 6       
-| 6      | TBD        | Introduction to unsupervised learning                           | [Slides](./01-slides/6.10-Unsupervised_Learning_slides.pdf) | 12,13                           
+| 3      | TBD   | Qualitative Predictors                    | [Slides](./01-slides/6.2-linear-regression.pdf)  |3                     
+| 4      | TBD     |  Classification (logistic regression, generative models)        | [Slides](./01-slides/6.3-classification.pdf)  | 4            
+| 5      | TBD      | Classification (logistic regression, generative models)                                      | [Slides](./01-slides/6.3-classification.pdf) | 4      
+| 6      | TBD        | Review      |  | 2-4     |
+| 7      | TBD     |  Resampling methods (CV, bootstrap) and Linear model selection and regularization         | [Slides](./01-slides/6.4-resampling-methods.pdf)  | 5               
+| 8      | TBD      | Linear Model Selection and Regularization (subset selection, shrinkage methods)                                 | [Slides](./01-slides/6.5-linear-model-selection.pdf) | 6       
+| 9      | TBD        | Linear Model Selection and Regularization (subset selection, shrinkage methods)                       | [Slides](./01-slides/6.5-linear-model-selection.pdf) | 6     |                      
 
 ## Grading Scheme
 
@@ -100,8 +103,8 @@ Note: If the assignment requires some content we end up not covering in class (i
 | Assessment        | Content         | Due Date                         | Submission Link |
 | ------------------| ----------------|----------------------------------| ------------------ |
 | Assignment 1      | Classes 1, 2, 3   |  TBD | Your Drive Folder |  
-| Assignment 2      | Classes 4, 5   |  TBD     | Your Drive Folder |
-| Assignment 3      | Classes 3, 4, 6     |  TBD    | Your Drive Folder |
+| Assignment 2      | Classes 4, 5, 6   |  TBD     | Your Drive Folder |
+| Assignment 3      | Classes 7, 8, 9   |  TBD    | Your Drive Folder |
 
 ## Policies
 * **Accessibility:** We want to provide an accessible learning environment for all. If there is something we can do to make this course more accessible to you, please let us know.
@@ -137,7 +140,7 @@ Feel free to use the following as resources:
 - [Machine Learning Fundamentals: Cross Validation](https://www.youtube.com/watch?v=fSytzGwwBVw&pp=ygUYdmFsaWRhdGlvbiBzZXQgc3RhdHF1ZXN0)
 - [Bootstrapping Main Ideas!!!](https://www.youtube.com/watch?v=Xz0x-8-cgaQ&pp=ygUXYm9vdHN0cmFwcGluZyBzdGF0cXVlc3Q%3D)
 
-#### Tree-based methods
+#### Tree-based methods (optional)
 - [Tree-based methods, explained in 8 minutes](https://www.youtube.com/watch?v=sN5ZcJLDMaE)
 - [Regularization, explained in 12 minutes](https://www.youtube.com/watch?v=pJ5c_uLeg2A)
 - [Decision and Classification Trees, Clearly Explained!!!](https://www.youtube.com/watch?v=_L39rN6gz7Y&pp=ygUXZGVjaXNpb24gdHJlZSBzdGF0cXVlc3Q%3D)
@@ -145,10 +148,10 @@ Feel free to use the following as resources:
 - [Boosting](https://www.youtube.com/watch?v=GM3CDQfQ4sw&pp=ygUQdWRhY2l0eSBib29zdGluZw%3D%3D)
 - [Statistical Learning: 8.6 Bayesian Additive Regression Trees](https://www.youtube.com/watch?v=xWhPwHZF4c0&pp=ygUUQkFSVCBzdGFuZm9yZCBvbmxpbmU%3D)
 
-#### Support Vector Machines
+#### Support Vector Machines (optional)
 - [Support Vector Machines Part 1 (of 3): Main Ideas!!!](https://www.youtube.com/watch?v=efR1C6CvhmE&pp=ygUOc3ZtcyBzdGF0cXVlc3Q%3D)
 
-#### Survival Analysis, Principal Components Analysis, Ethics/Inequity/Reproducibility
+#### Survival Analysis, Principal Components Analysis, Ethics/Inequity/Reproducibility (optional)
 - [Mini Lecture: Survival Analysis](https://www.youtube.com/watch?v=t6vdjwhauF8&pp=ygUsYmlvc3RhdGlzdGljcyBtaW5pIGxlY3R1cmUgc3Vydml2YWwgYW5hbHlzaXM%3D)
 
 ### How to get help
