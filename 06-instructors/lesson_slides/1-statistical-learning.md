@@ -6,7 +6,7 @@ paginate: true
 math: mathjax
 ---
 
-# 6.1: Introduction to Statistical Learning
+# 1: Introduction to Statistical Learning
 
 ```code
 $ echo "Data Science Institute"
@@ -23,6 +23,11 @@ your time!
 - Provide constructive feedback to make the course better 
 - Listen to and learn from each other 
 - Anything else?
+
+---
+
+# Think and share:
+## What is Statistical Learning?
 
 ---
 
@@ -144,7 +149,9 @@ This approach is implemented in two steps:
 1. Make an assumption about the functional form of $f$.
 2. Develop a procedure to fit the model to the training data.
 
-### Example
+---
+
+# Example
 
 - Suppose $f$ is linear in $X$: $f(X)=\beta_{0}+\beta_{1}X_{1}+\beta_{2}X_{2}+\cdots+\beta_{p}X_{p}$. This assumption has reduced the number of parameters that need to be fit significantly compared to fitting a generic p-dimensional function.
 - We need to estimate $\beta_{0}, \beta_{1}, \beta_{2}, \dots, \beta_{p}$ such that $Y \approx \beta_{0}+\beta_{1}X_{1}+\beta_{2}X_{2}+\cdots+\beta_{p}X_{p}$. One approach is to use least squares which attempts to minimize the difference between the data and our estimate for $f$.
@@ -226,6 +233,13 @@ In the described plots:
 
 This textual description aims to convey the essential information without relying on specific layout instructions. For actual visual representations, including the plots directly as images is the best practice, as shown above.
 
+---
+
+# Breakout Room: What if no test observations are available?
+
+In your breakout rooms, think, and share what happens if test observation are not available.
+
+_Hint: Google and ChatGPT are your friends!_
 
 ---
 
@@ -306,8 +320,6 @@ So far we have discussed model accuracy in the context of regression but the sam
 
 # References
 
-Chapter 2 of the ISLR2 and ISLP books:
-
-James, Gareth, et al. "Statistical Learning." An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+Chapter 2 of the ISLP book:
 
 James, Gareth, et al. "Statistical Learning." An Introduction to Statistical Learning: with Applications in Python, Springer, 2023.

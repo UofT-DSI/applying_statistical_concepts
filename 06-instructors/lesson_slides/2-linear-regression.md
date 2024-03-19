@@ -6,7 +6,7 @@ paginate: true
 math: mathjax
 ---
 
-# 6.2: Linear Regression
+# 2: Linear Regression
 
 ```code
 $ echo "Data Science Institute"
@@ -136,6 +136,10 @@ The standard errors for $\hat \beta_0$ and $\hat \beta_1$ can be used to compute
 
 ---
 
+# Breakout Room: What do you think the Hypothesis Test is?
+
+---
+
 # Hypothesis Tests on the Coefficients
 
 Once we have the standard errors, we can perform a hypothesis test on the coefficients to determine whether there is a relationship between $X$ and $Y$. 
@@ -194,7 +198,7 @@ Simple linear regression uses a single predictor variable $X$ to predict a respo
 
 # Exercises: Simple Linear Regression
 
-Open the Linear Regression Exercises R Markdown or Jupyter Notebook file.
+Open the Linear Regression Jupyter Notebook file.
 
 -   Go over the "Simple Linear Regression" section together as a class.
 
@@ -611,8 +615,6 @@ Open the Linear Regression Exercises Jupyter Notebook file.
 
 # References
 
-Chapter 3 of the ISLR2 and ISLP books:
-
-James, Gareth, et al. "Linear Regression." An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021.
+Chapter 3 of the ISLP book:
 
 James, Gareth, et al. "Linear Regression." An Introduction to Statistical Learning: with Applications in Python, Springer, 2023.

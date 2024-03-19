@@ -20,11 +20,33 @@ The `/04-homework` directory contains all the homework, a learner can do to demo
 
 ### Week 1
 
-TBD
+Focus of the week is on regression (linear and multiple linear).
+
+| Class  | Date   | Topic                                                 |  Resources | ISLP Chapter | DS: AFI Chapter |
+|--------|--------|-------------------------------------------------------|------------| -------------|-----------------|
+| 1      | TBD    | Key Concepts of Statistical Analysis                  | [Slides](./01-slides/1-statistical-learning.pdf)                      | 2 |  |
+| 2      | TBD    | Simple linear regression                              | [Slides](./01-slides/2-linear-regression.pdf)                         | 3 | 8 |
+| 3      | TBD    | Multiple linear regression, interactions and Qualitative Predictors  | [Slides](./01-slides/3-multiple-linear-regression.pdf) | 3 | 8 |
 
 ### Week 2
 
-TBD
+Focus of the week is on classification (logistic regression and generalized linear model)
+
+| Class  | Date   | Topic                                                 |  Resources | ISLP Chapter | DS: AFI Chapter |
+|--------|--------|-------------------------------------------------------|------------| -------------|-----------------|     
+| 4      | TBD    | Classification vs Regression                          | [Slides](./01-slides/4-classification.pdf)                            | 4 | 5 - 7 |
+| 5      | TBD    | Classification (Logistic Regression)                | [Slides](./01-slides/5-logistic-regression.pdf)                       | 4 | 5 + 6 |
+| 6      | TBD    | Classification (Generalized Linear Model)             | [Slides](./01-slides/6-generalized-linear-models.pdf)                 | 4 | 5 + 6 |  
+
+### Week 3
+
+Focus of the week is on resampling methods (Cross Validation and Bootstrap)
+
+| Class  | Date   | Topic                                                 |  Resources | ISLP Chapter | DS: AFI Chapter |
+|--------|--------|-------------------------------------------------------|------------| -------------|-----------------|
+| 7      | TBD    | Resampling Methods (Leave One Out Cross Validation)   |  [Slides](./01-slides/7-leave-one-out-cross-validation.pdf)           | 5 | 10 |
+| 8      | TBD    | Resampling Methods (K-fold Cross Validation)          | [Slides](./01-slides/8-k-fold-cross-validation.pdf)                   | 5 | 10 |
+| 9      | TBD    | Resampling Methods (Bootstrap)                        | [Slides](./01-slides/9-the-bootstrap.pdf)                             | 5 | 10 |  
 
 ## How do you assign assignments?
 Assignments are given and assigned at the start of each week at the end of the first lecture. The instructor will announce to the learners what the assignment is about, and how everything they will learn within the week will equip them to work on the assignment.

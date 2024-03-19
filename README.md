@@ -57,7 +57,7 @@ By the end of the course, students will:
 * Camera is optional although highly encouraged. We understand that not everyone may have the space at home to have the camera on.
 
 ### Delivery of Module
-The module will run sychronously up three times a week on Zoom. The first three days are used as "lectures" and will last a maximum of 3 hours. During this time, the instructor will introduce the concepts for the week. The last day is used for as optional, asychronous work periods. The work periods will also last for up to 3 hours. During the work period, an instructor or TA will be present on Zoom to assist learners reach the intended learning outcomes.
+The module will run sychronously three times a week on Zoom. The first three days are used as "lectures" and will last a maximum of 3 hours. During this time, the instructor will introduce the concepts for the week. The last day is used for as optional, asychronous work periods. The work periods will also last for up to 3 hours. During the work period, an instructor or TA will be present on Zoom to assist learners reach the intended learning outcomes.
 
 ### How the Instructor will deliver
 The instructors will introduce the concepts through a collaborative live coding session usiing the Python notebooks found under `/01-slides`. All instructors will also upload any live coding files to this repository for any learners to revisit under `/live-code`.
@@ -69,17 +69,19 @@ Learners are encouraged to be active participants while coding and are encourage
 
 ### Class Topics
 
-| Class | Date                   | Topic                                                                               |  Resources | ISLR2/ISLP Chapter |
-|--------|------------------------|-------------------------------------------------------------------------------------|------------| --------|
-| 1      | TBD    | Key Concepts of Statistical Analysis <br> Simple linear regression       | [Slides](./01-slides/6.1-Introduction_to_Statistical_Learning_slides.pdf) | 2
-| 2      | TBD   | Multiple linear regression and interactions <br>                         | [Slides](./01-slides/6.2-linear-regression.pdf) | 3            
-| 3      | TBD   | Qualitative Predictors                    | [Slides](./01-slides/6.2-linear-regression.pdf)  |3                     
-| 4      | TBD     |  Classification (logistic regression, generative models)        | [Slides](./01-slides/6.3-classification.pdf)  | 4            
-| 5      | TBD      | Classification (logistic regression, generative models)                                      | [Slides](./01-slides/6.3-classification.pdf) | 4      
-| 6      | TBD        | Review      |  | 2-4     |
-| 7      | TBD     |  Resampling methods (Cross Validation, bootstrap)       | [Slides](./01-slides/6.4-resampling-methods.pdf)  | 5               
-| 8      | TBD      | Linear Model Selection and Regularization (subset selection)                                 | [Slides](./01-slides/6.5-linear-model-selection.pdf) | 6       
-| 9      | TBD        | Linear Model Selection and Regularization (shrinkage methods)                       | [Slides](./01-slides/6.5-linear-model-selection.pdf) | 6     |                      
+| Class  | Date   | Topic                                                 |  Resources | ISLP Chapter | DS: AFI Chapter |
+|--------|--------|-------------------------------------------------------|------------| -------------|-----------------|
+| 1      | TBD    | Key Concepts of Statistical Analysis                  | [Slides](./01-slides/1-statistical-learning.pdf)                      | 2 |  |
+| 2      | TBD    | Simple linear regression                              | [Slides](./01-slides/2-linear-regression.pdf)                         | 3 | 8 |
+| 3      | TBD    | Multiple linear regression, interactions and Qualitative Predictors  | [Slides](./01-slides/3-multiple-linear-regression.pdf) | 3 | 8 |        
+| 4      | TBD    | Classification vs Regression                          | [Slides](./01-slides/4-classification.pdf)                            | 4 | 5 - 7 |
+| 5      | TBD    | Classification (Logistic Regression)                | [Slides](./01-slides/5-logistic-regression.pdf)                       | 4 | 5 + 6 |
+| 6      | TBD    | Classification (Generalized Linear Model)             | [Slides](./01-slides/6-generalized-linear-models.pdf)                 | 4 | 5 + 6 |  
+| 7      | TBD    | Resampling Methods (Leave One Out Cross Validation)   |  [Slides](./01-slides/7-leave-one-out-cross-validation.pdf)           | 5 | 10 |
+| 8      | TBD    | Resampling Methods (K-fold Cross Validation)          | [Slides](./01-slides/8-k-fold-cross-validation.pdf)                   | 5 | 10 |
+| 9      | TBD    | Resampling Methods (Bootstrap)                        | [Slides](./01-slides/9-the-bootstrap.pdf)                             | 5 | 10 |                 
+
+Alternative Textbook: [Data Science: A First Introduction](https://python.datasciencebook.ca/classification1.html) (Chapters 5-10)
 
 ## Grading Scheme
 
@@ -120,6 +122,7 @@ Feel free to use the following as resources:
 - [Cheatsheet](./05-review-session-material/dsi-emlt-cheat-sheet-2.pdf)
 - [Cross Validation - Basic Idea and Steps](./05-review-session-material/cross-validation-basic-idea-and-steps.pdf)
 - [EMLT Tutorial](./05-review-session-material/emlt-tutorials.pdf)
+- [ISLP Labs](https://islp.readthedocs.io/en/latest/installation.html)
 
 #### Simple Linear Regression
 - [Linear Regression, explained in 2 minutes](https://www.youtube.com/watch?v=CtsRRUddV2s)
@@ -134,11 +137,14 @@ Feel free to use the following as resources:
 - [StatQuest: Linear Discriminant Analysis (LDA) clearly explained.](https://www.youtube.com/watch?v=azXCzI57Yfc&pp=ygUNTERBIHN0YXRxdWVzdA%3D%3D)
 - [StatQuest: K-nearest neighbors, Clearly Explained](https://www.youtube.com/watch?v=HVXime0nQeI&pp=ygUNa25uIHN0YXRxdWVzdA%3D%3D)
 - [Naive Bayes, Clearly Explained!!!](https://www.youtube.com/watch?v=O2L2Uv9pdDA&pp=ygUaYmF5ZXMgY2xhc3NpZmllciBzdGF0cXVlc3Q%3D)
+- [Generalized Linear Model](https://www.youtube.com/watch?v=SqN-qlQOM5A)
 
 #### Resampling methods (CV, bootstrap) and Linear model selection and regularization
 - [Linear Modelling](https://www.youtube.com/watch?v=-inJu1jHqb8)
 - [Machine Learning Fundamentals: Cross Validation](https://www.youtube.com/watch?v=fSytzGwwBVw&pp=ygUYdmFsaWRhdGlvbiBzZXQgc3RhdHF1ZXN0)
 - [Bootstrapping Main Ideas!!!](https://www.youtube.com/watch?v=Xz0x-8-cgaQ&pp=ygUXYm9vdHN0cmFwcGluZyBzdGF0cXVlc3Q%3D)
+- [Bootstrapping Method](https://www.youtube.com/watch?v=uGsf3spCM3Y)
+- [$k$-fold Cross Validation](https://www.youtube.com/watch?v=TIgfjmp-4BA)
 
 #### Tree-based methods (optional)
 - [Tree-based methods, explained in 8 minutes](https://www.youtube.com/watch?v=sN5ZcJLDMaE)
