@@ -6,7 +6,7 @@ paginate: true
 math: mathjax
 ---
 
-# 6.3: Classification
+# 4: Classification
 
 ```code
 $ echo "Data Science Institute"

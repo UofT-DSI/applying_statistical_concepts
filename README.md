@@ -50,8 +50,9 @@ By the end of the course, students will:
 * Learners are not expected to have any coding experience, we designed the learning contents for beginners.
 * Learners are encouraged to ask questions, and collaborate with others to enhance learning.
 * Learners must have a computer and an internet connection to participate in online activities.
-* Learners must have VSCode installed with the following extensions: 
+* Learners must have VSCode installed with the following extensions:
     * [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+    * [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
 * Learners must not use generative AI such as ChatGPT to generate code in order to complete assignments. It should be use as a supportive tool to seek out answers to questions you may have.
 * We expect learners to have completed the [onboarding repo](https://github.com/UofT-DSI/Onboarding/tree/tech-onboarding-docs).
 * Camera is optional although highly encouraged. We understand that not everyone may have the space at home to have the camera on.
@@ -118,11 +119,14 @@ Note: If the assignment requires some content we end up not covering in class (i
 ## Resources
 Feel free to use the following as resources:
 
-#### Documents
-- [Cheatsheet](./05-review-session-material/dsi-emlt-cheat-sheet-2.pdf)
-- [Cross Validation - Basic Idea and Steps](./05-review-session-material/cross-validation-basic-idea-and-steps.pdf)
-- [EMLT Tutorial](./05-review-session-material/emlt-tutorials.pdf)
+### Documents
+- [Cheatsheet](./06-additional-resources/02_assignments/05-review-session-material/dsi-emlt-cheat-sheet-2.pdf)
+- [Cross Validation - Basic Idea and Steps](./06-additional-resources/05-review-session-material/cross-validation-basic-idea-and-steps.pdf)
+- [EMLT Tutorial](./06-additional-resources/05-review-session-material/emlt-tutorials.pdf)
 - [ISLP Labs](https://islp.readthedocs.io/en/latest/installation.html)
+
+### Videos 
+- [ISLP Playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)
 
 #### Simple Linear Regression
 - [Linear Regression, explained in 2 minutes](https://www.youtube.com/watch?v=CtsRRUddV2s)
@@ -146,20 +150,6 @@ Feel free to use the following as resources:
 - [Bootstrapping Method](https://www.youtube.com/watch?v=uGsf3spCM3Y)
 - [$k$-fold Cross Validation](https://www.youtube.com/watch?v=TIgfjmp-4BA)
 
-#### Tree-based methods (optional)
-- [Tree-based methods, explained in 8 minutes](https://www.youtube.com/watch?v=sN5ZcJLDMaE)
-- [Regularization, explained in 12 minutes](https://www.youtube.com/watch?v=pJ5c_uLeg2A)
-- [Decision and Classification Trees, Clearly Explained!!!](https://www.youtube.com/watch?v=_L39rN6gz7Y&pp=ygUXZGVjaXNpb24gdHJlZSBzdGF0cXVlc3Q%3D)
-- [Regression Trees, Clearly Explained!!!](https://www.youtube.com/watch?v=g9c66TUylZ4&pp=ygUXZGVjaXNpb24gdHJlZSBzdGF0cXVlc3Q%3D)
-- [Boosting](https://www.youtube.com/watch?v=GM3CDQfQ4sw&pp=ygUQdWRhY2l0eSBib29zdGluZw%3D%3D)
-- [Statistical Learning: 8.6 Bayesian Additive Regression Trees](https://www.youtube.com/watch?v=xWhPwHZF4c0&pp=ygUUQkFSVCBzdGFuZm9yZCBvbmxpbmU%3D)
-
-#### Support Vector Machines (optional)
-- [Support Vector Machines Part 1 (of 3): Main Ideas!!!](https://www.youtube.com/watch?v=efR1C6CvhmE&pp=ygUOc3ZtcyBzdGF0cXVlc3Q%3D)
-
-#### Survival Analysis, Principal Components Analysis, Ethics/Inequity/Reproducibility (optional)
-- [Mini Lecture: Survival Analysis](https://www.youtube.com/watch?v=t6vdjwhauF8&pp=ygUsYmlvc3RhdGlzdGljcyBtaW5pIGxlY3R1cmUgc3Vydml2YWwgYW5hbHlzaXM%3D)
-
 ### How to get help
 ![image](/steps-to-ask-for-help.png)
 
@@ -172,8 +162,8 @@ Feel free to use the following as resources:
 |-- 02-assignments
 |-- 03-exercises
 |-- 04-homework
-|-- 05-review-session-material
-|-- 06-instructors
+|-- 05-instructors
+|-- 06-additional-resources
 |-- .gitignore
 ```
 
@@ -183,7 +173,7 @@ Feel free to use the following as resources:
 * **exercises:** Work to be done alongside the lectures
 * **homework:** Optional homework to practice concepts covered in class
 * **assignments:** Graded assignments
-* **review_session_material**: Contains review materials
+* **additional resources:** Extra material not covered by the module
 * **instructors:** Instructions for the Instructor on what to teach
 * README: This file!
 * .gitignore: Files to exclude from this folder, specified by the instructor
