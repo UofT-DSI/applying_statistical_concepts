@@ -26,7 +26,6 @@ By the end of the course, students will:
 * Instructor: Kamilah Ebrahim [kamilah.ebrahim@mail.utoronto.ca](kamilah.ebrahim@mail.utoronto.ca)
 * TA: Ananya Jha [ananya.jha@mail.utoronto.ca](ananya.jha@mail.utoronto.ca)
 * TA : Vishnou Vinayagame [vishnouvina@cs.toronto.edu](vishnouvina@cs.toronto.edu)
-* TA: Vishnou Vinayagame [vishnouvina@cs.toronto.edu](vishnouvina@cs.toronto.edu)
 
 ### Textbook
 This course is based largely on the second edition (2021) of *An Introduction with Statistical Learning with Applications in R* (ISLR2), written by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani and *An Introduction with Statistical Learning with Applications in Python* (ISLP), written by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor (2023). Students should choose the language they are most familiar with to complete this course. Whether taken in R or Python, the underlying principles of this course remain the same. This course includes all essential materials from the textbooks in our slides and is not required; however, students may find it useful as a reference. The books can be downloaded for free, online, at the [companion website](https://www.statlearning.com/). If preferred, both the [R](https://librarysearch.library.utoronto.ca/discovery/fulldisplay?docid=alma991106106183406196&context=L&vid=01UTORONTO_INST:UTORONTO&lang=en&search_scope=UTL_AND_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,An%20Introduction%20to%20Statistical%20Learning&offset=0) and [Python](https://librarysearch.library.utoronto.ca/discovery/fulldisplay?docid=alma991107279624206196&context=L&vid=01UTORONTO_INST:UTORONTO&lang=en&search_scope=UTL_AND_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,An%20introduction%20to%20statistical%20learning%20:%20with%20applications%20in%20Python) verions of the books can be purchased, or borrowed from the University of Toronto library in print or online. 
@@ -58,17 +57,17 @@ Tutorial sessions are on the same date as each class. Tutorials will take place 
 
 ## Grading Scheme
 
-Grading is based on three components: 3 assignments, 3 homework questions (completion only), and class participation. The grading scheme is as follows:
+Grading is based on three components: 2 assignments (3rd one is now optional), 3 homework questions (completion only), and class participation. The grading scheme is as follows:
 
 | Assessment       | Number |  Individual Weight | Cumulative Weight
 |------------------|--------|--------------------|------------------|
-| Assignments      | 3      |  25%               | 75%              |
-| Homework         | 3      |  5%                | 15%              | 
+| Assignments      | 2      |  30%               | 60%              |
+| Homework         | 3      |  10%               | 30%              | 
 | Participation    | NA     |  NA                | 10%              |
 
 **Assignments**
 
-Assignments will cover key statistical concepts and related code implementation. The assignments are to complete according to the schedule below, for a total of 3 assignments. Assignments will be introduced in class, can be discussed in tutorial, and questions can be ask of the Instructor and/or TA over email. Assignments are due by 11:59PM on the day they are due. Please arrange for extensions *in advance* with the Instructor or the TAs. Assignments should be submitted through the correct Google Forms link found below following the naming convention `firstname_lastname_a#`.
+Assignments will cover key statistical concepts and related code implementation. The assignments are to complete according to the schedule below, for a total of 3 assignments, where the 3rd one is optional. Assignments will be introduced in class, can be discussed in tutorial, and questions can be ask of the Instructor and/or TA over email. Assignments are due by 11:59PM on the day they are due. Please arrange for extensions *in advance* with the Instructor or the TAs. Assignments should be submitted through the correct Google Forms link found below following the naming convention `firstname_lastname_a#`.
 
 Assignments can be found in the `Assignments` directory, above. We've included an .html file (knitted Markdown file) for easy reading, as well as Jupyter Notebook files, that can be edited for submission. (To download files, click Raw > Save as.)
 
@@ -79,12 +78,12 @@ Note: If the assignment requires some content we end up not covering in class (i
 | Assessment        | Content         | Due Date                         | Submission Link |
 | ------------------| ----------------|----------------------------------| ------------------ |
 | Assignment 1      | Classes 1, 2, 3   |  Sunday March 17, by 11:59PM | Your Drive Folder |  
-| Assignment 2      | Classes 4, 5   |  Wednesday March 20, by 11:59PM     | Your Drive Folder |
-| Assignment 3      | Classes 3, 4, 6     |  Saturday March 23, by 11:59PM    | Your Drive Folder |
+| Assignment 2      | Classes 4, 5   |  Friday March 22, by 11:59PM     | Your Drive Folder |
+| Assignment 3      | Classes 3, 4, 6     |  Optional    | Your Drive Folder |
 
 **Homework**
 
-For each class (with the exception of the first class), one homework question from the ISLR2 textbook will be assigned. The homework question is graded for **completion only** (i.e., an attempted solution receives full marks), and *only 3 questions* are required over the course (i.e., you do not have to submit 2 of them out of the 5 ones). The homework questions will require writing code in Python and are designed to take no more than 20 minutes. Individual feedback is not provided on the weekly homework question by default, but will be discussed in tutorials. Homework questions must be submitted before the beginning of the next class; late submissions will not be graded. Homeworks should be submitted through the correct Google Forms link found below following the naming convention firstname_lastname_hw#.  
+For each class (with the exception of the first class), one homework question from the ISLR2 textbook will be assigned. The homework question is graded for **completion only** (i.e., an attempted solution receives full marks), and *only 3 questions* are required over the course (i.e., you do not have to submit 2 of them out of the 5 ones). The homework questions will require writing code in Python and are designed to take no more than 20 minutes. Individual feedback is not provided on the weekly homework question by default, but will be discussed in tutorials. Homework questions must be submitted before the beginning of the next class; late submissions will not be graded. Homeworks should be submitted through your Drive Folder following the naming convention firstname_lastname_hw#.  
 
 Homework is as follows (<u>only 3 required, marked for competion only!</u>):
 
