@@ -1,6 +1,6 @@
 # Estimation, machine learning and testing
 
-## Contents
+## Content
 * [Description](#description)
 * [Learning Outcomes](#learning-outcomes)
 * [Logistics](#logistics)
