@@ -4,7 +4,7 @@
 * [Description](#description)
 * [Learning Outcomes](#learning-outcomes)
 * [Logistics](#logistics)
-  + [Course Contacts](#course-contacts)
+  + [Module Contacts](#module-contacts)
   + [Requirements](#requirements)
   + [Delivery of Module](#delivery-of-module)
   + [How the Instructor will deliver](#how-the-instructor-will-deliver)
@@ -27,10 +27,10 @@
 * [Acknowledgements](#acknowledgements)
 
 ## Description
-This course provides the intuition and skills required to design, implement, test and validate a variety of supervised learning models. We cover the basics of statistical learning including modelling with the goal of prediction versus inference, prediction accuracy and model interpretability trade-off, and the bias-variance trade-off. Each section of this course will cover a unique set of methods used for supervised learning on real data sets.
+This module provides the intuition and skills required to design, implement, test and validate a variety of supervised learning models. We cover the basics of statistical learning including modelling with the goal of prediction versus inference, prediction accuracy and model interpretability trade-off, and the bias-variance trade-off. Each section of this module will cover a unique set of methods used for supervised learning on real data sets.
 
 ## Learning Outcomes
-By the end of the course, students will:
+By the end of the module, students will:
 1. Implement and interpret the results from several supervised learning approaches for regression and classification
 2. Utilize resampling methods to extract more information from a data set and to choose the best model
 3. Perform exploratory data analysis for unsupervised learning
@@ -40,7 +40,7 @@ By the end of the course, students will:
 
 ## Logistics
 
-### Course Contacts
+### Module Contacts
 **Questions can be submitted to the #questions channel on Slack**
 
 * Instructor: **{Name}** {Pronouns}. Emails to the instructor can be sent to {first_name.last_name}@mail.utoronto.ca.
@@ -110,8 +110,8 @@ Note: If the assignment requires some content we end up not covering in class (i
 | Assignment 3      | Classes 7, 8, 9   |  TBD    | Your Drive Folder |
 
 ## Policies
-* **Accessibility:** We want to provide an accessible learning environment for all. If there is something we can do to make this course more accessible to you, please let us know.
-* **Course communications:** Communications take place over email or on Slack. If communicating over email, please include "DSI-EMT" or similar in the subject line, e.g. "DSI-EMT: stats question"
+* **Accessibility:** We want to provide an accessible learning environment for all. If there is something we can do to make this module more accessible to you, please let us know.
+* **Module communications:** Communications take place over email or on Slack. If communicating over email, please include "DSI-EMT" or similar in the subject line, e.g. "DSI-EMT: stats question"
 * **Camera:** Keeping your camera on is optional.
 * **Microphone:** Please keep microphones muted unless you need to speak. Please indicate your name before speaking as some Zoom configurations make it hard to tell who is talking!
 * **Assessment:** There will be homework which **is not** graded, but highly recommended, and there will be two assignments which **are** graded.
@@ -167,8 +167,8 @@ Feel free to use the following as resources:
 |-- .gitignore
 ```
 
-* **slides:** Course slides as interactive notebooks (.ipynb files)
-* **pdf slides:** Course slides as PDF files
+* **slides:** module slides as interactive notebooks (.ipynb files)
+* **pdf slides:** module slides as PDF files
 * **live-coding:** Notebooks from class live coding sessions
 * **exercises:** Work to be done alongside the lectures
 * **homework:** Optional homework to practice concepts covered in class
@@ -180,4 +180,4 @@ Feel free to use the following as resources:
 
 
 ## Acknowledgements
-Rohan Alexander supervised the development of this course. The first slides were developed by Simone Collier. Slides have been created and modified by Navona Calarco and Julia Gallucci for Winter 2023. Materials were re-developed from R to Python by Inessa De Angelis in Fall 2023. This course draws extensively on *An Introduction to Statistical Learning with Applications in R* (2nd edition, 2021), by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani and *An Introduction to Statistical Learning with Applications in Python* (2023) by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor. The structure of the repos were heavily organized and modified by Vishnou Vinayagame and Daniel Razavi in Winter of 2024.
+Rohan Alexander supervised the development of this module. The first slides were developed by Simone Collier. Slides have been created and modified by Navona Calarco and Julia Gallucci for Winter 2023. Materials were re-developed from R to Python by Inessa De Angelis in Fall 2023. This module draws extensively on *An Introduction to Statistical Learning with Applications in R* (2nd edition, 2021), by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani and *An Introduction to Statistical Learning with Applications in Python* (2023) by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor. The structure of the repos were heavily organized and modified by Vishnou Vinayagame and Daniel Razavi in Winter of 2024.
