@@ -7,7 +7,7 @@
   + [Module Contacts](#module-contacts)
   + [Requirements](#requirements)
   + [Delivery of Module](#delivery-of-module)
-  + [How the Instructor will deliver](#how-the-instructor-will-deliver)
+  + [How the Technical Facilitator will deliver](#how-the-Technical Facilitator-will-deliver)
   + [Expectations](#expectations)
 * [Class Schedule](#class-schedule)
   + [Class Topics](#class-topics)
@@ -43,8 +43,8 @@ By the end of the module, students will:
 ### Module Contacts
 **Questions can be submitted to the #questions channel on Slack**
 
-* Instructor: **{Name}** {Pronouns}. Emails to the instructor can be sent to {first_name.last_name}@mail.utoronto.ca.
-* TA: **{Name}** {Pronouns}. Emails to the instructor can be sent to {first_name.last_name}@mail.utoronto.ca.
+* Technical Facilitator: **{Name}** {Pronouns}. Emails to the Technical Facilitator can be sent to {first_name.last_name}@mail.utoronto.ca.
+* Learning Support Staff: **{Name}** {Pronouns}. Emails to the Technical Facilitator can be sent to {first_name.last_name}@mail.utoronto.ca.
 
 ### Requirements
 * Learners are not expected to have any coding experience, we designed the learning contents for beginners.
@@ -58,10 +58,10 @@ By the end of the module, students will:
 * Camera is optional although highly encouraged. We understand that not everyone may have the space at home to have the camera on.
 
 ### Delivery of Module
-The module will run sychronously three times a week on Zoom. The first three days are used as "lectures" and will last a maximum of 3 hours. During this time, the instructor will introduce the concepts for the week. The last day is used for as optional, asychronous work periods. The work periods will also last for up to 3 hours. During the work period, an instructor or TA will be present on Zoom to assist learners reach the intended learning outcomes.
+The module will run sychronously three times a week on Zoom. The first three days are used as "lectures" and will last a maximum of 3 hours. During this time, the Technical Facilitator will introduce the concepts for the week. The last day is used for as optional, asychronous work periods. The work periods will also last for up to 3 hours. During the work period, an Technical Facilitator or TA will be present on Zoom to assist learners reach the intended learning outcomes.
 
-### How the Instructor will deliver
-The instructors will introduce the concepts through a collaborative live coding session usiing the Python notebooks found under `/01-slides`. All instructors will also upload any live coding files to this repository for any learners to revisit under `/live-code`.
+### How the Technical Facilitator will deliver
+The Technical Facilitators will introduce the concepts through a collaborative live coding session usiing the Python notebooks found under `/01-slides`. All Technical Facilitators will also upload any live coding files to this repository for any learners to revisit under `/live-code`.
  
 ### Expectations
 Learners are encouraged to be active participants while coding and are encouraged to ask questions throughout the module.
@@ -95,7 +95,7 @@ Grading is based on three components: 3 assignments, and class participation. Th
 
 **Assignments**
 
-Assignments will cover key statistical concepts and related code implementation. The assignments are to complete according to the schedule below, for a total of 3 assignments, where the 3rd one is optional. Assignments will be introduced in class, can be discussed in tutorial, and questions can be ask of the Instructor and/or TA over email. Assignments are due by 11:59PM on the day they are due. Please arrange for extensions *in advance* with the Instructor or the TAs. Assignments should be submitted through the correct Google Forms link found below following the naming convention `firstname_lastname_a#`.
+Assignments will cover key statistical concepts and related code implementation. The assignments are to complete according to the schedule below, for a total of 3 assignments. Assignments will be introduced in class, can be discussed in tutorial, and questions can be ask of the Technical Facilitator and/or TA over email. Assignments are due by 11:59PM on the day they are due. Please arrange for extensions *in advance* with the Technical Facilitator or the TAs. Assignments should be submitted through the correct Google Forms link found below following the naming convention `firstname_lastname_a#`.
 
 Assignments can be found in the `Assignments` directory, above. We've included an .html file (knitted Markdown file) for easy reading, as well as Jupyter Notebook files, that can be edited for submission. (To download files, click Raw > Save as.)
 
@@ -158,13 +158,17 @@ Feel free to use the following as resources:
 ## Folder Structure
 
 ```markdown
-|-- 01-slides
-|-- 02-assignments
-|-- 03-exercises
-|-- 04-homework
-|-- 05-instructors
-|-- 06-additional-resources
-|-- .gitignore
+.
+├── 01-slides
+├── 02-assignments
+├── 03-exercises
+├── 04-homework
+├── 05-instructors
+├── 06-additional-resources
+├── LICENSE
+├── README.md
+├── requirements.txt
+└── steps-to-ask-for-help.png
 ```
 
 * **slides:** module slides as interactive notebooks (.ipynb files)
@@ -174,9 +178,9 @@ Feel free to use the following as resources:
 * **homework:** Optional homework to practice concepts covered in class
 * **assignments:** Graded assignments
 * **additional resources:** Extra material not covered by the module
-* **instructors:** Instructions for the Instructor on what to teach
+* **instructors:** Instructions for the Technical Facilitator on what to teach
 * README: This file!
-* .gitignore: Files to exclude from this folder, specified by the instructor
+* .gitignore: Files to exclude from this folder, specified by the Technical Facilitator
 
 
 ## Acknowledgements
