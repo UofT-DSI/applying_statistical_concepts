@@ -7,7 +7,7 @@
   + [Module Contacts](#module-contacts)
   + [Requirements](#requirements)
   + [Delivery of Module](#delivery-of-module)
-  + [How the Technical Facilitator will deliver](#how-the-Technical Facilitator-will-deliver)
+  + [How the Technical Facilitator will deliver](#how-the-technical-facilitator-will-deliver)
   + [Expectations](#expectations)
 * [Class Schedule](#class-schedule)
   + [Class Topics](#class-topics)
