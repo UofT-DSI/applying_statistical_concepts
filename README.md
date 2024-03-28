@@ -151,7 +151,7 @@ Feel free to use the following as resources:
 - [$k$-fold Cross Validation](https://www.youtube.com/watch?v=TIgfjmp-4BA)
 
 ### How to get help
-![image](/steps-to-ask-for-help.png)
+![image](/steps_to_ask_for_help.png)
 
 <hr>
 
@@ -168,7 +168,7 @@ Feel free to use the following as resources:
 ├── LICENSE
 ├── README.md
 ├── requirements.txt
-└── steps-to-ask-for-help.png
+└── steps_to_ask_for_help.png
 ```
 
 * **slides:** module slides as interactive notebooks (.ipynb files)
