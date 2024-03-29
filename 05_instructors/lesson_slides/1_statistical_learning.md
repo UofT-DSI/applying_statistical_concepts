@@ -49,7 +49,7 @@ Suppose we want to figure out the **association between the allocation of advert
 
 The sales in relation to each of the advertising budgets are shown along with a simple fitted line for the relationships.
 
-![Sales Figure](images/sales%20fig.png)
+![Sales Figure](images/sales_fig.png)
 
 ---
 
