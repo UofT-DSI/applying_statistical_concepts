@@ -19,7 +19,6 @@ $ echo "Data Science Institute"
 Throughout this Module we will be making use of the `Boston` dataset in the Python package `ISLP`. We can use the terminal to install the Python package and use the `load_data` function from the `ISLP` package to load the `Boston` dataset:
 
 ```         
-pip install ISLP
 from ISLP import load_data
 Boston = load_data("Boston")
 ```
