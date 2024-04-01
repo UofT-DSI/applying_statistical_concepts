@@ -1,7 +1,7 @@
 # Technical Facilitator Playbook
 
 ## How do you interact with the repo?
-The Technical Facilitator will teach using the content provided in the `/01-slides` directory. You are allowed to live code with them during your lecture. Just make sure you upload the live-coding files to a new directory called `/live-coding` under `/01-slides` to this repository using a new branch and open up a pull request for it to be merge.
+The Technical Facilitator will teach using the content provided in the `/01_slides` directory. You are allowed to live code with them during your lecture. Just make sure you upload the live_coding files to a new directory called `/live_coding` under `/01_slides` to this repository using a new branch and open up a pull request for it to be merge.
 
 ## How does the module flow?
 The module is organized into 4 main directories:
@@ -10,13 +10,13 @@ The module is organized into 4 main directories:
 3. Exercises
 4. Homework
 
-The `/01-slides` directory would be the first directory anyone would see, and contains the lecture slides, learning outcomes, and anything related to the learning outcomes such as live-coding files.
+The `/01_slides` directory would be the first directory anyone would see, and contains the lecture slides, learning outcomes, and anything related to the learning outcomes such as live_coding files.
 
-The `/02-assignments` directory is the second directory containing the assignments that would be marked as a `pass` or `fail`. Compared to `/04-homework`, the assignments are slightly more difficult, and helps encapsulates the learnings for the week. All assignments are mandatory to complete and deliver.
+The `/02_assignments` directory is the second directory containing the assignments that would be marked as a `pass` or `fail`. Compared to `/04_homework`, the assignments are slightly more difficult, and helps encapsulates the learnings for the week. All assignments are mandatory to complete and deliver.
 
-The `/03-exercises` directory contains the exercises to be completed alongside the lectures.
+The `/03_exercises` directory contains the exercises to be completed alongside the lectures.
 
-The `/04-homework` directory contains all the homework, a learner can do to demonstrate mastery of the learning contents. Unlike the `/02-assignments` directory, all homework is optional, but is highly encouraged to attempt.
+The `/04_homework` directory contains all the homework, a learner can do to demonstrate mastery of the learning contents. Unlike the `/02_assignments` directory, all homework is optional, but is highly encouraged to attempt.
 
 ### Week 1
 
@@ -24,9 +24,9 @@ Focus of the week is on regression (linear and multiple linear).
 
 | Class  | Date   | Topic                                                 |  Resources | ISLP Chapter | DS: AFI Chapter |
 |--------|--------|-------------------------------------------------------|------------| -------------|-----------------|
-| 1      | TBD    | Key Concepts of Statistical Analysis                  | [Slides](./01-slides/1-statistical-learning.pdf)                      | 2 |  |
-| 2      | TBD    | Simple linear regression                              | [Slides](./01-slides/2-linear-regression.pdf)                         | 3 | 8 |
-| 3      | TBD    | Multiple linear regression, interactions and Qualitative Predictors  | [Slides](./01-slides/3-multiple-linear-regression.pdf) | 3 | 8 |
+| 1      | TBD    | Key Concepts of Statistical Analysis                  | [Slides](./01_slides/1-statistical-learning.pdf)                      | 2 |  |
+| 2      | TBD    | Simple linear regression                              | [Slides](./01_slides/2-linear-regression.pdf)                         | 3 | 8 |
+| 3      | TBD    | Multiple linear regression, interactions and Qualitative Predictors  | [Slides](./01_slides/3-multiple-linear-regression.pdf) | 3 | 8 |
 
 ### Week 2
 
@@ -34,9 +34,9 @@ Focus of the week is on classification (logistic regression and generalized line
 
 | Class  | Date   | Topic                                                 |  Resources | ISLP Chapter | DS: AFI Chapter |
 |--------|--------|-------------------------------------------------------|------------| -------------|-----------------|     
-| 4      | TBD    | Classification vs Regression                          | [Slides](./01-slides/4-classification.pdf)                            | 4 | 5 - 7 |
-| 5      | TBD    | Classification (Logistic Regression)                | [Slides](./01-slides/5-logistic-regression.pdf)                       | 4 | 5 + 6 |
-| 6      | TBD    | Classification (Generalized Linear Model)             | [Slides](./01-slides/6-generalized-linear-models.pdf)                 | 4 | 5 + 6 |  
+| 4      | TBD    | Classification vs Regression                          | [Slides](./01_slides/4-classification.pdf)                            | 4 | 5 - 7 |
+| 5      | TBD    | Classification (Logistic Regression)                | [Slides](./01_slides/5-logistic-regression.pdf)                       | 4 | 5 + 6 |
+| 6      | TBD    | Classification (Generalized Linear Model)             | [Slides](./01_slides/6-generalized-linear-models.pdf)                 | 4 | 5 + 6 |  
 
 ### Week 3
 
@@ -44,9 +44,9 @@ Focus of the week is on resampling methods (Cross Validation and Bootstrap)
 
 | Class  | Date   | Topic                                                 |  Resources | ISLP Chapter | DS: AFI Chapter |
 |--------|--------|-------------------------------------------------------|------------| -------------|-----------------|
-| 7      | TBD    | Resampling Methods (Leave One Out Cross Validation)   |  [Slides](./01-slides/7-leave-one-out-cross-validation.pdf)           | 5 | 10 |
-| 8      | TBD    | Resampling Methods (K-fold Cross Validation)          | [Slides](./01-slides/8-k-fold-cross-validation.pdf)                   | 5 | 10 |
-| 9      | TBD    | Resampling Methods (Bootstrap)                        | [Slides](./01-slides/9-the-bootstrap.pdf)                             | 5 | 10 |  
+| 7      | TBD    | Resampling Methods (Leave One Out Cross Validation)   |  [Slides](./01_slides/7-leave-one-out-cross-validation.pdf)           | 5 | 10 |
+| 8      | TBD    | Resampling Methods (K-fold Cross Validation)          | [Slides](./01_slides/8-k-fold-cross-validation.pdf)                   | 5 | 10 |
+| 9      | TBD    | Resampling Methods (Bootstrap)                        | [Slides](./01_slides/9-the-bootstrap.pdf)                             | 5 | 10 |  
 
 ## How do you assign assignments?
 Assignments are given and assigned at the start of each week at the end of the first lecture. The Technical Facilitator will announce to the learners what the assignment is about, and how everything they will learn within the week will equip them to work on the assignment.

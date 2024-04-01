@@ -61,7 +61,7 @@ By the end of the module, students will:
 The module will run sychronously three times a week on Zoom. The first three days are used as "lectures" and will last a maximum of 3 hours. During this time, the Technical Facilitator will introduce the concepts for the week. The last day is used for as optional, asychronous work periods. The work periods will also last for up to 3 hours. During the work period, an Technical Facilitator or TA will be present on Zoom to assist learners reach the intended learning outcomes.
 
 ### How the Technical Facilitator will deliver
-The Technical Facilitators will introduce the concepts through a collaborative live coding session usiing the Python notebooks found under `/01-slides`. All Technical Facilitators will also upload any live coding files to this repository for any learners to revisit under `/live-code`.
+The Technical Facilitators will introduce the concepts through a collaborative live coding session usiing the Python notebooks found under `/01_slides`. All Technical Facilitators will also upload any live coding files to this repository for any learners to revisit under `/live_code`.
  
 ### Expectations
 Learners are encouraged to be active participants while coding and are encouraged to ask questions throughout the module.
@@ -72,15 +72,15 @@ Learners are encouraged to be active participants while coding and are encourage
 
 | Class  | Date   | Topic                                                 |  Resources | ISLP Chapter | DS: AFI Chapter |
 |--------|--------|-------------------------------------------------------|------------| -------------|-----------------|
-| 1      | TBD    | Key Concepts of Statistical Analysis                  | [Slides](./01-slides/1-statistical-learning.pdf)                      | 2 |  |
-| 2      | TBD    | Simple linear regression                              | [Slides](./01-slides/2-linear-regression.pdf)                         | 3 | 8 |
-| 3      | TBD    | Multiple linear regression, interactions and Qualitative Predictors  | [Slides](./01-slides/3-multiple-linear-regression.pdf) | 3 | 8 |        
-| 4      | TBD    | Classification vs Regression                          | [Slides](./01-slides/4-classification.pdf)                            | 4 | 5 - 7 |
-| 5      | TBD    | Classification (Logistic Regression)                | [Slides](./01-slides/5-logistic-regression.pdf)                       | 4 | 5 + 6 |
-| 6      | TBD    | Classification (Generalized Linear Model)             | [Slides](./01-slides/6-generalized-linear-models.pdf)                 | 4 | 5 + 6 |  
-| 7      | TBD    | Resampling Methods (Leave One Out Cross Validation)   |  [Slides](./01-slides/7-leave-one-out-cross-validation.pdf)           | 5 | 10 |
-| 8      | TBD    | Resampling Methods (K-fold Cross Validation)          | [Slides](./01-slides/8-k-fold-cross-validation.pdf)                   | 5 | 10 |
-| 9      | TBD    | Resampling Methods (Bootstrap)                        | [Slides](./01-slides/9-the-bootstrap.pdf)                             | 5 | 10 |                 
+| 1      | TBD    | Key Concepts of Statistical Analysis                  | [Slides](./01_slides/1-statistical-learning.pdf)                      | 2 |  |
+| 2      | TBD    | Simple linear regression                              | [Slides](./01_slides/2-linear-regression.pdf)                         | 3 | 8 |
+| 3      | TBD    | Multiple linear regression, interactions and Qualitative Predictors  | [Slides](./01_slides/3-multiple-linear-regression.pdf) | 3 | 8 |        
+| 4      | TBD    | Classification vs Regression                          | [Slides](./01_slides/4-classification.pdf)                            | 4 | 5 - 7 |
+| 5      | TBD    | Classification (Logistic Regression)                | [Slides](./01_slides/5-logistic-regression.pdf)                       | 4 | 5 + 6 |
+| 6      | TBD    | Classification (Generalized Linear Model)             | [Slides](./01_slides/6-generalized-linear-models.pdf)                 | 4 | 5 + 6 |  
+| 7      | TBD    | Resampling Methods (Leave One Out Cross Validation)   |  [Slides](./01_slides/7-leave-one-out-cross-validation.pdf)           | 5 | 10 |
+| 8      | TBD    | Resampling Methods (K-fold Cross Validation)          | [Slides](./01_slides/8-k-fold-cross-validation.pdf)                   | 5 | 10 |
+| 9      | TBD    | Resampling Methods (Bootstrap)                        | [Slides](./01_slides/9-the-bootstrap.pdf)                             | 5 | 10 |                 
 
 Alternative Textbook: [Data Science: A First Introduction](https://python.datasciencebook.ca/classification1.html) (Chapters 5-10)
 
@@ -120,9 +120,9 @@ Note: If the assignment requires some content we end up not covering in class (i
 Feel free to use the following as resources:
 
 ### Documents
-- [Cheatsheet](./06-additional-resources/02_assignments/05-review-session-material/dsi-emlt-cheat-sheet-2.pdf)
-- [Cross Validation - Basic Idea and Steps](./06-additional-resources/05-review-session-material/cross-validation-basic-idea-and-steps.pdf)
-- [EMLT Tutorial](./06-additional-resources/05-review-session-material/emlt-tutorials.pdf)
+- [Cheatsheet](./06_additional_resources/02_assignments/05_review_session_material/dsi-emlt-cheat-sheet-2.pdf)
+- [Cross Validation - Basic Idea and Steps](./06_additional_resources/05_review_session_material/cross-validation-basic-idea-and-steps.pdf)
+- [EMLT Tutorial](./06_additional_resources/05_review_session_material/emlt-tutorials.pdf)
 - [ISLP Labs](https://islp.readthedocs.io/en/latest/installation.html)
 
 ### Videos 
@@ -159,12 +159,12 @@ Feel free to use the following as resources:
 
 ```markdown
 .
-├── 01-slides
-├── 02-assignments
-├── 03-exercises
-├── 04-homework
-├── 05-instructors
-├── 06-additional-resources
+├── 01_slides
+├── 02_assignments
+├── 03_exercises
+├── 04_homework
+├── 05_instructors
+├── 06_additional_resources
 ├── LICENSE
 ├── README.md
 ├── requirements.txt
@@ -173,7 +173,7 @@ Feel free to use the following as resources:
 
 * **slides:** module slides as interactive notebooks (.ipynb files)
 * **pdf slides:** module slides as PDF files
-* **live-coding:** Notebooks from class live coding sessions
+* **live_coding:** Notebooks from class live coding sessions
 * **exercises:** Work to be done alongside the lectures
 * **homework:** Optional homework to practice concepts covered in class
 * **assignments:** Graded assignments
