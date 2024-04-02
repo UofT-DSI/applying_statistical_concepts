@@ -49,7 +49,7 @@ Suppose we want to figure out the **association between the allocation of advert
 
 The sales in relation to each of the advertising budgets are shown along with a simple fitted line for the relationships.
 
-![Sales Figure](images/sales_fig.png)
+![Sales Figure](./images/01_sales_fig.png)
 
 ---
 
@@ -220,7 +220,7 @@ There is no method that works the best on all data sets so we need a way to asse
 
 The discussion below references two plots: the first shows three different models fit to data, and the second compares the training Mean Squared Error (MSE) and test MSE against the flexibility of the model.
 
-![Models fit to data](images/test_training_mse.png)
+![Models fit to data](./images/01_test_training_mse.png)
 
 ---
 # Assessing Model Accuracy
@@ -291,7 +291,7 @@ The rate of change of the bias versus variance determines whether the test MSE w
 
 The discussion below is related to a plot that illustrates the bias (blue), variance (orange), variance of the error (dashed line), and the test Mean Squared Error (MSE) (red) as functions of model flexibility for three different data sets.
 
-![Bias, Variance, and MSE Plot](images/bias_variance.png)
+![Bias, Variance, and MSE Plot](./images/01_bias_variance.png)
 
 ---
 

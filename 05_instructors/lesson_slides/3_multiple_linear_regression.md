@@ -81,7 +81,7 @@ The equations for $\hat \beta_0, \dots, \hat \beta_p$ which minimize the $RSS$ a
 
 The figure shows the relationship between two predictor variables and a response variable. Linear regression in this case gives a plane fit by minimizing the squared vertical distance between the observations and the plane.
 
-![](images/regression_plane.png)
+![](images/02_regression_plane.png)
 
 ---
 
@@ -334,7 +334,7 @@ Identification:
 
 Plot of the residuals versus the predicted values for a linear regression fit to a dataset.
 
-![](images/residuals_01.png)
+![](images/02_residuals_01.png)
 
 --- 
 
@@ -342,7 +342,7 @@ Plot of the residuals versus the predicted values for a linear regression fit to
 
 There is a clear trend in the residuals illustrated by the red curve which could indicate patterns in the data that are not captured by the linear model.
 
-![](images/residuals_01.png)
+![](images/02_residuals_01.png)
 
 ---
 # Correlation of Errors
@@ -367,9 +367,9 @@ Identification for time series:
 
 Both plots show the residuals from a linear regression fit to time series data versus time. The top plot shows no correlation between the residuals whereas the bottom plot clearly has a time dependent structure.
 
-![](images/uncorrelated_error.png)
+![](images/02_uncorrelated_error.png)
 
-![](images/correlated_error.png)
+![](images/02_correlated_error.png)
 
 ---
 
@@ -389,7 +389,7 @@ Identification:
 
 Plot for the residuals versus the fitted values of a linear regression model.
 
-![](images/variance_errors.png)
+![](images/02_variance_errors.png)
 
 ---
 
@@ -397,7 +397,7 @@ Plot for the residuals versus the fitted values of a linear regression model.
 
 The residuals show a clear funnel shape with increasing response values resulting in increasing variance of the error terms.
 
-![](images/variance_errors.png)
+![](images/02_variance_errors.png)
 
 ---
 
@@ -418,7 +418,7 @@ Identification:
 
 Plot of the studentized residuals versus the response values.
 
-![](images/studentized_re.png)
+![](images/02_studentized_re.png)
 
 The red point at the top of the plot is above 3 which indicates it is an outlier.
 
@@ -441,7 +441,7 @@ Identification:
 
 The left plot shows the response versus the predictors for a simple linear regression. The right plot show the studentized residuals versus the leverage.
 
-![](images/simple_leverageVmultiple_leverage.png)
+![](images/02_simple_leverageVmultiple_leverage.png)
 
 Observation 41 in the left plot has a very large predictor value which indicates it is a high leverage point. This is confirmed in the right plot by the leverage index. The right plot also indicates 41 has a larger studentized residual (as does observation 20) so 41 is an outlier and a high leverage point.
 

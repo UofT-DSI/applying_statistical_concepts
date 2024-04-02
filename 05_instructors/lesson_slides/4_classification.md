@@ -136,7 +136,7 @@ where $I(y_i = j)$ if an **indicator variable** that equals 1 is $y_i = j$ and 0
 
 These figures illustrate the KNN approach with $K=3$. To the left we see the 3 closest points to x are 1 orange and 2 blue so this observation will be classified as blue. The right figure shows the decision boundaries where an observation will be classified as blue or orange.
 
-![](images/KNN1.png)
+![](./images/04_knn1.png)
 
 ---
 

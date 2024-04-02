@@ -202,7 +202,7 @@ Binary classifiers, similarly to such as tests for diseases (positive versus neg
 
 A confusion matrix helps to summarize the two types of errors of binary classifiers. They compare the LDA predictions to the true outcomes of the training observations. In the case of medical tests this looks like:
 
-![](images/confusionmatrix.png)
+![](images/05_confusionmatrix.png)
 
 The red text is where the numbers are filled in.
 
@@ -210,7 +210,7 @@ The red text is where the numbers are filled in.
 
 # Confusion Matrix
 
-![](images/confusionmatrix.png)
+![](images/05_confusionmatrix.png)
 
 -   N and P are the number of actual negatives and positives respectively in the training data.
 
@@ -236,7 +236,7 @@ That is, the binary classifier uses a threshold of 50%. Depending on the classif
 
 The ROC (receiver operator characteristics) curve is a method for visualising the errors previously discusses for all possible thresholds.
 
-![](images/ROC.png)
+![](images/05_roc.png)
 
 ---
 
@@ -247,7 +247,7 @@ The ROC (receiver operator characteristics) curve is a method for visualising th
 
 -   Ideal ROC curve is as close to the top left corner as possible.
 
-![](images/ROC.png)
+![](images/05_roc.png)
 
 ---
 
