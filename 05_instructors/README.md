@@ -49,10 +49,10 @@ Focus of the week is on resampling methods (Cross Validation and Bootstrap)
 | 9      | TBD    | Resampling Methods (Bootstrap)                        | [Slides](./01_slides/9-the-bootstrap.pdf)                             | 5 | 10 |  
 
 ## How do you assign assignments?
-Assignments are given and assigned at the start of each week at the end of the first lecture. The Technical Facilitator will announce to the learners what the assignment is about, and how everything they will learn within the week will equip them to work on the assignment.
+Assignments are given and assigned at the start of each week at the end of the first lecture. The Technical Facilitator will announce to the participants what the assignment is about, and how everything they will learn within the week will equip them to work on the assignment.
 
 ## How an assignment is expected to be completed and delivered?
-Learners are expected to complete the assignment before the first lecture of the following week. They will deliver the assignment by opening up a pull request on their copied repo. The learner will also add a Learning Suport Staff as a reviewer indicating they delivered a completed assignment, and it is ready to be graded as a `pass` or `fail`.
+Participants are expected to complete the assignment before the first lecture of the following week. They will deliver the assignment by opening up a pull request on their copied repo. The learner will also add a Learning Suport Staff as a reviewer indicating they delivered a completed assignment, and it is ready to be graded as a `pass` or `fail`.
 
 ## What is the criteria for `pass` or `fail`?
 The criteria for a `pass` or `fail` is if all parts of the program are working, and nothing in the code is broken. For some assignments, a rubric will be given outlining the criteria needed to pass.
@@ -66,8 +66,8 @@ Feedback will be given through the pull request a learner had made, and allowing
 <hr>
 
 ## Definitions
-**Lecture**: A Lecture is a synchronous period of time, lasting up to 3 hours, where the Technical Facilitator will facilitate and deliver the contents and learning outcomes online through Zoom. Learners are encouraged to participate and ask questions as they learn. Breaks are given if lecture goes pass an hour, with a 10 minutes break given for every hour still in a lecture.
+**Lecture**: A Lecture is a synchronous period of time, lasting up to 3 hours, where the Technical Facilitator will facilitate and deliver the contents and learning outcomes online through Zoom. Participants are encouraged to participate and ask questions as they learn. Breaks are given if lecture goes pass an hour, with a 10 minutes break given for every hour still in a lecture.
 
-**Work Period**: A Work Period is an asynchronous period of time, lasting up to 3 hours. The learners will work on their assignments and/or homework during this block of time. A Learning Suport Staff will be present online through Zoom to assist the learners and answer any questions they may have. As work periods are asynchronous and flexible, learners can choose to work on their own time. However, it is encouraged to work during the block of time when a Learning Suport Staff is present.
+**Work Period**: A Work Period is an asynchronous period of time, lasting up to 3 hours. The participants will work on their assignments and/or homework during this block of time. A Learning Suport Staff will be present online through Zoom to assist the participants and answer any questions they may have. As work periods are asynchronous and flexible, participants can choose to work on their own time. However, it is encouraged to work during the block of time when a Learning Suport Staff is present.
 
-**Assignments**: An Assignment is work assigned as part of the certification. They are slightly more difficult, providing an opportunity for learners to integrate and synthesize what they have learned throughout the week to meet the set learning outcomes.
+**Assignments**: An Assignment is work assigned as part of the certification. They are slightly more difficult, providing an opportunity for participants to integrate and synthesize what they have learned throughout the week to meet the set learning outcomes.
