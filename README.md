@@ -1,4 +1,4 @@
-# Estimation, machine learning and testing
+# Linear regression, classification, and resampling
 
 ## Content
 * [Description](#description)
@@ -7,7 +7,6 @@
   + [Module Contacts](#module-contacts)
   + [Requirements](#requirements)
   + [Delivery of Module](#delivery-of-module)
-  + [How the Technical Facilitator will deliver](#how-the-technical-facilitator-will-deliver)
   + [Expectations](#expectations)
 * [Class Schedule](#class-schedule)
   + [Class Topics](#class-topics)
@@ -19,24 +18,21 @@
   - [Multiple linear regression, interactions, qualitative predictors](#multiple-linear-regression-interactions-qualitative-predictors)
   - [Classification (logistic regression, generative models)](#classification-logistic-regression-generative-models)
   - [Resampling methods (CV, bootstrap) and Linear model selection and regularization](#resampling-methods-cv-bootstrap-and-linear-model-selection-and-regularization)
-  - [Tree-based methods](#tree-based-methods)
-  - [Support Vector Machines](#support-vector-machines)
-  - [Survival Analysis, Principal Components Analysis, Ethics/Inequity/Reproducibility](#survival-analysis-principal-components-analysis-ethicsinequityreproducibility)
   + [How to get help](#how-to-get-help)
 * [Folder Structure](#folder-structure)
-* [Acknowledgements](#acknowledgements)
 
 ## Description
-This module provides the intuition and skills required to design, implement, test and validate a variety of supervised learning models. We cover the basics of statistical learning including modelling with the goal of prediction versus inference, prediction accuracy and model interpretability trade-off, and the bias-variance trade-off. Each section of this module will cover a unique set of methods used for supervised learning on real data sets.
+
+This module provides the intuition and skills required to design, implement, test logistic regression and classification and validate it with resampling. It introduces the difference between modelling with the goal of prediction compared with inference, and discusses choices between prediction accuracy and model interpretability, and the bias-variance trade-off. 
 
 ## Learning Outcomes
+
 By the end of the module, students will:
 1. Implement and interpret the results from several supervised learning approaches for regression and classification
-2. Utilize resampling methods to extract more information from a data set and to choose the best model
-3. Perform exploratory data analysis for unsupervised learning
-4. Determine what is required for reproducible learning
-5. Analyze the uncertainties associated with model results and the ethical consequences of acting on these results
-6. Explain the different trade offs and considerations for the statistical methods in their toolkit to both technical and non-technical audiences
+2. Use resampling methods to select a model
+3. Determine what is required for reproducible learning
+4. Analyze the uncertainties associated with model results and the ethical consequences of acting on these results
+5. Explain the different trade offs and considerations for the statistical methods in their toolkit to both technical and non-technical audiences
 
 ## Logistics
 
@@ -47,7 +43,8 @@ By the end of the module, students will:
 * Learning Support Staff: **{Name}** {Pronouns}. Emails to the Technical Facilitator can be sent to {first_name.last_name}@mail.utoronto.ca.
 
 ### Requirements
-* Participants are not expected to have any coding experience, we designed the learning contents for beginners.
+
+* Participants are expected to have completed Shell, Git, and Python.
 * Participants are encouraged to ask questions, and collaborate with others to enhance learning.
 * Participants must have a computer and an internet connection to participate in online activities.
 * Participants must have VSCode installed with the following extensions:
@@ -58,12 +55,13 @@ By the end of the module, students will:
 * Camera is optional although highly encouraged. We understand that not everyone may have the space at home to have the camera on.
 
 ### Delivery of Module
+
 The module will run sychronously three times a week on Zoom. The first three days are used as "lectures" and will last a maximum of 3 hours. During this time, the Technical Facilitator will introduce the concepts for the week. The last day is used for as optional, asychronous work periods. The work periods will also last for up to 3 hours. During the work period, an Technical Facilitator or a Learning Support Staff will be present on Zoom to assist participants reach the intended learning outcomes.
 
-### How the Technical Facilitator will deliver
-The Technical Facilitators will introduce the concepts through a collaborative live coding session usiing the Python notebooks found under `/01_slides`. All Technical Facilitators will also upload any live coding files to this repository for any participants to revisit under `/live_code`.
+The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_slides`. The technical facilitator will upload any live coding files to this repository for any participants to revisit under `/live_code`.
  
 ### Expectations
+
 Participants are encouraged to be active participants while coding and are encouraged to ask questions throughout the module.
 
 ## Class Schedule
@@ -181,7 +179,3 @@ Feel free to use the following as resources:
 * **instructors:** Instructions for the Technical Facilitator on what to teach
 * README: This file!
 * .gitignore: Files to exclude from this folder, specified by the Technical Facilitator
-
-
-## Acknowledgements
-Rohan Alexander supervised the development of this module. The first slides were developed by Simone Collier. Slides have been created and modified by Navona Calarco and Julia Gallucci for Winter 2023. Materials were re-developed from R to Python by Inessa De Angelis in Fall 2023. This module draws extensively on *An Introduction to Statistical Learning with Applications in R* (2nd edition, 2021), by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani and *An Introduction to Statistical Learning with Applications in Python* (2023) by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor. The structure of the repos were heavily organized and modified by Vishnou Vinayagame and Daniel Razavi in Winter of 2024.
