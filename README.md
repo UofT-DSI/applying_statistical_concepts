@@ -11,7 +11,6 @@
 * [Class Schedule](#class-schedule)
   + [Class Topics](#class-topics)
 * [Grading Scheme](#grading-scheme)
-* [Policies](#policies)
 * [Resources](#resources)
   - [Documents](#documents)
   - [Simple Linear Regression](#simple-linear-regression)
@@ -106,13 +105,6 @@ Note: If the assignment requires some content we end up not covering in class (i
 | Assignment 1      | Classes 1, 2, 3   |  TBD | Your Drive Folder |  
 | Assignment 2      | Classes 4, 5, 6   |  TBD     | Your Drive Folder |
 | Assignment 3      | Classes 7, 8, 9   |  TBD    | Your Drive Folder |
-
-## Policies
-* **Accessibility:** We want to provide an accessible learning environment for all. If there is something we can do to make this module more accessible to you, please let us know.
-* **Module communications:** Communications take place over email or on Slack. If communicating over email, please include "DSI-EMT" or similar in the subject line, e.g. "DSI-EMT: stats question"
-* **Camera:** Keeping your camera on is optional.
-* **Microphone:** Please keep microphones muted unless you need to speak. Please indicate your name before speaking as some Zoom configurations make it hard to tell who is talking!
-* **Assessment:** There will be homework which **is not** graded, but highly recommended, and there will be two assignments which **are** graded.
 
 ## Resources
 Feel free to use the following as resources:
