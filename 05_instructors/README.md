@@ -24,9 +24,9 @@ Focus of the week is on regression (linear and multiple linear).
 
 | Class  | Date   | Topic                                                 |  Resources | ISLP Chapter | DS: AFI Chapter |
 |--------|--------|-------------------------------------------------------|------------| -------------|-----------------|
-| 1      | TBD    | Key Concepts of Statistical Analysis                  | [Slides](./01_slides/1-statistical-learning.pdf)                      | 2 |  |
-| 2      | TBD    | Simple linear regression                              | [Slides](./01_slides/2-linear-regression.pdf)                         | 3 | 8 |
-| 3      | TBD    | Multiple linear regression, interactions and Qualitative Predictors  | [Slides](./01_slides/3-multiple-linear-regression.pdf) | 3 | 8 |
+| 1      | TBD    | Key Concepts of Statistical Analysis                  | [Slides](../01_slides/1_statistical_learning.pdf)                      | 2 |  |
+| 2      | TBD    | Simple linear regression                              | [Slides](../01_slides/2_linear_regression.pdf)                         | 3 | 8 |
+| 3      | TBD    | Multiple linear regression, interactions and Qualitative Predictors  | [Slides](../01_slides/3_multiple_linear_regression.pdf) | 3 | 8 |
 
 ### Week 2
 
@@ -34,9 +34,9 @@ Focus of the week is on classification (logistic regression and generalized line
 
 | Class  | Date   | Topic                                                 |  Resources | ISLP Chapter | DS: AFI Chapter |
 |--------|--------|-------------------------------------------------------|------------| -------------|-----------------|     
-| 4      | TBD    | Classification vs Regression                          | [Slides](./01_slides/4-classification.pdf)                            | 4 | 5 - 7 |
-| 5      | TBD    | Classification (Logistic Regression)                | [Slides](./01_slides/5-logistic-regression.pdf)                       | 4 | 5 + 6 |
-| 6      | TBD    | Classification (Generalized Linear Model)             | [Slides](./01_slides/6-generalized-linear-models.pdf)                 | 4 | 5 + 6 |  
+| 4      | TBD    | Classification vs Regression                          | [Slides](../01_slides/4_classification.pdf)                            | 4 | 5 _ 7 |
+| 5      | TBD    | Classification (Logistic Regression)                | [Slides](../01_slides/5_logistic_regression.pdf)                       | 4 | 5 + 6 |
+| 6      | TBD    | Classification (Generalized Linear Model)             | [Slides](../01_slides/6_generalized_linear_models.pdf)                 | 4 | 5 + 6 |  
 
 ### Week 3
 
@@ -44,9 +44,9 @@ Focus of the week is on resampling methods (Cross Validation and Bootstrap)
 
 | Class  | Date   | Topic                                                 |  Resources | ISLP Chapter | DS: AFI Chapter |
 |--------|--------|-------------------------------------------------------|------------| -------------|-----------------|
-| 7      | TBD    | Resampling Methods (Leave One Out Cross Validation)   |  [Slides](./01_slides/7-leave-one-out-cross-validation.pdf)           | 5 | 10 |
-| 8      | TBD    | Resampling Methods (K-fold Cross Validation)          | [Slides](./01_slides/8-k-fold-cross-validation.pdf)                   | 5 | 10 |
-| 9      | TBD    | Resampling Methods (Bootstrap)                        | [Slides](./01_slides/9-the-bootstrap.pdf)                             | 5 | 10 |  
+| 7      | TBD    | Resampling Methods (Leave One Out Cross Validation)   |  [Slides](../01_slides/7_leave_one_out_cross_validation.pdf)           | 5 | 10 |
+| 8      | TBD    | Resampling Methods (K-fold Cross Validation)          | [Slides](../01_slides/8_k_fold_cross_validation.pdf)                   | 5 | 10 |
+| 9      | TBD    | Resampling Methods (Bootstrap)                        | [Slides](../01_slides/9_the_bootstrap.pdf)                             | 5 | 10 |  
 
 ## How do you assign assignments?
 Assignments are given and assigned at the start of each week at the end of the first lecture. The Technical Facilitator will announce to the participants what the assignment is about, and how everything they will learn within the week will equip them to work on the assignment.
