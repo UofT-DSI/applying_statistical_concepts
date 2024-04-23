@@ -87,13 +87,13 @@ The technical facilitator will introduce the concepts through a collaborative li
 Feel free to use the following as resources:
 
 ### Documents
-- [Cheatsheet](./06_additional_resources/02_assignments/05_review_session_material/dsi-emlt-cheat-sheet-2.pdf)
-- [Cross Validation - Basic Idea and Steps](./06_additional_resources/05_review_session_material/cross-validation-basic-idea-and-steps.pdf)
-- [EMLT Tutorial](./06_additional_resources/05_review_session_material/emlt-tutorials.pdf)
-- [ISLP Labs](https://islp.readthedocs.io/en/latest/installation.html)
+<!-- - [Cheatsheet](./06_additional_resources/05_review_session_material/dsi_emlt_cheat_sheet_2.pdf) -->
+<!-- - [Cross Validation - Basic Idea and Steps](./06_additional_resources/05_review_session_material/cross_validation_basic_idea_and_steps.pdf) -->
+<!-- - [EMLT Tutorial](./06_additional_resources/05_review_session_material/emlt_tutorials.pdf) -->
+- [Introduction to Statistical Learning with Python Documentation](https://islp.readthedocs.io/en/latest/index.html)
 
 ### Videos 
-- [ISLP Playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)
+- [Introduction to Statistical Learning with Python Video Playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)
 
 #### Simple Linear Regression
 - [Linear Regression, explained in 2 minutes](https://www.youtube.com/watch?v=CtsRRUddV2s)
@@ -120,7 +120,7 @@ Feel free to use the following as resources:
 Alternative Textbook: [Data Science: A First Introduction](https://python.datasciencebook.ca/classification1.html) (Chapters 5-10)
 
 ### How to get help
-![image](/steps_to_ask_for_help.png)
+![image](./steps_to_ask_for_help.png)
 
 <hr>
 
