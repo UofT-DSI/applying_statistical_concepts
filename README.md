@@ -152,7 +152,7 @@ Feel free to use the following as resources:
 ├── 02_assignments
 ├── 03_exercises
 ├── 04_homework
-├── 05_instructors
+├── 05_instructional_team
 ├── 06_additional_resources
 ├── LICENSE
 ├── README.md
