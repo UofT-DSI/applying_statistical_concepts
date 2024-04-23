@@ -80,16 +80,16 @@ The technical facilitator will introduce the concepts through a collaborative li
 * Participants are encouraged to ask questions and collaborate with others to enhance learning.
 * Participants must have a computer and an internet connection to participate in online activities.
 * Participants must not use generative AI such as ChatGPT to generate code to complete assignments. It should be used as a supportive tool to seek out answers to questions you may have.
-* We expect participants to have completed the steps in the [onboarding repo](https://github.com/UofT-DSI/onboarding/tree/main/onboarding_documents).
+* We expect participants to have completed the steps in the [onboarding repo](https://github.com/UofT-DSI/onboarding/tree/main).
 * We encourage participants to default to having their camera on at all times, and turning the camera off only as needed. This will greatly enhance the learning experience for all participants and provide real-time feedback for the instructional team. 
 
 ## Resources
 Feel free to use the following as resources:
 
 ### Documents
-- [Cheatsheet](./06_additional_resources/02_assignments/05_review_session_material/dsi-emlt-cheat-sheet-2.pdf)
-- [Cross Validation - Basic Idea and Steps](./06_additional_resources/05_review_session_material/cross-validation-basic-idea-and-steps.pdf)
-- [EMLT Tutorial](./06_additional_resources/05_review_session_material/emlt-tutorials.pdf)
+- [Cheatsheet](./06_additional_resources/05_review_session_material/dsi_emlt_cheat_sheet_2.pdf)
+- [Cross Validation - Basic Idea and Steps](./06_additional_resources/05_review_session_material/cross_validation_basic_idea_and_steps.pdf)
+- [EMLT Tutorial](./06_additional_resources/05_review_session_material/emlt_tutorials.pdf)
 - [ISLP Labs](https://islp.readthedocs.io/en/latest/installation.html)
 
 ### Videos 
@@ -132,7 +132,7 @@ Alternative Textbook: [Data Science: A First Introduction](https://python.datasc
 ├── 02_assignments
 ├── 03_exercises
 ├── 04_homework
-├── 05_instructional_team
+├── 05_instructors
 ├── 06_additional_resources
 ├── LICENSE
 ├── README.md
