@@ -32,6 +32,8 @@ By the end of the module, participants will be able to:
 
 ## Assignments
 
+Participants should review the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for instructions on how to complete assignments in this module.
+
 [Assignment 1](https://github.com/UofT-DSI/applied_statistical_concepts/blob/main/02_assignments/assignment_1.ipynb)
 
 [Assignment 2](https://github.com/UofT-DSI/applied_statistical_concepts/blob/main/02_assignments/assignment_2.ipynb)
