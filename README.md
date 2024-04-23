@@ -19,7 +19,7 @@
 
 ## Description
 
-This module introduces the skills required to design, implement, test logistic regression and classification, and validate it with resampling. The module introduces the difference between modeling with the goal of prediction compared with inference and discusses choices between prediction accuracy and model interpretability and the bias-variance trade-off. 
+This module introduces the skills required to design, implement, test logistic regression and classification, and validate it with resampling. The module introduces the difference between modelling with the goal of prediction compared with inference, and discusses choices between prediction accuracy and model interpretability, and the bias-variance trade-off. 
 
 ## Learning Outcomes
 
@@ -28,7 +28,7 @@ By the end of the module, participants will be able to:
 * Use resampling methods to select a model
 * Determine what is required for reproducible learning
 * Analyze the uncertainties associated with model results and the ethical consequences of acting on these results
-* Explain the different trade-offs and considerations for the statistical methods in their toolkit to both technical and non-technical audiences
+* Explain the different trade offs and considerations for the statistical methods in their toolkit to both technical and non-technical audiences
 
 ## Assignments
 
@@ -54,9 +54,9 @@ By the end of the module, participants will be able to:
 
 ### Delivery of the Learning Module
 
-This module will include live learning sessions and optional, asynchronous work periods. During live learning sessions, the Technical Facilitator will introduce and explain key concepts and demonstrate core skills. Learning is facilitated during this time. Before and after each live learning session, the instructional team will be available for questions related to the core concepts of the module. Optional work periods are to be used to seek help from peers, and the Learning Support team, and to work through the homework and assignments in the learning module, with access to live help. Content is not facilitated, but rather this time should be driven by participants. We encourage participants to come to these work periods with questions and problems to work through. 
+This module will include live learning sessions and optional, asynchronous work periods. During live learning sessions, the Technical Facilitator will introduce and explain key concepts and demonstrate core skills. Learning is facilitated during this time. Before and after each live learning session, the instructional team will be available for questions related to the core concepts of the module. Optional work periods are to be used to seek help from peers, the Learning Support team, and to work through the homework and assignments in the learning module, with access to live help. Content is not facilitated, but rather this time should be driven by participants. We encourage participants to come to these work periods with questions and problems to work through. 
  
-Participants are encouraged to engage actively during the learning module. The key to developing the core skills in each learning module is through practice. The more participants engage in coding along with the instructional team and applying the skills in each module, the more likely it is that these skills will solidify. 
+Participants are encouraged to engage actively during the learning module. They key to developing the core skills in each learning module is through practice. The more participants engage in coding along with the instructional team, and applying the skills in each module, the more likely it is that these skills will solidify. 
 
 The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_slides`. The technical facilitator will upload any live coding files to this repository for any participants to revisit under `/live_code`.
 
@@ -77,23 +77,23 @@ The technical facilitator will introduce the concepts through a collaborative li
 ### Requirements
 
 * Participants are expected to have completed Shell, Git, and Python learning modules.
-* Participants are encouraged to ask questions and collaborate with others to enhance learning.
+* Participants are encouraged to ask questions, and collaborate with others to enhance learning.
 * Participants must have a computer and an internet connection to participate in online activities.
-* Participants must not use generative AI such as ChatGPT to generate code to complete assignments. It should be used as a supportive tool to seek out answers to questions you may have.
-* We expect participants to have completed the steps in the [onboarding repo](https://github.com/UofT-DSI/onboarding/tree/main).
-* We encourage participants to default to having their camera on at all times, and turning the camera off only as needed. This will greatly enhance the learning experience for all participants and provide real-time feedback for the instructional team. 
+* Participants must not use generative AI such as ChatGPT to generate code in order to complete assignments. It should be use as a supportive tool to seek out answers to questions you may have.
+* We expect participants to have completed the steps in the [onboarding repo](https://github.com/UofT-DSI/Onboarding/tree/tech-onboarding-docs).
+* We encourage participants to default to having their camera on at all times, and turning the camera off only as needed. This will greatly enhance the learning experience for all participants and provides real-time feedback for the instructional team.
 
 ## Resources
 Feel free to use the following as resources:
 
 ### Documents
-- [Cheatsheet](./06_additional_resources/05_review_session_material/dsi_emlt_cheat_sheet_2.pdf)
-- [Cross Validation - Basic Idea and Steps](./06_additional_resources/05_review_session_material/cross_validation_basic_idea_and_steps.pdf)
-- [EMLT Tutorial](./06_additional_resources/05_review_session_material/emlt_tutorials.pdf)
-- [ISLP Labs](https://islp.readthedocs.io/en/latest/installation.html)
+<!-- - [Cheatsheet](./06_additional_resources/05_review_session_material/dsi_emlt_cheat_sheet_2.pdf) -->
+<!-- - [Cross Validation - Basic Idea and Steps](./06_additional_resources/05_review_session_material/cross_validation_basic_idea_and_steps.pdf) -->
+<!-- - [EMLT Tutorial](./06_additional_resources/05_review_session_material/emlt_tutorials.pdf) -->
+- [Introduction to Statistical Learning with Python Documentation](https://islp.readthedocs.io/en/latest/index.html)
 
 ### Videos 
-- [ISLP Playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)
+- [Introduction to Statistical Learning with Python Video Playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)
 
 #### Simple Linear Regression
 - [Linear Regression, explained in 2 minutes](https://www.youtube.com/watch?v=CtsRRUddV2s)
@@ -145,6 +145,6 @@ Alternative Textbook: [Data Science: A First Introduction](https://python.datasc
 * **homework:** Homework to practice concepts covered in learning modules.
 * **assignments:** Assignments.
 * **additional resources:** Extra material not covered by the module.
-* **instructors:** This folder guides Technical Facilitators and the Learning Support team on teaching methodologies and content delivery.
+* **instructors:** This folder provides guidance for Technical Facilitators and the Learning Support team on teaching methodologies and content delivery.
 * README: This file!
 * .gitignore: Files to exclude from this folder, specified by the Technical Facilitator
