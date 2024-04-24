@@ -92,7 +92,7 @@ Feel free to use the following as resources:
 <!-- - [Cheatsheet](./06_additional_resources/05_review_session_material/dsi_emlt_cheat_sheet_2.pdf) -->
 <!-- - [Cross Validation - Basic Idea and Steps](./06_additional_resources/05_review_session_material/cross_validation_basic_idea_and_steps.pdf) -->
 <!-- - [EMLT Tutorial](./06_additional_resources/05_review_session_material/emlt_tutorials.pdf) -->
-- [Introduction to Statistical Learning with Python Documentation](https://islp.readthedocs.io/en/latest/index.html)
+- [Introduction to Statistical Learning with Python Documentation (ISLP)](https://islp.readthedocs.io/en/latest/index.html)
 
 ### Videos 
 - [Introduction to Statistical Learning with Python Video Playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)
