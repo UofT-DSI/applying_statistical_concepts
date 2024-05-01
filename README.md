@@ -89,9 +89,9 @@ The technical facilitator will introduce the concepts through a collaborative li
 Feel free to use the following as resources:
 
 ### Documents
-<!-- - [Cheatsheet](./06_additional_resources/05_review_session_material/dsi_emlt_cheat_sheet_2.pdf) -->
-<!-- - [Cross Validation - Basic Idea and Steps](./06_additional_resources/05_review_session_material/cross_validation_basic_idea_and_steps.pdf) -->
-<!-- - [EMLT Tutorial](./06_additional_resources/05_review_session_material/emlt_tutorials.pdf) -->
+<!-- - [Cheatsheet](./06_cohort_three/additional_resources/05_review_session_material/dsi_emlt_cheat_sheet_2.pdf)
+- [Cross Validation - Basic Idea and Steps](./06_cohort_three/additional_resources/05_review_session_material/cross_validation_basic_idea_and_steps.pdf)
+- [EMLT Tutorial](./06_cohort_three/additional_resources/05_review_session_material/emlt_tutorials.pdf) -->
 - [Introduction to Statistical Learning with Python Documentation (ISLP)](https://islp.readthedocs.io/en/latest/index.html)
 
 ### Videos 
