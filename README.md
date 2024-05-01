@@ -19,14 +19,14 @@
 
 ## Description
 
-This module introduces the skills required to design, implement, test logistic regression and classification, and validate it with resampling. The module introduces the difference between modelling with the goal of prediction compared with inference, and discusses choices between prediction accuracy and model interpretability, and the bias-variance trade-off. 
+This module introduces the skills required to design, implement and test logistic regression and classification, as well as validate it with resampling. The module compares the differences between modelling for prediction purposes and inference. It explores the choices between prediction accuracy and model interpretability, and the bias-variance trade-off. 
 
 ## Learning Outcomes
 
 By the end of the module, participants will be able to:
 * Implement and interpret the results from several supervised learning approaches for regression and classification
 * Use resampling methods to select a model
-* Determine what is required for reproducible learning
+* Determine the requirements for reproducible learning
 * Analyze the uncertainties associated with model results and the ethical consequences of acting on these results
 * Explain the different trade offs and considerations for the statistical methods in their toolkit to both technical and non-technical audiences
 
