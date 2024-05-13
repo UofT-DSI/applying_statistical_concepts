@@ -14,7 +14,7 @@ $ echo "Data Science Institute"
 
 ---
 # Welcome!
-- So far, we've focused primarily on coding - now we explore the relationship between coding and statistics as this will allow us to answer questions
+- So far, we've focused primarily on coding - now we explore the relationship between coding and statistics as this will allow us to answer questions such as "should we spend more of the advertising budget on TV or the internet"?
 - This learning module will include definitions, mathematical concepts and approaches that may be new for most participants
 - Live learning sessions will focus on theory, while the homework and assignments will focus on coding and applications
 - Work periods will cover the homework from that week - Learning Support will review Homework 1 & 2 this week
@@ -22,6 +22,7 @@ $ echo "Data Science Institute"
 ---
 # Rules of Engagement
 
+- This lecture is an overview and we will go into more detail in later lectures.
 - Questions are encouraged - ask as we go - this is your time to understand these concepts
 - Listen to and learn from each other, ask questions on Slack between sessions
 - Anything else?
@@ -42,13 +43,11 @@ $ echo "Data Science Institute"
 
 ## What is Statistical Learning?
 
-Imagine we work in a marketing agency. Our client wants to know whether or not the money spent on advertising is leading to sales and which advertising channels results in the most sales. They want to increase their sales and need to determine how to spend the money the right way to drive that increase. Suppose we want to figure out the **relationship between how the advertising budget is spent and sales** in order to increase sales for a client.
+Imagine we work in a marketing agency. Our client wants to know whether the money spent on advertising is leading to sales, and which advertising channels results in the most sales. They want to increase their sales and need to determine how to spend the money the right way to drive that increase. Suppose we want to figure out the **relationship between how the advertising budget is spent and sales** in order to increase sales for a client.
 
 - There are three types of advertising: TV, radio, and newspaper which can be labelled $X_1, X_2, and\ X_3$ respectively.
-
-- The advertising budgets in thousands of dollars are the independent variables, or _**predictor variables**._ which we label X (the horizontal axis)
-
-- The number of sales in thousands is the dependent variable, or _**response variable**_ which we label Y (the vertical axis)
+- The advertising budgets (in thousands of dollars) are independent, or _**predictor variables**_, which we label X (the horizontal axis).
+- The number of sales (in thousands of units) is the dependent, or _**response variable**_, which we label Y (the vertical axis).
 
 ---
 
@@ -62,16 +61,13 @@ The sales in relation to each of the advertising budgets are shown along with a 
 
 ## What is Statistical Learning?
 
-We want to find the relationship between the predictor variables(budget) and the response variable(sales). This relationship can be described as a function $f$.
-However, it's complicated, and the relationship is not perfectly described. The difference between the actual value and the estimation of that value can be described as a random error term $\epsilon$
+We want to find the relationship between the predictor variables (budget) and the response variable (sales). This relationship can be described as a function $f$. In reality the relationship is complicated, and cannot be perfectly described. The difference between the actual value and the estimation of that value can be described as a random error term $\epsilon$.
 
-This relationship between $X = (X_1, X_2, X_3)$ and $Y$ can be written as
+This relationship between $X$ and $Y$ can be written as:
 
 $$
-Y = f(X) + \epsilon
+Y = f(X_1, X_2, X_3) + \epsilon
 $$
-
-
 
 **Statistical learning is summarized by the set of approaches which are used to estimate $f$.**
 
@@ -81,90 +77,38 @@ $$
 
 There are two main reasons why we want to estimate $f$:
 
-1. If we want to know what sales can be expected for a given advertising budget? _**what response is expected given a set of predictors.**_
-   - This is a **Prediction** 
-
-2. If we want to know to what extent the sales volume is related to the advertising budget? _**how the response variable is affected by changes in the predictors.**_
-   - This is an **Inference**
+1. If we want to know what sales can be expected for a given advertising budget? _**What response is expected given a set of predictors.**_ This is **prediction**.
+2. If we want to know to what extent sales volume is related to the advertising budget? _**How the response variable is affected by changes in the predictors.**_ This is **inference**.
 
 ---
 # Types of Statistical Learning
 ## Prediction
 
-Prediction problems often arise when the _**predictor variables $X$ are known but the response $Y$ is not easily obtained**_. Recall the relationship between the predictor and response variables
+Prediction problems focus on the response $Y$. They can arise when the _**predictor variables $X$ are known but the response $Y$ is not easily obtained**_. We use "^" to denote estimates. That is, $\hat Y$ is an estimate for $Y$ and $\hat f$ is an estimate for $f$.
 
-$$
-Y = f(X) + \epsilon
-$$
+The accuracy of our prediction, $\hat Y$, depends on two types of errors: 1) those that we can potentially control, influence or **reduce** and 2) those that we cannot control or **reduce**.  The **reducible error** is the error that we need to focus on as an analyst. But there is alway some **irreducible error**: the random error associated with the true response $Y = f(x) + \epsilon$. (Even if $\hat f = f$, $\hat Y$ will still have error associated with its prediction since $\epsilon$ is not a function of $X$.)
 
-Since the error term $\epsilon$ averages to zero, we can go about predicting $Y$ using
-
-$$
-\hat Y = \hat f(X)
-$$
-
-We use "^" to denote estimates. That is, $\hat Y$ is an estimate for $Y$ and $\hat f$ is an estimate for $f$.
-
----
-# Types of Statistical Learning
-## Prediction
-
-The accuracy of our prediction $\hat Y$ depends on two types of errors - those that we can potentially control, influence or **reduce** and those that we cannot control or **reduce** for as there will always be an element of randomness affecting our prediction:
-
-1. The **reducible error**: the error in our estimate $\hat f$. This error is reducible since estimates can always be improved.
-This is what we need to focus on as an analyst, but we can never be perfect because there is always:
-
-2. The **irreducible error**: the random error associated with the true response $Y = f(x) + \epsilon$. 
-(Even if $\hat f = f$, $\hat Y$ will still have error associated with its prediction since $\epsilon$ is not a function of $X$.)
+Our focus is on making predictions for $Y$ using $\hat f$.
 
 ---
 # Types of Statistical Learning
 ## Inference
-Inference problems often arise when _**both the predictor variables $X$ and the response $Y$ are known**_ and we want to know how they are related.
 
-- Which predictors affect the response?
-- Is a linear equation a good approximation for the relationship between the predictors and the response?
+Inference problems focus on predictors $X$. They can arise when both the _**predictor variables $X$ and the response $Y$ are known**_ and we want to know how they are related. 
 
-In each case, we do not want to make predictions for $Y$ using $\hat f$, we want to find the true form of $f$.
+The accuracy of our inference depends on how exactly we can estimate $\hat f$. It may depend on: 1) understanding which predictors are more important than others, 2) how does the response change (positively or negatively) given changes in the predictors, and 3) does the response change linearly or non-linearly given changes in the predictors.
+
+Our focus is on finding the true form of $f$.
 
 ---
 # Applying Statistical Learning
-## How do we Estimate $f$?
+## How do we estimate $f$?
 
 Assume that we have $n$ observations in our data set. The standard approach is to split the data set into training data and testing data.
 
 - **training data** is used to train or teach the statistical method we are using to estimate $f$.
 - **testing data** is used to test the accuracy of the resulting estimate for $f$ on new data.
 
-In general, the statistical learning methods used to estimate $f$ can be characterized as **parametric**, and **non-parametric**.
-WHAT IS A STATISTICAL LEARNING METHOD?
----
-# Applying Statistical Learning
-## Parametric Methods
-Can we better define this???
-This approach is implemented in two steps:
-
-1. Make an assumption about the functional form of $f$.
-2. Develop a procedure to fit the model to the training data.
-
----
-# Applying Statistical Learning
-## Example
-***What's going on here?***
-- Suppose $f$ is linear in $X$: $f(X)=\beta_{0}+\beta_{1}X_{1}+\beta_{2}X_{2}+\cdots+\beta_{p}X_{p}$. This assumption has reduced the number of parameters that need to be fit significantly compared to fitting a generic p-dimensional function.
-- We need to estimate $\beta_{0}, \beta_{1}, \beta_{2}, \dots, \beta_{p}$ such that $Y \approx \beta_{0}+\beta_{1}X_{1}+\beta_{2}X_{2}+\cdots+\beta_{p}X_{p}$. One approach is to use least squares which attempts to minimize the difference between the data and our estimate for $f$.
-
----
-# Applying Statistical Learning
-## Non-Parametric Methods
-
-This method does not make an assumption about the form of $f$. Instead, the goal of non-parametric fitting it to **_create an estimate for $f$ that follows the data as close as possible while staying as "smooth" as possible_**.
-
-- This avoids the danger seen in parametric approaches where the functional form of the estimate could be completely different from the true $f$.
-- This approach requires many parameters to be fit since the form of $f$ needs to be flexible.
-- As a result, many observations are needed in order to get an accurate estimate for $f$.
-- This approach could lead to **_overfitting_**, in which $f$ follows the noise and random variation in our data too closely.
-- Splines are an example of non-parametric fitting.
 
 ---
 # Applying Statistical Learning
@@ -174,19 +118,18 @@ This method does not make an assumption about the form of $f$. Instead, the goal
 - Choosing a model on the basis of flexibility will depend on the problem at hand.
     - **_If we are interested in inference, restrictive models are much more interpretable_** (i.e., the relationship between the predictors and the response is more clear)
     - **_If we are only interested in prediction accuracy, flexible models ♦️might♦️ perform better._**
-- Flexible models will not always provide better predictions since they are very prone to overfitting!
+- Flexible models will not always provide better predictions since they are prone to overfitting!
 
 ---
 # Applying Statistical Learning
 ## Supervised vs Unsupervised Learning
 
-- **Supervised learning** involves models for predicting a response based on predictor variables
-    - Examples: linear regression, boosting, support vector machines (SVM)
-- **Unsupervised learning** refers to models used to investigate features associated with observations.
-    - There is no response variable to predict.
-    - The goal is to understand the relationship between variables or observations.
-    - Example: clustering
-- **Semi-supervised learning** involves a set of observations, some of which have both predictor and response variables and some with only predictor variables. (Not covered in this module)
+- **Supervised learning** involves models for predicting a response based on predictor variables.
+   - An example of this is linear regression.
+- **Unsupervised learning** refers to models used to investigate features associated with observations (not covered in this module).
+    - There is no response variable to predict, instead the goal is to understand the relationship between variables or observations.
+    - An example of this is clustering. 
+
 
 ---
 # Applying Statistical Learning
