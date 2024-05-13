@@ -61,7 +61,7 @@ The sales in relation to each of the advertising budgets are shown along with a 
 
 ## What is Statistical Learning?
 
-We want to find the relationship between the predictor variables (budget) and the response variable (sales). This relationship can be described as a function $f$. In reality the relationship is complicated, and cannot be perfectly described. The difference between the actual value and the estimation of that value can be described as a random error term $\epsilon$.
+We want to find the relationship between the predictor variables (budget) and the response variable (sales). This relationship can be described as a function $f$. In reality the relationship is complicated, and cannot be perfectly described. We are using this function to model the relationship. The difference between the actual value and the estimation of that value can be described as a random error term $\epsilon$.
 
 This relationship between $X$ and $Y$ can be written as:
 
@@ -75,7 +75,7 @@ $$
 # Types of Statistical Learning
 ## Prediction vs Inference
 
-There are two main reasons why we want to estimate $f$:
+There are two main reasons why we want to model to estimate $f$:
 
 1. If we want to know what sales can be expected for a given advertising budget? _**What response is expected given a set of predictors.**_ This is **prediction**.
 2. If we want to know to what extent sales volume is related to the advertising budget? _**How the response variable is affected by changes in the predictors.**_ This is **inference**.
@@ -106,7 +106,7 @@ Our focus is on finding the true form of $f$.
 
 Assume that we have $n$ observations in our data set. The standard approach is to split the data set into training data and testing data.
 
-- **training data** is used to train or teach the statistical method we are using to estimate $f$.
+- **training data** is used to train or teach the model we are using to estimate $f$.
 - **testing data** is used to test the accuracy of the resulting estimate for $f$ on new data.
 
 
@@ -114,7 +114,7 @@ Assume that we have $n$ observations in our data set. The standard approach is t
 # Applying Statistical Learning
 ## Accuracy-Interpretability Trade-Off
 
-- The methods we will introduce have different levels of restrictiveness or flexibility.
+- The models we will introduce have different levels of restrictiveness or flexibility.
 - Choosing a model on the basis of flexibility will depend on the problem at hand.
     - **_If we are interested in inference, restrictive models are much more interpretable_** (i.e., the relationship between the predictors and the response is more clear)
     - **_If we are only interested in prediction accuracy, flexible models ♦️might♦️ perform better._**
@@ -125,7 +125,7 @@ Assume that we have $n$ observations in our data set. The standard approach is t
 ## Supervised vs Unsupervised Learning
 
 - **Supervised learning** involves models for predicting a response based on predictor variables.
-   - An example of this is linear regression. This is the primary focus of this learning module.
+   - Examples of supervised learning models are linear regression and classification. These models are the primary focus of this learning module.
 - **Unsupervised learning** refers to models used to investigate features associated with observations 
     - There is no response variable to predict, instead the goal is to understand the relationship between variables or observations.
     - An example of this is clustering.
@@ -147,10 +147,11 @@ Assume that we have $n$ observations in our data set. The standard approach is t
 # Applying Statistical Learning
 ## Assessing Model Accuracy
 
-There is no method that works the best on all data sets so we need a way to assess the quality of the model's fit to the data.
+There is no model that works the best on all data sets so we need a way to assess the quality of the model's fit to the data.
 
 - Recall that we use the training data set to fit the model.
 - Then the test data set is used to see how well the model performs on new data by computing some test statistic.
+- One way to do this is to look at how different our prediction is from the actual.
 - For regression, the **mean squared error** (MSE) is most common which measures how close the predicted responses are to the true responses.
 - We can compute the MSE for both the training data and the test data.
     - The training MSE will usually be lower (better) than the test MSE.
@@ -160,7 +161,7 @@ There is no method that works the best on all data sets so we need a way to asse
 # Applying Statistical Learning
 ## Assessing Model Accuracy
 
-The discussion below references two plots: the first shows three different models fit to data, and the second compares the training Mean Squared Error (MSE) and test MSE against the flexibility of the model.
+The first plot shows three different models fit to data, and the second compares the training Mean Squared Error (MSE) and test MSE against the flexibility of the model.
 
 ![Models fit to data](./images/01_test_training_mse.png)
 
@@ -181,7 +182,7 @@ This textual description aims to convey the essential information without relyin
 # Applying Statistical Learning
 ## Breakout Room: What if no test observations are available?
 
-In your breakout rooms, think, and share what happens if test observation are not available.
+In your breakout rooms, think, and share what happens if test observations are not available.
 
 _Hint: Google and ChatGPT are your friends!_
 
@@ -201,6 +202,17 @@ What if no test observations are available?
 # Applying Statistical Learning
 ## The Bias-Variance Trade-Off
 
+**_In order to minimise the expected test error we need to use statistical learning methods that result in low bias **and** low variance._**
+
+- **Variance** is the amount $\hat{f}$ would change if we fit it using a different training set.
+    - More flexible models have higher variance since they fit the training data more closely.
+- **Bias** is the error from approximating a complicated relationship with a simpler model.
+    - More restrictive models have higher bias since they make more assumptions about the form of $f$.# Applying Statistical Learning
+
+---
+# Applying Statistical Learning
+## The Bias-Variance Trade-Off
+
 The test MSE will always exhibit a U-shaped curve as a function of model flexibility. This is because the expected test MSE for some observation $x_0$ is the sum of:
 
 - $\operatorname{Var}(\hat{f}(x_{0}))$: the variance of $\hat{f}(x_{0})$ (the variance of the predicted response for the test observation $x_0$ given many $\hat{f}$ fit on different training sets).
@@ -211,29 +223,19 @@ The test MSE will always exhibit a U-shaped curve as a function of model flexibi
 # Applying Statistical Learning
 ## The Bias-Variance Trade-Off
 
-**_In order to minimise the expected test error we need to use statistical learning methods that result in low bias **and** low variance._**
-
-- **Variance** is the amount $\hat{f}$ would change if we fit it using a different training set.
-    - More flexible models have higher variance since they fit the training data more closely.
-- **Bias** is the error from approximating a complicated relationship with a simpler model.
-    - More restrictive models have higher bias since they make more assumptions about the form of $f$.
-
----
-# Applying Statistical Learning
-## The Bias-Variance Trade-Off
-
 The rate of change of the bias versus variance determines whether the test MSE will decrease or increase with flexibility.
 
-- Initially, as the flexibility of the method increases, the bias decreases faster
+- Initially, as the flexibility of the model increases, the bias decreases faster
     - The test MSE declines
 - At some point the increasing flexibility has little impact on the bias but the variance increases significantly.
-    - The test MSE increases. -This results in a U-shaped curve for test MSE vs method flexibility.
+    - The test MSE increases.
+    - This results in a U-shaped curve for test MSE vs model flexibility.
 
 ---
 # Applying Statistical Learning
 ## The Bias-Variance Trade-Off
 
-The discussion below is related to a plot that illustrates the bias (blue), variance (orange), variance of the error (dashed line), and the test Mean Squared Error (MSE) (red) as functions of model flexibility for three different data sets.
+The plot illustrates the bias (blue), variance (orange), variance of the error (dashed line), and the test Mean Squared Error (MSE) (red) as functions of model flexibility for three different data sets.
 
 ![Bias, Variance, and MSE Plot](./images/01_bias_variance.png)
 
@@ -246,9 +248,6 @@ Key points from the plot:
 - The MSE is the sum of the bias squared, variance, and the variance of the error (irreducible error).
 - The MSE cannot be smaller than the variance of the error, which represents the irreducible error.
 - The model that is closest to linear shows that the test MSE starts increasing immediately with increased flexibility, indicating a trade-off between bias and variance.
-
-This description aims to succinctly convey the critical insights from the plot, ensuring that readers understand the significance of the bias-variance trade-off and how it affects model selection.
-
 
 ---
 # Applying Statistical Learning
