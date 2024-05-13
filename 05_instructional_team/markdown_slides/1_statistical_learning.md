@@ -22,7 +22,7 @@ $ echo "Data Science Institute"
 ---
 # Rules of Engagement
 
-- This lecture is an overview and we will go into more detail in later lectures.
+- This session is an overview and we will go into more detail in later sessions.
 - Questions are encouraged - ask as we go - this is your time to understand these concepts
 - Listen to and learn from each other, ask questions on Slack between sessions
 - Anything else?
@@ -125,10 +125,11 @@ Assume that we have $n$ observations in our data set. The standard approach is t
 ## Supervised vs Unsupervised Learning
 
 - **Supervised learning** involves models for predicting a response based on predictor variables.
-   - An example of this is linear regression.
-- **Unsupervised learning** refers to models used to investigate features associated with observations (not covered in this module).
+   - An example of this is linear regression. This is the primary focus of this learning module.
+- **Unsupervised learning** refers to models used to investigate features associated with observations 
     - There is no response variable to predict, instead the goal is to understand the relationship between variables or observations.
-    - An example of this is clustering. 
+    - An example of this is clustering.
+    - Future modules explore this. 
 
 
 ---
