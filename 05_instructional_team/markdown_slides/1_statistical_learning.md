@@ -79,17 +79,19 @@ $$
 # Types of Statistical Learning
 ## Prediction vs Inference
 
-There are two main reasons for why we want to estimate $f$:
+There are two main reasons why we want to estimate $f$:
 
-1. **Prediction**: We want to know _**what response is expected given a set of predictors.**_ Ex: What income is expected for a given level of education and seniority?
+1. If we want to know what sales can be expected for a given advertising budget? _**what response is expected given a set of predictors.**_
+   - This is a **Prediction** 
 
-2. **Inference**: We want to understand _**how the response variable is affected by changes in the predictors**_. Ex: To what extent is income associated with education?
+2. If we want to know to what extent the sales volume is related to the advertising budget? _**how the response variable is affected by changes in the predictors.**_
+   - This is an **Inference**
 
 ---
 # Types of Statistical Learning
 ## Prediction
 
-Prediction problems often arise when the _**predictor variables $X$ are known but the response $Y$ is not easily obtained**_. Recall the general form for the relationship between the predictor and response variables
+Prediction problems often arise when the _**predictor variables $X$ are known but the response $Y$ is not easily obtained**_. Recall the relationship between the predictor and response variables
 
 $$
 Y = f(X) + \epsilon
@@ -107,9 +109,10 @@ We use "^" to denote estimates. That is, $\hat Y$ is an estimate for $Y$ and $\h
 # Types of Statistical Learning
 ## Prediction
 
-The accuracy of our prediction $\hat Y$ depends on:
+The accuracy of our prediction $\hat Y$ depends on two types of errors - those that we can potentially control, influence or **reduce** and those that we cannot control or **reduce** for as there will always be an element of randomness affecting our prediction:
 
 1. The **reducible error**: the error in our estimate $\hat f$. This error is reducible since estimates can always be improved.
+This is what we need to focus on as an analyst, but we can never be perfect because there is always:
 
 2. The **irreducible error**: the random error associated with the true response $Y = f(x) + \epsilon$. 
 (Even if $\hat f = f$, $\hat Y$ will still have error associated with its prediction since $\epsilon$ is not a function of $X$.)
@@ -117,24 +120,12 @@ The accuracy of our prediction $\hat Y$ depends on:
 ---
 # Types of Statistical Learning
 ## Inference
-
-We want to know how the predictor variables and the response variable are related.
+Inference problems often arise when _**both the predictor variables $X$ and the response $Y$ are known**_ and we want to know how they are related.
 
 - Which predictors affect the response?
 - Is a linear equation a good approximation for the relationship between the predictors and the response?
 
 In each case, we do not want to make predictions for $Y$ using $\hat f$, we want to find the true form of $f$.
-
----
-# Types of Statistical Learning
-## Inference
-
-We want to know how the predictor variables and the response variable are related.
-
-1. *Which predictors affect the response?*
-2. *Is a linear equation a good approximation for the relationship between the predictors and the response?*
-
-In each case, we do not want to make predictions for $Y$ using $\hat{f}$, we want to find the true form of $f$.
 
 ---
 # Applying Statistical Learning
@@ -146,11 +137,11 @@ Assume that we have $n$ observations in our data set. The standard approach is t
 - **testing data** is used to test the accuracy of the resulting estimate for $f$ on new data.
 
 In general, the statistical learning methods used to estimate $f$ can be characterized as **parametric**, and **non-parametric**.
-
+WHAT IS A STATISTICAL LEARNING METHOD?
 ---
 # Applying Statistical Learning
 ## Parametric Methods
-
+Can we better define this???
 This approach is implemented in two steps:
 
 1. Make an assumption about the functional form of $f$.
@@ -159,7 +150,7 @@ This approach is implemented in two steps:
 ---
 # Applying Statistical Learning
 ## Example
-
+***What's going on here?***
 - Suppose $f$ is linear in $X$: $f(X)=\beta_{0}+\beta_{1}X_{1}+\beta_{2}X_{2}+\cdots+\beta_{p}X_{p}$. This assumption has reduced the number of parameters that need to be fit significantly compared to fitting a generic p-dimensional function.
 - We need to estimate $\beta_{0}, \beta_{1}, \beta_{2}, \dots, \beta_{p}$ such that $Y \approx \beta_{0}+\beta_{1}X_{1}+\beta_{2}X_{2}+\cdots+\beta_{p}X_{p}$. One approach is to use least squares which attempts to minimize the difference between the data and our estimate for $f$.
 
