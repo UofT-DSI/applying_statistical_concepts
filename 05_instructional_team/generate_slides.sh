@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # CONFIGURATION
-folder_md="lessons/markdown_slides"
-folder_output="lessons/markdown_slides/pdf" # This will be used for both PDF and HTML
+folder_md="./markdown_slides"
+folder_output="../01_slides" # This will be used for both PDF and HTML
 
 # Clear the screen for the splash screen
 clear
