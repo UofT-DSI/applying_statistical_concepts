@@ -16,7 +16,7 @@ The `/02_assignments` directory contains assignments participants should submit 
 
 The `/03_exercises` directory contains exercises related to each live learning session. The technical facilitator will review each exercise at the end of the live learning sessions. Exercise 1 will be provided to participants prior to the first session. The technical facilitator is expected to review this exercise in the first session. 
 
-The `/04_homework` directory contains homework participants can complete to further develop and practice the skills covered in a learning module. Homework is optional, but participants are encouraged to complete as much as they can. While the homework is optional, a portion of the work periods each week should be used to review the homework. Week 1 work periods should cover homework 1 & 2, Week 2 should cover homework 3, and Week 3 should cover homework 1. 
+The `/04_homework` directory contains homework participants can complete to further develop and practice the skills covered in a learning module. Homework is optional, but participants are encouraged to complete as much as they can. While the homework is optional, a portion of the work periods each week should be used to review the homework. Week 1 work periods should cover homework 1 & 2, Week 2 should cover homework 3, and Week 3 should cover homework 4. 
 
 ### Week 1
 
