@@ -151,6 +151,9 @@ def scatter_plot(X, y=None, line_plot=None, title='', show_legend=True, xlabel='
     all_y_values = X['data'][1]
     if y is not None:
         all_y_values = np.concatenate([all_y_values, y['data'][1]])
+    if line_plot is not None:
+        all_y_values = np.concatenate([all_y_values, line_plot["y"]])
+
     y_min, y_max = all_y_values.min(), all_y_values.max()
     y_range = y_max - y_min
     y_extension = y_range * 0.1  # 10% extension
@@ -281,7 +284,7 @@ def scatter_plot_with_decision_boundary(X, y, model, feature1, feature2):
 
     # Line Plot Coordinates
     x_values = np.linspace(X[:, feature1_index].min(), X[:, feature1_index].max(), 100)
-    y_values = -(model.intercept_ + model.coef_[0][0] * x_values) / model.coef_[0][1]  # Decision boundary equation
+    y_values = -(model.intercept_[0] + model.coef_[0][0] * x_values) / model.coef_[0][1]  # Decision boundary equation
 
     # Plot the graph
     scatter_plot(
