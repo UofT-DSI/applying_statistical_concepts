@@ -36,6 +36,24 @@ $ echo "Data Science Institute"
 
 ---
 
+# Statistics and data science
+## What is Statistical Learning?
+
+There are a variety of definitions, but broadly, we consider data science to be an interdisciplinary approach to generating insight from data.
+
+Statistics is focused on collecting and analysing data. The discipline has developed robust methods for using samples of data to make broader claims.
+
+---
+
+# Statistics and data science
+## What is Statistical Learning?
+
+Data science relies on statistics for robust ways of dealing with data. And it relies on software engineering for robust ways of approaching coding.
+
+In data science, we write code to implement statistical methods. We need to know aspects of both the implementation (in code), and the underlying statistical methods, that we need in order to develop insights from our data.
+
+---
+
 # Think and share:
 ## What is Statistical Learning?
 
