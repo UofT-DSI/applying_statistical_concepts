@@ -151,8 +151,6 @@ def scatter_plot(X, y=None, line_plot=None, title='', show_legend=True, xlabel='
     all_y_values = X['data'][1]
     if y is not None:
         all_y_values = np.concatenate([all_y_values, y['data'][1]])
-    if line_plot is not None:
-        all_y_values = np.concatenate([all_y_values, line_plot["y"]])
 
     y_min, y_max = all_y_values.min(), all_y_values.max()
     y_range = y_max - y_min
@@ -324,6 +322,13 @@ def run_it_all_over():
     x_values = np.linspace(X_test[:, feature1_index].min(), X_test[:, feature1_index].max(), 100)
     y_values = -(model.intercept_ + model.coef_[0][0] * x_values) / model.coef_[0][1]
 
+    # Predict on the test set using the same features
+    y_pred = model.predict(X_test[:, feature_indices])
+
+    # Calculate the accuracy
+    accuracy = accuracy_score(y_test, y_pred)
+    print("Accuracy on test set:", accuracy)
+
     # Plot the graph
     scatter_plot(
         X={'data': [X_test[y_test == 0][:, feature1_index], X_test[y_test == 0][:, feature2_index]], 'color': 'green', 'label': data.target_names[0]}, 
@@ -376,13 +381,6 @@ def run_it_all_over():
         "The yellow points 🟢 represent \"benign tumors\", and the purple points 🔴 represent \"malignant tumors\".\n"
         "The red dashed line represents the decision boundary determined by the logistic regression model.\n\n" # explain what a decision boundary is better
         "Each run of this script might result in different features being selected, hence different visualizations and boundaries.\n")
-    
-    # Predict on the test set using the same features
-    y_pred = model.predict(X_test[:, feature_indices])
-
-    # Calculate the accuracy
-    accuracy = accuracy_score(y_test, y_pred)
-    print("Accuracy on test set:", accuracy)
 
 def help_me_in_real_life():
     """
