@@ -44,15 +44,16 @@ Participants should review the [Assignment Submission Guide](https://github.com/
 
 | Assessment        | Content         | Due Date                         | 
 | ------------------| ----------------|----------------------------------|
-| Assignment 1      | Sessions 1, 2, 3   |  TBD | 
-| Assignment 2      | Sessions 4, 5, 6   |  TBD     |
-| Assignment 3      | Sessions 7, 8, 9   |  TBD    | 
+| Assignment 1      | Sessions 1, 2, 3   |  June 2 | 
+| Assignment 2      | Sessions 4, 5, 6   |  June 9     |
+| Assignment 3      | Sessions 7, 8, 9   |  June 16    | 
 
 ### Contacts
 **Questions can be submitted to the _#cohort-3-help_ channel on Slack**
-
-* Technical Facilitator: **{Name}** {Pronouns}. Emails to the Technical Facilitator can be sent to {first_name.last_name}@mail.utoronto.ca.
-* Learning Support Staff: **{Name}** {Pronouns}. Emails to the Technical Facilitator can be sent to {first_name.last_name}@mail.utoronto.ca.
+ 
+* Technical Facilitator: **Ananya Jha** (She/Her). Emails to the Technical Facilitator can be sent to ananya.jha@mail.utoronto.ca
+* Learning Support Staff: **Amanda Ng** (She/Her). Emails to the Technical Facilitator can be sent to waiyuamanda.ng@mail.utoronto.ca
+* Learning Support Staff: **Vishnou Vinayagame** (He/Him). Emails to the Technical Facilitator can be sent to vishnouvina@cs.toronto.edu
 
 ### Delivery of the Learning Module
 
@@ -66,15 +67,15 @@ The technical facilitator will introduce the concepts through a collaborative li
 
 | Session  | Date   | Topic                                                 | ISLP Chapter | 
 |--------|--------|-------------------------------------------------------|------------|
-| 1      | TBD    | Key Concepts of Statistical Analysis                     | 2 |  
-| 2      | TBD    | Simple linear regression                                                     | 3 | 
-| 3      | TBD    | Multiple linear regression, interactions and Qualitative Predictors   | 3 |       
-| 4      | TBD    | Classification vs Regression                                                   | 4 | 
-| 5      | TBD    | Classification (Logistic Regression)                                     | 4 | 
-| 6      | TBD    | Classification (Generalized Linear Model)                          | 4 | 
-| 7      | TBD    | Resampling Methods (Leave One Out Cross Validation)           | 5 | 
-| 8      | TBD    | Resampling Methods (K-fold Cross Validation)                       | 5 | 
-| 9      | TBD    | Resampling Methods (Bootstrap)                                                  | 5 |   
+| 1      | May 28    | Key Concepts of Statistical Analysis                     | 2 |  
+| 2      | May 29    | Simple linear regression                                                     | 3 | 
+| 3      | May 30    | Multiple linear regression, interactions and Qualitative Predictors   | 3 |       
+| 4      | June 4    | Classification vs Regression                                                   | 4 | 
+| 5      | June 5    | Classification (Logistic Regression)                                     | 4 | 
+| 6      | June 6    | Classification (Generalized Linear Model)                          | 4 | 
+| 7      | June 11    | Resampling Methods (Leave One Out Cross Validation)           | 5 | 
+| 8      | June 12    | Resampling Methods (K-fold Cross Validation)                       | 5 | 
+| 9      | June 13    | Resampling Methods (Bootstrap)                                                  | 5 |   
 
 ### Requirements
 
