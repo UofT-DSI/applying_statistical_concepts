@@ -171,9 +171,7 @@ There is no model that works the best on all data sets so we need a way to asses
 - Then the test data set is used to see how well the model performs on new data by computing some test statistic.
 - One way to do this is to look at how different our prediction is from the actual.
 - For regression, the **mean squared error** (MSE) is most common which measures how close the predicted responses are to the true responses.
-- We can compute the MSE for both the training data and the test data.
-    - The training MSE will usually be lower (better) than the test MSE.
-    - We want to **_choose the model that minimizes the test MSE_** since we only really care about the performance of the model on new data.
+- We can compute the MSE for both the training data and the test data: the training MSE will usually be lower (better) than the test MSE. We want to **_choose the model that minimizes the test MSE_** since we only really care about the performance of the model on new data.
 
 ---
 # Applying Statistical Learning
