@@ -225,7 +225,7 @@ What if no test observations are available?
 - **Variance** is the amount $\hat{f}$ would change if we fit it using a different training set.
     - More flexible models have higher variance since they fit the training data more closely.
 - **Bias** is the error from approximating a complicated relationship with a simpler model.
-    - More restrictive models have higher bias since they make more assumptions about the form of $f$.# Applying Statistical Learning
+    - More restrictive models have higher bias since they make more assumptions about the form of $f$.
 
 ---
 # Applying Statistical Learning
