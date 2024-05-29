@@ -1,5 +1,20 @@
 # Technical Facilitator Playbook
 
+## Table of Contents
+- [How do you interact with the repo?](#how-do-you-interact-with-the-repo)
+- [How does the module flow?](#how-does-the-module-flow)
+    - [Week 1](#week-1)
+    - [Week 2](#week-2)
+    - [Week 3](#week-3)
+- [How do you assign assignments?](#how-do-you-assign-assignments)
+- [How is an assignment expected to be completed and delivered?](#how-is-an-assignment-expected-to-be-completed-and-delivered)
+- [What are the criteria for `complete` or `incomplete`?](#what-are-the-criteria-for-complete-or-incomplete)
+- [How to evaluate?](#how-to-evaluate)
+- [How will feedback be given?](#how-will-feedback-be-given)
+- [Definitions](#definitions)
+- [generate_slides.sh](#generate_slidessh)
+- [Assignment Summaries](#assignment-summaries)
+
 ## How do you interact with the repo?
 The Technical Facilitator will deliver the content in the `/01_slides` directory. You are encouraged to live code with participants during live sessions. Please ensure that live coding files are uploaded to a new directory called `/live_code` under `/06_cohort_three` in this repository using a new branch. Please open a pull request for it to be merged.
 
@@ -12,11 +27,11 @@ The module is organized into 3 main directories:
 
 The `/01_slides` directory contains the live learning session slides.
 
-The `/02_assignments` directory contains assignments participants should submit for evaluation as  `complete` or `incomplete`. The assignments measure a participant's achievement of the learning outcomes, and help technical facilitators determine if a participant has successfully completed the learning module. 
+The `/02_assignments` directory contains assignments participants should submit for evaluation as `complete` or `incomplete`. The assignments measure a participant's achievement of the learning outcomes and help technical facilitators determine if a participant has successfully completed the learning module. 
 
 The `/03_exercises` directory contains exercises related to each live learning session. The technical facilitator will review each exercise at the end of the live learning sessions. Exercise 1 will be provided to participants prior to the first session. The technical facilitator is expected to review this exercise in the first session. 
 
-The `/04_homework` directory contains homework participants can complete to further develop and practice the skills covered in a learning module. Homework is optional, but participants are encouraged to complete as much as they can. While the homework is optional, a portion of the work periods each week should be used to review the homework. Week 1 work periods should cover homework 1 & 2, Week 2 should cover homework 3, and Week 3 should cover homework 4. 
+The `/04_homework` directory contains homework participants can complete to further develop and practice the skills covered in a learning module. Homework is optional, but participants are encouraged to complete as much as they can. While the homework is optional, a portion of the work periods each week should be used to review the homework. Week 1 work periods should cover homeworks 1 & 2, Week 2 should cover homework 3, and Week 3 should cover homework 4. 
 
 ### Week 1
 
@@ -51,10 +66,10 @@ Focus of the week is on resampling methods (Cross Validation and Bootstrap)
 ## How do you assign assignments?
 Technical Facilitators are encouraged to introduce assignments as early as possible in the learning module. The Technical Facilitator should describe the assignment to participants and explain how the topics covered in the module will equip them with the knowledge and skills to complete the assignment. 
 
-## How is an assignment is expected to be completed and delivered?
+## How is an assignment expected to be completed and delivered?
 Participants are expected to complete the assignment by the end of the first week. They will deliver the assignment by opening a pull request on their copied repo. The participants will also add a Learning Support Staff as a reviewer indicating they delivered a completed assignment, and it is ready to be evaluated as `complete` or `incomplete`.
 
-## What is the criteria for `complete` or `incomplete`?
+## What are the criteria for `complete` or `incomplete`?
 The criteria for a `complete` or `incomplete` is if all parts of the program are working, and nothing in the code is broken. For some assignments, a rubric is provided outlining the criteria needed to assess an assignment as incomplete.
 
 ## How to evaluate?
@@ -70,8 +85,21 @@ Feedback should be given through the pull request a participant has made. Techni
 
 **Work Period**: A Work Period is an asynchronous period of time, lasting up to 3 hours. Participants will work on assignments and/or homework during this block of time. Learning Support Staff are to be present online through Zoom to assist participants and answer any questions they may have. As work periods are asynchronous and flexible, participants can choose to work on their own time. However, it is encouraged that they work during the block of time when a Learning Support Staff is present.
 
-**Assignments**: An Assignment is work assigned as part of the learning modules. They provide an opportunity for participants to integrate and synthesize what they have learned throughout the week to meet the set learning outcomes.
+**Assignments**: An Assignment is a work assigned as part of the learning modules. They provide an opportunity for participants to integrate and synthesize what they have learned throughout the week to meet the set learning outcomes.
 
 ## generate_slides.sh
 
-This script is designed to convert Markdown files located in a specified folder into slide presentations using Marp CLI, allowing for the generation of either HTML or PDF formats based on user input. It includes an option to apply a custom CSS theme to the slides by specifying a theme path. The script also provides a help function detailing its usage, options, and examples for convenience. It ensures the necessary directories exist, validates the presence of Marp CLI on the system, processes each Markdown file found in the specified directory, and outputs the generated slides into a designated output folder, displaying the status of each operation and a completion message. The only configuration needed is to set where the md files are and where you would like the pdf/html files to be placed.
+This script is designed to convert Markdown files located in a specified folder into slide presentations using Marp CLI, allowing for the generation of either HTML or PDF formats based on user input. It includes an option to apply a custom CSS theme to the slides by specifying a theme path. The script also provides a help function detailing its usage, options, and examples for convenience. It ensures the necessary directories exist, validates the presence of Marp CLI on the system, processes each Markdown file found in the specified directory, and outputs the generated slides into a designated output folder, displaying the status of each operation and a completion message. The only configuration needed is to set where the .md files are and where you would like the pdf/html files to be placed.
+
+## Assignment Summaries
+
+**Assignment 1:**
+The assignment involves using the Boston dataset from the ISLP library. Tasks include performing simple linear regression using `sm.OLS()` and interpreting the results. The emphasis is on understanding the variables `medv` and `dis`, visualizing data, and answering questions related to the model outputs.
+
+**Assignment 2:**
+This assignment explores the classification using the K-Nearest Neighbors (KNN) method with the `Caravan` dataset from the `ISLP` package. It involves using all variables in the dataset, except the response variable `Purchase`, which indicates if a customer purchased a caravan insurance policy. The tasks include understanding the data through various descriptive statistics methods, and fitting KNN models to predict the likelihood of insurance purchase. Questions focus on dataset dimensions, variable types, levels of the response variable, and model performance comparison. Participants are expected to interpret their results, collaborate if desired, and follow specific submission guidelines.
+
+**Assignment 3:**
+This assignment focuses on resampling techniques using the `iris` dataset. The main task is to implement bootstrapping to estimate the mean and variability of the Sepal Length of iris flowers, which could help in space allotment for a shipping company. It involves creating functions for calculating an alpha statistic from the dataset, constructing bootstrap datasets, and assessing the accuracy of these estimates. Questions guide the participant through understanding the dataset, applying bootstrapping, and interpreting the results concerning the business context. Submission guidelines emphasize proper formatting, collaboration disclosures, and following a structured process for review.
+
+Each assignment builds on the use of Python libraries for statistical analysis and data visualization, requiring the participants to apply, analyze, and interpret the statistical concepts learned.
