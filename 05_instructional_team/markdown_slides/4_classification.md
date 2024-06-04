@@ -42,12 +42,6 @@ Let's categorize this as a class!
 
 ---
 
-# Breakout Room
-
-A person is donating a blood test. How would you qualify this?
-
----
-
 # Why not use linear regression?
 
 Suppose we are trying to diagnose a patient with either a *stroke*, *drug overdose*, or *epileptic seizure* based on their symptoms. We can code this response as follows 
@@ -116,7 +110,7 @@ In summary, we don't use linear regression for classification since:
 
 -   It does not work for a qualitative response variable with more than 2 classes.
 
--   With 2 classes, the probability estimates are not meaningful.
+-   The probability estimates are not meaningful.
 
 ---
 
