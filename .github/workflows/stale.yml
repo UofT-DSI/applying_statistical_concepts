@@ -1,0 +1,31 @@
+name: Close Pull Requests
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  closePR:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check if user is in the organization
+      id: check_user
+      run: |
+        user_login=${{ github.event.pull_request.user.login }}
+        org_name="uoft-dsi" # Replace with your organization name
+        result=$(gh api "orgs/$org_name/members/$user_login" -H "Authorization: token $GITHUB_TOKEN" || echo "Not Found")
+        if [ "$result" == "Not Found" ]; then
+          echo "is_member=false" >> $GITHUB_ENV
+        else
+          echo "is_member=true" >> $GITHUB_ENV
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Close pull request if not a member
+      if: env.is_member == 'false'
+      run: |
+        gh pr close ${{ github.event.pull_request.number }} -R ${{ github.repository }}
+        gh pr comment ${{ github.event.pull_request.number }} -R ${{ github.repository }} -b "You have unfortunately made a pull request to the wrong repo. You shouldn't be making a pull request to UofT-DSI/applying_statistical_concepts, but rather your own forked applying_statistical_concepts repo. Please read the instructions on your onboarding [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) more carefully."
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
