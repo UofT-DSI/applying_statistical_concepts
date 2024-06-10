@@ -1,6 +1,6 @@
 Jennie was here # Applying Statistical Concepts: Linear regression, classification, and resampling
 
-## Content
+## Content ok ok ok 
 * [Description](#description)
 * [Learning Outcomes](#learning-outcomes)
 * [Assignments](#assignments)
