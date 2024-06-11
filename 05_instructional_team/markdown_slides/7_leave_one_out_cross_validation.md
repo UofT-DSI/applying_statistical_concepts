@@ -78,14 +78,6 @@ Open the Resampling Methods Jupyter Notebook file.
 
 ---
 
-# Activity (10 minutes)
-
-Watch these videos about Cross-Validation:
-* https://www.youtube.com/watch?v=hoNpvry0370 (~3 minutes)
-* https://www.youtube.com/watch?v=BgYogUmdXaE (~5 minutes)
-
----
-
 # Leave-One-Out Cross-Validation
 
 Leave-one-out cross-validation (LOOCV) follows the same steps as the validation set approach except the _**♦️validation set is just one single observation♦️**_. Then,
@@ -97,6 +89,11 @@ Leave-one-out cross-validation (LOOCV) follows the same steps as the validation 
 -   Compute the validation set error.
 
 -   Repeat this process for every observation.
+
+---
+# Leave-One-Out Cross-Validation
+
+![image info](images/07_loocv.png)
 
 ---
 
