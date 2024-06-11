@@ -14,15 +14,16 @@ $ echo "Data Science Institute"
 
 ---
 
-# Activity (15 minutes)
-
-Watch this video about $k$-Fold Cross-Validation: https://www.youtube.com/watch?v=wjILv3-UGM8&t=439s
+# Activity
+Watch this two videos about $k$-Fold Cross-Validation:
+* https://www.youtube.com/watch?v=hoNpvry0370 (~3 minutes)
+* https://www.youtube.com/watch?v=wjILv3-UGM8&t=439s (~10 minutes)
 
 ---
 
 # $k$-Fold Cross-Validation
 
-$k$-fold cross validation involves randomly dividing the set of observations into $k$ approximately equally sized groups. Then,
+$k$-fold cross validation involves randomly dividing the set of observations into $k$ *approximately* equally sized groups. Then,
 
 -   Fit the model using the observations from all but one of the groups.
 
@@ -36,11 +37,17 @@ $k$-fold cross validation involves randomly dividing the set of observations int
 
 # $k$-Fold Cross-Validation
 
+![image info](images/08_kcv.png)
+
+---
+
+# $k$-Fold Cross-Validation
+
 The $k$-fold cross validation estimate of the test error is the average of the $k$ validation set errors.
 
 $CV_{(k)}=\frac{1}{k}\sum\limits_{i=1}^kMSE_i$
 
-LOOCV is a special case of the $k$-fold cross validation approach using $k = n$ (\$n = \$ number of observations).
+LOOCV is a special case of the $k$-fold cross validation approach using $k=n$ where $n$ is the number of observations.
 
 ---
 
@@ -56,17 +63,13 @@ Based on what you learned so far, how does LOOCV compare to $k$-fold CV?
 
 -   _**♦️LOOCV is less biased♦️**_ in its estimation of the test error rate since it trains the model on more observations.
 
--   _**♦️LOOCV has a test error estimate that has higher variance♦️**_ than $k$-fold CV ($k < n$)
-
--   the models in the LOOCV process are fit with nearly identical training sets
-
 ---
 
-# Comparing LOOCV and $k$-fold CV
+# Comparing LOOCV and $k$-fold CV Continue
 
--   thus, each test error result is much more correlated with one another than they would be for $k$-fold CV
-
--   averaging highly correlated quantities has a higher variance than if they were not correlated
+- **♦️LOOCV has a test error estimate that has higher variance♦️** than $k$-fold CV ($k < n$)
+    - The models in the LOOCV process are fitted with *nearly* identical training sets thus each test error result is much more correlated with one another than they would be for $k$-fold CV
+    - Averaging highly correlated quantities has a higher variance than if they were not correlated
 
 Thus, there is a bias-variance trade-off when it comes to choosing $k$ for $k$-fold cross-validation. Typically $k = 5$ or $k = 10$ is used.
 
