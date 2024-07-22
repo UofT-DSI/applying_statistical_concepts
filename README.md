@@ -34,11 +34,11 @@ By the end of the module, participants will be able to:
 
 Participants should review the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for instructions on how to complete assignments in this module.
 
-[Assignment 1](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_assignments/assignment_1.ipynb)
+[Assignment 1](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_activities/assignments/assignment_1.ipynb)
 
-[Assignment 2](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_assignments/assignment_2.ipynb)
+[Assignment 2](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_activities/assignments/assignment_2.ipynb)
 
-[Assignment 3](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_assignments/assignment_3.ipynb)
+[Assignment 3](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_activities/assignments/assignment_3.ipynb)
 
 **Assignment Due-dates**
 
@@ -132,9 +132,9 @@ Alternative Textbook: [Data Science: A First Introduction](https://python.datasc
 ```markdown
 .
 ├── 01_materials/slides
-├── 02_assignments
-├── 03_exercises
-├── 04_homework
+├── 02_activities/assignments
+├── 02_activities/exercises
+├── 02_activities/homework
 ├── 05_instructors
 ├── 06_additional_resources
 ├── LICENSE
