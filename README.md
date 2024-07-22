@@ -61,7 +61,7 @@ This module will include live learning sessions and optional, asynchronous work 
  
 Participants are encouraged to engage actively during the learning module. They key to developing the core skills in each learning module is through practice. The more participants engage in coding along with the instructional team, and applying the skills in each module, the more likely it is that these skills will solidify. 
 
-The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_materials/slides`. The technical facilitator will upload any live coding files to this repository for any participants to revisit under `./06_cohort_three/live_code`.
+The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_materials/slides`. The technical facilitator will upload any live coding files to this repository for any participants to revisit under `./04_cohort_three/live_code`.
 
 ## Schedule
 
@@ -90,9 +90,9 @@ The technical facilitator will introduce the concepts through a collaborative li
 Feel free to use the following as resources:
 
 ### Documents
-<!-- - [Cheatsheet](./06_cohort_three/additional_resources/05_review_session_material/dsi_emlt_cheat_sheet_2.pdf)
-- [Cross Validation - Basic Idea and Steps](./06_cohort_three/additional_resources/05_review_session_material/cross_validation_basic_idea_and_steps.pdf)
-- [EMLT Tutorial](./06_cohort_three/additional_resources/05_review_session_material/emlt_tutorials.pdf) -->
+<!-- - [Cheatsheet](./04_cohort_three/additional_resources/05_review_session_material/dsi_emlt_cheat_sheet_2.pdf)
+- [Cross Validation - Basic Idea and Steps](./04_cohort_three/additional_resources/05_review_session_material/cross_validation_basic_idea_and_steps.pdf)
+- [EMLT Tutorial](./04_cohort_three/additional_resources/05_review_session_material/emlt_tutorials.pdf) -->
 - [Introduction to Statistical Learning with Python Documentation (ISLP)](https://islp.readthedocs.io/en/latest/index.html)
 
 ### Videos 
