@@ -131,15 +131,14 @@ Alternative Textbook: [Data Science: A First Introduction](https://python.datasc
 
 ```markdown
 .
-├── 01_materials/slides
-├── 02_activities/assignments
-├── 02_activities/exercises
-├── 02_activities/homework
-├── 05_instructors
-├── 06_additional_resources
+├── .github
+├── .gitignore
+├── 01_materials
+├── 02_activities
+├── 03_instructional_team
+├── 04_cohort_three
 ├── LICENSE
 ├── README.md
-├── requirements.txt
 └── steps_to_ask_for_help.png
 ```
 
@@ -151,3 +150,13 @@ Alternative Textbook: [Data Science: A First Introduction](https://python.datasc
 * **instructors:** This folder provides guidance for Technical Facilitators and the Learning Support team on teaching methodologies and content delivery.
 * README: This file!
 * .gitignore: Files to exclude from this folder, specified by the Technical Facilitator
+
+* **.github**: Contains issue templates and pull request templates for the repository.
+* **materials**: Module slides (.pdf) used during learning sessions.
+* **activities**: Contains graded assignments, exercises, and homework to practice concepts covered in the learning module.
+* **instructional_team**: Resources for the instructional team.
+* **cohort_three**: Additional materials and resources for cohort three.
+* **.gitignore**: Files to exclude from this folder, specified by the Technical Facilitator
+* **LICENSE**: The license for this repository.
+* **README.md**: This file.
+* **steps_to_ask_for_help.png**: Guide on how to ask for help.
