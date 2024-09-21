@@ -34,11 +34,11 @@ By the end of the module, participants will be able to:
 
 Participants should review the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for instructions on how to complete assignments in this module.
 
-[Assignment 1](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_assignments/assignment_1.ipynb)
+[Assignment 1](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_activities/assignments/assignment_1.ipynb)
 
-[Assignment 2](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_assignments/assignment_2.ipynb)
+[Assignment 2](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_activities/assignments/assignment_2.ipynb)
 
-[Assignment 3](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_assignments/assignment_3.ipynb)
+[Assignment 3](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_activities/assignments/assignment_3.ipynb)
 
 **Assignment Due-dates**
 
@@ -61,7 +61,7 @@ This module will include live learning sessions and optional, asynchronous work 
  
 Participants are encouraged to engage actively during the learning module. They key to developing the core skills in each learning module is through practice. The more participants engage in coding along with the instructional team, and applying the skills in each module, the more likely it is that these skills will solidify. 
 
-The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_slides`. The technical facilitator will upload any live coding files to this repository for any participants to revisit under `./06_cohort_three/live_code`.
+The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_materials/slides`. The technical facilitator will upload any live coding files to this repository for any participants to revisit under `./04_cohort_three/live_code`.
 
 ## Schedule
 
@@ -90,9 +90,9 @@ The technical facilitator will introduce the concepts through a collaborative li
 Feel free to use the following as resources:
 
 ### Documents
-<!-- - [Cheatsheet](./06_cohort_three/additional_resources/05_review_session_material/dsi_emlt_cheat_sheet_2.pdf)
-- [Cross Validation - Basic Idea and Steps](./06_cohort_three/additional_resources/05_review_session_material/cross_validation_basic_idea_and_steps.pdf)
-- [EMLT Tutorial](./06_cohort_three/additional_resources/05_review_session_material/emlt_tutorials.pdf) -->
+<!-- - [Cheatsheet](./04_cohort_three/additional_resources/05_review_session_material/dsi_emlt_cheat_sheet_2.pdf)
+- [Cross Validation - Basic Idea and Steps](./04_cohort_three/additional_resources/05_review_session_material/cross_validation_basic_idea_and_steps.pdf)
+- [EMLT Tutorial](./04_cohort_three/additional_resources/05_review_session_material/emlt_tutorials.pdf) -->
 - [Introduction to Statistical Learning with Python Documentation (ISLP)](https://islp.readthedocs.io/en/latest/index.html)
 
 ### Videos 
@@ -131,15 +131,14 @@ Alternative Textbook: [Data Science: A First Introduction](https://python.datasc
 
 ```markdown
 .
-├── 01_slides
-├── 02_assignments
-├── 03_exercises
-├── 04_homework
-├── 05_instructors
-├── 06_additional_resources
+├── .github
+├── .gitignore
+├── 01_materials
+├── 02_activities
+├── 03_instructional_team
+├── 04_cohort_three
 ├── LICENSE
 ├── README.md
-├── requirements.txt
 └── steps_to_ask_for_help.png
 ```
 
@@ -151,3 +150,13 @@ Alternative Textbook: [Data Science: A First Introduction](https://python.datasc
 * **instructors:** This folder provides guidance for Technical Facilitators and the Learning Support team on teaching methodologies and content delivery.
 * README: This file!
 * .gitignore: Files to exclude from this folder, specified by the Technical Facilitator
+
+* **.github**: Contains issue templates and pull request templates for the repository.
+* **materials**: Module slides (.pdf) used during learning sessions.
+* **activities**: Contains graded assignments, exercises, and homework to practice concepts covered in the learning module.
+* **instructional_team**: Resources for the instructional team.
+* **cohort_three**: Additional materials and resources for cohort three.
+* **.gitignore**: Files to exclude from this folder, specified by the Technical Facilitator
+* **LICENSE**: The license for this repository.
+* **README.md**: This file.
+* **steps_to_ask_for_help.png**: Guide on how to ask for help.
