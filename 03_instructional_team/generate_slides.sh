@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # CONFIGURATION
-folder_md="../01_materials/slides"
-folder_output="../01_materials/slides" # This will be used for both PDF and HTML
+folder_md="01_materials/slides"
+folder_output="01_materials/slides" # This will be used for both PDF and HTML
 
 # Clear the screen for the splash screen
 clear

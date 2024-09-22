@@ -73,11 +73,8 @@ The technical facilitator will introduce the concepts through a collaborative li
 Feel free to use the following as resources:
 
 ### Documents
-<!-- - [Cheatsheet](./04_cohort_three/additional_resources/05_review_session_material/dsi_emlt_cheat_sheet_2.pdf)
-- [Cross Validation - Basic Idea and Steps](./04_cohort_three/additional_resources/05_review_session_material/cross_validation_basic_idea_and_steps.pdf)
-- [EMLT Tutorial](./04_cohort_three/additional_resources/05_review_session_material/emlt_tutorials.pdf) -->
-- [A First Introduction (Python Edition) Tiffany Timbers, Trevor Campbell, Melissa Lee, Joel Ostblom, Lindsey Heagy] (https://python.datasciencebook.ca/index.html) 
-- [Introduction to Statistical Learning with Python Documentation (ISLP)](https://islp.readthedocs.io/en/latest/index.html)
+- Textbook: [Data Science: A First Introduction](https://python.datasciencebook.ca/index.html)
+- Alternative textbook: [Introduction to Statistical Learning with Python Documentation (ISLP)](https://islp.readthedocs.io/en/latest/index.html)
 
 ### Videos 
 - [Introduction to Statistical Learning with Python Video Playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)
@@ -102,12 +99,11 @@ Feel free to use the following as resources:
 - [Machine Learning Fundamentals: Cross Validation](https://www.youtube.com/watch?v=fSytzGwwBVw&pp=ygUYdmFsaWRhdGlvbiBzZXQgc3RhdHF1ZXN0)
 - [Bootstrapping Main Ideas!!!](https://www.youtube.com/watch?v=Xz0x-8-cgaQ&pp=ygUXYm9vdHN0cmFwcGluZyBzdGF0cXVlc3Q%3D)
 - [Bootstrapping Method](https://www.youtube.com/watch?v=uGsf3spCM3Y)
-- [$k$-fold Cross Validation](https://www.youtube.com/watch?v=TIgfjmp-4BA)
-
-Alternative Textbook: [Data Science: A First Introduction](https://python.datasciencebook.ca/classification1.html) (Chapters 5-10)
+- [k-fold Cross Validation](https://www.youtube.com/watch?v=TIgfjmp-4BA)
 
 ### How to get help
 ![image](./steps_to_ask_for_help.png)
+Please remember to use the help channel to get help from the course support!
 
 <hr>
 
@@ -115,10 +111,11 @@ Alternative Textbook: [Data Science: A First Introduction](https://python.datasc
 
 ```markdown
 .
-├── .github
-├── .gitignore
 ├── 01_materials
 ├── 02_activities
+│   │   assignments
+│   │   exercises
+│   │   homework
 ├── 03_instructional_team
 ├── 04_cohort_4
 ├── LICENSE
@@ -126,21 +123,4 @@ Alternative Textbook: [Data Science: A First Introduction](https://python.datasc
 └── steps_to_ask_for_help.png
 ```
 
-* **slides:** Module slides as PDF files.
-* **exercises:** Work to be done alongside learning sessions.
-* **homework:** Homework to practice concepts covered in learning modules.
-* **assignments:** Assignments.
-* **additional resources:** Extra material not covered by the module.
-* **instructors:** This folder provides guidance for Technical Facilitators and the Learning Support team on teaching methodologies and content delivery.
-* README: This file!
-* .gitignore: Files to exclude from this folder, specified by the Technical Facilitator
-
-* **.github**: Contains issue templates and pull request templates for the repository.
-* **materials**: Module slides (.pdf) used during learning sessions.
-* **activities**: Contains graded assignments, exercises, and homework to practice concepts covered in the learning module.
-* **instructional_team**: Resources for the instructional team.
-* **cohort_4**: Additional materials and resources for cohort 4.
-* **.gitignore**: Files to exclude from this folder, specified by the Technical Facilitator
-* **LICENSE**: The license for this repository.
-* **README.md**: This file.
-* **steps_to_ask_for_help.png**: Guide on how to ask for help.
+Exercises and homework are **optional** additional resources for you to learn outside the live learning sessions. Only assignments are mandatory in order to successfully pass this module.
