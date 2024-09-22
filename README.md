@@ -6,7 +6,6 @@
 * [Assignments](#assignments)
 * [Contacts](#contacts)
 * [Delivery of the Learning Module](#delivery-of-the-learning-module)
-* [Schedule](#schedule)
 * [Requirements](#requirements)
 * [Resources](#resources)
   - [Documents](#documents)
@@ -19,7 +18,7 @@
 
 ## Description
 
-This module introduces the skills required to design, implement and test logistic regression and classification, as well as validate it with resampling. The module compares the differences between modelling for prediction purposes and inference. It explores the choices between prediction accuracy and model interpretability, and the bias-variance trade-off. 
+This module introduces the skills required to design, implement and test basic statistical learning methods including regression, classification, clustering as well as validate it with resampling. The module compares the differences between modelling for prediction purposes and inference. It explores the choices between prediction accuracy and model interpretability, and the bias-variance trade-off. 
 
 ## Learning Outcomes
 
@@ -34,26 +33,24 @@ By the end of the module, participants will be able to:
 
 Participants should review the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for instructions on how to complete assignments in this module.
 
-[Assignment 1](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_activities/assignments/assignment_1.ipynb)
-
-[Assignment 2](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_activities/assignments/assignment_2.ipynb)
-
-[Assignment 3](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_activities/assignments/assignment_3.ipynb)
+- Assignment 1: TBA
+- Assignment 2: TBA
+- Assignment 3: TBA
 
 **Assignment Due-dates**
 
-| Assessment        | Content         | Due Date                         | 
-| ------------------| ----------------|----------------------------------|
-| Assignment 1      | Sessions 1, 2, 3   |  June 2 | 
-| Assignment 2      | Sessions 4, 5, 6   |  June 9     |
-| Assignment 3      | Sessions 7, 8, 9   |  June 16    | 
+| Assessment        |  Due Date                         | 
+| ------------------| ----------------------------------|
+| Assignment 1      |   Sep 29    | 
+| Assignment 2      |   Oct 6     |
+| Assignment 3      |   Oct 13    | 
 
 ### Contacts
-**Questions can be submitted to the _#cohort-3-help_ channel on Slack**
-* Technical Facilitator: **Holly Xie** (She/Her). Emails can be sent to xhonglei2007@gmail.com
-* Learning Support Staff: **Ananya Jha** (She/Her). Emails can be sent to ananya.jha@mail.utoronto.ca
-* Learning Support Staff: **Amanda Ng** (She/Her). Emails can be sent to waiyuamanda.ng@mail.utoronto.ca
-* Learning Support Staff: **Vishnou Vinayagame** (He/Him). Emails can be sent to vishnouvina@cs.toronto.edu
+**Questions can be submitted to the _#cohort-4-help_ channel on Slack**
+* Technical Facilitator: **Holly**. Emails can be sent to xhonglei2007@gmail.com
+* Learning Support Staff: **Kasra**. Emails can be sent to vakiloroayaei.kasra@gmail.com
+* Learning Support Staff: **Amanda**. Emails can be sent to waiyuamanda.ng@mail.utoronto.ca
+* Learning Support Staff: **Vishnou**. Emails can be sent to vishnouvina@cs.toronto.edu
 
 ### Delivery of the Learning Module
 
@@ -61,21 +58,7 @@ This module will include live learning sessions and optional, asynchronous work 
  
 Participants are encouraged to engage actively during the learning module. They key to developing the core skills in each learning module is through practice. The more participants engage in coding along with the instructional team, and applying the skills in each module, the more likely it is that these skills will solidify. 
 
-The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_materials/slides`. The technical facilitator will upload any live coding files to this repository for any participants to revisit under `./04_cohort_three/live_code`.
-
-## Schedule
-
-| Session  | Date   | Topic                                                 | ISLP Chapter | 
-|--------|--------|-------------------------------------------------------|------------|
-| 1      | May 28    | Key Concepts of Statistical Analysis                     | 2 |  
-| 2      | May 29    | Simple linear regression                                                     | 3 | 
-| 3      | May 30    | Multiple linear regression, interactions and Qualitative Predictors   | 3 |       
-| 4      | June 4    | Classification vs Regression                                                   | 4 | 
-| 5      | June 5    | Classification (Logistic Regression)                                     | 4 | 
-| 6      | June 6    | Classification (Generalized Linear Model)                          | 4 | 
-| 7      | June 11    | Resampling Methods (Leave One Out Cross Validation)           | 5 | 
-| 8      | June 12    | Resampling Methods (K-fold Cross Validation)                       | 5 | 
-| 9      | June 13    | Resampling Methods (Bootstrap)                                                  | 5 |   
+The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_materials/notebooks/`. Slides can be found under `/01_materials/slides/`.
 
 ### Requirements
 
@@ -93,6 +76,7 @@ Feel free to use the following as resources:
 <!-- - [Cheatsheet](./04_cohort_three/additional_resources/05_review_session_material/dsi_emlt_cheat_sheet_2.pdf)
 - [Cross Validation - Basic Idea and Steps](./04_cohort_three/additional_resources/05_review_session_material/cross_validation_basic_idea_and_steps.pdf)
 - [EMLT Tutorial](./04_cohort_three/additional_resources/05_review_session_material/emlt_tutorials.pdf) -->
+- [A First Introduction (Python Edition) Tiffany Timbers, Trevor Campbell, Melissa Lee, Joel Ostblom, Lindsey Heagy] (https://python.datasciencebook.ca/index.html) 
 - [Introduction to Statistical Learning with Python Documentation (ISLP)](https://islp.readthedocs.io/en/latest/index.html)
 
 ### Videos 
@@ -136,7 +120,7 @@ Alternative Textbook: [Data Science: A First Introduction](https://python.datasc
 ├── 01_materials
 ├── 02_activities
 ├── 03_instructional_team
-├── 04_cohort_three
+├── 04_cohort_4
 ├── LICENSE
 ├── README.md
 └── steps_to_ask_for_help.png
@@ -155,7 +139,7 @@ Alternative Textbook: [Data Science: A First Introduction](https://python.datasc
 * **materials**: Module slides (.pdf) used during learning sessions.
 * **activities**: Contains graded assignments, exercises, and homework to practice concepts covered in the learning module.
 * **instructional_team**: Resources for the instructional team.
-* **cohort_three**: Additional materials and resources for cohort three.
+* **cohort_4**: Additional materials and resources for cohort 4.
 * **.gitignore**: Files to exclude from this folder, specified by the Technical Facilitator
 * **LICENSE**: The license for this repository.
 * **README.md**: This file.
