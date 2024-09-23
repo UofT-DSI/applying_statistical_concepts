@@ -1,22 +1,18 @@
 # Technical Facilitator Playbook
 
 ## How do you interact with the repo?
-The Technical Facilitator will deliver the content in the `/01_materials/slides` directory. You are encouraged to live code with participants during live sessions. Please ensure that live coding files are uploaded to a new directory called `/live_code` under `/04_cohort_three` in this repository using a new branch. Please open a pull request for it to be merged.
+The Technical Facilitator will deliver the content in the `/01_materials/slides` directory. You are encouraged to live code with participants during live sessions. Please ensure that live coding files are uploaded to a new directory called `/live_code` under `/04_this_cohort` in this repository using a new branch. Please open a pull request for it to be merged.
 
 ## How does the module flow?
-The module is organized into 3 main directories:
-1. Slides
-2. Assignments
-3. Exercises
-4. Homework
+The module is organized into 4 main directories:
+1. materials
+2. activities
+3. instructional team
+4. this cohort
 
-The `/01_materials/slides` directory contains the live learning session slides.
+The `/01_materials/slides` directory contains the live learning session slides and `/01_materials/notebooks` helps the supplementary notebooks.
 
 The `/02_activities/assignments` directory contains assignments participants should submit for evaluation as  `complete` or `incomplete`. The assignments measure a participant's achievement of the learning outcomes, and help technical facilitators determine if a participant has successfully completed the learning module. 
-
-The `/02_activities/exercises` directory contains exercises related to each live learning session. The technical facilitator will review each exercise at the end of the live learning sessions. Exercise 1 will be provided to participants prior to the first session. The technical facilitator is expected to review this exercise in the first session. 
-
-The `/02_activities/homework` directory contains homework participants can complete to further develop and practice the skills covered in a learning module. Homework is optional, but participants are encouraged to complete as much as they can. While the homework is optional, a portion of the work periods each week should be used to review the homework. Week 1 work periods should cover homework 1 & 2, Week 2 should cover homework 3, and Week 3 should cover homework 4. 
 
 ### Week 1
 
@@ -62,8 +58,6 @@ If the participant's solution works, then their assignment should be assessed as
 
 ## How will feedback be given?
 Feedback should be given through the pull request a participant has made. Technical Facilitators are encouraged to allow participants to make revisions if needed. In order to maximize learning, feedback should be constructive, and specific.
-
-<hr>
 
 ## Definitions
 **Live Learning Sessions**: A Live Learning Session is a synchronous period of time, lasting up to 2.5 hours, where the Technical Facilitator will facilitate and deliver the content and learning outcomes online through Zoom. Participants are encouraged to participate and ask questions as they learn. 10 minute breaks are encouraged once per hour.
