@@ -44,9 +44,9 @@ Participants should review the [Assignment Submission Guide](https://github.com/
 
 | Assessment        | Content         | Due Date                         | 
 | ------------------| ----------------|----------------------------------|
-| Assignment 1      | Sessions 1, 2, 3   |  June 2 | 
-| Assignment 2      | Sessions 4, 5, 6   |  June 9     |
-| Assignment 3      | Sessions 7, 8, 9   |  June 16    | 
+| Assignment 1      | Sessions 1, 2, 3   |  September 29 🚩 | 
+| Assignment 2      | Sessions 4, 5, 6   |  October 6 🚩    |
+| Assignment 3      | Sessions 7, 8, 9   |  October 13 🚩   | 
 
 ### Contacts
 **Questions can be submitted to the _#cohort-3-help_ channel on Slack**
