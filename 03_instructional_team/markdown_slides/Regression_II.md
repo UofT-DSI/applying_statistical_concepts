@@ -1,73 +1,29 @@
 ---
 marp: true
-theme: uncover
+theme: dsi_certificates_theme
 _class: invert
 paginate: true
-
-style: |
-    section{;
-    }
 ---
-<style>
-     p {
-        text-align: left;
-        font-size: 30px
-    }
-    ul {
-        margin: 0;
-        font-size: 30px;
-    }
-    table {
-        font-size: 30px;
-    }
-    ol {
-        margin: 0;
-        font-size: 30px;
-    }
-    blockquote {
-        border-left: 10px solid #ccc;
-        margin: 1.5em 10px;
-        padding: 0.5em 30px;
-        quotes: "\201C""\201D""\2018""\2019";
-    }
 
-    blockquote:before {
-        color: #ccc;
-        content: none;
-        font-size: 4em;
-        line-height: 0.1em;
-        margin-right: 0.25em;
-        vertical-align: -0.4em;
-    }
-
-    blockquote:after{
-        content: none;
-        font-size: 4em
-    }
-
-    img {
-    width: 50%;
-    height: auto;
-  }
-</style>
-
-# **Regression II**
+# Regression II
 ```console
 Data Sciences Institute
 Applying Statistical Concepts
 ```
 ---
-##### **Acknowledgements**
+##### Acknowledgements
 - Slides created by Julia Gallucci under the supervision of Rohan  Alexander.
 - Content adapted from: A First Introduction (Python Edition) Tiffany Timbers, Trevor Campbell, Melissa Lee, Joel Ostblom, Lindsey Heagy https://python.datasciencebook.ca/index.html
+
 ---
-##### **Learning objectives**
+##### Learning objectives
 - Explain the linear regression algorithm and contrast it with KNN regression.
 - Fit simple and multivariable linear regression models on training data using Python.
 - Evaluate the linear regression models on test data.
 - Explain the impact of outliers and multicollinearity on linear regression.
+
 ---
-##### **Simple linear regression**
+##### Simple linear regression
 $$ y = mx + b $$
 - **Predictor Variable ($x$)**:
   - The factor you’re using to make the prediction (independent variable)
@@ -87,12 +43,12 @@ $$ y = mx + b $$
 - Linear regression is widely used due to its interpretable mathematical equation linking predictors and response variables.
 - Simple linear regression involves one predictor and one response variable and **predicts by creating a straight line of best fit through the training data.**
 ---
-##### **Animation of linear regression**
-[![w:750 Watch on YouTube](https://img.youtube.com/vi/SWTeWu1rerk/0.jpg)](https://youtu.be/SWTeWu1rerk)
+##### Animation of linear regression
+[![w:750 Watch on YouTube] (https://img.youtube.com/vi/SWTeWu1rerk/0.jpg)] (https://youtu.be/SWTeWu1rerk)
 https://www.youtube.com/watch?v=SWTeWu1rerk
 
 ---
- ##### **Example dataset**
+ ##### Example dataset
 932 real estate transactions in Sacramento, California is the dataset we will be using, specifically for predicting whether the size of a house in Sacramento can be used to predict its sale price. 
 
 - *Key features:* 
@@ -102,7 +58,8 @@ https://www.youtube.com/watch?v=SWTeWu1rerk
 ---
 - To decide whether the $350,000 asking price for the 2,000 square-foot house is fair, we can use our existing data to predict its likely sale price. However, since there are no exact observations for a 2,000 square-foot house in our dataset, we need a method to estimate the price. 
 - Using simple linear regression, we use the data we can draw a straight line of best fit through our existing data points.
-![bg right:45% w:600][simple_reg]
+![bg right:45% w:600] (./images/simple_reg.png)
+
 ---
 - The equation for the straight line in simple linear regression is:
   
@@ -124,23 +81,25 @@ $$
 - Once we have the coefficients, we can use the equation to evaluate the predicted sale price given the value we have for the predictor variable—here 2,000 square feet.
 - Linear regression can predict extreme values (e.g., 6 million or -2,000 sq. ft.), but these predictions are unreliable.
 - Make predictions within the original data range; extrapolate only when logically justified.
-![bg right:45% w:600][predict_simple]
+![bg right:45% w:600] (./images/predict_simple.png)
+
 ---
- ##### **Choosing the line of best fit**
+ ##### Choosing the line of best fit
  Many different lines could be drawn through the data points, how do we choose the line of best fit? 
-![bg right:60% w:700][many_lines]
+![bg right:60% w:700] (./images/many_lines.png)
 
 ---
 - Simple linear regression finds the line of best fit by minimizing the average squared vertical distance between the line and observed data points.
 - This process is equivalent to **minimizing the Root Mean Squared Error (RMSE).**
 - The predictive accuracy of the simple linear regression model is assessed using the Root Mean Squared Prediction Error (RMSPE), similar to KNN regression.
-![bg right:40% w:500][RMSE]
+![bg right:40% w:500](./images/RMSE.png)
+
 ---
-#### **Comparing simple linear and KNN regression**
+#### Comparing simple linear and KNN regression
 - **Parameter Tuning:** No need for cross-validation to choose parameters in linear regression.
 - **Data Preparation:** No need for standardization (centering and scaling) of the data in linear regression.
 ---
-![w:1000][KNN_vs_linreg]
+![w:1000](./images/KNN_vs_linreg.png)
 Visualization of the simple linear regression model predicting price from house size and the “best” K-NN regression model obtained from the same problem.
 
 --- 
@@ -153,7 +112,7 @@ Visualization of the simple linear regression model predicting price from house 
 | **Extrapolation Behavior**| Predicts with constant slope, can be inaccurate (e.g., negative prices) | Produces flat predictions at boundaries, may not match reality |
 
 ---
-#### **Multivariable linear regression**
+#### Multivariable linear regression
 - Extends simple linear regression to multiple predictors.
 - Similar to KNN regression, simply add more predictors to the training data.
 - Each predictor variable *may* give us new information to help create our model. 
@@ -168,48 +127,29 @@ $$
   $\beta_2$ is the slope (rate of price increase as number of bedrooms increases).
 
 ---
-![bg right:60% w:700][multivar]
+![bg right:60% w:700](./images/multivar_linreg.jpg)
 In the case of two predictors, we can plot the predictions made by our linear regression to create a plane of best fit.
 
 ---
-#### **Outliers**
+#### Outliers
 - Data points with unusually high or low vertical distances from the line of best fit.
 - Outliers can disproportionately influence the line of best fit.
 - Identifying outliers accurately often requires advanced techniques.
-![bg right:40% w:500][outlier]
+![bg right:40% w:500](./images/outlier.png)
 - Eg.,  a single outlier (a 5,000 sq. ft. house sold for $50,000) dramatically alters the line of best fit, changing it from the original (**orange**) to a new line (**red**).
   
 ---
 Fortunately, if you have enough data, the inclusion of one or two outliers—as long as their values are not too wild— will typically not have a large effect on the line of best fit.
-![bg right:60% w:700][outlier_bigdata]
+![bg right:60% w:700](./images/outlier_bigdata.png)
 
 ---
-#### **Multicollinearity** 
+#### Multicollinearity 
 - Occurs in multivariable linear regression when predictors are strongly linearly related.
 - if predictors are highly correlated, the model’s coefficients can become very sensitive to slight changes in the data.
 - This sensitivity can lead to large variations in the estimated coefficients when using different data splits or subsets.
 - Identifying multicollinearity often requires techniques like Variance Inflation Factor that are beyond the scope of this module.
-![bg right:33% w:430][multico]
+![bg right:33% w:430](./images/multico.png)
+
 ---
-<!--_color: white -->
-<!--_backgroundColor: #f4a534 -->
 ## `Putting it all together`
 ### `linear regression with scikit-learn`
-
-
-[simple_reg]: ../DSI%20Certificate%20Coordinator/simple_reg.png
-[predict_simple]: ../DSI%20Certificate%20Coordinator/predict_simple.png
-
-[many_lines]: ../DSI%20Certificate%20Coordinator/many_lines.png
-
-[RMSE]: ../DSI%20Certificate%20Coordinator/RMSE.png
-[KNN_vs_linreg]: ../DSI%20Certificate%20Coordinator/KNN_vs_linreg.png
-
-[multivar]: ../DSI%20Certificate%20Coordinator/multivar_linreg.jpg
-
-[outlier]: ../DSI%20Certificate%20Coordinator/outlier.png
-[outlier_bigdata]: ../DSI%20Certificate%20Coordinator/outlier_bigdata.png
-
-[multico]: ../DSI%20Certificate%20Coordinator/multico.png
-[def]: "https://www.youtube.com/embed/SWTeWu1rerk"
-[def2]: https://markdown-videos-api.jorgenkh.no/youtube/SWTeWu1rerk
