@@ -19,7 +19,7 @@
 
 ## Description
 
-This module introduces the skills required to design, implement and test logistic regression and classification, as well as validate it with resampling. The module compares the differences between modelling for prediction purposes and inference. It explores the choices between prediction accuracy and model interpretability, and the bias-variance trade-off. 
+This module introduces the skills required to design, implement and test basic statistical learning methods including regression, classification, clustering as well as validate it with resampling. The module compares the differences between modelling for prediction purposes and inference. It explores the choices between prediction accuracy and model interpretability, and the bias-variance trade-off. 
 
 ## Learning Outcomes
 
@@ -49,11 +49,11 @@ Participants should review the [Assignment Submission Guide](https://github.com/
 | Assignment 3 | Clustering & Resampling (Sessions 5, 6) | Oct 13   |
 
 ### Contacts
-**Questions can be submitted to the _#cohort-3-help_ channel on Slack**
-* Technical Facilitator: **Holly** (She/Her). Emails can be sent to xhonglei2007@gmail.com
-* Learning Support Staff: **Kasra** (He/Him). Emails can be sent to vakiloroayaei.kasra@gmail.com
-* Learning Support Staff: **Amanda** (She/Her). Emails can be sent to waiyuamanda.ng@mail.utoronto.ca
-* Learning Support Staff: **Vishnou** (He/Him). Emails can be sent to vishnouvina@cs.toronto.edu
+**Questions can be submitted to the _#cohort-4-help_ channel on Slack**
+* Technical Facilitator: **Holly**. Emails can be sent to xhonglei2007@gmail.com
+* Learning Support Staff: **Kasra**. Emails can be sent to vakiloroayaei.kasra@gmail.com
+* Learning Support Staff: **Amanda**. Emails can be sent to waiyuamanda.ng@mail.utoronto.ca
+* Learning Support Staff: **Vishnou**. Emails can be sent to vishnouvina@cs.toronto.edu
 
 ### Delivery of the Learning Module
 
@@ -61,18 +61,12 @@ This module will include live learning sessions and optional, asynchronous work 
  
 Participants are encouraged to engage actively during the learning module. They key to developing the core skills in each learning module is through practice. The more participants engage in coding along with the instructional team, and applying the skills in each module, the more likely it is that these skills will solidify. 
 
-The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_materials/slides`. The technical facilitator will upload any live coding files to this repository for any participants to revisit under `./04_this_cohort/live_code`.
+The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_materials/notebooks/`. Slides can be found under `/01_materials/slides/`.
 
 ## Schedule
-
-| Session | Date       | Topic                                                   | Key Concepts                          |
-|---------|------------|---------------------------------------------------------|-------------------------------------|
-| 1       | X 🚩     | Key Concepts of Classification                          | Overview of classification, KNN     |
-| 2       | X 🚩    | Advanced Classification Techniques                      | KNN classification, cross-validation|
-| 3       | X  🚩   | Introduction to Regression                              | Overview of regression, KNN         |
-| 4       | X  🚩   | Linear Regression Models                                | Simple linear regression, multiple regression |
-| 5       | X  🚩   | Clustering Methods                                      | K-means clustering                  |
-| 6       | X  🚩   | Introduction to Statistical Inference                   | Bootstrap resampling |
+- Week 1 will focus on intro and classification methods
+- Week 2 will focus on regression methods
+- Week 3 will focus on clustering and statistical inference topics
 
 ### Requirements
 
@@ -90,6 +84,7 @@ Feel free to use the following as resources:
 <!-- - [Cheatsheet](./04_cohort_three/additional_resources/05_review_session_material/dsi_emlt_cheat_sheet_2.pdf)
 - [Cross Validation - Basic Idea and Steps](./04_cohort_three/additional_resources/05_review_session_material/cross_validation_basic_idea_and_steps.pdf)
 - [EMLT Tutorial](./04_cohort_three/additional_resources/05_review_session_material/emlt_tutorials.pdf) -->
+- Textbook: [Data Science: A First Introduction](https://python.datasciencebook.ca/index.html)
 - [Introduction to Statistical Learning with Python Documentation (ISLP)](https://islp.readthedocs.io/en/latest/index.html)
 
 ### Videos 
@@ -139,7 +134,7 @@ Alternative Textbook: [Data Science: A First Introduction](https://python.datasc
 
 * **.github**: Contains issue templates and pull request templates for the repository.
 * **materials**: Module slides (.pdf) used during learning sessions.
-* **activities**: Contains graded assignments.
+* **activities**: Contains assignments.
 * **instructional_team**: Resources for the instructional team.
 * **this_cohort**: Additional materials and resources for this cohort.
 * **.gitignore**: Files to exclude from this folder, specified by the Technical Facilitator
