@@ -21,7 +21,7 @@
 
 This module introduces the skills required to design, implement and test logistic regression and classification, as well as validate it with resampling. The module compares the differences between modelling for prediction purposes and inference. It explores the choices between prediction accuracy and model interpretability, and the bias-variance trade-off. 
 
-## 🚩 Learning Outcomes
+## Learning Outcomes
 
 By the end of the module, participants will be able to:
 - Implement and interpret the results from several supervised learning approaches for **classification and regression**.
@@ -40,7 +40,7 @@ Participants should review the [Assignment Submission Guide](https://github.com/
 
 [Assignment 3](./02_activities/assignments/assignment_3.ipynb)
 
-🚩 **Assignment Due-dates**
+**Assignment Due-dates**
 
 | Assessment   | Content                            | Due Date     |
 |--------------|------------------------------------|--------------|
@@ -63,7 +63,7 @@ Participants are encouraged to engage actively during the learning module. They 
 
 The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_materials/slides`. The technical facilitator will upload any live coding files to this repository for any participants to revisit under `./04_this_cohort/live_code`.
 
-## 🚩 Schedule
+## Schedule
 
 | Session | Date       | Topic                                                   | Key Concepts                          |
 |---------|------------|---------------------------------------------------------|-------------------------------------|
