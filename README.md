@@ -24,29 +24,29 @@ This module introduces the skills required to design, implement and test logisti
 ## Learning Outcomes
 
 By the end of the module, participants will be able to:
-* Implement and interpret the results from several supervised learning approaches for regression and classification
-* Use resampling methods to select a model
-* Determine the requirements for reproducible learning
-* Analyze the uncertainties associated with model results and the ethical consequences of acting on these results
-* Explain the different trade offs and considerations for the statistical methods in their toolkit to both technical and non-technical audiences
+- Implement and interpret the results from several supervised learning approaches for **classification and regression**.
+- Use **resampling methods** such as cross-validation and bootstrapping to select and evaluate models.
+- Determine the **requirements for reproducible machine learning** and ensure consistency across model implementations.
+- Analyze the **uncertainties and limitations** associated with model results and understand the **ethical implications** of applying these models in real-world decision-making.
+- Effectively explain the **trade-offs and considerations** for various statistical methods to both **technical** and **non-technical** audiences.
 
 ## Assignments
 
 Participants should review the [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md) for instructions on how to complete assignments in this module.
 
-[Assignment 1](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_activities/assignments/assignment_1.ipynb)
+[Assignment 1](./02_activities/assignments/assignment_1.ipynb)
 
-[Assignment 2](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_activities/assignments/assignment_2.ipynb)
+[Assignment 2](./02_activities/assignments/assignment_2.ipynb)
 
-[Assignment 3](https://github.com/UofT-DSI/applying_statistical_concepts/blob/main/02_activities/assignments/assignment_3.ipynb)
+[Assignment 3](./02_activities/assignments/assignment_3.ipynb)
 
 **Assignment Due-dates**
 
-| Assessment        | Content         | Due Date                         | 
-| ------------------| ----------------|----------------------------------|
-| Assignment 1      | Sessions 1, 2, 3   |  June 2 | 
-| Assignment 2      | Sessions 4, 5, 6   |  June 9     |
-| Assignment 3      | Sessions 7, 8, 9   |  June 16    | 
+| Assessment   | Content                            | Due Date     |
+|--------------|------------------------------------|--------------|
+| Assignment 1 | Classification (Sessions 1, 2)     | X  🚩 |
+| Assignment 2 | Regression (Sessions 3, 4)         | X 🚩    |
+| Assignment 3 | Clustering & Resampling (Sessions 5, 6) | X 🚩   |
 
 ### Contacts
 **Questions can be submitted to the _#cohort-3-help_ channel on Slack**
@@ -61,21 +61,18 @@ This module will include live learning sessions and optional, asynchronous work 
  
 Participants are encouraged to engage actively during the learning module. They key to developing the core skills in each learning module is through practice. The more participants engage in coding along with the instructional team, and applying the skills in each module, the more likely it is that these skills will solidify. 
 
-The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_materials/slides`. The technical facilitator will upload any live coding files to this repository for any participants to revisit under `./04_cohort_three/live_code`.
+The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_materials/slides`. The technical facilitator will upload any live coding files to this repository for any participants to revisit under `./04_this_cohort/live_code`.
 
 ## Schedule
 
-| Session  | Date   | Topic                                                 | ISLP Chapter | 
-|--------|--------|-------------------------------------------------------|------------|
-| 1      | May 28    | Key Concepts of Statistical Analysis                     | 2 |  
-| 2      | May 29    | Simple linear regression                                                     | 3 | 
-| 3      | May 30    | Multiple linear regression, interactions and Qualitative Predictors   | 3 |       
-| 4      | June 4    | Classification vs Regression                                                   | 4 | 
-| 5      | June 5    | Classification (Logistic Regression)                                     | 4 | 
-| 6      | June 6    | Classification (Generalized Linear Model)                          | 4 | 
-| 7      | June 11    | Resampling Methods (Leave One Out Cross Validation)           | 5 | 
-| 8      | June 12    | Resampling Methods (K-fold Cross Validation)                       | 5 | 
-| 9      | June 13    | Resampling Methods (Bootstrap)                                                  | 5 |   
+| Session | Date       | Topic                                                   | Key Concepts                          |
+|---------|------------|---------------------------------------------------------|-------------------------------------|
+| 1       | X 🚩     | Key Concepts of Classification                          | Overview of classification, KNN     |
+| 2       | X 🚩    | Advanced Classification Techniques                      | KNN classification, cross-validation|
+| 3       | X  🚩   | Introduction to Regression                              | Overview of regression, KNN         |
+| 4       | X  🚩   | Linear Regression Models                                | Simple linear regression, multiple regression |
+| 5       | X  🚩   | Clustering Methods                                      | K-means clustering                  |
+| 6       | X  🚩   | Introduction to Statistical Inference                   | Bootstrap resampling |
 
 ### Requirements
 
@@ -106,15 +103,15 @@ Feel free to use the following as resources:
 - [Multiple Regression, Clearly Explained!!!](https://www.youtube.com/watch?v=EkAQAi3a4js&pp=ygUic2ltcGxlIGxpbmVhciByZWdyZXNzaW9uIHN0YXRxdWVzdA%3D%3D)
 
 #### Classification (logistic regression, generative models)
-- [Logistic Regression, explained in 3 minutes](https://www.youtube.com/watch?v=EKm0spFxFG4)
+<!-- - [Logistic Regression, explained in 3 minutes](https://www.youtube.com/watch?v=EKm0spFxFG4)
 - [StatQuest: Logistic Regression](https://www.youtube.com/watch?v=yIYKR4sgzI8&list=PLblh5JKOoLUKxzEP5HA2d-Li7IJkHfXSe)
-- [StatQuest: Linear Discriminant Analysis (LDA) clearly explained.](https://www.youtube.com/watch?v=azXCzI57Yfc&pp=ygUNTERBIHN0YXRxdWVzdA%3D%3D)
+- [StatQuest: Linear Discriminant Analysis (LDA) clearly explained.](https://www.youtube.com/watch?v=azXCzI57Yfc&pp=ygUNTERBIHN0YXRxdWVzdA%3D%3D) -->
 - [StatQuest: K-nearest neighbors, Clearly Explained](https://www.youtube.com/watch?v=HVXime0nQeI&pp=ygUNa25uIHN0YXRxdWVzdA%3D%3D)
-- [Naive Bayes, Clearly Explained!!!](https://www.youtube.com/watch?v=O2L2Uv9pdDA&pp=ygUaYmF5ZXMgY2xhc3NpZmllciBzdGF0cXVlc3Q%3D)
-- [Generalized Linear Model](https://www.youtube.com/watch?v=SqN-qlQOM5A)
+<!-- - [Naive Bayes, Clearly Explained!!!](https://www.youtube.com/watch?v=O2L2Uv9pdDA&pp=ygUaYmF5ZXMgY2xhc3NpZmllciBzdGF0cXVlc3Q%3D)
+- [Generalized Linear Model](https://www.youtube.com/watch?v=SqN-qlQOM5A) -->
 
 #### Resampling methods (CV, bootstrap) and Linear model selection and regularization
-- [Linear Modelling](https://www.youtube.com/watch?v=-inJu1jHqb8)
+<!-- - [Linear Modelling](https://www.youtube.com/watch?v=-inJu1jHqb8) -->
 - [Machine Learning Fundamentals: Cross Validation](https://www.youtube.com/watch?v=fSytzGwwBVw&pp=ygUYdmFsaWRhdGlvbiBzZXQgc3RhdHF1ZXN0)
 - [Bootstrapping Main Ideas!!!](https://www.youtube.com/watch?v=Xz0x-8-cgaQ&pp=ygUXYm9vdHN0cmFwcGluZyBzdGF0cXVlc3Q%3D)
 - [Bootstrapping Method](https://www.youtube.com/watch?v=uGsf3spCM3Y)
@@ -125,8 +122,6 @@ Alternative Textbook: [Data Science: A First Introduction](https://python.datasc
 ### How to get help
 ![image](./steps_to_ask_for_help.png)
 
-<hr>
-
 ## Folder Structure
 
 ```markdown
@@ -136,26 +131,17 @@ Alternative Textbook: [Data Science: A First Introduction](https://python.datasc
 ├── 01_materials
 ├── 02_activities
 ├── 03_instructional_team
-├── 04_cohort_three
+├── 04_this_cohort
 ├── LICENSE
 ├── README.md
 └── steps_to_ask_for_help.png
 ```
 
-* **slides:** Module slides as PDF files.
-* **exercises:** Work to be done alongside learning sessions.
-* **homework:** Homework to practice concepts covered in learning modules.
-* **assignments:** Assignments.
-* **additional resources:** Extra material not covered by the module.
-* **instructors:** This folder provides guidance for Technical Facilitators and the Learning Support team on teaching methodologies and content delivery.
-* README: This file!
-* .gitignore: Files to exclude from this folder, specified by the Technical Facilitator
-
 * **.github**: Contains issue templates and pull request templates for the repository.
 * **materials**: Module slides (.pdf) used during learning sessions.
-* **activities**: Contains graded assignments, exercises, and homework to practice concepts covered in the learning module.
+* **activities**: Contains graded assignments.
 * **instructional_team**: Resources for the instructional team.
-* **cohort_three**: Additional materials and resources for cohort three.
+* **this_cohort**: Additional materials and resources for this cohort.
 * **.gitignore**: Files to exclude from this folder, specified by the Technical Facilitator
 * **LICENSE**: The license for this repository.
 * **README.md**: This file.
