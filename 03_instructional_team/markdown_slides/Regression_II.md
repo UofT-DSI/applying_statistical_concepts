@@ -44,7 +44,7 @@ $$ y = mx + b $$
 - Simple linear regression involves one predictor and one response variable and **predicts by creating a straight line of best fit through the training data.**
 ---
 ##### Animation of linear regression
-[![w:750 Watch on YouTube] (https://img.youtube.com/vi/SWTeWu1rerk/0.jpg)] (https://youtu.be/SWTeWu1rerk)
+[![w:750 Watch on YouTube](https://img.youtube.com/vi/SWTeWu1rerk/0.jpg)](https://youtu.be/SWTeWu1rerk)
 https://www.youtube.com/watch?v=SWTeWu1rerk
 
 ---
@@ -58,7 +58,7 @@ https://www.youtube.com/watch?v=SWTeWu1rerk
 ---
 - To decide whether the $350,000 asking price for the 2,000 square-foot house is fair, we can use our existing data to predict its likely sale price. However, since there are no exact observations for a 2,000 square-foot house in our dataset, we need a method to estimate the price. 
 - Using simple linear regression, we use the data we can draw a straight line of best fit through our existing data points.
-![bg right:45% w:600] (./images/simple_reg.png)
+![bg right:45% w:600](./images/simple_reg.png)
 
 ---
 - The equation for the straight line in simple linear regression is:
@@ -81,12 +81,12 @@ $$
 - Once we have the coefficients, we can use the equation to evaluate the predicted sale price given the value we have for the predictor variable—here 2,000 square feet.
 - Linear regression can predict extreme values (e.g., 6 million or -2,000 sq. ft.), but these predictions are unreliable.
 - Make predictions within the original data range; extrapolate only when logically justified.
-![bg right:45% w:600] (./images/predict_simple.png)
+![bg right:45% w:600](./images/predict_simple.png)
 
 ---
  ##### Choosing the line of best fit
  Many different lines could be drawn through the data points, how do we choose the line of best fit? 
-![bg right:60% w:700] (./images/many_lines.png)
+![bg right:60% w:700](./images/many_lines.png)
 
 ---
 - Simple linear regression finds the line of best fit by minimizing the average squared vertical distance between the line and observed data points.

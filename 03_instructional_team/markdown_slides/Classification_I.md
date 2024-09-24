@@ -78,12 +78,19 @@ Observation | Variable x | Variable y |
 $A$ | $xA$ | $yA$ |
 $B$ | $xB$ | $yB$ |
 
+---
+
+ ##### Distance metric
+
+![bg right:31% w:410](./images/KNN_distance.jpg)
+
 The straight-line distance between observations A and B can be computed using the following formula: 
 $$
 \text{Distance} = \sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}
 $$
 
 ---
+
  ##### Example: K = 1
 - New observation with an unknown diagnosis is a red diamond. The closest point to this new observation is malignant. 
 - Points close together have similar perimeter and concavity values, suggesting they likely share the same diagnosis.

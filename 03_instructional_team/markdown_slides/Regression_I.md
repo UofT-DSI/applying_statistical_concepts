@@ -49,7 +49,7 @@ Applying Statistical Concepts
 - This suggests that we could potentially predict the sale price of a house based on its size, even if the house hasn't been sold yet.
 
 ![bg right:50% w:700](./images/scatterplot.png)
----
+
 ---
  ##### KNN Regression
  - To decide whether the $350,000 asking price for the 2,000 square-foot house in Sacramento is fair, we can use our existing data to predict its likely sale price. 
