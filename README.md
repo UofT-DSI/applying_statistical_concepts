@@ -64,15 +64,9 @@ Participants are encouraged to engage actively during the learning module. They 
 The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_materials/notebooks/`. Slides can be found under `/01_materials/slides/`.
 
 ## Schedule
-
-| Session | Date       | Topic                                                   | Key Concepts                          |
-|---------|------------|---------------------------------------------------------|-------------------------------------|
-| 1       | X 🚩     | Key Concepts of Classification                          | Overview of classification, KNN     |
-| 2       | X 🚩    | Advanced Classification Techniques                      | KNN classification, cross-validation|
-| 3       | X  🚩   | Introduction to Regression                              | Overview of regression, KNN         |
-| 4       | X  🚩   | Linear Regression Models                                | Simple linear regression, multiple regression |
-| 5       | X  🚩   | Clustering Methods                                      | K-means clustering                  |
-| 6       | X  🚩   | Introduction to Statistical Inference                   | Bootstrap resampling |
+- Week 1 will focus on intro and classification methods
+- Week 2 will focus on regression methods
+- Week 3 will focus on clustering and statistical inference topics
 
 ### Requirements
 

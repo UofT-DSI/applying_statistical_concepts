@@ -14,35 +14,6 @@ The `/01_materials/slides` directory contains the live learning session slides a
 
 The `/02_activities/assignments` directory contains assignments participants should submit for evaluation as  `complete` or `incomplete`. The assignments measure a participant's achievement of the learning outcomes, and help technical facilitators determine if a participant has successfully completed the learning module. 
 
-### Week 1
-
-Focus of the week is on regression (linear and multiple linear).
-
-| Live Learning Session  | Date   | Topic                                                 |  Resources | ISLP Chapter |       
-|--------|--------|-------------------------------------------------------|------------| -------------|
-| 1      | May 28    | Key Concepts of Statistical Analysis                  | [Slides](../01_materials/slides/1_statistical_learning.pdf)                      | 2 |
-| 2      | May 29    | Simple linear regression                              | [Slides](../01_materials/slides/2_linear_regression.pdf)                         | 3 |
-| 3      | May 30   | Multiple linear regression, interactions and Qualitative Predictors  | [Slides](../01_materials/slides/3_multiple_linear_regression.pdf) | 3 |
-
-### Week 2
-
-Focus of the week is on classification (logistic regression and generalized linear model)
-
-| Live Learning Session  | Date   | Topic                                                 |  Resources | ISLP Chapter |
-|--------|--------|-------------------------------------------------------|------------| -------------|   
-| 4      | June 4    | Classification vs Regression                          | [Slides](../01_materials/slides/4_classification.pdf)                            | 4 |
-| 5      | June 5    | Classification (Logistic Regression)                | [Slides](../01_materials/slides/5_logistic_regression.pdf)                       | 4 |
-| 6      | June 6   | Classification (Generalized Linear Model)             | [Slides](../01_materials/slides/6_generalized_linear_models.pdf)                 | 4 |
-
-### Week 3
-
-Focus of the week is on resampling methods (Cross Validation and Bootstrap)
-
-| Class  | Date   | Topic                                                 |  Resources | ISLP Chapter | 
-|--------|--------|-------------------------------------------------------|------------| -------------|
-| 7      | June 11   | Resampling Methods (Leave One Out Cross Validation)   |  [Slides](../01_materials/slides/7_leave_one_out_cross_validation.pdf)           | 5 | 
-| 8      | June 12  | Resampling Methods (K-fold Cross Validation)          | [Slides](../01_materials/slides/8_k_fold_cross_validation.pdf)                   | 5 | 
-| 9      | June 13    | Resampling Methods (Bootstrap)                        | [Slides](../01_materials/slides/9_the_bootstrap.pdf)                             | 5 | 
 
 ## How do you assign assignments?
 Technical Facilitators are encouraged to introduce assignments as early as possible in the learning module. The Technical Facilitator should describe the assignment to participants and explain how the topics covered in the module will equip them with the knowledge and skills to complete the assignment. 
