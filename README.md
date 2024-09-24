@@ -44,16 +44,16 @@ Participants should review the [Assignment Submission Guide](https://github.com/
 
 | Assessment   | Content                            | Due Date     |
 |--------------|------------------------------------|--------------|
-| Assignment 1 | Classification (Sessions 1, 2)     | X  🚩 |
-| Assignment 2 | Regression (Sessions 3, 4)         | X 🚩    |
-| Assignment 3 | Clustering & Resampling (Sessions 5, 6) | X 🚩   |
+| Assignment 1 | Classification (Sessions 1, 2)     | Sep 29 |
+| Assignment 2 | Regression (Sessions 3, 4)         | Oct 6    |
+| Assignment 3 | Clustering & Resampling (Sessions 5, 6) | Oct 13   |
 
 ### Contacts
 **Questions can be submitted to the _#cohort-3-help_ channel on Slack**
-* Technical Facilitator: **Holly Xie** (She/Her). Emails can be sent to xhonglei2007@gmail.com
-* Learning Support Staff: **Ananya Jha** (She/Her). Emails can be sent to ananya.jha@mail.utoronto.ca
-* Learning Support Staff: **Amanda Ng** (She/Her). Emails can be sent to waiyuamanda.ng@mail.utoronto.ca
-* Learning Support Staff: **Vishnou Vinayagame** (He/Him). Emails can be sent to vishnouvina@cs.toronto.edu
+* Technical Facilitator: **Holly** (She/Her). Emails can be sent to xhonglei2007@gmail.com
+* Learning Support Staff: **Kasra** (She/Her). Emails can be sent to vakiloroayaei.kasra@gmail.com
+* Learning Support Staff: **Amanda** (She/Her). Emails can be sent to waiyuamanda.ng@mail.utoronto.ca
+* Learning Support Staff: **Vishnou** (He/Him). Emails can be sent to vishnouvina@cs.toronto.edu
 
 ### Delivery of the Learning Module
 
