@@ -19,7 +19,7 @@
 
 ## Description
 
-This module introduces the skills required to design, implement and test logistic regression and classification, as well as validate it with resampling. The module compares the differences between modelling for prediction purposes and inference. It explores the choices between prediction accuracy and model interpretability, and the bias-variance trade-off. 
+This module introduces the skills required to design, implement and test basic statistical learning methods including regression, classification, clustering as well as validate it with resampling. The module compares the differences between modelling for prediction purposes and inference. It explores the choices between prediction accuracy and model interpretability, and the bias-variance trade-off. 
 
 ## Learning Outcomes
 
@@ -44,16 +44,16 @@ Participants should review the [Assignment Submission Guide](https://github.com/
 
 | Assessment   | Content                            | Due Date     |
 |--------------|------------------------------------|--------------|
-| Assignment 1 | Classification (Sessions 1, 2)     | X  🚩 |
-| Assignment 2 | Regression (Sessions 3, 4)         | X 🚩    |
-| Assignment 3 | Clustering & Resampling (Sessions 5, 6) | X 🚩   |
+| Assignment 1 | Classification (Sessions 1, 2)     | Sep 29  🚩 |
+| Assignment 2 | Regression (Sessions 3, 4)         | Oct 6 🚩    |
+| Assignment 3 | Clustering & Resampling (Sessions 5, 6) | Oct 13 🚩   |
 
 ### Contacts
-**Questions can be submitted to the _#cohort-3-help_ channel on Slack**
-* Technical Facilitator: **Holly Xie** (She/Her). Emails can be sent to xhonglei2007@gmail.com
-* Learning Support Staff: **Ananya Jha** (She/Her). Emails can be sent to ananya.jha@mail.utoronto.ca
-* Learning Support Staff: **Amanda Ng** (She/Her). Emails can be sent to waiyuamanda.ng@mail.utoronto.ca
-* Learning Support Staff: **Vishnou Vinayagame** (He/Him). Emails can be sent to vishnouvina@cs.toronto.edu
+**Questions can be submitted to the _#cohort-4-help_ channel on Slack**
+* Technical Facilitator: **Holly**. Emails can be sent to xhonglei2007@gmail.com
+* Learning Support Staff: **Kasra**. Emails can be sent to vakiloroayaei.kasra@gmail.com
+* Learning Support Staff: **Amanda**. Emails can be sent to waiyuamanda.ng@mail.utoronto.ca
+* Learning Support Staff: **Vishnou**. Emails can be sent to vishnouvina@cs.toronto.edu
 
 ### Delivery of the Learning Module
 
@@ -61,7 +61,7 @@ This module will include live learning sessions and optional, asynchronous work 
  
 Participants are encouraged to engage actively during the learning module. They key to developing the core skills in each learning module is through practice. The more participants engage in coding along with the instructional team, and applying the skills in each module, the more likely it is that these skills will solidify. 
 
-The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_materials/slides`. The technical facilitator will upload any live coding files to this repository for any participants to revisit under `./04_this_cohort/live_code`.
+The technical facilitator will introduce the concepts through a collaborative live coding session using the Python notebooks found under `/01_materials/notebooks/`. Slides can be found under `/01_materials/slides/`.
 
 ## Schedule
 
@@ -90,6 +90,7 @@ Feel free to use the following as resources:
 <!-- - [Cheatsheet](./04_cohort_three/additional_resources/05_review_session_material/dsi_emlt_cheat_sheet_2.pdf)
 - [Cross Validation - Basic Idea and Steps](./04_cohort_three/additional_resources/05_review_session_material/cross_validation_basic_idea_and_steps.pdf)
 - [EMLT Tutorial](./04_cohort_three/additional_resources/05_review_session_material/emlt_tutorials.pdf) -->
+- Textbook: [Data Science: A First Introduction](https://python.datasciencebook.ca/index.html)
 - [Introduction to Statistical Learning with Python Documentation (ISLP)](https://islp.readthedocs.io/en/latest/index.html)
 
 ### Videos 
@@ -139,7 +140,7 @@ Alternative Textbook: [Data Science: A First Introduction](https://python.datasc
 
 * **.github**: Contains issue templates and pull request templates for the repository.
 * **materials**: Module slides (.pdf) used during learning sessions.
-* **activities**: Contains graded assignments.
+* **activities**: Contains assignments.
 * **instructional_team**: Resources for the instructional team.
 * **this_cohort**: Additional materials and resources for this cohort.
 * **.gitignore**: Files to exclude from this folder, specified by the Technical Facilitator
