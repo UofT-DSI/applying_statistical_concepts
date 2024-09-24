@@ -44,9 +44,9 @@ Participants should review the [Assignment Submission Guide](https://github.com/
 
 | Assessment   | Content                            | Due Date     |
 |--------------|------------------------------------|--------------|
-| Assignment 1 | Classification (Sessions 1, 2)     | Sep 29  🚩 |
-| Assignment 2 | Regression (Sessions 3, 4)         | Oct 6 🚩    |
-| Assignment 3 | Clustering & Resampling (Sessions 5, 6) | Oct 13 🚩   |
+| Assignment 1 | Classification (Sessions 1, 2)     | Sep 29 |
+| Assignment 2 | Regression (Sessions 3, 4)         | Oct 6    |
+| Assignment 3 | Clustering & Resampling (Sessions 5, 6) | Oct 13   |
 
 ### Contacts
 **Questions can be submitted to the _#cohort-4-help_ channel on Slack**
