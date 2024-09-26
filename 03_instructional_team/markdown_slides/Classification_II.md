@@ -67,7 +67,7 @@ $$
 **Recall:**  quantifies how many positive observations in the test set were identified as positive 
 
 $$
-\text{Precision} = \frac{\text{Number of correct positive predictions}}{\text{total number of positive test set observations}}
+\text{Recall} = \frac{\text{Number of correct positive predictions}}{\text{total number of positive test set observations}}
 $$
 
 - A good classifier would have high precision and high recall 
