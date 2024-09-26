@@ -19,16 +19,18 @@
 
 ## Description
 
-This module introduces the skills required to design, implement and test basic statistical learning methods including regression, classification, clustering as well as validate it with resampling. The module compares the differences between modelling for prediction purposes and inference. It explores the choices between prediction accuracy and model interpretability, and the bias-variance trade-off. 
+This module introduces the skills required to design, implement, and test basic statistical learning methods, including regression, classification, and clustering, as well as validating models with resampling techniques. It compares the differences between modeling for prediction purposes and inference, exploring the trade-offs between prediction accuracy, model interpretability, and the bias-variance trade-off. Participants also gain exposure to key tools such as Pandas, NumPy, and scikit-learn.
 
 ## Learning Outcomes
 
 By the end of the module, participants will be able to:
-- Implement and interpret the results from several supervised learning approaches for **classification and regression**.
+
+- Implement and interpret the results from several supervised learning approaches for **classification and regression**, using libraries like pandas, numpy, and scikit-learn.
 - Use **resampling methods** such as cross-validation and bootstrapping to select and evaluate models.
 - Determine the **requirements for reproducible machine learning** and ensure consistency across model implementations.
 - Analyze the **uncertainties and limitations** associated with model results and understand the **ethical implications** of applying these models in real-world decision-making.
 - Effectively explain the **trade-offs and considerations** for various statistical methods to both **technical** and **non-technical** audiences.
+- Apply **pandas, numpy, and scikit-learn** for data manipulation, model implementation, and evaluation.
 
 ## Assignments
 
