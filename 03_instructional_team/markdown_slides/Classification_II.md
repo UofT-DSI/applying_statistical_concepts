@@ -67,7 +67,7 @@ $$
 **Recall:**  quantifies how many positive observations in the test set were identified as positive 
 
 $$
-\text{Precision} = \frac{\text{Number of correct positive predictions}}{\text{total number of positive test set observations}}
+\text{Recall} = \frac{\text{Number of correct positive predictions}}{\text{total number of positive test set observations}}
 $$
 
 - A good classifier would have high precision and high recall 
@@ -81,7 +81,8 @@ $$
 - Randomness seems to conflict with the principle of reproducibility in data analysis.
 - Python's random number generator uses a seed value to ensure that the sequence of random numbers is reproducible.
 ```python
-random.seed(123)
+import numpy as np
+np.random.seed(123)
 ```
   - Setting the same seed value guarantees the same results each time the analysis is run. Different seed values result in different random patterns, but the same value ensures consistent results.
 
@@ -131,14 +132,17 @@ Tuning is part of model training, not model evaluation.**
 - We can use cross-validation to calculate accuracy for each value of a given parameter.
 - By assessing a reasonable range of values, we can identify the parameter that yields the best accuracy.
 - The optimal value is chosen based on the highest accuracy obtained during cross-validation.
-  
----
-- When selecting parameters like $K$, the goal is to achieve roughly optimal accuracy, ensuring the model is likely to be accurate.
-- The chosen value should be stable, meaning small changes (e.g., adding or subtracting a small number) do not significantly decrease accuracy, making the choice reliable under uncertainty.
-- The cost of training should be manageable; for instance, if $K$ is too large, prediction may become computationally expensive.
 
 ---
+
+### Question
+
+In KNN, what happened if you set $K=1$? How about you set $K=$ total size of the training set?
+
+---
+
 #### Underfitting and Overfitting
+
 - **Underfitting:**
   - Occurs when the classifier is too simplistic and fails to capture the underlying patterns in the data.
   - The model under fits the data when it isn't sufficiently influenced by the training data, resulting in poor performance on both the training and test data.
