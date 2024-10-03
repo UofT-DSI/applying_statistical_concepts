@@ -42,10 +42,6 @@ $$ y = mx + b $$
 - Linear regression addresses these limitations: better prediction range and faster performance with larger datasets.
 - Linear regression is widely used due to its interpretable mathematical equation linking predictors and response variables.
 - Simple linear regression involves one predictor and one response variable and **predicts by creating a straight line of best fit through the training data.**
----
-##### Animation of linear regression
-[![w:750 Watch on YouTube](https://img.youtube.com/vi/SWTeWu1rerk/0.jpg)](https://youtu.be/SWTeWu1rerk)
-https://www.youtube.com/watch?v=SWTeWu1rerk
 
 ---
  ##### Example dataset
@@ -122,9 +118,9 @@ $$
 $$
 
   where:
- $\beta_0$ is the vertical intercept (price when house size is 0).
-  $\beta_1$ is the slope (rate of price increase as house size increases).
-  $\beta_2$ is the slope (rate of price increase as number of bedrooms increases).
+ $\beta_0$ is the vertical intercept (price when house size is 0 and number of bedrooms is 0).
+  $\beta_1$ is the slope (rate of price increase as house size increases when fixing everything else).
+  $\beta_2$ is the slope (rate of price increase as number of bedrooms increases when fixing everything else).
 
 ---
 ![bg right:60% w:700](./images/multivar_linreg.jpg)
