@@ -42,7 +42,7 @@ Applying Statistical Concepts
 - Instead, we use a **sample**, a subset of the population, to estimate the population parameter.
 - **Sample estimate**: A numerical characteristic of the sample that approximates the population parameter.
 - **Statistical inference**: Using a sample to make conclusions about the broader population.
-![bg right:40% w:550](./images/population_vs_sample.png)
+![bg right:40% w:400](./images/population_vs_sample.png)
 
 ---
 ##### Example dataset
