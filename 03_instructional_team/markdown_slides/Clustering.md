@@ -94,16 +94,31 @@ Visualizing the relationship between flipper length and bill length, we can obse
 ---
 ##### WSSD
   1. Calculate the cluster centers by taking the mean of each variable for all data points in a cluster.
-  2. Measure the sum of squared distances between each data point and its cluster center.
+  For example, suppose we have a cluster containing 4 observations, and we are using two variables, $x$ and $y$ , to cluster the data. Then we would compute the coordinates, $\mu_x$ and $\mu_y$ of the cluster center by
+  $$
+  \mu_x = \frac{1}{4}(x_1+x_2+x_3+x_4) \quad \mu_y = \frac{1}{4}(y_1+y_2+y_3+y_4)
+  $$
+---
+##### WSSD
+2. Measure the sum of squared distances between each data point and its cluster center.
 ![bg right:45% w:600](./images/wssd.png)
 WSSD is computed by summing the squared Euclidean distances between each data point and the cluster center.
+$$
+\begin{split}
+\text{WSSD} = \left((x_1 - \mu_x)^2 + (y_1 - \mu_y)^2\right) + \left((x_2 - \mu_x)^2 + (y_2 - \mu_y)^2\right)\\
+ + \left((x_3 - \mu_x)^2 + (y_3 - \mu_y)^2\right)  +  \left((x_4 - \mu_x)^2 + (y_4 - \mu_y)^2\right)
+\end{split}
+$$
 ---
+
+##### WSSD
 - A larger WSSD indicates that the cluster is more spread out, as it means data points are farther from the cluster center.
 
 - To obtain the total WSSD, sum the WSSD values for all clusters, which involves adding up all squared distances for all observations.
 ![bg right:50% w:600](./images/all_wssd.png)
 
 ---
+
 ##### Clustering algorithm
 - The K-means algorithm starts by choosing $K$ and randomly assigning observations to each of the $K$ clusters. 
 - Here, each data point is assigned to 1 of 3 clusters:
